@@ -1,0 +1,38 @@
+{
+  "id": "63898521410179292969424282100000",
+  "message": "START RequestId: f737bb47-4947-4183-abb3-8dcffb7bf82f\n[GET] /api/synthetic status=200\nEND RequestId: f737bb47-4947-4183-abb3-8dcffb7bf82f\nREPORT RequestId: f737bb47-4947-4183-abb3-8dcffb7bf82f Duration: 222 ms Billed Duration: 222 ms Memory Size: 2048 MB Max Memory Used: 252 MB",
+  "timestamp": 1792929694242,
+  "type": "stdout",
+  "requestId": "6jzgl-1792929694230-2e68fff7370e",
+  "executionRegion": "iad1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "timestamp": 1792929694230,
+    "method": "GET",
+    "host": "petclinic-agent-f1afzsrgt-brontoio.vercel.app",
+    "path": "/api/synthetic",
+    "statusCode": 200,
+    "scheme": "https",
+    "userAgent": [
+      "vercel-cron/1.0"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "iad1",
+    "lambdaRegion": "iad1",
+    "vercelCache": "MISS",
+    "pathType": "middleware"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "source": "lambda",
+  "host": "petclinic-agent-f1afzsrgt-brontoio.vercel.app",
+  "path": "/services/web/_middleware",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "7f75508a06404ce0f0a8eda5a6ba3a00",
+  "spanId": "daca81ed6d466336",
+  "invocationId": "01M5SF00H2M3Y8FKB0BQTMHD8J",
+  "instanceId": "6nXeMPYt7P1F"
+}

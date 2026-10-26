@@ -1,0 +1,24 @@
+{
+  "ChargePeriodStart": "2026-10-25T07:00:00.000Z",
+  "ChargePeriodEnd": "2026-10-26T07:00:00.000Z",
+  "ChargeCategory": "Usage",
+  "BilledCost": 0,
+  "BillingCurrency": "USD",
+  "EffectiveCost": 0,
+  "ServiceName": "Fast Data Transfer",
+  "ServiceCategory": "Vercel Delivery Network",
+  "ServiceProviderName": "Vercel",
+  "SkuId": "prod_01jvt9pfezecssvtk1g6gxtb10",
+  "ConsumedQuantity": 0.073096586,
+  "ConsumedUnit": "gigabyte",
+  "RegionId": "dub1",
+  "RegionName": "Dublin, Ireland",
+  "Tags": {
+    "ProjectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+    "ProjectName": "petclinic-agent"
+  },
+  "PricingCategory": "Other",
+  "PricingCurrency": "USD",
+  "PricingQuantity": 0,
+  "PricingUnit": "USD"
+}

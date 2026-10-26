@@ -1,0 +1,37 @@
+{
+  "id": "1792668022108363843718113040",
+  "timestamp": 1792668022108,
+  "requestId": "ljzx4-1792668022038-fcee4681b2a6",
+  "executionRegion": "iad1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "timestamp": 1792668022038,
+    "method": "POST",
+    "statusCode": 200,
+    "clientIp": "203.0.113.10",
+    "path": "/35dfe401045c5cda/view",
+    "vercelId": "ljzx4-1792668022038-fcee4681b2a6",
+    "pathType": "EXTERNAL",
+    "host": "petclinic-agent.vercel.app",
+    "userAgent": [
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 26_3_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/144.0.7559.95 Mobile/15E148 Safari/604.1"
+    ],
+    "scheme": "https",
+    "region": "iad1",
+    "referer": "https://petclinic-agent.vercel.app/",
+    "vercelCache": "MISS"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_BP49Qa9QfydHNzpk8DxpJYjtVyJF",
+  "source": "external",
+  "host": "petclinic-agent.vercel.app",
+  "destination": "https://vitals.vercel-insights.com/v1/view?dsn=m4A6vvKlrBVPDrG1PdIXjXTAt&ve=production&vu=petclinic-agent-ic11zqukl-brontoio.vercel.app&dpl=dpl_BP49Qa9QfydHNzpk8DxpJYjtVyJF",
+  "path": "/35dfe401045c5cda/view",
+  "environment": "production",
+  "branch": "main",
+  "ja4Digest": "t13d1517h2_8daaf6152771_cb7bf5808d99",
+  "traceId": "e4b1b904a17d17da1b8e92e85a0ea293",
+  "spanId": "580bc9de46e3af4e"
+}

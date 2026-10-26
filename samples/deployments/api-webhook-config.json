@@ -1,0 +1,18 @@
+{
+  "events": [
+    "deployment.created",
+    "deployment.succeeded",
+    "deployment.error",
+    "deployment.canceled",
+    "deployment.promoted"
+  ],
+  "id": "account_hook_FtW3PwGbKclpkVxBtaVI2XuM",
+  "url": "https://petclinic-agent.vercel.app/api/vercel-webhook",
+  "ownerId": "team_REDACTED",
+  "createdAt": 1792438283624,
+  "updatedAt": 1792438283624,
+  "projectIds": [
+    "prj_b3WTvq01Qtd6lK3zThoF2COD7prM"
+  ],
+  "createdFrom": "account"
+}

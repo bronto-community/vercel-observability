@@ -1,0 +1,270 @@
+{
+  "query": {
+    "metric": "vercel.queue_operation.count",
+    "aggregation": "count",
+    "groupBy": [
+      "queueRegion"
+    ],
+    "startTime": "2026-10-25T00:00:00.000Z",
+    "endTime": "2026-10-26T00:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 79242
+    },
+    {
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 4128
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 2961
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T01:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 2864
+    },
+    {
+      "timestamp": "2026-10-25T01:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 132
+    },
+    {
+      "timestamp": "2026-10-25T02:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 2920
+    },
+    {
+      "timestamp": "2026-10-25T02:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 1216
+    },
+    {
+      "timestamp": "2026-10-25T03:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3292
+    },
+    {
+      "timestamp": "2026-10-25T03:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 2040
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 4526
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T05:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3450
+    },
+    {
+      "timestamp": "2026-10-25T05:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T06:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3455
+    },
+    {
+      "timestamp": "2026-10-25T06:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T07:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3444
+    },
+    {
+      "timestamp": "2026-10-25T07:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3472
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T09:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3452
+    },
+    {
+      "timestamp": "2026-10-25T09:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T10:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3446
+    },
+    {
+      "timestamp": "2026-10-25T10:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T11:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3452
+    },
+    {
+      "timestamp": "2026-10-25T11:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3356
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 120
+    },
+    {
+      "timestamp": "2026-10-25T13:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3224
+    },
+    {
+      "timestamp": "2026-10-25T13:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 236
+    },
+    {
+      "timestamp": "2026-10-25T14:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3216
+    },
+    {
+      "timestamp": "2026-10-25T14:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 240
+    },
+    {
+      "timestamp": "2026-10-25T15:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3272
+    },
+    {
+      "timestamp": "2026-10-25T15:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 144
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3448
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T17:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3424
+    },
+    {
+      "timestamp": "2026-10-25T17:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T18:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3456
+    },
+    {
+      "timestamp": "2026-10-25T18:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T19:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3424
+    },
+    {
+      "timestamp": "2026-10-25T19:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 3040
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T21:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 2868
+    },
+    {
+      "timestamp": "2026-10-25T21:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T22:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 2832
+    },
+    {
+      "timestamp": "2026-10-25T22:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T23:00:00.000Z",
+      "queueRegion": "dub1",
+      "vercel_queue_operation_count_count": 2948
+    },
+    {
+      "timestamp": "2026-10-25T23:00:00.000Z",
+      "queueRegion": "iad1",
+      "vercel_queue_operation_count_count": 0
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

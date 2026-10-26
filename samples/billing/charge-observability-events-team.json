@@ -1,0 +1,19 @@
+{
+  "ChargePeriodStart": "2026-10-25T07:00:00.000Z",
+  "ChargePeriodEnd": "2026-10-26T07:00:00.000Z",
+  "ChargeCategory": "Usage",
+  "BilledCost": 0,
+  "BillingCurrency": "USD",
+  "EffectiveCost": 0,
+  "ServiceName": "Observability Events",
+  "ServiceCategory": "Observability",
+  "ServiceProviderName": "Vercel",
+  "SkuId": "prod_01jvt9nsx5ecyrhdr6amd7veyt",
+  "ConsumedQuantity": 0,
+  "ConsumedUnit": "Events",
+  "Tags": {},
+  "PricingCategory": "Other",
+  "PricingCurrency": "USD",
+  "PricingQuantity": 0,
+  "PricingUnit": "USD"
+}

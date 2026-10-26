@@ -1,0 +1,155 @@
+{
+  "query": {
+    "metric": "vercel.firewall_action.count",
+    "aggregation": "count",
+    "groupBy": [
+      "requestPath",
+      "clientUserAgent",
+      "edgeRegion"
+    ],
+    "filter": "wafRuleId eq 'sys_dos_mitigation'",
+    "startTime": "2026-10-19T08:00:00.000Z",
+    "endTime": "2026-10-26T12:00:00.000Z",
+    "granularity": {
+      "hours": 4
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "requestPath": "/api/chat",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 4
+    },
+    {
+      "requestPath": "/api/generate",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 4
+    },
+    {
+      "requestPath": "/api/v1/chat/completions",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 4
+    },
+    {
+      "requestPath": "/v1/chat/completions",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 4
+    },
+    {
+      "requestPath": "/api/message",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 3
+    },
+    {
+      "requestPath": "/api/predict",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 3
+    },
+    {
+      "requestPath": "/run/predict",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 3
+    },
+    {
+      "requestPath": "/.claude/settings.json",
+      "clientUserAgent": "Mozilla/5.0 (compatible; MistralBot/1.0; +https://mistral.ai)",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 1
+    },
+    {
+      "requestPath": "/.claude/settings.local.json",
+      "clientUserAgent": "Mozilla/5.0 (compatible; MistralBot/1.0; +https://mistral.ai)",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 1
+    },
+    {
+      "requestPath": "/.cursor/mcp.json",
+      "clientUserAgent": "Mozilla/5.0 (compatible; MistralBot/1.0; +https://mistral.ai)",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 1
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/api/chat",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/api/generate",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/api/v1/chat/completions",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/v1/chat/completions",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/api/message",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/api/predict",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/run/predict",
+      "clientUserAgent": "Mozilla/5.0",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/.claude/settings.json",
+      "clientUserAgent": "Mozilla/5.0 (compatible; MistralBot/1.0; +https://mistral.ai)",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/.claude/settings.local.json",
+      "clientUserAgent": "Mozilla/5.0 (compatible; MistralBot/1.0; +https://mistral.ai)",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/.cursor/mcp.json",
+      "clientUserAgent": "Mozilla/5.0 (compatible; MistralBot/1.0; +https://mistral.ai)",
+      "edgeRegion": "lhr1",
+      "vercel_firewall_action_count_count": 1
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

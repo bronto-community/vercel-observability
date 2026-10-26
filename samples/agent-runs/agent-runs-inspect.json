@@ -1,0 +1,46 @@
+{
+  "run": {
+    "id": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD",
+    "traceId": "776df6eb76802dec252056a55e1f4bfc",
+    "title": "Agent Session",
+    "status": "waiting",
+    "framework": "eve",
+    "agentId": null,
+    "agentName": "petclinic-agent",
+    "model": "anthropic/claude-haiku-5.5",
+    "workflowName": null,
+    "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+    "environment": "production",
+    "trigger": {
+      "type": "unknown",
+      "label": "eve"
+    },
+    "createdAt": "2026-10-23T22:00:12.838Z",
+    "startedAt": "2026-10-23T22:00:12.838Z",
+    "completedAt": null,
+    "updatedAt": "2026-10-23T22:00:23.900Z",
+    "durationMs": null,
+    "turns": 2,
+    "subagents": 0,
+    "usage": null,
+    "events": [],
+    "metadata": {
+      "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+      "teamId": "team_REDACTED",
+      "source": "agent-otel"
+    },
+    "runType": "session",
+    "rootRunId": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD",
+    "navigationRootRunId": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD"
+  },
+  "identity": {
+    "runType": "session",
+    "rootRunId": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD",
+    "navigationRootRunId": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD"
+  },
+  "meta": {
+    "dataSource": "agent-otel",
+    "dataConfidence": "real",
+    "activityRevision": "2026-10-23T22:00:22.819Z"
+  }
+}

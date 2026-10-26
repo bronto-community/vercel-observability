@@ -1,0 +1,35 @@
+{
+  "id": "82963629880179248682015337200000",
+  "message": "Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",
+  "timestamp": 1792486820153,
+  "type": "stderr",
+  "requestId": "qfk87-1792486819529-c639c1830db2",
+  "executionRegion": "dub1",
+  "level": "info",
+  "proxy": {
+    "timestamp": 1792486819529,
+    "method": "GET",
+    "host": "petclinic-agent.vercel.app",
+    "path": "/api/chaos?kind=crash",
+    "scheme": "https",
+    "userAgent": [
+      "curl/8.7.1"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "fra1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_BUnY2YbSpnti6SrhEMUf4LcbbxU7",
+  "source": "lambda",
+  "host": "petclinic-agent.vercel.app",
+  "path": "/api/chaos",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "aeb51dc95ea85635294b04612c108587",
+  "spanId": "310474af04c19486",
+  "invocationId": "01M5C8MHV2BMW0Z91GT3ETFWY4"
+}

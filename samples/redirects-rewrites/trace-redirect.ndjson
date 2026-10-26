@@ -1,0 +1,2 @@
+{"depth":0,"duration":"2.17ms","duration_ns":2168064,"error":false,"operation":"Resolve Deployment","parent_span_id":"ba5a0068577ded89","service":"vercel.edge-network","span_id":"e69aca484ba2051b","start_ns":1792792654738524928,"status":"UNSET","trace_id":"a20e295721f58bb32e9a37b0301cc514"}
+{"depth":0,"duration":"2.24ms","duration_ns":2237952,"error":false,"operation":"Resolve Route","parent_span_id":"ba5a0068577ded89","service":"vercel.edge-network","span_id":"4321ef8817c5bf1b","start_ns":1792792654740825088,"status":"UNSET","trace_id":"a20e295721f58bb32e9a37b0301cc514"}

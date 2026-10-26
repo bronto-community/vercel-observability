@@ -1,0 +1,37 @@
+{
+  "id": "1792777637848460816271742134",
+  "timestamp": 1792777637848,
+  "requestId": "845sv-1792777637845-b8fb50cfc69c",
+  "executionRegion": "sfo1:sfo1:sfo1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "method": "GET",
+    "vercelCache": "HIT",
+    "referer": "https://petclinic-agent-f1afzsrgt-brontoio.vercel.app/",
+    "path": "/35dfe401045c5cda/script.js",
+    "host": "petclinic-agent-f1afzsrgt-brontoio.vercel.app",
+    "vercelId": "845sv-1792777637845-b8fb50cfc69c",
+    "cacheId": "d8q84-1792777637253-0e7615bc457f",
+    "region": "sfo1",
+    "userAgent": [
+      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.7390.0 Safari/537.36"
+    ],
+    "statusCode": 200,
+    "clientIp": "203.0.113.10",
+    "scheme": "https",
+    "timestamp": 1792777637845,
+    "pathType": "EXTERNAL"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "source": "external",
+  "host": "petclinic-agent-f1afzsrgt-brontoio.vercel.app",
+  "path": "/35dfe401045c5cda/script.js",
+  "environment": "production",
+  "branch": "main",
+  "ja4Digest": "t13d1516h2_8daaf6152771_d8a2da3f94cd",
+  "traceId": "38972c64d1bba3d72ce6c63fca571772",
+  "spanId": "5aaece2bddc24a9b"
+}

@@ -1,0 +1,271 @@
+{
+  "query": {
+    "metric": "vercel.queue_operation.count",
+    "aggregation": "count",
+    "groupBy": [
+      "deliveryCount"
+    ],
+    "filter": "eventType eq 'QUEUE_RECEIVED'",
+    "startTime": "2026-10-25T00:00:00.000Z",
+    "endTime": "2026-10-26T00:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 20827
+    },
+    {
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 16
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 735
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-25T01:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 748
+    },
+    {
+      "timestamp": "2026-10-25T01:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-25T02:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 1031
+    },
+    {
+      "timestamp": "2026-10-25T02:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-25T03:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 1333
+    },
+    {
+      "timestamp": "2026-10-25T03:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 1131
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-25T05:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 862
+    },
+    {
+      "timestamp": "2026-10-25T05:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-25T06:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 863
+    },
+    {
+      "timestamp": "2026-10-25T06:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T07:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 861
+    },
+    {
+      "timestamp": "2026-10-25T07:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 868
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T09:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 863
+    },
+    {
+      "timestamp": "2026-10-25T09:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T10:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 861
+    },
+    {
+      "timestamp": "2026-10-25T10:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-25T11:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 863
+    },
+    {
+      "timestamp": "2026-10-25T11:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 869
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T13:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 865
+    },
+    {
+      "timestamp": "2026-10-25T13:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T14:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 864
+    },
+    {
+      "timestamp": "2026-10-25T14:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T15:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 854
+    },
+    {
+      "timestamp": "2026-10-25T15:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 862
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T17:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 856
+    },
+    {
+      "timestamp": "2026-10-25T17:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T18:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 864
+    },
+    {
+      "timestamp": "2026-10-25T18:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T19:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 856
+    },
+    {
+      "timestamp": "2026-10-25T19:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 757
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-25T21:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 717
+    },
+    {
+      "timestamp": "2026-10-25T21:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T22:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 708
+    },
+    {
+      "timestamp": "2026-10-25T22:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T23:00:00.000Z",
+      "deliveryCount": "1",
+      "vercel_queue_operation_count_count": 736
+    },
+    {
+      "timestamp": "2026-10-25T23:00:00.000Z",
+      "deliveryCount": "2",
+      "vercel_queue_operation_count_count": 0
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

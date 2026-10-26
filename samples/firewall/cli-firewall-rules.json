@@ -1,0 +1,100 @@
+{
+  "managed": [
+    {
+      "id": "bot-protection",
+      "name": "Bot Protection",
+      "action": "off",
+      "wafRuleId": "managed_bot_protection"
+    },
+    {
+      "id": "ai-bots",
+      "name": "AI Bots",
+      "action": "allow",
+      "wafRuleId": "managed_ai_bots"
+    },
+    {
+      "id": "bot-id",
+      "name": "BotID",
+      "action": "basic",
+      "wafRuleId": null
+    }
+  ],
+  "rules": [
+    {
+      "action": {
+        "mitigate": {
+          "action": "deny",
+          "actionDuration": null,
+          "rateLimit": null,
+          "redirect": null
+        }
+      },
+      "active": true,
+      "conditionGroup": [
+        {
+          "conditions": [
+            {
+              "op": "inc",
+              "type": "path",
+              "value": [
+                "/.env",
+                "/wp-login.php",
+                "/.git/config",
+                "/xmlrpc.php"
+              ]
+            }
+          ]
+        }
+      ],
+      "description": "Typical vulnerability scanner probes",
+      "id": "rule_block_scanner_paths_jbLxqj",
+      "name": "Block scanner paths",
+      "valid": true,
+      "validationErrors": null,
+      "_status": "live"
+    },
+    {
+      "action": {
+        "mitigate": {
+          "action": "rate_limit",
+          "actionDuration": null,
+          "rateLimit": {
+            "action": "deny",
+            "algo": "fixed_window",
+            "keys": [
+              "ip"
+            ],
+            "limit": 20,
+            "window": 60
+          },
+          "redirect": null
+        }
+      },
+      "active": true,
+      "conditionGroup": [
+        {
+          "conditions": [
+            {
+              "op": "eq",
+              "type": "path",
+              "value": "/eve/v1/session"
+            },
+            {
+              "op": "eq",
+              "type": "method",
+              "value": "POST"
+            }
+          ]
+        }
+      ],
+      "description": "At most 20 new chat sessions per minute per IP",
+      "id": "rule_rate_limit_new_chats_vbkYGF",
+      "name": "Rate limit new chats",
+      "valid": true,
+      "validationErrors": null,
+      "_status": "live"
+    }
+  ],
+  "hasDraft": false,
+  "pendingChanges": 0
+}

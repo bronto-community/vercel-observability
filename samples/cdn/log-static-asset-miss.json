@@ -1,0 +1,32 @@
+{
+  "id": "1792907938407250404317607156",
+  "timestamp": 1792907938407,
+  "requestId": "cg5lx-1792907937159-3e5e091b5a72",
+  "executionRegion": "pdx1",
+  "level": "info",
+  "proxy": {
+    "host": "petclinic-agent.vercel.app",
+    "clientIp": "203.0.113.10",
+    "region": "pdx1",
+    "timestamp": 1792907937159,
+    "scheme": "https",
+    "path": "/_next/static/chunks/0a7ys0jsd8qel.js?",
+    "vercelId": "cg5lx-1792907937159-3e5e091b5a72",
+    "pathType": "STATIC",
+    "statusCode": 200,
+    "userAgent": [
+      "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.52 Mobile Safari/537.36 (compatible; GoogleOther)"
+    ],
+    "method": "GET",
+    "vercelCache": "MISS"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_9LPTPG5JHWdEtDN1H6L7TAfttUNu",
+  "source": "static",
+  "host": "petclinic-agent.vercel.app",
+  "path": "_next/static/chunks/0a7ys0jsd8qel.js",
+  "environment": "production",
+  "branch": "main",
+  "ja4Digest": "t13d181300_e8a523a41297_43ade6aba3df"
+}

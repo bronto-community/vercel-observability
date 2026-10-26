@@ -1,0 +1,35 @@
+{
+  "id": "88309987110179279287860063100000",
+  "message": "Vercel Runtime Timeout Error: Task timed out after 60 seconds",
+  "timestamp": 1792792878600,
+  "type": "stderr",
+  "requestId": "qh58w-1792792818589-a2b591b7311b",
+  "executionRegion": "dub1",
+  "level": "error",
+  "proxy": {
+    "timestamp": 1792792818589,
+    "method": "GET",
+    "host": "petclinic-agent.vercel.app",
+    "path": "/eve/v1/session/wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD/stream",
+    "scheme": "https",
+    "userAgent": [
+      "petclinic-synthetic/1.0"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "dub1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "source": "lambda",
+  "host": "petclinic-agent.vercel.app",
+  "path": "/eve/v1/session/[sessionId]/stream",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "f714bde1b3d1543e44f9e886c8e35e64",
+  "spanId": "47a0e818e341f057",
+  "invocationId": "01M5NCEP2ZAXAJFVR5CK68T74H"
+}

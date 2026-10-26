@@ -1,0 +1,1067 @@
+{
+  "query": {
+    "metric": "vercel.request.count",
+    "aggregation": "count",
+    "groupBy": [
+      "requestPath",
+      "externalRewriteTargetHost"
+    ],
+    "filter": "pathType:external",
+    "startTime": "2026-10-20T00:00:00.000Z",
+    "endTime": "2026-10-21T00:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 2415
+    },
+    {
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 2016
+    },
+    {
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 2014
+    },
+    {
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 2009
+    },
+    {
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 1115
+    },
+    {
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 83
+    },
+    {
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 1
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T01:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T01:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T01:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T01:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T01:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T01:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T01:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T02:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T02:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T02:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T02:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T02:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T02:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T02:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T03:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T03:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T03:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T03:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T03:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T03:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T03:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T05:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T05:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T05:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T05:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T05:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T05:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T05:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T06:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T06:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-20T06:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-20T06:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-20T06:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-20T06:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T06:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T07:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T07:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 29
+    },
+    {
+      "timestamp": "2026-10-20T07:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-20T07:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 14
+    },
+    {
+      "timestamp": "2026-10-20T07:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 26
+    },
+    {
+      "timestamp": "2026-10-20T07:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T07:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 17
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 17
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 13
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 26
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T09:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 170
+    },
+    {
+      "timestamp": "2026-10-20T09:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 94
+    },
+    {
+      "timestamp": "2026-10-20T09:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 94
+    },
+    {
+      "timestamp": "2026-10-20T09:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 109
+    },
+    {
+      "timestamp": "2026-10-20T09:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 147
+    },
+    {
+      "timestamp": "2026-10-20T09:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-20T09:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T10:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 158
+    },
+    {
+      "timestamp": "2026-10-20T10:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 136
+    },
+    {
+      "timestamp": "2026-10-20T10:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 136
+    },
+    {
+      "timestamp": "2026-10-20T10:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 132
+    },
+    {
+      "timestamp": "2026-10-20T10:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 74
+    },
+    {
+      "timestamp": "2026-10-20T10:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-20T10:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T11:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 160
+    },
+    {
+      "timestamp": "2026-10-20T11:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 134
+    },
+    {
+      "timestamp": "2026-10-20T11:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 134
+    },
+    {
+      "timestamp": "2026-10-20T11:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 134
+    },
+    {
+      "timestamp": "2026-10-20T11:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 60
+    },
+    {
+      "timestamp": "2026-10-20T11:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 8
+    },
+    {
+      "timestamp": "2026-10-20T11:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 164
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 135
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 135
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 135
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 53
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 7
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T13:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 176
+    },
+    {
+      "timestamp": "2026-10-20T13:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 142
+    },
+    {
+      "timestamp": "2026-10-20T13:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 142
+    },
+    {
+      "timestamp": "2026-10-20T13:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 142
+    },
+    {
+      "timestamp": "2026-10-20T13:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 65
+    },
+    {
+      "timestamp": "2026-10-20T13:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 7
+    },
+    {
+      "timestamp": "2026-10-20T13:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T14:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 164
+    },
+    {
+      "timestamp": "2026-10-20T14:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 135
+    },
+    {
+      "timestamp": "2026-10-20T14:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 135
+    },
+    {
+      "timestamp": "2026-10-20T14:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 135
+    },
+    {
+      "timestamp": "2026-10-20T14:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 66
+    },
+    {
+      "timestamp": "2026-10-20T14:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-20T14:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T15:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 150
+    },
+    {
+      "timestamp": "2026-10-20T15:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 129
+    },
+    {
+      "timestamp": "2026-10-20T15:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 129
+    },
+    {
+      "timestamp": "2026-10-20T15:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 129
+    },
+    {
+      "timestamp": "2026-10-20T15:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 76
+    },
+    {
+      "timestamp": "2026-10-20T15:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-20T15:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 167
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 138
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 138
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 139
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 83
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T17:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 164
+    },
+    {
+      "timestamp": "2026-10-20T17:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 135
+    },
+    {
+      "timestamp": "2026-10-20T17:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 135
+    },
+    {
+      "timestamp": "2026-10-20T17:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 135
+    },
+    {
+      "timestamp": "2026-10-20T17:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 59
+    },
+    {
+      "timestamp": "2026-10-20T17:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 7
+    },
+    {
+      "timestamp": "2026-10-20T17:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T18:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 166
+    },
+    {
+      "timestamp": "2026-10-20T18:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 137
+    },
+    {
+      "timestamp": "2026-10-20T18:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 137
+    },
+    {
+      "timestamp": "2026-10-20T18:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 137
+    },
+    {
+      "timestamp": "2026-10-20T18:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 62
+    },
+    {
+      "timestamp": "2026-10-20T18:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-20T18:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T19:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 166
+    },
+    {
+      "timestamp": "2026-10-20T19:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 137
+    },
+    {
+      "timestamp": "2026-10-20T19:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 137
+    },
+    {
+      "timestamp": "2026-10-20T19:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 137
+    },
+    {
+      "timestamp": "2026-10-20T19:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 65
+    },
+    {
+      "timestamp": "2026-10-20T19:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-20T19:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 140
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 123
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 123
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 123
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 63
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T21:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 158
+    },
+    {
+      "timestamp": "2026-10-20T21:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 132
+    },
+    {
+      "timestamp": "2026-10-20T21:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 132
+    },
+    {
+      "timestamp": "2026-10-20T21:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 132
+    },
+    {
+      "timestamp": "2026-10-20T21:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 59
+    },
+    {
+      "timestamp": "2026-10-20T21:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-20T21:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T22:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 158
+    },
+    {
+      "timestamp": "2026-10-20T22:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 132
+    },
+    {
+      "timestamp": "2026-10-20T22:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 132
+    },
+    {
+      "timestamp": "2026-10-20T22:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 132
+    },
+    {
+      "timestamp": "2026-10-20T22:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 75
+    },
+    {
+      "timestamp": "2026-10-20T22:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-20T22:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T23:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/event",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 150
+    },
+    {
+      "timestamp": "2026-10-20T23:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 129
+    },
+    {
+      "timestamp": "2026-10-20T23:00:00.000Z",
+      "requestPath": "/39023274925c087f/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 129
+    },
+    {
+      "timestamp": "2026-10-20T23:00:00.000Z",
+      "requestPath": "/35dfe401045c5cda/view",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 129
+    },
+    {
+      "timestamp": "2026-10-20T23:00:00.000Z",
+      "requestPath": "/39023274925c087f/vitals",
+      "externalRewriteTargetHost": "vitals.vercel-insights.com",
+      "vercel_request_count_count": 53
+    },
+    {
+      "timestamp": "2026-10-20T23:00:00.000Z",
+      "requestPath": "/petclinic-openapi.yml",
+      "externalRewriteTargetHost": "raw.githubusercontent.com",
+      "vercel_request_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-20T23:00:00.000Z",
+      "requestPath": "/_vercel/insights/script.js",
+      "externalRewriteTargetHost": "analytics-script.vercel.sh",
+      "vercel_request_count_count": 0
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

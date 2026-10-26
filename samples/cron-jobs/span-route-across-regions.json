@@ -1,0 +1,22 @@
+{
+  "deployment.environment.name": "production",
+  "service.name": "vercel.edge-network",
+  "span.dropped_attributes_count": "0",
+  "span.duration_nano": "36163002",
+  "span.end_time_unix_nano": "1792929694301649599",
+  "span.flags": "0",
+  "span.kind": "SPAN_KIND_SERVER",
+  "span.name": "Route across regions",
+  "span.parent_span_id": "29c6685f5870df5b",
+  "span.span_id": "60ce4087877011dd",
+  "span.start_time_unix_nano": "1792929694265486597",
+  "span.status_code": "STATUS_CODE_UNSET",
+  "span.trace_id": "7f75508a06404ce0f0a8eda5a6ba3a00",
+  "vercel.deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "vercel.deployment_id": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "vercel.edge.region": "iad1",
+  "vercel.function.region": "dub1",
+  "vercel.ownerId": "team_REDACTED",
+  "vercel.projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "vercel.project_id": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "1792777631783499613227900000",
+  "message": "Deployment completed",
+  "timestamp": 1792777631783,
+  "type": "stdout",
+  "level": "info",
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "source": "build",
+  "buildId": "bld_d0w9ahj0k",
+  "host": "petclinic-agent-f1afzsrgt-brontoio.vercel.app",
+  "entrypoint": ".",
+  "environment": "production"
+}

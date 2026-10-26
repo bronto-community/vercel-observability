@@ -1,0 +1,30 @@
+{
+  "id": "dpl_9N9ig6nAVomDrAZcNMMGV7nPT8jh",
+  "name": "petclinic-agent",
+  "url": "petclinic-agent-d57mmogib-brontoio.vercel.app",
+  "target": null,
+  "source": "git",
+  "createdAt": 1792486773755,
+  "buildingAt": 1792486774723,
+  "ready": 1792486788067,
+  "readyState": "ERROR",
+  "readySubstate": null,
+  "errorCode": "BUILD_UTILS_SPAWN_1",
+  "errorMessage": "Command \"node ../../node_modules/next/dist/bin/next build\" exited with 1",
+  "regions": [
+    "iad1"
+  ],
+  "meta": {
+    "githubCommitAuthorName": "Severin Neumann",
+    "githubCommitMessage": "Lab: break the preview build on purpose\n\nAssisted-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "githubCommitOrg": "bronto-community",
+    "githubCommitRef": "lab/broken-build",
+    "githubCommitRepo": "petclinic-agent",
+    "githubCommitSha": "69eb1b5136b36ff753205719826d8d3897e5f900",
+    "githubOrg": "bronto-community",
+    "githubRepo": "petclinic-agent",
+    "githubCommitRepoId": "1426010849",
+    "githubCommitAuthorLogin": "svrnm",
+    "githubCommitVerification": "verified"
+  }
+}

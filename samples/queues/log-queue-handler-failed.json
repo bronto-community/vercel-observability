@@ -1,0 +1,35 @@
+{
+  "id": "55124784800179298830749422500000",
+  "message": "[workflow] Queue handler failed for message \"6-1M1hkJWbg0SuQKkbBWVG0KyxcbgrcMvS\" on delivery attempt 1; retrying in 1s: [TypeError: fetch failed] {\n  [cause]: Error: Queue request exceeded its 30000ms deadline\n      at #r (file:///var/task/_libs/eve.mjs:131253:19)\n      at Timeout.<anonymous> (file:///var/task/_libs/eve.mjs:131249:26)\n      at listOnTimeout (node:internal/timers:685:17)\n      at process.processTimers (node:internal/timers:618:7)\n}",
+  "timestamp": 1792988307494,
+  "type": "stderr",
+  "requestId": "lbz8k-1792988277427-3850d964a8b5",
+  "executionRegion": "dub1",
+  "level": "error",
+  "proxy": {
+    "timestamp": 1792988277427,
+    "method": "POST",
+    "host": "petclinic-agent-f76xcgxmv-brontoio.vercel.app",
+    "path": "/.well-known/workflow/v1/flow",
+    "scheme": "https",
+    "userAgent": [
+      "vercel-queue/v2beta"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "dub1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_7VSYuGrupeRR6x1ELnzygg6YbajE",
+  "source": "lambda",
+  "host": "petclinic-agent-f76xcgxmv-brontoio.vercel.app",
+  "path": "/.well-known/workflow/v1/flow",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "46d63cb3bdc9a5e4550409995a407410",
+  "spanId": "e91f11ef0aa90a55",
+  "invocationId": "01M5V6VRZW4GDCV3G9NS2FDKVW"
+}

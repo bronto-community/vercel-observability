@@ -1,0 +1,111 @@
+{
+  "runs": [
+    {
+      "id": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD",
+      "sessionId": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD",
+      "traceId": "776df6eb76802dec252056a55e1f4bfc",
+      "title": "Agent Session",
+      "isTitlePrivate": true,
+      "status": "waiting",
+      "framework": "eve",
+      "agentId": null,
+      "agentName": null,
+      "model": null,
+      "workflowName": null,
+      "deploymentId": null,
+      "environment": "production",
+      "trigger": {
+        "type": "unknown",
+        "label": "eve"
+      },
+      "provenance": {
+        "origin": "channel",
+        "channel": "eve",
+        "schedule": null
+      },
+      "createdAt": "2026-10-23T22:00:12.838000000Z",
+      "startedAt": "2026-10-23T22:00:11.672Z",
+      "completedAt": null,
+      "updatedAt": "2026-10-23T22:00:23.900000000Z",
+      "durationMs": null,
+      "turns": 2,
+      "subagents": null,
+      "usage": {
+        "inputTokens": 12,
+        "outputTokens": 638,
+        "cachedInputTokens": 26176,
+        "cacheCreationInputTokens": 2751,
+        "totalTokens": 29577,
+        "costUsd": 0.000925835
+      },
+      "lifecycleConfidence": "exact"
+    },
+    {
+      "id": "wrun_41M5NCC4ZM3GR5K49YP42BNPRZ",
+      "sessionId": "wrun_41M5NCC4ZM3GR5K49YP42BNPRZ",
+      "traceId": "a5dde410dce2378e72bad5eea7075482",
+      "title": "Agent Session",
+      "isTitlePrivate": true,
+      "status": "waiting",
+      "framework": "eve",
+      "agentId": null,
+      "agentName": null,
+      "model": null,
+      "workflowName": null,
+      "deploymentId": null,
+      "environment": "production",
+      "trigger": {
+        "type": "unknown",
+        "label": "eve"
+      },
+      "provenance": {
+        "origin": "channel",
+        "channel": "eve",
+        "schedule": null
+      },
+      "createdAt": "2026-10-23T21:58:49.882000000Z",
+      "startedAt": "2026-10-23T21:58:48.859Z",
+      "completedAt": null,
+      "updatedAt": "2026-10-23T21:58:49.942000000Z",
+      "durationMs": null,
+      "turns": 1,
+      "subagents": null,
+      "usage": null,
+      "lifecycleConfidence": "exact"
+    }
+  ],
+  "summary": {
+    "runs": 121,
+    "completed": 0,
+    "failed": 0,
+    "cancelled": 0,
+    "totalDurationMs": null,
+    "avgDurationMs": null,
+    "costUsd": null
+  },
+  "timeseries": [],
+  "tokensTimeseries": [],
+  "runsByTriggerLabels": [],
+  "runsByTrigger": [],
+  "triggerFilterOptions": [],
+  "timeseriesBucketSeconds": 60,
+  "pageInfo": {
+    "total": 121,
+    "page": 1,
+    "pageSize": 5,
+    "hasMore": true,
+    "nextOffsets": {
+      "workflow": 5,
+      "otel": 0,
+      "otelCursor": "eyJ2ZXJzaW9uIjoxLCJmaW5nZXJwcmludCI6IlhJZTZSRnNpQmFveS02eV9TdEtKRnpyWjdOWUdZYXBISzg5ZUlSUXJJWjAiLCJsYXN0QWN0aXZpdHlBdCI6IjIwMjYtMTAtMjNUMjE6NTU6NDcuODg2MDAwMDAwWiIsInNlc3Npb25JZCI6IndydW5fNDFNNU5DNktEWjNHUFc4WUNaR1Q1QkdOOVIifQ",
+      "otelRange": {
+        "from": 1792785600000,
+        "to": 1792796400000
+      }
+    }
+  },
+  "meta": {
+    "dataSource": "agent-hybrid",
+    "dataConfidence": "real"
+  }
+}

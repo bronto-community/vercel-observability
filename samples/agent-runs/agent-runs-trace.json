@@ -1,0 +1,131 @@
+{
+  "trace": {
+    "runId": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD",
+    "framework": "eve",
+    "metadata": {
+      "agentName": "petclinic-agent",
+      "conversationId": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD",
+      "schemaVersion": 4,
+      "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+      "environment": "production",
+      "model": "anthropic/claude-haiku-5.5",
+      "trigger": {
+        "type": "unknown",
+        "label": "eve"
+      }
+    },
+    "eve": {
+      "runId": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD",
+      "turns": [
+        {
+          "id": "turn_0",
+          "startedAt": "2026-10-23T22:00:12.838Z",
+          "completedAt": "2026-10-23T22:00:16.909Z",
+          "status": "completed",
+          "messages": [],
+          "timeline": [
+            {
+              "id": "turn_0-tool-toolu_01JdBGS5xFsNsNZzu2vsDDXZ",
+              "type": "tool-call",
+              "toolCallId": "toolu_01JdBGS5xFsNsNZzu2vsDDXZ",
+              "createdAt": "2026-10-23T22:00:14.251Z",
+              "order": 0
+            }
+          ],
+          "thinking": null,
+          "reasoning": null,
+          "toolCalls": [
+            {
+              "id": "toolu_01JdBGS5xFsNsNZzu2vsDDXZ",
+              "name": "find_owner",
+              "status": "completed",
+              "reason": null,
+              "startedAt": "2026-10-23T22:00:14.251Z",
+              "completedAt": "2026-10-23T22:00:14.275Z",
+              "childRunId": null,
+              "subagentName": null
+            }
+          ],
+          "usage": {
+            "inputTokens": 6,
+            "outputTokens": 394,
+            "cachedInputTokens": 10845,
+            "cacheCreationInputTokens": 2145,
+            "costUsd": 0.000574175,
+            "totalTokens": 13390
+          },
+          "costUsd": 0.000574175,
+          "metadata": {
+            "rootRunId": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD",
+            "invocationRole": "execution",
+            "principal": {
+              "current": {
+                "type": "runtime"
+              },
+              "initiator": {
+                "type": "runtime"
+              }
+            }
+          }
+        },
+        {
+          "id": "turn_1",
+          "startedAt": "2026-10-23T22:00:18.953Z",
+          "completedAt": "2026-10-23T22:00:23.900Z",
+          "status": "completed",
+          "messages": [],
+          "timeline": [
+            {
+              "id": "turn_1-tool-toolu_01M5EX8uJKRAHZJjZLvcop9n",
+              "type": "tool-call",
+              "toolCallId": "toolu_01M5EX8uJKRAHZJjZLvcop9n",
+              "createdAt": "2026-10-23T22:00:20.092Z",
+              "order": 0
+            }
+          ],
+          "thinking": null,
+          "reasoning": null,
+          "toolCalls": [
+            {
+              "id": "toolu_01M5EX8uJKRAHZJjZLvcop9n",
+              "name": "book_visit",
+              "status": "completed",
+              "reason": null,
+              "startedAt": "2026-10-23T22:00:20.092Z",
+              "completedAt": "2026-10-23T22:00:22.608Z",
+              "childRunId": null,
+              "subagentName": null
+            }
+          ],
+          "usage": {
+            "inputTokens": 6,
+            "outputTokens": 244,
+            "cachedInputTokens": 15331,
+            "cacheCreationInputTokens": 606,
+            "costUsd": 0.00035166,
+            "totalTokens": 16187
+          },
+          "costUsd": 0.00035166,
+          "metadata": {
+            "rootRunId": "wrun_41M5NCENVJ3GVQ3AKCDDEW3YZD",
+            "invocationRole": "execution",
+            "principal": {
+              "current": {
+                "type": "runtime"
+              },
+              "initiator": {
+                "type": "runtime"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "meta": {
+    "dataSource": "agent-otel",
+    "dataConfidence": "real",
+    "traceRevision": "agent-otel:776df6eb76802dec252056a55e1f4bfc,8f4dd49762ae87052acded4ce063c7cf",
+    "contentOmitted": false
+  }
+}

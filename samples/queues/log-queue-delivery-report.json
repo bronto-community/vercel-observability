@@ -1,0 +1,38 @@
+{
+  "id": "55124784800179292970567202000000",
+  "message": "START RequestId: 464b3a92-e7ab-4e73-a5de-d08f67057cfb\n[POST] /.well-known/workflow/v1/flow status=200\nEND RequestId: 464b3a92-e7ab-4e73-a5de-d08f67057cfb\nREPORT RequestId: 464b3a92-e7ab-4e73-a5de-d08f67057cfb Duration: 114 ms Billed Duration: 114 ms Memory Size: 2048 MB Max Memory Used: 336 MB",
+  "timestamp": 1792929705672,
+  "type": "stdout",
+  "requestId": "4s2zx-1792929705660-624cd2635884",
+  "executionRegion": "dub1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "timestamp": 1792929705660,
+    "method": "POST",
+    "host": "petclinic-agent-f2n83i7x4-brontoio.vercel.app",
+    "path": "/.well-known/workflow/v1/flow",
+    "statusCode": 200,
+    "scheme": "https",
+    "userAgent": [
+      "vercel-queue/v2beta"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "dub1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_FjmZXZZFn1mhcEnQTuVdsGkkr6Sv",
+  "source": "lambda",
+  "host": "petclinic-agent-f2n83i7x4-brontoio.vercel.app",
+  "path": "/.well-known/workflow/v1/flow",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "6adcf9920000000071026c2e36b8e59c",
+  "spanId": "cf0a2efed47b44ab",
+  "invocationId": "01M5SF0BP8BFTKS6P5PG8AEVXH",
+  "instanceId": "IMduleypw7dw"
+}

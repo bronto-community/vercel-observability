@@ -1,0 +1,37 @@
+{
+  "id": "60321266770179279277500681500000",
+  "message": "START RequestId: b308a56d-eda7-49e0-a79f-4e3ceaf70b37\n[GET] /vets status=200\nEND RequestId: b308a56d-eda7-49e0-a79f-4e3ceaf70b37\nREPORT RequestId: b308a56d-eda7-49e0-a79f-4e3ceaf70b37 Duration: 91 ms Billed Duration: 91 ms Memory Size: 2048 MB Max Memory Used: 293 MB",
+  "timestamp": 1792792775006,
+  "type": "stdout",
+  "requestId": "wgtvj-1792792774736-5ce17a3fb736",
+  "executionRegion": "dub1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "timestamp": 1792792774736,
+    "method": "GET",
+    "host": "petclinic-agent.vercel.app",
+    "path": "/vets",
+    "statusCode": 200,
+    "scheme": "https",
+    "userAgent": [
+      "petclinic-synthetic/1.0"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "dub1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "background_func",
+    "pathTypeVariant": "prerender"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "source": "lambda",
+  "host": "petclinic-agent.vercel.app",
+  "path": "/vets",
+  "environment": "production",
+  "branch": "main",
+  "invocationId": "01M5NCDJAYNKZTXQRC5MAFW9CR",
+  "instanceId": "G6VxUfyC3QPs"
+}

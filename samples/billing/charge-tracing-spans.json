@@ -1,0 +1,22 @@
+{
+  "ChargePeriodStart": "2026-10-25T07:00:00.000Z",
+  "ChargePeriodEnd": "2026-10-26T07:00:00.000Z",
+  "ChargeCategory": "Usage",
+  "BilledCost": 0.2443975,
+  "BillingCurrency": "USD",
+  "EffectiveCost": 0.2443975,
+  "ServiceName": "Tracing Spans",
+  "ServiceCategory": "Observability",
+  "ServiceProviderName": "Vercel",
+  "SkuId": "prod_01kzxtnq9we04rqapjxz993r99",
+  "ConsumedQuantity": 488795,
+  "ConsumedUnit": "Span Units",
+  "Tags": {
+    "ProjectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+    "ProjectName": "petclinic-agent"
+  },
+  "PricingCategory": "Other",
+  "PricingCurrency": "USD",
+  "PricingQuantity": 0.2443975,
+  "PricingUnit": "USD"
+}

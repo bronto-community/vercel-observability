@@ -1,0 +1,37 @@
+{
+  "id": "1792486827479713236670763257",
+  "message": "MITIGATION_DENY: You don't have the required permissions",
+  "timestamp": 1792486827479,
+  "requestId": "d6z46-1792486827473-8993fdd212ea",
+  "executionRegion": "fra1",
+  "statusCode": 403,
+  "level": "warning",
+  "proxy": {
+    "wafRule": "rule_rate_limit_new_chats_vbkYGF",
+    "path": "/eve/v1/session",
+    "method": "POST",
+    "scheme": "https",
+    "vercelId": "d6z46-1792486827473-8993fdd212ea",
+    "userAgent": [
+      "curl/8.7.1"
+    ],
+    "wafAction": "deny",
+    "errorCode": "MITIGATION_DENY",
+    "region": "fra1",
+    "timestamp": 1792486827473,
+    "host": "petclinic-agent.vercel.app",
+    "statusCode": 403,
+    "clientIp": "203.0.113.10"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_BUnY2YbSpnti6SrhEMUf4LcbbxU7",
+  "source": "firewall",
+  "host": "petclinic-agent.vercel.app",
+  "path": "/eve/v1/session",
+  "environment": "production",
+  "branch": "main",
+  "ja4Digest": "t13d4907h2_0d8feac7bc37_7395dae3b2f3",
+  "traceId": "d1f2356a1a66d93d02124d9d50659dbc",
+  "spanId": "3812ac0afff2ff6a"
+}

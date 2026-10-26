@@ -1,0 +1,19 @@
+{
+  "ChargePeriodStart": "2026-10-25T07:00:00.000Z",
+  "ChargePeriodEnd": "2026-10-26T07:00:00.000Z",
+  "ChargeCategory": "Usage",
+  "BilledCost": 0.6666666666666666,
+  "BillingCurrency": "USD",
+  "EffectiveCost": 0.6666666666666666,
+  "ServiceName": "Pro",
+  "ServiceCategory": "Subscription Licenses",
+  "ServiceProviderName": "Vercel",
+  "SkuId": "prod_01jvt9ny9pfk2rh63vymrjvpqr",
+  "ConsumedQuantity": 0,
+  "ConsumedUnit": null,
+  "Tags": {},
+  "PricingCategory": "Other",
+  "PricingCurrency": "USD",
+  "PricingQuantity": 0.6666666666666666,
+  "PricingUnit": "USD"
+}

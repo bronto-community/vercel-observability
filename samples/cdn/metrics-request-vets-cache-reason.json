@@ -1,0 +1,822 @@
+{
+  "query": {
+    "metric": "vercel.request.count",
+    "aggregation": "count",
+    "groupBy": [
+      "cacheResult",
+      "cacheHitLevel",
+      "cacheReason",
+      "pathTypeVariant"
+    ],
+    "filter": "route:/vets",
+    "startTime": "2026-10-23T00:00:00.000Z",
+    "endTime": "2026-10-24T00:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 604
+    },
+    {
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 602
+    },
+    {
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 102
+    },
+    {
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 8
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 29
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 29
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 25
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 26
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 7
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 26
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 26
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 7
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 26
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 26
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 8
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 26
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 26
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 7
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 29
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 29
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 28
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "regional",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "cacheResult": "HIT",
+      "cacheHitLevel": "global",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "cacheResult": "STALE",
+      "cacheHitLevel": "global",
+      "cacheReason": "stale_time",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "cacheResult": "PRERENDER",
+      "cacheHitLevel": "fallback",
+      "cacheReason": "",
+      "pathTypeVariant": "u",
+      "vercel_request_count_count": 0
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

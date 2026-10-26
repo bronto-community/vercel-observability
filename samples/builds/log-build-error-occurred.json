@@ -1,0 +1,15 @@
+{
+  "id": "1792486786588308593829200001",
+  "message": "> Build error occurred",
+  "timestamp": 1792486786588,
+  "type": "stderr",
+  "level": "info",
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_9N9ig6nAVomDrAZcNMMGV7nPT8jh",
+  "source": "build",
+  "buildId": "bld_njxx1uhki",
+  "host": "petclinic-agent-d57mmogib-brontoio.vercel.app",
+  "entrypoint": ".",
+  "environment": "preview"
+}

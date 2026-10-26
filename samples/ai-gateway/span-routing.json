@@ -1,0 +1,16 @@
+{
+  "service.name": "ai-gateway",
+  "service.namespace": "vercel",
+  "span.dropped_attributes_count": "0",
+  "span.duration_nano": "49000000",
+  "span.end_time_unix_nano": "1792792822906000000",
+  "span.flags": "0",
+  "span.kind": "SPAN_KIND_INTERNAL",
+  "span.name": "vercel.ai_gateway.routing",
+  "span.parent_span_id": "29702f870f51e5cd",
+  "span.span_id": "10b70ca096e7f302",
+  "span.start_time_unix_nano": "1792792822857000000",
+  "span.status_code": "STATUS_CODE_OK",
+  "span.trace_id": "bcdbfac90415e2eeb3948005a52d6170",
+  "vercel.ai_gateway.vmc.used": "false"
+}

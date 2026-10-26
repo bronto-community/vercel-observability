@@ -1,0 +1,35 @@
+{
+  "id": "40636645690179297055963768500000",
+  "message": "[workflow] events transport: rebuilding connection pool after 3 consecutive transport failures",
+  "timestamp": 1792970559637,
+  "type": "stderr",
+  "requestId": "5hk5z-1792970499615-fe2503b3083a",
+  "executionRegion": "dub1",
+  "level": "warning",
+  "proxy": {
+    "timestamp": 1792970499615,
+    "method": "POST",
+    "host": "petclinic-agent-f2n83i7x4-brontoio.vercel.app",
+    "path": "/.well-known/workflow/v1/flow",
+    "scheme": "https",
+    "userAgent": [
+      "vercel-queue/v2beta"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "dub1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_FjmZXZZFn1mhcEnQTuVdsGkkr6Sv",
+  "source": "lambda",
+  "host": "petclinic-agent-f2n83i7x4-brontoio.vercel.app",
+  "path": "/.well-known/workflow/v1/flow",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "a4a85a9131bbd5b791d48122cffa32e0",
+  "spanId": "972f805de1054b16",
+  "invocationId": "01M5TNX78E2EZ93RGX88RAESAS"
+}

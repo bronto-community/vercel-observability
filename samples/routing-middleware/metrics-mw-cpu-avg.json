@@ -1,0 +1,115 @@
+{
+  "query": {
+    "metric": "vercel.middleware_invocation.function_cpu_time_ms",
+    "aggregation": "avg",
+    "groupBy": [],
+    "startTime": "2026-10-23T00:00:00.000Z",
+    "endTime": "2026-10-24T00:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    }
+  },
+  "summary": [
+    {
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 65.89513015743361
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 27.07070707070707
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 38.08673469387755
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 55.98701298701299
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 40.54455445544554
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 36.73267326732673
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 45.380710659898476
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 43.31658291457286
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 44.851485148514854
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 42.01005025125628
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 40.495049504950494
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 38.70646766169154
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 37.41293532338308
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 40.05050505050505
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 174.22743055555554
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 152.64208909370203
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 20
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 102.93617021276596
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 194.46908602150535
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 22.266009852216747
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 26.11111111111111
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 22.01005025125628
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 63.61230329041488
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 53.924418604651166
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "vercel_middleware_invocation_function_cpu_time_ms_avg": 113.93067846607669
+    }
+  ]
+}

@@ -1,0 +1,1960 @@
+{
+  "query": {
+    "metric": "vercel.middleware_invocation.count",
+    "aggregation": "count",
+    "groupBy": [
+      "functionRegion",
+      "edgeNetworkRegion"
+    ],
+    "startTime": "2026-10-23T00:00:00.000Z",
+    "endTime": "2026-10-24T00:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 2721
+    },
+    {
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 1548
+    },
+    {
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 428
+    },
+    {
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 162
+    },
+    {
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 160
+    },
+    {
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 29
+    },
+    {
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 16
+    },
+    {
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 10
+    },
+    {
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 9
+    },
+    {
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 8
+    },
+    {
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 1
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 125
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 124
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 132
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 23
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 129
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 129
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 124
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 126
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 131
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 126
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 128
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 7
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 128
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 128
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 125
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 128
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 118
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 129
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 118
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 122
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 62
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 125
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 64
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 59
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 50
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 140
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 118
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 129
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 126
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 126
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 130
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 62
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 15
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 14
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 9
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 14
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 8
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "dub1",
+      "edgeNetworkRegion": "dub1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "iad1",
+      "edgeNetworkRegion": "iad1",
+      "vercel_middleware_invocation_count_count": 61
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "sfo1",
+      "edgeNetworkRegion": "sfo1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "fra1",
+      "edgeNetworkRegion": "fra1",
+      "vercel_middleware_invocation_count_count": 7
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "lhr1",
+      "edgeNetworkRegion": "lhr1",
+      "vercel_middleware_invocation_count_count": 22
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "pdx1",
+      "edgeNetworkRegion": "pdx1",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "bom1",
+      "edgeNetworkRegion": "bom1",
+      "vercel_middleware_invocation_count_count": 16
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "cdg1",
+      "edgeNetworkRegion": "cdg1",
+      "vercel_middleware_invocation_count_count": 10
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "arn1",
+      "edgeNetworkRegion": "arn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "syd1",
+      "edgeNetworkRegion": "syd1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "icn1",
+      "edgeNetworkRegion": "icn1",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "hkg1",
+      "edgeNetworkRegion": "hkg1",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionRegion": "sin1",
+      "edgeNetworkRegion": "sin1",
+      "vercel_middleware_invocation_count_count": 0
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

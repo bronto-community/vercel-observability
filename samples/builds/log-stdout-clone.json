@@ -1,0 +1,15 @@
+{
+  "id": "1792777593992356060844800000",
+  "message": "Cloning github.com/bronto-community/petclinic-agent (Branch: main, Commit: abd0ee3)",
+  "timestamp": 1792777593992,
+  "type": "stdout",
+  "level": "info",
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "source": "build",
+  "buildId": "bld_d0w9ahj0k",
+  "host": "petclinic-agent-f1afzsrgt-brontoio.vercel.app",
+  "entrypoint": ".",
+  "environment": "production"
+}

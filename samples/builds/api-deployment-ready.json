@@ -1,0 +1,30 @@
+{
+  "id": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "name": "petclinic-agent",
+  "url": "petclinic-agent-f1afzsrgt-brontoio.vercel.app",
+  "target": "production",
+  "source": "git",
+  "createdAt": 1792777593071,
+  "buildingAt": 1792777594152,
+  "ready": 1792777631594,
+  "readyState": "READY",
+  "readySubstate": "PROMOTED",
+  "errorCode": null,
+  "errorMessage": null,
+  "regions": [
+    "iad1"
+  ],
+  "meta": {
+    "githubCommitAuthorName": "Severin Neumann",
+    "githubCommitMessage": "Set the region per service again\n\nIn a project with services, a top-level `regions` doesn't reach the\nfunctions: they all ran in Vercel's default region (iad1), and every tool\ncall to PetClinic in eu-west-1 crossed the Atlantic and back. The region\ngoes back into each service's `functions`, and into eve's function\nconfigs, which ignore `functions`.\n\nAssisted-By: Claude Opus 5.5 <noreply@anthropic.com>",
+    "githubCommitOrg": "bronto-community",
+    "githubCommitRef": "main",
+    "githubCommitRepo": "petclinic-agent",
+    "githubCommitSha": "abd0ee3e7ecbe052d62c0b3656d6840c40371ae9",
+    "githubOrg": "bronto-community",
+    "githubRepo": "petclinic-agent",
+    "githubCommitRepoId": "1426010849",
+    "githubCommitAuthorLogin": "svrnm",
+    "githubCommitVerification": "unverified"
+  }
+}

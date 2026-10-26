@@ -1,0 +1,35 @@
+{
+  "id": "20087930120179279282392257000000",
+  "message": "{\"msg\":\"synthetic run\",\"free\":0,\"premium\":1,\"failed\":0,\"errors\":[]}",
+  "timestamp": 1792792823922,
+  "type": "stdout",
+  "requestId": "69lrq-1792792774197-ef34c5be74a1",
+  "executionRegion": "dub1",
+  "level": "info",
+  "proxy": {
+    "timestamp": 1792792774197,
+    "method": "GET",
+    "host": "petclinic-agent-f1afzsrgt-brontoio.vercel.app",
+    "path": "/api/synthetic",
+    "scheme": "https",
+    "userAgent": [
+      "vercel-cron/1.0"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "iad1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "source": "lambda",
+  "host": "petclinic-agent-f1afzsrgt-brontoio.vercel.app",
+  "path": "/api/synthetic",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "85bd2aaeaaaec285662fc110f8bd8223",
+  "spanId": "e2790809894d06a2",
+  "invocationId": "01M5NCDHMASD36QAQB5R308G6D"
+}

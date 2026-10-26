@@ -1,0 +1,35 @@
+{
+  "id": "01641874860179270980844270700000",
+  "message": "[workflow-sdk] Transient world error during replay; redelivering via queue instead of failing the run\n  StreamError\n  run    wrun_41M5JX7S7F3GNX8TB09MS25M3N \u00b7 workflowEntry (eve)\n  error  GET listEvents transport failure after 60002ms (UND_ERR_HEADERS_TIMEOUT)\n  deliveryAttempt 1",
+  "timestamp": 1792709808442,
+  "type": "stderr",
+  "requestId": "mbff4-1792709748034-be80928e7d9e",
+  "executionRegion": "dub1",
+  "level": "warning",
+  "proxy": {
+    "timestamp": 1792709748034,
+    "method": "POST",
+    "host": "petclinic-agent-ejezkkpzs-brontoio.vercel.app",
+    "path": "/.well-known/workflow/v1/flow",
+    "scheme": "https",
+    "userAgent": [
+      "vercel-queue/v2beta"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "dub1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_9LPTPG5JHWdEtDN1H6L7TAfttUNu",
+  "source": "lambda",
+  "host": "petclinic-agent-ejezkkpzs-brontoio.vercel.app",
+  "path": "/.well-known/workflow/v1/flow",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "a8b2179bdf7996e4719f8f847cded823",
+  "spanId": "86b0a4122a3891af",
+  "invocationId": "01M5JX7SAD758EGKBTFT10SHKK"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "drn_JrNk7k50Ae7qw1X9",
+  "name": "Pet Clinic AI Gateway Drain",
+  "status": "enabled",
+  "schemas": {
+    "ai_gateway": {
+      "version": "otelv1"
+    }
+  },
+  "projectIds": [
+    "prj_b3WTvq01Qtd6lK3zThoF2COD7prM"
+  ],
+  "sampling": [],
+  "delivery": {
+    "type": "otlphttp",
+    "endpoint": {
+      "traces": "<your endpoint>/v1/traces"
+    },
+    "encoding": "proto"
+  },
+  "source": {
+    "kind": "self-served"
+  }
+}

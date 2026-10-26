@@ -1,0 +1,67 @@
+{
+  "query": {
+    "metric": "vercel.ai_gateway.request.count",
+    "aggregation": "count",
+    "groupBy": [
+      "appName",
+      "isByok"
+    ],
+    "startTime": "2026-10-22T00:00:00.000Z",
+    "endTime": "2026-10-23T00:00:00.000Z",
+    "granularity": {
+      "days": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "appName": "petclinic-agent",
+      "isByok": "not-byok",
+      "vercel_ai_gateway_request_count_count": 447
+    },
+    {
+      "appName": "",
+      "isByok": "not-byok",
+      "vercel_ai_gateway_request_count_count": 77
+    },
+    {
+      "appName": "",
+      "isByok": "byok",
+      "vercel_ai_gateway_request_count_count": 13
+    },
+    {
+      "appName": "triage",
+      "isByok": "not-byok",
+      "vercel_ai_gateway_request_count_count": 5
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "appName": "petclinic-agent",
+      "isByok": "not-byok",
+      "vercel_ai_gateway_request_count_count": 447
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "appName": "",
+      "isByok": "not-byok",
+      "vercel_ai_gateway_request_count_count": 77
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "appName": "",
+      "isByok": "byok",
+      "vercel_ai_gateway_request_count_count": 13
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "appName": "triage",
+      "isByok": "not-byok",
+      "vercel_ai_gateway_request_count_count": 5
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

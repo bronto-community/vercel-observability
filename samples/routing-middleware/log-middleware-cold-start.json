@@ -1,0 +1,36 @@
+{
+  "id": "50404460940179279147150118900000",
+  "message": "START RequestId: aca823d2-031d-46ef-b4f2-cb46b641d7c9\n[GET] /_next/static/chunks/35dfe401045c5cda/script.js status=200\nEND RequestId: aca823d2-031d-46ef-b4f2-cb46b641d7c9\nREPORT RequestId: aca823d2-031d-46ef-b4f2-cb46b641d7c9 Duration: 896 ms Billed Duration: 896 ms Memory Size: 2048 MB Max Memory Used: 232 MB Init Duration: 368 ms",
+  "timestamp": 1792791471501,
+  "type": "stdout",
+  "requestId": "fsn9z-1792791471483-fb7440236d9c",
+  "executionRegion": "fra1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "timestamp": 1792791471483,
+    "method": "GET",
+    "host": "petclinic-agent.vercel.app",
+    "path": "/_next/static/chunks/35dfe401045c5cda/script.js",
+    "statusCode": 200,
+    "scheme": "https",
+    "userAgent": [
+      "Mozilla/5.0 (X11; Linux x86_64) Chrome/129"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "fra1",
+    "lambdaRegion": "fra1",
+    "vercelCache": "MISS",
+    "pathType": "middleware"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "source": "lambda",
+  "host": "petclinic-agent.vercel.app",
+  "path": "/services/web/_middleware",
+  "environment": "production",
+  "branch": "main",
+  "invocationId": "01M5NB5SCD3M25HBMDV7WRSGQC",
+  "instanceId": "Ni5SZCNdWWOl"
+}

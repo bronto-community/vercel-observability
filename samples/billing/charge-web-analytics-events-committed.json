@@ -1,0 +1,22 @@
+{
+  "ChargePeriodStart": "2026-10-20T07:00:00.000Z",
+  "ChargePeriodEnd": "2026-10-21T07:00:00.000Z",
+  "ChargeCategory": "Usage",
+  "BilledCost": 0,
+  "BillingCurrency": "USD",
+  "EffectiveCost": 0.14316645981308412,
+  "ServiceName": "Web Analytics Events",
+  "ServiceCategory": "Observability",
+  "ServiceProviderName": "Vercel",
+  "SkuId": "prod_01jvt9njkkecssvrevr3webmhg",
+  "ConsumedQuantity": 4772.215327102804,
+  "ConsumedUnit": "Events",
+  "Tags": {
+    "ProjectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+    "ProjectName": "petclinic-agent"
+  },
+  "PricingCategory": "Committed",
+  "PricingCurrency": "USD",
+  "PricingQuantity": 0.14316645981308412,
+  "PricingUnit": "USD"
+}

@@ -1,0 +1,21 @@
+{
+  "gen_ai.request.model": "google/gemini-3.8-flash",
+  "service.name": "ai-gateway",
+  "service.namespace": "vercel",
+  "span.dropped_attributes_count": "0",
+  "span.duration_nano": "0",
+  "span.end_time_unix_nano": "1792663667615000000",
+  "span.flags": "0",
+  "span.kind": "SPAN_KIND_INTERNAL",
+  "span.name": "vercel.ai_gateway.model_attempt google/gemini-3.8-flash",
+  "span.parent_span_id": "afb74910d04886e3",
+  "span.span_id": "1e480328daee8fc1",
+  "span.start_time_unix_nano": "1792663667615000000",
+  "span.status_code": "STATUS_CODE_OK",
+  "span.trace_id": "08f01a80ac678f6fc638d4191e3ab8f0",
+  "vercel.ai_gateway.model_attempt.index": "1",
+  "vercel.ai_gateway.model_attempt.is_last": "true",
+  "vercel.ai_gateway.model_attempt.provider_attempt_count": "1",
+  "vercel.ai_gateway.model_attempt.success": "true",
+  "vercel.ai_gateway.model_attempt.total": "2"
+}

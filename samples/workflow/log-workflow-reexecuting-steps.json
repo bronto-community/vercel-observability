@@ -1,0 +1,35 @@
+{
+  "id": "83450109860179277138890544100000",
+  "message": "[workflow-sdk] Re-executing inline steps owned by this queue message \u2014 a previous delivery crashed mid-body and this redelivery is recovering them\n  run    wrun_41M5MR0H9W3GGGG4SJXF8WDS2S\n  stepIds [\"step_01M5MR0H9WY6BFH00E85V2C5B8\"]",
+  "timestamp": 1792771388905,
+  "type": "stderr",
+  "requestId": "xkqzl-1792771376586-36b9a4851b8d",
+  "executionRegion": "iad1",
+  "level": "warning",
+  "proxy": {
+    "timestamp": 1792771376586,
+    "method": "POST",
+    "host": "petclinic-agent-78sdz426j-brontoio.vercel.app",
+    "path": "/.well-known/workflow/v1/flow",
+    "scheme": "https",
+    "userAgent": [
+      "vercel-queue/v2beta"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "dub1",
+    "lambdaRegion": "iad1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_C9mSYawLzCK9HtjqsaQiThuPM8FL",
+  "source": "lambda",
+  "host": "petclinic-agent-78sdz426j-brontoio.vercel.app",
+  "path": "/.well-known/workflow/v1/flow",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "c0484bc88cccdc81e60956ac8dc24761",
+  "spanId": "5aa8b10cae1bfeee",
+  "invocationId": "01M5MR0HGB5VBE1VP9QT6JC7SN"
+}

@@ -1,0 +1,85 @@
+{
+  "query": {
+    "metric": "vercel.ai_gateway.request.count",
+    "aggregation": "count",
+    "groupBy": [
+      "aiGatewayModelId",
+      "aiModel",
+      "aiProvider",
+      "environment"
+    ],
+    "startTime": "2026-10-22T00:00:00.000Z",
+    "endTime": "2026-10-23T00:00:00.000Z",
+    "granularity": {
+      "days": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "aiGatewayModelId": "anthropic:claude-haiku-5-5",
+      "aiModel": "anthropic/claude-haiku-5.5",
+      "aiProvider": "anthropic",
+      "environment": "production",
+      "vercel_ai_gateway_request_count_count": 525
+    },
+    {
+      "aiGatewayModelId": "anthropic:claude-haiku-5-5",
+      "aiModel": "anthropic/claude-haiku-5.5",
+      "aiProvider": "anthropic",
+      "environment": "development",
+      "vercel_ai_gateway_request_count_count": 13
+    },
+    {
+      "aiGatewayModelId": "google:gemini-3.8-flash",
+      "aiModel": "google/gemini-3.8-flash",
+      "aiProvider": "google",
+      "environment": "development",
+      "vercel_ai_gateway_request_count_count": 3
+    },
+    {
+      "aiGatewayModelId": "vertexAnthropic:claude-haiku-5-5",
+      "aiModel": "anthropic/claude-haiku-5.5",
+      "aiProvider": "vertex",
+      "environment": "development",
+      "vercel_ai_gateway_request_count_count": 1
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "aiGatewayModelId": "anthropic:claude-haiku-5-5",
+      "aiModel": "anthropic/claude-haiku-5.5",
+      "aiProvider": "anthropic",
+      "environment": "production",
+      "vercel_ai_gateway_request_count_count": 525
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "aiGatewayModelId": "anthropic:claude-haiku-5-5",
+      "aiModel": "anthropic/claude-haiku-5.5",
+      "aiProvider": "anthropic",
+      "environment": "development",
+      "vercel_ai_gateway_request_count_count": 13
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "aiGatewayModelId": "google:gemini-3.8-flash",
+      "aiModel": "google/gemini-3.8-flash",
+      "aiProvider": "google",
+      "environment": "development",
+      "vercel_ai_gateway_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "aiGatewayModelId": "vertexAnthropic:claude-haiku-5-5",
+      "aiModel": "anthropic/claude-haiku-5.5",
+      "aiProvider": "vertex",
+      "environment": "development",
+      "vercel_ai_gateway_request_count_count": 1
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "1792792654742549366466586540",
+  "timestamp": 1792792654742,
+  "requestId": "lcnbm-1792792654738-b278170fee2a",
+  "executionRegion": "iad1:dub1",
+  "statusCode": 307,
+  "level": "info",
+  "proxy": {
+    "region": "dub1",
+    "scheme": "https",
+    "timestamp": 1792792654738,
+    "host": "petclinic-agent.vercel.app",
+    "clientIp": "203.0.113.10",
+    "method": "GET",
+    "path": "/clinic",
+    "userAgent": [
+      "petclinic-synthetic/1.0"
+    ],
+    "vercelId": "lcnbm-1792792654738-b278170fee2a",
+    "statusCode": 307
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "source": "redirect",
+  "host": "petclinic-agent.vercel.app",
+  "destination": "/vets",
+  "path": "/clinic",
+  "environment": "production",
+  "branch": "main",
+  "ja4Digest": "t13d5213h1_b262b3658495_66863fb0a24c",
+  "traceId": "a20e295721f58bb32e9a37b0301cc514",
+  "spanId": "ba5a0068577ded89"
+}

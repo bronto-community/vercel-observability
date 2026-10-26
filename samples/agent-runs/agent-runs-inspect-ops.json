@@ -1,0 +1,46 @@
+{
+  "run": {
+    "id": "wrun_01M5N90KMAHT3CBMTT20ZBCXCT",
+    "traceId": "ecb860fcdf52af036519e6826cd5742a",
+    "title": "Agent Session",
+    "status": "waiting",
+    "framework": "eve",
+    "agentId": null,
+    "agentName": "clinic-ops",
+    "model": "anthropic/claude-haiku-5.5",
+    "workflowName": null,
+    "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+    "environment": "production",
+    "trigger": {
+      "type": "http",
+      "label": "HTTP"
+    },
+    "createdAt": "2026-10-23T21:00:08.350Z",
+    "startedAt": "2026-10-23T21:00:08.350Z",
+    "completedAt": null,
+    "updatedAt": "2026-10-23T21:00:17.472Z",
+    "durationMs": null,
+    "turns": 1,
+    "subagents": 0,
+    "usage": null,
+    "events": [],
+    "metadata": {
+      "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+      "teamId": "team_REDACTED",
+      "source": "agent-otel"
+    },
+    "runType": "session",
+    "rootRunId": "wrun_01M5N90KMAHT3CBMTT20ZBCXCT",
+    "navigationRootRunId": "wrun_01M5N90KMAHT3CBMTT20ZBCXCT"
+  },
+  "identity": {
+    "runType": "session",
+    "rootRunId": "wrun_01M5N90KMAHT3CBMTT20ZBCXCT",
+    "navigationRootRunId": "wrun_01M5N90KMAHT3CBMTT20ZBCXCT"
+  },
+  "meta": {
+    "dataSource": "agent-otel",
+    "dataConfidence": "real",
+    "activityRevision": "2026-10-23T21:00:15.711Z"
+  }
+}

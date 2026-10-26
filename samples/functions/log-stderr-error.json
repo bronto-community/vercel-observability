@@ -1,0 +1,35 @@
+{
+  "id": "61970999860179300354386929900000",
+  "message": "Visibility extension failed with client error for receipt handle s.B.1M1lDRvVYrg6xcGDYvi3kRc0qWH9bquA.BHio3996SaH (stopping retries): ul [MessageNotAvailableError]: Message B-1M1lDRvVYrg6xcGDYvi3kRc0qWH9bquA not available for processing: Message is not currently in-flight\n    at e.changeVisibility (file:///var/task/_libs/eve.mjs:138270:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async f (file:///var/task/_libs/eve.mjs:137008:5)",
+  "timestamp": 1793003543869,
+  "type": "stderr",
+  "requestId": "484kc-1793003483592-6af73da18aca",
+  "executionRegion": "dub1",
+  "level": "error",
+  "proxy": {
+    "timestamp": 1793003483592,
+    "method": "POST",
+    "host": "petclinic-agent-f2n83i7x4-brontoio.vercel.app",
+    "path": "/.well-known/workflow/v1/flow",
+    "scheme": "https",
+    "userAgent": [
+      "vercel-queue/v2beta"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "dub1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_FjmZXZZFn1mhcEnQTuVdsGkkr6Sv",
+  "source": "lambda",
+  "host": "petclinic-agent-f2n83i7x4-brontoio.vercel.app",
+  "path": "/.well-known/workflow/v1/flow",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "3d235971fa57890aae0e73a66d686b96",
+  "spanId": "d7813dc400a752fc",
+  "invocationId": "01M5VNBQ9NS0ESKJPH955Z9EKV"
+}

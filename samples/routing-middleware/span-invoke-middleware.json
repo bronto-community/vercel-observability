@@ -1,0 +1,20 @@
+{
+  "deployment.environment.name": "production",
+  "service.name": "vercel.serverless-runtime",
+  "span.dropped_attributes_count": "0",
+  "span.duration_nano": "12693634",
+  "span.end_time_unix_nano": "1792792774782857377",
+  "span.flags": "0",
+  "span.kind": "SPAN_KIND_SERVER",
+  "span.name": "Invoke Middleware",
+  "span.parent_span_id": "70ef7a6f5dbab1a2",
+  "span.span_id": "cfab6307ba8ec7cc",
+  "span.start_time_unix_nano": "1792792774770163743",
+  "span.status_code": "STATUS_CODE_UNSET",
+  "span.trace_id": "d7f7152d2e9e26bd0780e4eb67f19337",
+  "vercel.deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "vercel.deployment_id": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "vercel.ownerId": "team_REDACTED",
+  "vercel.projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "vercel.project_id": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM"
+}

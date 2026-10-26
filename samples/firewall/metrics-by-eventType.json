@@ -1,0 +1,240 @@
+{
+  "query": {
+    "metric": "vercel.firewall_action.count",
+    "aggregation": "count",
+    "groupBy": [
+      "eventType"
+    ],
+    "startTime": "2026-10-19T08:00:00.000Z",
+    "endTime": "2026-10-26T12:00:00.000Z",
+    "granularity": {
+      "hours": 4
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 299211
+    },
+    {
+      "eventType": "httpRequest",
+      "vercel_firewall_action_count_count": 75
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 1474
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 142
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3179
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 26914
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "eventType": "httpRequest",
+      "vercel_firewall_action_count_count": 75
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 30381
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 30650
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 29487
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 20037
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 15078
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 6725
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 5023
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 4905
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 4870
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 4599
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 6011
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 5427
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 5290
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 5210
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 5183
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 4981
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 6349
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 5477
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 5726
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 5700
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 4455
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3627
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 4613
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3897
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3866
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3748
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3334
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 4147
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 4012
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3747
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3743
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3732
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3213
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 4536
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 3749
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "eventType": "httpResponse",
+      "vercel_firewall_action_count_count": 1973
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

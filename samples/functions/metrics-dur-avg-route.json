@@ -1,0 +1,518 @@
+{
+  "query": {
+    "metric": "vercel.function_invocation.function_duration_ms",
+    "aggregation": "avg",
+    "groupBy": [
+      "route"
+    ],
+    "startTime": "2026-10-25T00:00:00.000Z",
+    "endTime": "2026-10-26T00:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 407.36672105970433
+    },
+    {
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 37.15694444444444
+    },
+    {
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 685.5763888888889
+    },
+    {
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1923.375
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 2111.180216802168
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 24.366666666666667
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 690.4166666666666
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 2060
+    },
+    {
+      "timestamp": "2026-10-25T01:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 634.7901069518716
+    },
+    {
+      "timestamp": "2026-10-25T01:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 51.71666666666667
+    },
+    {
+      "timestamp": "2026-10-25T01:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 789.6666666666666
+    },
+    {
+      "timestamp": "2026-10-25T01:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1806
+    },
+    {
+      "timestamp": "2026-10-25T02:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 1273.840271055179
+    },
+    {
+      "timestamp": "2026-10-25T02:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 31.116666666666667
+    },
+    {
+      "timestamp": "2026-10-25T02:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 785.3333333333334
+    },
+    {
+      "timestamp": "2026-10-25T02:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1804
+    },
+    {
+      "timestamp": "2026-10-25T03:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 293.5768942235559
+    },
+    {
+      "timestamp": "2026-10-25T03:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 46.9
+    },
+    {
+      "timestamp": "2026-10-25T03:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 824.75
+    },
+    {
+      "timestamp": "2026-10-25T03:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1947
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 276.99911582670205
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 24.466666666666665
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 419.8333333333333
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1955
+    },
+    {
+      "timestamp": "2026-10-25T05:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 390.8528389339513
+    },
+    {
+      "timestamp": "2026-10-25T05:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 46.71666666666667
+    },
+    {
+      "timestamp": "2026-10-25T05:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 525.1666666666666
+    },
+    {
+      "timestamp": "2026-10-25T05:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1907
+    },
+    {
+      "timestamp": "2026-10-25T06:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 641
+    },
+    {
+      "timestamp": "2026-10-25T06:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 33.15
+    },
+    {
+      "timestamp": "2026-10-25T06:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 564.4166666666666
+    },
+    {
+      "timestamp": "2026-10-25T06:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1664
+    },
+    {
+      "timestamp": "2026-10-25T07:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 204.23809523809524
+    },
+    {
+      "timestamp": "2026-10-25T07:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 43.86666666666667
+    },
+    {
+      "timestamp": "2026-10-25T07:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 781.75
+    },
+    {
+      "timestamp": "2026-10-25T07:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 3001
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 195.87557603686636
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 27.883333333333333
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 775.5833333333334
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1791
+    },
+    {
+      "timestamp": "2026-10-25T09:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 198.67323290845886
+    },
+    {
+      "timestamp": "2026-10-25T09:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 46.31666666666667
+    },
+    {
+      "timestamp": "2026-10-25T09:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 690.3333333333334
+    },
+    {
+      "timestamp": "2026-10-25T09:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1865
+    },
+    {
+      "timestamp": "2026-10-25T10:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 198.2636469221835
+    },
+    {
+      "timestamp": "2026-10-25T10:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 26.616666666666667
+    },
+    {
+      "timestamp": "2026-10-25T10:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 754.25
+    },
+    {
+      "timestamp": "2026-10-25T10:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 2138
+    },
+    {
+      "timestamp": "2026-10-25T11:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 218.00463499420627
+    },
+    {
+      "timestamp": "2026-10-25T11:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 54.3
+    },
+    {
+      "timestamp": "2026-10-25T11:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 579.9166666666666
+    },
+    {
+      "timestamp": "2026-10-25T11:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1828
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 252.57077100115075
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 26.266666666666666
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 930.9166666666666
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1841
+    },
+    {
+      "timestamp": "2026-10-25T13:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 223.28092485549132
+    },
+    {
+      "timestamp": "2026-10-25T13:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 49.28333333333333
+    },
+    {
+      "timestamp": "2026-10-25T13:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 698.9166666666666
+    },
+    {
+      "timestamp": "2026-10-25T13:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1688
+    },
+    {
+      "timestamp": "2026-10-25T14:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 264.5891203703704
+    },
+    {
+      "timestamp": "2026-10-25T14:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 23.883333333333333
+    },
+    {
+      "timestamp": "2026-10-25T14:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 658.5
+    },
+    {
+      "timestamp": "2026-10-25T14:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1826
+    },
+    {
+      "timestamp": "2026-10-25T15:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 200.79508196721312
+    },
+    {
+      "timestamp": "2026-10-25T15:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 46.6
+    },
+    {
+      "timestamp": "2026-10-25T15:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 900.8333333333334
+    },
+    {
+      "timestamp": "2026-10-25T15:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1981
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 196.91531322505801
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 45.95
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 573.6666666666666
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 2004
+    },
+    {
+      "timestamp": "2026-10-25T17:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 188.41471962616822
+    },
+    {
+      "timestamp": "2026-10-25T17:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 29.8
+    },
+    {
+      "timestamp": "2026-10-25T17:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 326.75
+    },
+    {
+      "timestamp": "2026-10-25T17:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1978
+    },
+    {
+      "timestamp": "2026-10-25T18:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 205.51041666666666
+    },
+    {
+      "timestamp": "2026-10-25T18:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 43.266666666666666
+    },
+    {
+      "timestamp": "2026-10-25T18:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 942.0833333333334
+    },
+    {
+      "timestamp": "2026-10-25T18:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 2010
+    },
+    {
+      "timestamp": "2026-10-25T19:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 190.30841121495328
+    },
+    {
+      "timestamp": "2026-10-25T19:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 27.283333333333335
+    },
+    {
+      "timestamp": "2026-10-25T19:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 558.75
+    },
+    {
+      "timestamp": "2026-10-25T19:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1888
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 316.1578947368421
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 44.93333333333333
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 815.25
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1853
+    },
+    {
+      "timestamp": "2026-10-25T21:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 174.4086471408647
+    },
+    {
+      "timestamp": "2026-10-25T21:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 23.716666666666665
+    },
+    {
+      "timestamp": "2026-10-25T21:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 295
+    },
+    {
+      "timestamp": "2026-10-25T21:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1774
+    },
+    {
+      "timestamp": "2026-10-25T22:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 210.32627118644066
+    },
+    {
+      "timestamp": "2026-10-25T22:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 26.55
+    },
+    {
+      "timestamp": "2026-10-25T22:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 937.1666666666666
+    },
+    {
+      "timestamp": "2026-10-25T22:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1785
+    },
+    {
+      "timestamp": "2026-10-25T23:00:00.000Z",
+      "route": "/.well-known/workflow/v1/flow",
+      "vercel_function_invocation_function_duration_ms_avg": 909.5448369565217
+    },
+    {
+      "timestamp": "2026-10-25T23:00:00.000Z",
+      "route": "/api/synthetic",
+      "vercel_function_invocation_function_duration_ms_avg": 46.81666666666667
+    },
+    {
+      "timestamp": "2026-10-25T23:00:00.000Z",
+      "route": "/",
+      "vercel_function_invocation_function_duration_ms_avg": 634.5833333333334
+    },
+    {
+      "timestamp": "2026-10-25T23:00:00.000Z",
+      "route": "/api/ops",
+      "vercel_function_invocation_function_duration_ms_avg": 1767
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

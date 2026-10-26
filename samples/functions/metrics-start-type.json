@@ -1,0 +1,64 @@
+{
+  "query": {
+    "metric": "vercel.function_invocation.count",
+    "aggregation": "count",
+    "groupBy": [
+      "functionStartType"
+    ],
+    "startTime": "2026-10-25T00:00:00.000Z",
+    "endTime": "2026-10-27T00:00:00.000Z",
+    "granularity": {
+      "days": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "functionStartType": "hot",
+      "vercel_function_invocation_count_count": 31939
+    },
+    {
+      "functionStartType": "cold",
+      "vercel_function_invocation_count_count": 460
+    },
+    {
+      "functionStartType": "prewarmed",
+      "vercel_function_invocation_count_count": 81
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_function_invocation_count_count": 22226
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_function_invocation_count_count": 306
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_function_invocation_count_count": 56
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_function_invocation_count_count": 9713
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_function_invocation_count_count": 154
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_function_invocation_count_count": 25
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

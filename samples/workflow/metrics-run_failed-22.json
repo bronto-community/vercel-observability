@@ -1,0 +1,20 @@
+{
+  "query": {
+    "metric": "vercel.workflow_operation.run_failed",
+    "aggregation": "count",
+    "groupBy": [
+      "workflowName"
+    ],
+    "startTime": "2026-10-22T00:00:00.000Z",
+    "endTime": "2026-10-23T00:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [],
+  "data": [],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

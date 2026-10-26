@@ -1,0 +1,394 @@
+{
+  "query": {
+    "metric": "vercel.middleware_invocation.count",
+    "aggregation": "count",
+    "groupBy": [
+      "functionStartType"
+    ],
+    "startTime": "2026-10-23T00:00:00.000Z",
+    "endTime": "2026-10-24T00:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 4547
+    },
+    {
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 429
+    },
+    {
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 119
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 193
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 184
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T01:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 203
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 21
+    },
+    {
+      "timestamp": "2026-10-23T02:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 187
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T03:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 189
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 181
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T05:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 184
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T06:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 188
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T07:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 185
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 187
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 13
+    },
+    {
+      "timestamp": "2026-10-23T09:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 187
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T10:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 187
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T11:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 184
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 232
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 69
+    },
+    {
+      "timestamp": "2026-10-23T13:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 18
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 248
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 56
+    },
+    {
+      "timestamp": "2026-10-23T14:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 16
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 196
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T15:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 221
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 29
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 11
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 235
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 68
+    },
+    {
+      "timestamp": "2026-10-23T17:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 17
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 200
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T18:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 193
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T19:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 197
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 211
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 21
+    },
+    {
+      "timestamp": "2026-10-23T21:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 81
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 8
+    },
+    {
+      "timestamp": "2026-10-23T22:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionStartType": "hot",
+      "vercel_middleware_invocation_count_count": 94
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionStartType": "cold",
+      "vercel_middleware_invocation_count_count": 21
+    },
+    {
+      "timestamp": "2026-10-23T23:00:00.000Z",
+      "functionStartType": "prewarmed",
+      "vercel_middleware_invocation_count_count": 3
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

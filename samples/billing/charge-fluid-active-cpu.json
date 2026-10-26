@@ -1,0 +1,24 @@
+{
+  "ChargePeriodStart": "2026-10-25T07:00:00.000Z",
+  "ChargePeriodEnd": "2026-10-26T07:00:00.000Z",
+  "ChargeCategory": "Usage",
+  "BilledCost": 0.07496981333333333,
+  "BillingCurrency": "USD",
+  "EffectiveCost": 0.07496981333333333,
+  "ServiceName": "Fluid Active CPU",
+  "ServiceCategory": "Vercel Functions",
+  "ServiceProviderName": "Vercel",
+  "SkuId": "prod_01jwgvr9tbe49a6cnf36h0ck42",
+  "ConsumedQuantity": 0.4462488889,
+  "ConsumedUnit": "hour",
+  "RegionId": "dub1",
+  "RegionName": "Dublin, Ireland",
+  "Tags": {
+    "ProjectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+    "ProjectName": "petclinic-agent"
+  },
+  "PricingCategory": "Other",
+  "PricingCurrency": "USD",
+  "PricingQuantity": 0.07496981333333333,
+  "PricingUnit": "USD"
+}

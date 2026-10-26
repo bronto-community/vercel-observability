@@ -1,0 +1,22 @@
+{
+  "ChargePeriodStart": "2026-10-25T07:00:00.000Z",
+  "ChargePeriodEnd": "2026-10-26T07:00:00.000Z",
+  "ChargeCategory": "Usage",
+  "BilledCost": 0.5212357072673286,
+  "BillingCurrency": "USD",
+  "EffectiveCost": 0.5212357072673286,
+  "ServiceName": "Drains Volume",
+  "ServiceCategory": "Observability",
+  "ServiceProviderName": "Vercel",
+  "SkuId": "prod_01jvt9pkqbecssvtz6z30jsjwf",
+  "ConsumedQuantity": 1.0424714145346572,
+  "ConsumedUnit": "gigabyte",
+  "Tags": {
+    "ProjectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+    "ProjectName": "petclinic-agent"
+  },
+  "PricingCategory": "Other",
+  "PricingCurrency": "USD",
+  "PricingQuantity": 0.5212357072673286,
+  "PricingUnit": "USD"
+}
