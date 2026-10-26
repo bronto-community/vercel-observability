@@ -1,0 +1,38 @@
+{
+  "id": "99117240860179249138530661300000",
+  "message": "START RequestId: 00000004\n[GET] /config.yml status=200\nEND RequestId: 00000004\nREPORT RequestId: 00000004 Duration: 19 ms Billed Duration: 19 ms Memory Size: 2048 MB Max Memory Used: 259 MB",
+  "timestamp": 1792491385306,
+  "type": "stdout",
+  "requestId": "22c6m-1792491385295-5b9ac35549b4",
+  "executionRegion": "lhr1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "timestamp": 1792491385295,
+    "method": "GET",
+    "host": "petclinic-agent.vercel.app",
+    "path": "/config.yml",
+    "statusCode": 200,
+    "scheme": "https",
+    "userAgent": [
+      "Mozilla/5.0 (compatible; MistralBot/1.0; +https://mistral.ai)"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "lhr1",
+    "lambdaRegion": "lhr1",
+    "vercelCache": "MISS",
+    "pathType": "middleware"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_7VSYuGrupeRR6x1ELnzygg6YbajE",
+  "source": "lambda",
+  "host": "petclinic-agent.vercel.app",
+  "path": "/services/web/_middleware",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "dc1bc82fae6732d71db509df54ed96e0",
+  "spanId": "85dceedcb1851766",
+  "invocationId": "01M5CCZW9FHSW7HWKS5VXGYCQ5",
+  "instanceId": "B5xJ3xQsC1FV"
+}

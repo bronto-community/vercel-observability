@@ -1,0 +1,24 @@
+[
+  {
+    "id": "account_hook_FtW3PwGbKclpkVxBtaVI2XuM",
+    "events": [
+      "deployment.created",
+      "deployment.succeeded",
+      "deployment.error",
+      "deployment.canceled",
+      "deployment.promoted"
+    ],
+    "projectIds": [
+      "prj_b3WTvq01Qtd6lK3zThoF2COD7prM"
+    ]
+  },
+  {
+    "id": "account_hook_UfriRE12qfpShd9mmMY4k2fP",
+    "events": [
+      "deployment.succeeded"
+    ],
+    "projectIds": [
+      "prj_OTHER_10"
+    ]
+  }
+]

@@ -1,0 +1,5290 @@
+{
+  "query": {
+    "metric": "vercel.ai_traffic.crawler.count",
+    "aggregation": "count",
+    "groupBy": [
+      "botName",
+      "requestPath",
+      "httpStatus",
+      "pathType"
+    ],
+    "startTime": "2026-10-19T12:00:00.000Z",
+    "endTime": "2026-10-26T16:00:00.000Z",
+    "granularity": {
+      "hours": 4
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 9
+    },
+    {
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 7
+    },
+    {
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 7
+    },
+    {
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 7
+    },
+    {
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 3
+    },
+    {
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 2
+    },
+    {
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 2
+    },
+    {
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 2
+    },
+    {
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 2
+    },
+    {
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 2
+    },
+    {
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/robots.txt",
+      "httpStatus": "404",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap-index.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "gptbot",
+      "requestPath": "/sitemap.xml",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/101gccj00pzwt.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/claude-platform/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "applebot",
+      "requestPath": "/_next/static/immutable/chunks/0a57d4z4eyoan.js",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "shapbot",
+      "requestPath": "/episodes/codex-cli",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/ansible/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/apollo-router/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/codex-cli/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/docker-buildx/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "botName": "amazonbot",
+      "requestPath": "/episodes/jenkins/",
+      "httpStatus": "200",
+      "pathType": "static",
+      "vercel_ai_traffic_crawler_count_count": null
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

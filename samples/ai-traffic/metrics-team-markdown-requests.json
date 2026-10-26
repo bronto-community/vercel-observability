@@ -1,0 +1,23 @@
+{
+  "query": {
+    "metric": "vercel.ai_traffic.markdown_requests.count",
+    "aggregation": "count",
+    "groupBy": [
+      "botName",
+      "requestPath",
+      "httpStatus",
+      "pathType"
+    ],
+    "startTime": "2026-10-19T12:00:00.000Z",
+    "endTime": "2026-10-26T16:00:00.000Z",
+    "granularity": {
+      "hours": 4
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [],
+  "data": [],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

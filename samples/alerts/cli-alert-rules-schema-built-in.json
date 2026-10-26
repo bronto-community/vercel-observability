@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 3,
+  "notificationDiscovery": {
+    "availableWebhooks": {
+      "method": "GET",
+      "path": "/v1/webhooks?teamId={teamId}",
+      "description": "Returns webhooks configured for the team. Only account-owned webhooks subscribed to alerts.triggered can be linked."
+    },
+    "availableSlackChannels": {
+      "method": "GET",
+      "path": "/alerts/v3/alert-rules/notifications/discover-slack-channels?teamId={teamId}",
+      "description": "Returns reusable Slack channels. By default, only channels subscribed to alert events are included; set the includeNonAlertChannels query parameter to true to include other channels."
+    }
+  },
+  "ruleTypes": [
+    {
+      "type": "built-in",
+      "description": "Pre-defined Vercel alert detectors.",
+      "create": {
+        "jsonSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "built-in",
+              "description": "Create a built-in alert rule."
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "description": "Human-readable alert rule name."
+            },
+            "ruleScope": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "all",
+                      "description": "Apply the rule to every project in the team. Project-restricted tokens cannot use this scope."
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "include",
+                      "description": "Apply the rule only to the listed projects."
+                    },
+                    "projectIds": {
+                      "minItems": 1,
+                      "maxItems": 100,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "description": "Unique IDs of projects included in this rule.",
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "projectIds"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "exclude",
+                      "description": "Apply the rule to every team project except the listed projects. Project-restricted tokens cannot use this scope."
+                    },
+                    "projectIds": {
+                      "minItems": 1,
+                      "maxItems": 100,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "description": "Unique IDs of projects excluded from this rule.",
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "projectIds"
+                  ],
+                  "additionalProperties": false
+                }
+              ],
+              "description": "Projects affected by this built-in rule."
+            },
+            "triggers": {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "const": "selected",
+                  "description": "Enable only the trigger types listed in items."
+                },
+                "items": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "const": "usage_anomaly",
+                            "description": "Trigger on a usage anomaly."
+                          },
+                          "filter": {
+                            "description": "Optional KQL filter for usage anomalies. Accepts only the metrics field with values fluid_cpu_duration, fluid_duration, fast_data_transfer, edge_requests, or function_invocations, using equality or inequality combined with AND, OR, and NOT. Example: metrics:(edge_requests OR function_invocations).",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 2048
+                          }
+                        },
+                        "required": [
+                          "type"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "const": "error_anomaly",
+                            "description": "Trigger on an error anomaly."
+                          },
+                          "filter": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 2048,
+                            "description": "Required KQL filter for error anomalies. Accepts statusGroup (values 4xx or 5xx; must be included) and route (supports wildcards and regexes), using equality or inequality combined with AND, OR, and NOT. Example: statusGroup:5xx AND route:/api/*."
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "filter"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "description": "Unique built-in triggers to enable. At least one item is required when creating or updating a rule."
+                }
+              },
+              "required": [
+                "mode",
+                "items"
+              ],
+              "additionalProperties": false,
+              "description": "Built-in trigger types enabled for this rule."
+            },
+            "matchMinimumSeverityLevel": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "description": "Minimum severity to match: low, medium, or high. The rule also matches every higher severity, including Critical."
+            },
+            "tags": {
+              "description": "Optional unique metadata tags for this rule. Provide at most 10 non-empty tags of up to 256 characters each.",
+              "maxItems": 10,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256
+              }
+            },
+            "notificationSettings": {
+              "default": {
+                "enableTeamOwnerNotifications": true
+              },
+              "description": "Notification delivery settings for this rule.",
+              "type": "object",
+              "properties": {
+                "enableTeamOwnerNotifications": {
+                  "type": "boolean",
+                  "description": "Whether team owners receive notifications for this rule."
+                },
+                "incidentIoRoutingKey": {
+                  "description": "Optional incident.io routing key included in this rule's webhook payloads. It has no effect unless an incident.io webhook subscribed to alerts.triggered is configured.",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                },
+                "vercelNotificationsMinimumSeverityLevel": {
+                  "description": "Optional minimum severity for Vercel email, in-app, and push notifications. When omitted, the rule's minimum severity applies.",
+                  "type": "string",
+                  "const": "critical"
+                }
+              },
+              "required": [
+                "enableTeamOwnerNotifications"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "name",
+            "ruleScope",
+            "triggers",
+            "matchMinimumSeverityLevel"
+          ],
+          "additionalProperties": false
+        },
+        "examples": [
+          {
+            "name": "Create an error anomaly rule for every project",
+            "body": {
+              "type": "built-in",
+              "name": "Production server errors",
+              "ruleScope": {
+                "type": "all"
+              },
+              "triggers": {
+                "mode": "selected",
+                "items": [
+                  {
+                    "type": "error_anomaly",
+                    "filter": "statusGroup:5xx AND route:/api/*"
+                  }
+                ]
+              },
+              "matchMinimumSeverityLevel": "high"
+            }
+          }
+        ]
+      },
+      "update": {
+        "jsonSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "type": {
+              "description": "Optional immutable rule type. When omitted, the type is inferred from the stored rule.",
+              "type": "string",
+              "const": "built-in"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "description": "Human-readable alert rule name."
+            },
+            "ruleScope": {
+              "description": "Projects affected by this built-in rule.",
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "all",
+                      "description": "Apply the rule to every project in the team. Project-restricted tokens cannot use this scope."
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "include",
+                      "description": "Apply the rule only to the listed projects."
+                    },
+                    "projectIds": {
+                      "minItems": 1,
+                      "maxItems": 100,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "description": "Unique IDs of projects included in this rule.",
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "projectIds"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "exclude",
+                      "description": "Apply the rule to every team project except the listed projects. Project-restricted tokens cannot use this scope."
+                    },
+                    "projectIds": {
+                      "minItems": 1,
+                      "maxItems": 100,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "description": "Unique IDs of projects excluded from this rule.",
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "projectIds"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "triggers": {
+              "description": "Built-in trigger types enabled for this rule.",
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "const": "selected",
+                  "description": "Enable only the trigger types listed in items."
+                },
+                "items": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "const": "usage_anomaly",
+                            "description": "Trigger on a usage anomaly."
+                          },
+                          "filter": {
+                            "description": "Optional KQL filter for usage anomalies. Accepts only the metrics field with values fluid_cpu_duration, fluid_duration, fast_data_transfer, edge_requests, or function_invocations, using equality or inequality combined with AND, OR, and NOT. Example: metrics:(edge_requests OR function_invocations).",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 2048
+                          }
+                        },
+                        "required": [
+                          "type"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "const": "error_anomaly",
+                            "description": "Trigger on an error anomaly."
+                          },
+                          "filter": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 2048,
+                            "description": "Required KQL filter for error anomalies. Accepts statusGroup (values 4xx or 5xx; must be included) and route (supports wildcards and regexes), using equality or inequality combined with AND, OR, and NOT. Example: statusGroup:5xx AND route:/api/*."
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "filter"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "description": "Unique built-in triggers to enable. At least one item is required when creating or updating a rule."
+                }
+              },
+              "required": [
+                "mode",
+                "items"
+              ],
+              "additionalProperties": false
+            },
+            "matchMinimumSeverityLevel": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "description": "Minimum severity to match: low, medium, or high. The rule also matches every higher severity, including Critical."
+            },
+            "tags": {
+              "description": "Optional unique metadata tags for this rule. Provide at most 10 non-empty tags of up to 256 characters each, or null to clear them.",
+              "anyOf": [
+                {
+                  "maxItems": 10,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "notificationSettings": {
+              "description": "Notification delivery settings for this rule.",
+              "type": "object",
+              "properties": {
+                "enableTeamOwnerNotifications": {
+                  "type": "boolean",
+                  "description": "Whether team owners receive notifications for this rule."
+                },
+                "incidentIoRoutingKey": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 256
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "vercelNotificationsMinimumSeverityLevel": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "const": "critical"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "examples": [
+          {
+            "name": "Update metadata and minimum severity without repeating the rule type",
+            "body": {
+              "name": "High-priority production errors",
+              "matchMinimumSeverityLevel": "high"
+            }
+          },
+          {
+            "name": "Update notification delivery for a built-in or default rule",
+            "body": {
+              "notificationSettings": {
+                "enableTeamOwnerNotifications": true,
+                "incidentIoRoutingKey": "routing-key"
+              }
+            }
+          }
+        ]
+      },
+      "constraints": [
+        {
+          "code": "immutable_type",
+          "kind": "request",
+          "appliesTo": [
+            "update"
+          ],
+          "paths": [
+            "type"
+          ],
+          "description": "The type is immutable. It may be omitted on update and is then inferred from the stored rule."
+        },
+        {
+          "code": "selected_triggers_non_empty_unique",
+          "kind": "request",
+          "appliesTo": [
+            "create",
+            "update"
+          ],
+          "paths": [
+            "triggers.mode",
+            "triggers.items"
+          ],
+          "description": "Built-in triggers must use selected mode with at least one item, and each trigger type may appear only once."
+        },
+        {
+          "code": "usage_anomaly_filter",
+          "kind": "request",
+          "appliesTo": [
+            "create",
+            "update"
+          ],
+          "paths": [
+            "triggers.items.*.type",
+            "triggers.items.*.filter"
+          ],
+          "description": "A usage anomaly accepts an optional filter containing only the metrics field. Its value must use fluid_cpu_duration, fluid_duration, fast_data_transfer, edge_requests, or function_invocations, combined with AND, OR, or NOT."
+        },
+        {
+          "code": "error_anomaly_filter",
+          "kind": "request",
+          "appliesTo": [
+            "create",
+            "update"
+          ],
+          "paths": [
+            "triggers.items.*.type",
+            "triggers.items.*.filter"
+          ],
+          "description": "Error anomalies require a filter containing statusGroup:4xx or statusGroup:5xx. The optional route field supports wildcards and regular expressions. Combine conditions with AND, OR, or NOT."
+        },
+        {
+          "code": "non_empty_patch",
+          "kind": "request",
+          "appliesTo": [
+            "update"
+          ],
+          "paths": [
+            "$"
+          ],
+          "description": "An update must include at least one mutable field in addition to or instead of type."
+        },
+        {
+          "code": "default_rule_notification_only",
+          "kind": "resource-state",
+          "appliesTo": [
+            "update"
+          ],
+          "paths": [
+            "isDefault",
+            "notificationSettings"
+          ],
+          "description": "The team default rule accepts notificationSettings updates only. Its name, scope, triggers, and minimum severity remain immutable."
+        }
+      ]
+    }
+  ]
+}

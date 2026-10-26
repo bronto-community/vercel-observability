@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "type": "built-in",
+      "name": "Default Alert Rule",
+      "ruleScope": {
+        "type": "all"
+      },
+      "triggers": {
+        "mode": "all"
+      },
+      "matchMinimumSeverityLevel": "high",
+      "notificationSettings": {
+        "enableTeamOwnerNotifications": true
+      },
+      "id": "ar_default",
+      "isDefault": true
+    }
+  ]
+}

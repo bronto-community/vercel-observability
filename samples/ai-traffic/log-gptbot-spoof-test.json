@@ -1,0 +1,39 @@
+{
+  "id": "10824107320179302711965419100000",
+  "message": "START RequestId: 7d9be396-73c2-4a16-af31-6dc300d92765\n[GET] /?catalog-test=gptbot-spoof status=200\nEND RequestId: 7d9be396-73c2-4a16-af31-6dc300d92765\nREPORT RequestId: 7d9be396-73c2-4a16-af31-6dc300d92765 Duration: 1480 ms Billed Duration: 1480 ms Memory Size: 2048 MB Max Memory Used: 289 MB Init Duration: 441 ms",
+  "timestamp": 1793027119654,
+  "type": "stdout",
+  "requestId": "vv7c6-1793027118583-3e633d57263e",
+  "executionRegion": "dub1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "timestamp": 1793027118583,
+    "method": "GET",
+    "host": "petclinic-agent.vercel.app",
+    "path": "/?catalog-test=gptbot-spoof",
+    "statusCode": 200,
+    "scheme": "https",
+    "userAgent": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.3; +https://openai.com/gptbot)"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "fra1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func",
+    "pathTypeVariant": "lambda"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP",
+  "source": "lambda",
+  "host": "petclinic-agent.vercel.app",
+  "path": "/",
+  "environment": "production",
+  "branch": "main",
+  "traceId": "9eab2563a5918ecc1d78a3300c018105",
+  "spanId": "7eca74f6a45e8cef",
+  "invocationId": "01M5WBX6H6KRP405RH2XGPD47M",
+  "instanceId": "HT4G2cJHyj5D"
+}

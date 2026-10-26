@@ -38,9 +38,9 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | Flags | | | | ✓ | WH, AD | Needs test project |
 | Speed Insights | | ✓ | | | SID | Blocked: Speed Insights drain not created yet; no visits recorded since 2026-10-23 |
 | [Web Analytics](emitters/web-analytics.md) | | ✓ | | Page views, custom events | AD | **Done** 2026-10-26 |
-| AI traffic (crawlers, assistants) | | ✓ (Plus) | | | — | To do (Plus now enabled) |
+| [AI traffic (crawlers, assistants)](emitters/ai-traffic.md) | | ✓ (Plus) | | | — | **Done** 2026-10-26 (no recognized AI bot on the lab project yet) |
 | Custom Metrics | | ✓ | | | — | Needs test project (Plus now enabled) |
-| Alerts | | | | ✓ | WH | To do (Plus now enabled; needs an alert to fire) |
+| [Alerts](emitters/alerts.md) | | | | ✓ | WH, API | **Done** 2026-10-26 (no alert fired yet; first possible 2026-10-27) |
 | Vercel Connect | | | | ✓ | Drain (`connect`) | Needs test project |
 | Audit Logs | ✓ | | | | Drain (`audit_log`) | Blocked: Enterprise only |
 | [Billing and usage](emitters/billing.md) | | | | FOCUS cost records | API | **Done** 2026-10-26 (no backend queries yet: needs a forwarder) |

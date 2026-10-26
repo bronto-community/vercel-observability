@@ -1,0 +1,35 @@
+{
+  "id": "1792491384753844723339898581",
+  "timestamp": 1792491384753,
+  "requestId": "fx6r2-1792491384729-7135c7f3891d",
+  "executionRegion": "lhr1",
+  "level": "warning",
+  "proxy": {
+    "path": "/status",
+    "timestamp": 1792491384729,
+    "cacheId": "-",
+    "statusCode": 404,
+    "pathType": "STATIC",
+    "method": "GET",
+    "vercelId": "fx6r2-1792491384729-7135c7f3891d",
+    "host": "petclinic-agent.vercel.app",
+    "region": "lhr1",
+    "userAgent": [
+      "Mozilla/5.0 (compatible; MistralBot/1.0; +https://mistral.ai)"
+    ],
+    "clientIp": "203.0.113.10",
+    "scheme": "https",
+    "vercelCache": "HIT"
+  },
+  "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+  "projectName": "petclinic-agent",
+  "deploymentId": "dpl_7VSYuGrupeRR6x1ELnzygg6YbajE",
+  "source": "static",
+  "host": "petclinic-agent.vercel.app",
+  "path": "404",
+  "environment": "production",
+  "branch": "main",
+  "ja4Digest": "t13d3112h1_e8f1e7e78f70_b26ce05bbdd6",
+  "traceId": "6bf4e5f11a9982491ff947ff1ff7081e",
+  "spanId": "b947891582f6e23a"
+}

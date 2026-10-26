@@ -1,0 +1,288 @@
+{
+  "query": {
+    "metric": "vercel.request.count",
+    "aggregation": "count",
+    "groupBy": [
+      "botName",
+      "botCategory"
+    ],
+    "startTime": "2026-10-19T00:00:00.000Z",
+    "endTime": "2026-10-27T00:00:00.000Z",
+    "granularity": {
+      "days": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "botName": "",
+      "botCategory": "unknown",
+      "vercel_request_count_count": 239066
+    },
+    {
+      "botName": "",
+      "botCategory": "",
+      "vercel_request_count_count": 64596
+    },
+    {
+      "botName": "checkly",
+      "botCategory": "monitor",
+      "vercel_request_count_count": 1152
+    },
+    {
+      "botName": "googleother",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 34
+    },
+    {
+      "botName": "googlebot",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 4
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-19T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "unknown",
+      "vercel_request_count_count": 785
+    },
+    {
+      "timestamp": "2026-10-19T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "",
+      "vercel_request_count_count": 832
+    },
+    {
+      "timestamp": "2026-10-19T00:00:00.000Z",
+      "botName": "checkly",
+      "botCategory": "monitor",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T00:00:00.000Z",
+      "botName": "googleother",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-19T00:00:00.000Z",
+      "botName": "googlebot",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "unknown",
+      "vercel_request_count_count": 63708
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "",
+      "vercel_request_count_count": 57907
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "checkly",
+      "botCategory": "monitor",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "googleother",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "botName": "googlebot",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "unknown",
+      "vercel_request_count_count": 51086
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "",
+      "vercel_request_count_count": 5662
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "checkly",
+      "botCategory": "monitor",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "googleother",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "botName": "googlebot",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "unknown",
+      "vercel_request_count_count": 31408
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "",
+      "vercel_request_count_count": 187
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "checkly",
+      "botCategory": "monitor",
+      "vercel_request_count_count": 168
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "googleother",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "botName": "googlebot",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "unknown",
+      "vercel_request_count_count": 32372
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "",
+      "vercel_request_count_count": 8
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "checkly",
+      "botCategory": "monitor",
+      "vercel_request_count_count": 288
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "googleother",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 27
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "botName": "googlebot",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "unknown",
+      "vercel_request_count_count": 22802
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "checkly",
+      "botCategory": "monitor",
+      "vercel_request_count_count": 288
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "googleother",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "botName": "googlebot",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "unknown",
+      "vercel_request_count_count": 22299
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "",
+      "vercel_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "checkly",
+      "botCategory": "monitor",
+      "vercel_request_count_count": 288
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "googleother",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "botName": "googlebot",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "unknown",
+      "vercel_request_count_count": 14606
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "",
+      "botCategory": "",
+      "vercel_request_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "checkly",
+      "botCategory": "monitor",
+      "vercel_request_count_count": 120
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "googleother",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": null
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "botName": "googlebot",
+      "botCategory": "search_engine_crawler",
+      "vercel_request_count_count": null
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}
