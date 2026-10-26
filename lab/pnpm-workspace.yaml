@@ -1,0 +1,4 @@
+minimumReleaseAgeExclude:
+  - '@flags-sdk/vercel@1.5.3'
+  - '@vercel/flags-core@1.10.2'
+  - flags@4.4.0
