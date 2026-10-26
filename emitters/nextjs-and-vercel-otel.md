@@ -155,7 +155,7 @@ Queries against the lab's last 7 days, run 2026-10-26:
 
 ## Gotchas
 
-1. **Two exporters from one call.** `registerOTel()` exports to Vercel and, if `OTEL_EXPORTER_OTLP_ENDPOINT` is set anywhere in the project, to that endpoint too. With a trace drain, that's every app span twice (Observed: 8,623 versus 8,617 on 2026-10-25).
+1. **Two exporters from one call.** `registerOTel()` always exports to Vercel. Its automatic OTLP exporter is added as well: to `OTEL_EXPORTER_OTLP_ENDPOINT` if set, otherwise to `http://localhost:4318/v1/traces`. The 2.1.3 source wraps that exporter in a check meant to skip it when the request has trace drains (`skipping automatic exporter due to configured trace drains`), but in the lab the check didn't take effect: every app span arrived twice (Observed: 8,623 exported versus 8,617 drained on 2026-10-25, same span IDs). Reported to Vercel on 2026-10-26. Until that's resolved, a project with a trace drain shouldn't also set `OTEL_EXPORTER_OTLP_ENDPOINT` for traces.
 2. **Default propagation stops at your own production domain.** Only the deployment's generated URLs get `traceparent` by default. Calls to the production alias or a custom domain of the same app start new traces unless the URL is in `propagateContextUrls` (Observed).
 3. **`proxy.ts` is traced as `middleware GET`.** Next.js 16 renamed the file, not the span (Captured: `span-middleware.json`).
 4. **4xx is not an error.** Root and `fetch` spans keep `UNSET` for 4xx; only thrown errors and 5xx from `fetch` set `ERROR`. Count 4xx from `"$http.status_code"` (Observed).
