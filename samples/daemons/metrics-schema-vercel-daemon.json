@@ -1,0 +1,7 @@
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+{
+  "error": {
+    "code": "METRIC_NOT_FOUND",
+    "message": "No metrics match \"vercel.daemon\". Run `vercel metrics schema` to see available metrics."
+  }
+}

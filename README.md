@@ -44,7 +44,9 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | [Vercel Connect](emitters/vercel-connect.md) | | ✓ (Plus) | | Token and trigger events | Drain (`connect`) | **Done** 2026-10-27 (drain records: not observed yet) |
 | [Audit Logs and the Activity Log](emitters/audit-logs.md) | ✓ | | | Team activity events | Drain (`audit_log`, Enterprise), API | **Done** 2026-10-27 (audit drain: Enterprise only) |
 | [Billing and usage](emitters/billing.md) | | | | FOCUS cost records | API | **Done** 2026-10-26 (no backend queries yet: needs a forwarder) |
-| [Vercel Drives](emitters/vercel-drive.md) | | ✓ (Plus) | | Usage, billing | — | Documented only (team has no drives) |
+| [Spend Management](emitters/spend-management.md) | | | | Budget alerts | WH, API | **Done** 2026-10-27 (alert payload: documented; needs a budget webhook) |
+| [Daemons](emitters/daemons.md) | ✓ (not in drains) | | | | — | **Done** 2026-10-27 |
+| [Vercel Drives](emitters/vercel-drive.md) | | ✓ (Plus) | via Sandbox SDK spans | Usage, billing | TD | **Done** 2026-10-27 |
 
 ### Libraries and client scripts
 

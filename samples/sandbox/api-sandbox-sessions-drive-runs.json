@@ -1,0 +1,89 @@
+{
+  "sessions": [
+    {
+      "id": "sbx_6gwacssY77AyhrCiKjd6yDp4GUwn",
+      "runtime": "node22",
+      "architecture": "amd64",
+      "requestedAt": 1793095896506,
+      "startedAt": 1793095896536,
+      "requestedStopAt": 1793095897282,
+      "stoppedAt": 1793095897672,
+      "status": "stopped",
+      "duration": 1136,
+      "vcpus": 1,
+      "memory": 2048,
+      "timeout": 60000,
+      "region": "iad1",
+      "cwd": "/vercel",
+      "workloadType": "sandbox",
+      "createdAt": 1793095896506,
+      "updatedAt": 1793095896546,
+      "interactivePort": 26661,
+      "activeCpuDurationMs": 800,
+      "networkTransfer": {
+        "ingress": 3562,
+        "egress": 2723
+      },
+      "sourceSandboxName": "lavender-colossal-weasel-bHsgSo",
+      "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM"
+    },
+    {
+      "id": "sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH",
+      "runtime": "node22",
+      "architecture": "amd64",
+      "requestedAt": 1793095892999,
+      "startedAt": 1793095893041,
+      "requestedStopAt": 1793095893991,
+      "stoppedAt": 1793095894363,
+      "status": "stopped",
+      "duration": 1322,
+      "vcpus": 1,
+      "memory": 2048,
+      "timeout": 60000,
+      "region": "iad1",
+      "cwd": "/vercel",
+      "workloadType": "sandbox",
+      "createdAt": 1793095892999,
+      "updatedAt": 1793095893050,
+      "interactivePort": 26661,
+      "activeCpuDurationMs": 1050,
+      "networkTransfer": {
+        "ingress": 6886,
+        "egress": 2622
+      },
+      "sourceSandboxName": "gold-skinny-bear-2JATFQ",
+      "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM"
+    },
+    {
+      "id": "sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP",
+      "runtime": "node22",
+      "architecture": "amd64",
+      "requestedAt": 1793095883943,
+      "startedAt": 1793095883972,
+      "requestedStopAt": 1793095884801,
+      "stoppedAt": 1793095885205,
+      "status": "stopped",
+      "duration": 1233,
+      "vcpus": 1,
+      "memory": 2048,
+      "timeout": 60000,
+      "region": "iad1",
+      "cwd": "/vercel",
+      "workloadType": "sandbox",
+      "createdAt": 1793095883943,
+      "updatedAt": 1793095883981,
+      "interactivePort": 26661,
+      "activeCpuDurationMs": 777,
+      "networkTransfer": {
+        "ingress": 3507,
+        "egress": 2645
+      },
+      "sourceSandboxName": "copper-defiant-flamingo-tyVf67",
+      "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM"
+    }
+  ],
+  "pagination": {
+    "count": 5,
+    "next": null
+  }
+}

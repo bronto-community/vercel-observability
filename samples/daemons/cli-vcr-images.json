@@ -1,0 +1,33 @@
+{
+  "images": [
+    {
+      "id": "image_RWUKikddN5opnCIZ7CWtXW3vyMHz",
+      "repositoryId": "repo_Z8Q434MFGzXPn3OeunvTEmD7pNam",
+      "manifestDigest": "sha256:fed1968e3f7ea386e9718e1aafe4594f7554b355046f5db1d7924a33f8aa13f2",
+      "kind": "manifest",
+      "platform": "linux",
+      "arch": "amd64",
+      "sizeInBytes": 53414904,
+      "status": "ready",
+      "createdAt": "2026-10-27T10:16:44.885Z",
+      "tags": [
+        "c100aa4b33d9"
+      ]
+    },
+    {
+      "id": "image_u2TB8BK0hmnR9DbTL5YXXdLsc3BV",
+      "repositoryId": "repo_Z8Q434MFGzXPn3OeunvTEmD7pNam",
+      "manifestDigest": "sha256:b6c3eea2236d567a889b27fb6e8bcc7b14fec98d7b395e4bc99c272be5479254",
+      "kind": "manifest",
+      "platform": "linux",
+      "arch": "amd64",
+      "sizeInBytes": 53414904,
+      "status": "ready",
+      "createdAt": "2026-10-27T10:12:44.704Z",
+      "tags": []
+    }
+  ],
+  "pagination": {
+    "next": null
+  }
+}

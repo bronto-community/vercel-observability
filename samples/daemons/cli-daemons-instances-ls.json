@@ -1,0 +1,14 @@
+{
+  "instances": [
+    {
+      "id": "dmni_01m5ydsps2n3jrbv0dcdhr0skk",
+      "region": "dub1",
+      "startedAt": "2026-10-27T10:16:50.808Z",
+      "lastCheckedAt": "2026-10-27T10:22:14.905Z",
+      "alive": true,
+      "image": "vcr.vercel.com/brontoio/vercel-observability-lab/daemon.heartbeat@sha256:fed1968e3f7ea386e9718e1aafe4594f7554b355046f5db1d7924a33f8aa13f2",
+      "memoryMiB": 1024,
+      "daemon": "heartbeat"
+    }
+  ]
+}

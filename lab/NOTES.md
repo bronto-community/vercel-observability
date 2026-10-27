@@ -85,3 +85,50 @@ All times UTC. `vercel` below means `npx vercel@65.2.0` run from this folder (li
 
 - `vercel metrics vercel.function_invocation.count --group-by route --group-by functionRegion --since 1h`: every route in `dub1`.
 - In `vercel logs --json`, `region` is the edge region (`fra1` from this client), not the function region.
+
+## Changes on 2026-10-27
+
+### Instrumentation: undici instead of fetch, Global Config spans
+
+Deployed 10:03–10:06 UTC (`dpl_9aBXamwMGAtPV1yDNvA8pY9xnFiE`, `dpl_EWQV89riJZ21sXkqT7waRB8wQhG5`, `dpl_42HLZRGEErtMw8aedmJ4Lq6LB1GX`, the last one current). Added `@opentelemetry/instrumentation-undici` 0.34.0 (released 2026-10-20; needs Node.js ≥ 22.15).
+
+| Configuration | Blob calls | BotID's `globalThis.fetch` call |
+| --- | --- | --- |
+| Before: `@vercel/otel` default (fetch instrumentation) | no span | `fetch POST https://api.vercel.com/…` |
+| `instrumentations: ["auto", new UndiciInstrumentation()]` | `PUT`/`GET`/`GET`/`POST` client spans | two sibling spans (fetch + undici) |
+| `instrumentations: [new UndiciInstrumentation()]` | as above | two nested spans: Next.js's own `fetch POST …` (`AppRender.fetch`) + undici `POST` |
+| Same + `NEXT_OTEL_FETCH_DISABLED=1` (current) | as above | one undici `POST` span |
+
+- Node's `fetch` is undici, so the undici instrumentation covers it; `@vercel/otel`'s fetch instrumentation sets `NEXT_OTEL_FETCH_DISABLED=1` itself, which is why Next.js's span only shows up once that instrumentation is removed. `instrumentation.ts` now sets the variable before `registerOTel`.
+- Consequence for other routes: outgoing `globalThis.fetch` calls (BotID's `is-bot`, the Sandbox SDK's API calls) are now spans named after the method (`POST`) with `url.full`/`server.address`, not `fetch POST <url>` with `http.url`.
+- `vercel.external_api_request.count` still shows no Blob calls after the change; the platform metric doesn't depend on app instrumentation.
+- Global Config: `setTracerProvider(trace)` from `@vercel/global-config` (README form, passing the API object). Every `get()` now has a `get` span (`operation.name: vercel_global-config`, attribute `edgeConfigId`), 10 spans for 10 requests, avg 0.74 ms. No key in the span.
+- Flags span (`flag`) still emitted after the change.
+- Traffic: `/api/blob` 10, `/api/config` 10, `POST /api/botid` 10 (curl → 403), `/flags` 2.
+
+### Vercel Drives (`/api/drive`)
+
+- Deployed 10:11 UTC (`dpl_14UbnR1c1cgJ2Kk4RkNXj5ChK3XJ`). `LAB_SECRET` (production, sensitive) was replaced with a new random value; the old one was unknown. `/api/drive` takes it as `Authorization: Bearer <LAB_SECRET>` (a header, so it never lands in request logs); `/api/sandbox` still takes `?secret=` and was not called.
+- Drive `lab-drive` (`drive_vsjD0blIUoOGyMKEqFj6EcYK8J5C`), `iad1`, max size 1 GiB, created by the first run. Three runs 10:11:24–10:11:37 UTC; sandboxes `copper-defiant-flamingo-tyVf67`, `gold-skinny-bear-2JATFQ`, `lavender-colossal-weasel-bHsgSo` (1 vCPU, non-persistent, `iad1`). Each wrote one ~31-byte file and read all files (1, 2, 3).
+- `vercel.drive.read_bytes`: `miss` 49,152, `hit` 16,384 bytes, one 1-minute bucket. `driveId` dimension is `<projectId>_iad1_<driveId>`. `vercel.drive.write_bytes`: no rows.
+- Trace drain: five undici `POST` client spans per run (drive, create, 2 × cmd, stop); nothing from inside the VM. Log drain: report line + the route's `drive run` line only.
+- `vercel.sandbox.*` again lower than the API (CPU 1,968 vs 2,627 ms; memory and network 0).
+- Billing lines for these runs: not in the in-progress billing day at 10:47 UTC.
+- Drive deleted with `vercel sandbox drives delete lab-drive` at 10:47:47 UTC; `/api/drive` recreates it on the next run.
+
+### Daemon `heartbeat`
+
+- `daemons/heartbeat/` (`node:24.16.0-alpine`, `heartbeat.mjs` logs one JSON line per minute and one on `SIGTERM`), declared in `vercel.json` with `instances: {"dub1": 1}`, `1Gi`, `terminationGracePeriodSeconds: 5`.
+- Started 10:12:50.981 UTC with `dpl_7iop2T1aw8yWXFVBzYmUYoXyJQez` (instance `dmni_01m5ydjce50mfxxkrqhvwrkwe5`); replaced at 10:16:50.808 UTC by `dmni_01m5ydsps2n3jrbv0dcdhr0skk` when `dpl_EqPzC7dEefgzqwzBtFpQhbe4TQy7` deployed (the old one logged `daemon stopping` at 10:16:51.170). The image is rebuilt on every production deployment (new digest each time).
+- `vercel logs --query 'source:daemon'` shows the lines (`source: daemon`, `deploymentId`, `stream`, empty `requestId`/`region`). The log drain had none of them.
+- Removed from `vercel.json` and redeployed at 10:47 UTC (`dpl_AX3DBwrCwuKMwZhdbeEsoMeTrgKh`, current production): last line `daemon stopping` at 10:47:00.285; `vercel daemons ls` empty. Ran 34 minutes, 37 lines in `vercel logs`, 0 in the log drain (checked to 10:50).
+- The build pushed two 53.4 MB images to the VCR repository `daemon.heartbeat` (same tag, new digest per deployment). Repository deleted with `vercel vcr delete daemon.heartbeat --yes` at 10:47 UTC.
+- No `vercel.daemon.*` metric in `vercel metrics schema`; `vercel daemons instances inspect` asks the metrics API for `vercel.daemon.cpu_time_ms`, `memory_peak_bytes` and others and gets `Unknown metric` (400).
+
+### Spend Management receiver (`/api/vercel-webhook`)
+
+- Deployed 10:16 UTC. Verifies `x-vercel-signature` (HMAC-SHA1 of the raw body, hex) against `VERCEL_WEBHOOK_SECRET` and logs the payload as one JSON line. The env var is not set: the secret is issued by Vercel when a webhook URL is saved on the team budget, and the team budget was not changed (team-wide setting, notifies Owners/Billing). The route answers `503` until it is set. Signature check tested locally with a throwaway secret (valid → 200 and the log line, wrong/missing → 403).
+
+### Schedules
+
+- `vercel schedules list`: `schedules_not_enabled`; no docs page and no self-serve switch. Not added.

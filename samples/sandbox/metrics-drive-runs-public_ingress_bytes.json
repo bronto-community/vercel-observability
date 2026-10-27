@@ -1,0 +1,949 @@
+{
+  "query": {
+    "metric": "vercel.sandbox.public_ingress_bytes",
+    "aggregation": "sum",
+    "groupBy": [
+      "sandboxName"
+    ],
+    "startTime": "2026-10-27T09:14:00.000Z",
+    "endTime": "2026-10-27T10:15:00.000Z",
+    "granularity": {
+      "minutes": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-27T09:14:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:14:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:14:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:15:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:15:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:15:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:16:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:16:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:16:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:17:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:17:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:17:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:18:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:18:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:18:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:19:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:19:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:19:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:20:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:20:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:20:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:21:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:21:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:21:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:22:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:22:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:22:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:23:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:23:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:23:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:24:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:24:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:24:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:25:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:25:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:25:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:26:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:26:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:26:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:27:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:27:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:27:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:28:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:28:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:28:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:29:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:29:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:29:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:30:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:30:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:30:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:31:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:31:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:31:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:32:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:32:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:32:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:33:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:33:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:33:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:34:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:34:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:34:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:35:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:35:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:35:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:36:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:36:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:36:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:37:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:37:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:37:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:38:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:38:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:38:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:39:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:39:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:39:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:40:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:40:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:40:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:41:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:41:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:41:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:42:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:42:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:42:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:43:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:43:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:43:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "sandboxName": "copper-defiant-flamingo-tyVf67",
+      "vercel_sandbox_public_ingress_bytes_sum": null
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "sandboxName": "gold-skinny-bear-2JATFQ",
+      "vercel_sandbox_public_ingress_bytes_sum": null
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "sandboxName": "lavender-colossal-weasel-bHsgSo",
+      "vercel_sandbox_public_ingress_bytes_sum": null
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

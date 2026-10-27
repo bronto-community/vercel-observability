@@ -1,0 +1,20 @@
+{
+  "query": {
+    "metric": "vercel.drive.write_bytes",
+    "aggregation": "sum",
+    "groupBy": [
+      "driveId"
+    ],
+    "startTime": "2026-10-27T07:45:00.000Z",
+    "endTime": "2026-10-27T11:00:00.000Z",
+    "granularity": {
+      "minutes": 15
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [],
+  "data": [],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

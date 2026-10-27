@@ -1,0 +1,1742 @@
+{
+  "query": {
+    "metric": "vercel.external_api_request.count",
+    "aggregation": "count",
+    "groupBy": [
+      "requestHostname",
+      "requestPath"
+    ],
+    "startTime": "2026-10-27T09:44:00.000Z",
+    "endTime": "2026-10-27T10:15:00.000Z",
+    "granularity": {
+      "minutes": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 10
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 3
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 3
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 1
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 1
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 1
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:44:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:45:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:46:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:47:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:48:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:49:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:50:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:51:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:52:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:53:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:54:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:55:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:56:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:57:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:58:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:59:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:01:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:02:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:03:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:04:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:05:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:06:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:07:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:08:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:09:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:10:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-27T10:11:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:12:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:13:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/bot-protection/v1/is-bot",
+      "vercel_external_api_request_count_count": null
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/drives/lab-drive",
+      "vercel_external_api_request_count_count": null
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "vercel_external_api_request_count_count": null
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/cmd",
+      "vercel_external_api_request_count_count": null
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/cmd",
+      "vercel_external_api_request_count_count": null
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/cmd",
+      "vercel_external_api_request_count_count": null
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_6gwacssY77AyhrCiKjd6yDp4GUwn/stop",
+      "vercel_external_api_request_count_count": null
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP/stop",
+      "vercel_external_api_request_count_count": null
+    },
+    {
+      "timestamp": "2026-10-27T10:14:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH/stop",
+      "vercel_external_api_request_count_count": null
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

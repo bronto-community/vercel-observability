@@ -134,6 +134,8 @@ A log record's `traceId` is the `$trace_id` of the trace that holds the `is-bot`
 
 ## Gotchas
 
+**Span shape depends on the fetch instrumentation.** Everything above was captured with `@vercel/otel`'s default fetch instrumentation: a span named `fetch POST <url>` with `http.url` and `http.status_code`. From 2026-10-27 ~10:00 UTC the lab uses `@opentelemetry/instrumentation-undici` instead (see the Blob entry for why): the same call is a span named `POST` with `url.full`, `server.address` and `http.response.status_code`, still `400` for Bot and `200` for Human (Captured: `samples/blob/span-undici-botid.json`). In the backend, match both forms: `("$http.url" LIKE '%/bot-protection/v1/is-bot%' OR "$url.full" LIKE '%/bot-protection/v1/is-bot%')` and group by `$http.status_code` or `$http.response.status_code`.
+
 1. **The `is-bot` call answers `400` for bots.** A fetch error-rate alert on `api.vercel.com` fires on bot traffic. Treat `400` from `/bot-protection/v1/is-bot` as the Bot verdict, not as a failure (Observed, 36 of 36 calls agreed with the metric).
 2. **The verdict isn't a firewall event.** Requests your code rejects after `checkBotId()` count as `allow` in the firewall metric and never produce `source: firewall` records. Firewall dashboards don't show BotID blocks.
 3. **The warning is from the library, at `warning`.** "Possible misconfiguration of Vercel BotId or malicious request…" is `console.warn` in production; `curl` and scripts without BotID's client trigger it on every request. In preview and development the same case is a `console.error` with a different text, so a filter on the production text misses it there.

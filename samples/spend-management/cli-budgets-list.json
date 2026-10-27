@@ -1,0 +1,43 @@
+{
+  "teamId": "team_REDACTED",
+  "teamSlug": "brontoio",
+  "budgets": [
+    {
+      "id": "budget_01kg7w22nke4ernmr9qzc0kwh8",
+      "teamId": "team_REDACTED",
+      "scope": "team",
+      "amount": 200,
+      "amountUnit": "usd",
+      "status": "active",
+      "pause": false,
+      "webhookId": null,
+      "webhookUrl": null,
+      "webhookStatus": "absent",
+      "thresholds": [
+        {
+          "percent": 50,
+          "sendNotifications": true,
+          "triggerWebhook": false,
+          "pauseUsage": false
+        },
+        {
+          "percent": 75,
+          "sendNotifications": true,
+          "triggerWebhook": false,
+          "pauseUsage": false
+        },
+        {
+          "percent": 100,
+          "sendNotifications": true,
+          "triggerWebhook": false,
+          "pauseUsage": false
+        }
+      ],
+      "spend": {
+        "currentSpend": 18.57,
+        "percentUsed": 9,
+        "unit": "usd"
+      }
+    }
+  ]
+}

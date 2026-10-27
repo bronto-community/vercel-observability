@@ -1,0 +1,95 @@
+{
+  "sandboxes": [
+    {
+      "name": "lavender-colossal-weasel-bHsgSo",
+      "currentSessionId": "sbx_6gwacssY77AyhrCiKjd6yDp4GUwn",
+      "status": "stopped",
+      "statusUpdatedAt": 1793095897931,
+      "persistent": false,
+      "workloadType": "sandbox",
+      "region": "iad1",
+      "failoverRegions": [],
+      "vcpus": 1,
+      "memory": 2048,
+      "runtime": "node22",
+      "architecture": "amd64",
+      "image": "vercel/sandbox/universal@sha256:7a812a4ad9cbf6fc78aba06c60b30cb2d2a3f59a5e969683f578d2ec4020b90c",
+      "timeout": 60000,
+      "totalEgressBytes": 2723,
+      "totalIngressBytes": 3562,
+      "totalActiveCpuDurationMs": 800,
+      "totalDurationMs": 1136,
+      "cwd": "/vercel",
+      "mounts": {
+        "/data": {
+          "drive": "lab-drive",
+          "mode": "read-write"
+        }
+      },
+      "createdAt": 1793095896857,
+      "updatedAt": 1793095896857
+    },
+    {
+      "name": "gold-skinny-bear-2JATFQ",
+      "currentSessionId": "sbx_uIvU3f7rI7zKxhihXKBhcK4C1cZH",
+      "status": "stopped",
+      "statusUpdatedAt": 1793095894664,
+      "persistent": false,
+      "workloadType": "sandbox",
+      "region": "iad1",
+      "failoverRegions": [],
+      "vcpus": 1,
+      "memory": 2048,
+      "runtime": "node22",
+      "architecture": "amd64",
+      "image": "vercel/sandbox/universal@sha256:7a812a4ad9cbf6fc78aba06c60b30cb2d2a3f59a5e969683f578d2ec4020b90c",
+      "timeout": 60000,
+      "totalEgressBytes": 2622,
+      "totalIngressBytes": 6886,
+      "totalActiveCpuDurationMs": 1050,
+      "totalDurationMs": 1322,
+      "cwd": "/vercel",
+      "mounts": {
+        "/data": {
+          "drive": "lab-drive",
+          "mode": "read-write"
+        }
+      },
+      "createdAt": 1793095893520,
+      "updatedAt": 1793095893520
+    },
+    {
+      "name": "copper-defiant-flamingo-tyVf67",
+      "currentSessionId": "sbx_fDifdTFhTf3GVvS3QEAGBpaSovxP",
+      "status": "stopped",
+      "statusUpdatedAt": 1793095885467,
+      "persistent": false,
+      "workloadType": "sandbox",
+      "region": "iad1",
+      "failoverRegions": [],
+      "vcpus": 1,
+      "memory": 2048,
+      "runtime": "node22",
+      "architecture": "amd64",
+      "image": "vercel/sandbox/universal@sha256:7a812a4ad9cbf6fc78aba06c60b30cb2d2a3f59a5e969683f578d2ec4020b90c",
+      "timeout": 60000,
+      "totalEgressBytes": 2645,
+      "totalIngressBytes": 3507,
+      "totalActiveCpuDurationMs": 777,
+      "totalDurationMs": 1233,
+      "cwd": "/vercel",
+      "mounts": {
+        "/data": {
+          "drive": "lab-drive",
+          "mode": "read-write"
+        }
+      },
+      "createdAt": 1793095884391,
+      "updatedAt": 1793095884391
+    }
+  ],
+  "pagination": {
+    "count": 5,
+    "next": null
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "1793096199859322604175800001",
+  "message": "\u25b2 container  Building image vcr.vercel.com/brontoio/vercel-observability-lab/daemon.heartbeat:c100aa4b33d9 (buildah)",
+  "timestamp": 1793096199859,
+  "type": "stderr",
+  "level": "info",
+  "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+  "projectName": "vercel-observability-lab",
+  "deploymentId": "dpl_EqPzC7dEefgzqwzBtFpQhbe4TQy7",
+  "source": "build",
+  "buildId": "bld_4nasnrm3k",
+  "host": "vercel-observability-enjf4vb3d-brontoio.vercel.app",
+  "entrypoint": ".",
+  "environment": "production"
+}

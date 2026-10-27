@@ -1,0 +1,34 @@
+{
+  "id": "21477604640179309589719078700000",
+  "message": "{\"msg\":\"drive run\",\"drive\":\"lab-drive\",\"driveId\":\"drive_vsjD0blIUoOGyMKEqFj6EcYK8J5C\",\"sandbox\":\"lavender-colossal-weasel-bHsgSo\",\"session\":\"sbx_6gwacssY77AyhrCiKjd6yDp4GUwn\",\"file\":\"/data/run-1793095896936.txt\",\"writeExitCode\":0,\"readExitCode\":0,\"filesRead\":3}",
+  "timestamp": 1793095897190,
+  "type": "stdout",
+  "requestId": "wrnvx-1793095895186-bbc41caa6dff",
+  "executionRegion": "dub1",
+  "level": "info",
+  "proxy": {
+    "timestamp": 1793095895186,
+    "method": "GET",
+    "host": "vercel-observability-lab.vercel.app",
+    "path": "/api/drive",
+    "scheme": "https",
+    "userAgent": [
+      "catalog-check/1.0"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "fra1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+  "projectName": "vercel-observability-lab",
+  "deploymentId": "dpl_14UbnR1c1cgJ2Kk4RkNXj5ChK3XJ",
+  "source": "lambda",
+  "host": "vercel-observability-lab.vercel.app",
+  "path": "/api/drive",
+  "environment": "production",
+  "traceId": "602d03b0bca67be6a8bea6e25efadb8c",
+  "spanId": "c3361571ca427b7c",
+  "invocationId": "01M5YDG25HCG6NN4M78925VC46"
+}
