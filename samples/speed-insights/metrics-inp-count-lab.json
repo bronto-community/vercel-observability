@@ -1,0 +1,67 @@
+{
+  "query": {
+    "metric": "vercel.speed_insights.inp_ms",
+    "aggregation": "count",
+    "groupBy": [],
+    "startTime": "2026-10-27T09:15:00.000Z",
+    "endTime": "2026-10-27T09:27:00.000Z",
+    "granularity": {
+      "minutes": 1
+    }
+  },
+  "summary": [
+    {
+      "vercel_speed_insights_inp_ms_count": 15
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-27T09:15:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:16:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:17:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 1
+    },
+    {
+      "timestamp": "2026-10-27T09:18:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 8
+    },
+    {
+      "timestamp": "2026-10-27T09:19:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:20:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:21:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:22:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:23:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 3
+    },
+    {
+      "timestamp": "2026-10-27T09:24:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 3
+    },
+    {
+      "timestamp": "2026-10-27T09:25:00.000Z",
+      "vercel_speed_insights_inp_ms_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T09:26:00.000Z",
+      "vercel_speed_insights_inp_ms_count": null
+    }
+  ]
+}

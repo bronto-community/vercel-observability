@@ -1,0 +1,150 @@
+{
+  "query": {
+    "metric": "vercel.speed_insights.lcp_ms",
+    "aggregation": "p75",
+    "groupBy": [
+      "deviceType"
+    ],
+    "startTime": "2026-10-27T09:15:00.000Z",
+    "endTime": "2026-10-27T09:27:00.000Z",
+    "granularity": {
+      "minutes": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": 140
+    },
+    {
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": 124
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-27T09:15:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:15:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:16:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:16:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:17:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": 172
+    },
+    {
+      "timestamp": "2026-10-27T09:17:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:18:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": 124
+    },
+    {
+      "timestamp": "2026-10-27T09:18:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:19:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:19:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:20:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:20:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:21:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:21:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:22:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:22:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:23:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": 100
+    },
+    {
+      "timestamp": "2026-10-27T09:23:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:24:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": 140
+    },
+    {
+      "timestamp": "2026-10-27T09:24:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": 124
+    },
+    {
+      "timestamp": "2026-10-27T09:25:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:25:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:26:00.000Z",
+      "deviceType": "desktop",
+      "vercel_speed_insights_lcp_ms_p75": null
+    },
+    {
+      "timestamp": "2026-10-27T09:26:00.000Z",
+      "deviceType": "mobile",
+      "vercel_speed_insights_lcp_ms_p75": null
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

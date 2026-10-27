@@ -36,7 +36,7 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | [Blob](emitters/blob.md) | | | via OTLP from code | Usage, billing | API, OTLP | **Done** 2026-10-27 |
 | [Global Config (formerly Edge Config)](emitters/global-config.md) | | | via OTLP from code | Usage, billing | API, OTLP | **Done** 2026-10-27 |
 | [Flags](emitters/flags.md) | | ✓ | ✓ | Evaluations, webhooks | TD, AD, WH, API | **Done** 2026-10-27 |
-| Speed Insights | | ✓ | | | SID | Blocked: Speed Insights drain not created yet; no visits recorded since 2026-10-23 |
+| [Speed Insights](emitters/speed-insights.md) | | ✓ | | Web Vitals per page view | SID | **Done** 2026-10-27 |
 | [Web Analytics](emitters/web-analytics.md) | | ✓ | | Page views, custom events | AD | **Done** 2026-10-26 |
 | [AI traffic (crawlers, assistants)](emitters/ai-traffic.md) | | ✓ (Plus) | | | — | **Done** 2026-10-26 (no recognized AI bot on the lab project yet) |
 | [Custom Metrics](emitters/custom-metrics.md) | | ✓ (Plus) | | | — | **Done** 2026-10-27 |
@@ -54,7 +54,7 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | [AI SDK (`ai`, `@ai-sdk/otel`)](emitters/ai-sdk.md) | GenAI spans | TD, OTLP | **Done** 2026-10-26 |
 | eve, durable-harness | Agent spans | TD, OTLP | Covered in [Agent Runs](emitters/agent-runs.md) |
 | `@vercel/analytics` | Page views, custom events | AD | Covered in [Web Analytics](emitters/web-analytics.md) |
-| `@vercel/speed-insights` | Web Vitals | SID | Blocked with Speed Insights |
+| `@vercel/speed-insights` | Web Vitals | SID | Covered in [Speed Insights](emitters/speed-insights.md) |
 | `@vercel/functions` (`metric()`, `waitUntil`) | Custom metrics, `waitUntil` spans | — | Covered in [Custom Metrics](emitters/custom-metrics.md) and [Functions](emitters/functions.md) |
 | Flags SDK | `flag` spans, flag values on Web Analytics | TD, AD | Covered in [Flags](emitters/flags.md) |
 | Turborepo | Run metrics (OTLP) | OTLP | Needs test project |
