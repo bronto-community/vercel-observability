@@ -1,0 +1,52 @@
+{
+  "query": {
+    "metric": "vercel.function_invocation.count",
+    "aggregation": "count",
+    "groupBy": [
+      "httpStatus",
+      "functionRegion"
+    ],
+    "filter": "route eq '/api/sandbox'",
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "httpStatus": "401",
+      "functionRegion": "dub1",
+      "vercel_function_invocation_count_count": 3
+    },
+    {
+      "httpStatus": "200",
+      "functionRegion": "dub1",
+      "vercel_function_invocation_count_count": 2
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "httpStatus": "401",
+      "functionRegion": "dub1",
+      "vercel_function_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "httpStatus": "200",
+      "functionRegion": "dub1",
+      "vercel_function_invocation_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-26T21:00:00.000Z",
+      "httpStatus": "401",
+      "functionRegion": "dub1",
+      "vercel_function_invocation_count_count": 1
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

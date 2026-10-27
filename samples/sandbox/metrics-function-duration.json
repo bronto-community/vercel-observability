@@ -1,0 +1,46 @@
+{
+  "query": {
+    "metric": "vercel.function_invocation.function_duration_ms",
+    "aggregation": "max",
+    "groupBy": [
+      "httpStatus"
+    ],
+    "filter": "route eq '/api/sandbox'",
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "httpStatus": "401",
+      "vercel_function_invocation_function_duration_ms_max": 1000
+    },
+    {
+      "httpStatus": "200",
+      "vercel_function_invocation_function_duration_ms_max": 2465
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "httpStatus": "401",
+      "vercel_function_invocation_function_duration_ms_max": 1000
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "httpStatus": "200",
+      "vercel_function_invocation_function_duration_ms_max": 2465
+    },
+    {
+      "timestamp": "2026-10-26T21:00:00.000Z",
+      "httpStatus": "401",
+      "vercel_function_invocation_function_duration_ms_max": 663
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

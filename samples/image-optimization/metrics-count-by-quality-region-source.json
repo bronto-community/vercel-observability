@@ -1,0 +1,48 @@
+{
+  "query": {
+    "metric": "vercel.image_transformation.count",
+    "aggregation": "count",
+    "groupBy": [
+      "optimizedQuality",
+      "imageTransformationRegion",
+      "sourceImageHostname",
+      "sourceImagePathname"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "optimizedQuality": "75",
+      "imageTransformationRegion": "fra1",
+      "sourceImageHostname": "local",
+      "sourceImagePathname": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM/immutable_static_assets/production/_next/static/immutable/media/gradient.1ucu3hliyzcw1.png",
+      "vercel_image_transformation_count_count": 7
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedQuality": "75",
+      "imageTransformationRegion": "fra1",
+      "sourceImageHostname": "local",
+      "sourceImagePathname": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM/immutable_static_assets/production/_next/static/immutable/media/gradient.1ucu3hliyzcw1.png",
+      "vercel_image_transformation_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "optimizedQuality": "75",
+      "imageTransformationRegion": "fra1",
+      "sourceImageHostname": "local",
+      "sourceImagePathname": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM/immutable_static_assets/production/_next/static/immutable/media/gradient.1ucu3hliyzcw1.png",
+      "vercel_image_transformation_count_count": 2
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

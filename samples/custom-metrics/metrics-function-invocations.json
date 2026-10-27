@@ -1,0 +1,42 @@
+{
+  "query": {
+    "metric": "vercel.function_invocation.count",
+    "aggregation": "count",
+    "groupBy": [
+      "route"
+    ],
+    "filter": "route eq '/api/metric'",
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "route": "/api/metric",
+      "vercel_function_invocation_count_count": 18
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "route": "/api/metric",
+      "vercel_function_invocation_count_count": 9
+    },
+    {
+      "timestamp": "2026-10-26T21:00:00.000Z",
+      "route": "/api/metric",
+      "vercel_function_invocation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "route": "/api/metric",
+      "vercel_function_invocation_count_count": 8
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

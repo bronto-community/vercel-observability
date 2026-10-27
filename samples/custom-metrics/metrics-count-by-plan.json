@@ -1,0 +1,55 @@
+{
+  "query": {
+    "metric": "lab.orders.created",
+    "aggregation": "count",
+    "groupBy": [
+      "plan"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "plan": "pro",
+      "lab_orders_created_count": 11
+    },
+    {
+      "plan": "free",
+      "lab_orders_created_count": 7
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "plan": "pro",
+      "lab_orders_created_count": 7
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "plan": "free",
+      "lab_orders_created_count": 2
+    },
+    {
+      "timestamp": "2026-10-26T21:00:00.000Z",
+      "plan": "free",
+      "lab_orders_created_count": 1
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "plan": "pro",
+      "lab_orders_created_count": 4
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "plan": "free",
+      "lab_orders_created_count": 4
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

@@ -1,0 +1,62 @@
+{
+    "sessions": [
+        {
+            "id": "sbx_57FZJ1atQJYPXcESx0x8Kp5pVnGS",
+            "runtime": "node22",
+            "architecture": "amd64",
+            "requestedAt": 1793027177065,
+            "startedAt": 1793027177096,
+            "requestedStopAt": 1793027177701,
+            "stoppedAt": 1793027178006,
+            "status": "stopped",
+            "duration": 910,
+            "vcpus": 1,
+            "memory": 2048,
+            "timeout": 60000,
+            "region": "iad1",
+            "cwd": "/vercel",
+            "workloadType": "sandbox",
+            "createdAt": 1793027177065,
+            "updatedAt": 1793027177104,
+            "interactivePort": 26661,
+            "activeCpuDurationMs": 944,
+            "networkTransfer": {
+                "ingress": 3067,
+                "egress": 2576
+            },
+            "sourceSandboxName": "aquamarine-colourful-quokka-z45VGz",
+            "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM"
+        },
+        {
+            "id": "sbx_zsZthcumQQ5hiI74bfd1MF6CayC3",
+            "runtime": "node22",
+            "architecture": "amd64",
+            "requestedAt": 1793026832718,
+            "startedAt": 1793026832740,
+            "requestedStopAt": 1793026833341,
+            "stoppedAt": 1793026833629,
+            "status": "stopped",
+            "duration": 889,
+            "vcpus": 1,
+            "memory": 2048,
+            "timeout": 60000,
+            "region": "iad1",
+            "cwd": "/vercel",
+            "workloadType": "sandbox",
+            "createdAt": 1793026832718,
+            "updatedAt": 1793026832747,
+            "interactivePort": 26661,
+            "activeCpuDurationMs": 814,
+            "networkTransfer": {
+                "ingress": 3063,
+                "egress": 2452
+            },
+            "sourceSandboxName": "beige-dirty-cardinal-P4qDoP",
+            "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM"
+        }
+    ],
+    "pagination": {
+        "count": 2,
+        "next": null
+    }
+}

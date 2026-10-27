@@ -1,0 +1,35 @@
+{
+  "id": "96693232190179309085500290500000",
+  "message": "{\"msg\":\"botid check\",\"isBot\":true}",
+  "timestamp": 1793090855002,
+  "type": "stdout",
+  "requestId": "dn7j2-1793090854853-10bcd360efa5",
+  "executionRegion": "dub1",
+  "level": "info",
+  "proxy": {
+    "timestamp": 1793090854853,
+    "method": "POST",
+    "host": "vercel-observability-lab.vercel.app",
+    "path": "/api/botid",
+    "scheme": "https",
+    "userAgent": [
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36"
+    ],
+    "referer": "https://vercel-observability-lab.vercel.app/botid",
+    "clientIp": "203.0.113.10",
+    "region": "fra1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func"
+  },
+  "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+  "projectName": "vercel-observability-lab",
+  "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+  "source": "lambda",
+  "host": "vercel-observability-lab.vercel.app",
+  "path": "/api/botid",
+  "environment": "production",
+  "traceId": "5be872b6ecd124cb4a296f69fd41b5a2",
+  "spanId": "f3567e5e8005bd82",
+  "invocationId": "01M5Y8P7YQ5847DCQPEH23G82F"
+}

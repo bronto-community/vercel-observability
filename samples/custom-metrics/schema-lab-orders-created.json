@@ -1,0 +1,30 @@
+[
+  {
+    "id": "lab.orders.created",
+    "description": "Custom metric value",
+    "dimensions": [
+      "ownerId",
+      "projectId",
+      "deploymentId",
+      "functionRegion",
+      "pathType",
+      "edgeNetworkRegion",
+      "plan"
+    ],
+    "unit": "count",
+    "aggregations": [
+      "count",
+      "sum",
+      "avg",
+      "min",
+      "max",
+      "p50",
+      "p75",
+      "p90",
+      "p95",
+      "p99",
+      "stddev",
+      "unique"
+    ]
+  }
+]

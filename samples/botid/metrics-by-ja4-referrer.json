@@ -1,0 +1,84 @@
+{
+  "query": {
+    "metric": "vercel.bot_id_check.count",
+    "aggregation": "count",
+    "groupBy": [
+      "botCheckResult",
+      "clientJa4Digest",
+      "referrerUrl"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "botCheckResult": "Human",
+      "clientJa4Digest": "t13d1517h2_8daaf6152771_cb7bf5808d99",
+      "referrerUrl": "https://vercel-observability-lab.vercel.app/botid",
+      "vercel_bot_id_check_count_count": 15
+    },
+    {
+      "botCheckResult": "Bot",
+      "clientJa4Digest": "t13d4907h2_0d8feac7bc37_7395dae3b2f3",
+      "referrerUrl": "",
+      "vercel_bot_id_check_count_count": 11
+    },
+    {
+      "botCheckResult": "Bot",
+      "clientJa4Digest": "t13d1517h2_8daaf6152771_cb7bf5808d99",
+      "referrerUrl": "https://vercel-observability-lab.vercel.app/botid",
+      "vercel_bot_id_check_count_count": 10
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "botCheckResult": "Human",
+      "clientJa4Digest": "t13d1517h2_8daaf6152771_cb7bf5808d99",
+      "referrerUrl": "https://vercel-observability-lab.vercel.app/botid",
+      "vercel_bot_id_check_count_count": 13
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "botCheckResult": "Bot",
+      "clientJa4Digest": "t13d4907h2_0d8feac7bc37_7395dae3b2f3",
+      "referrerUrl": "",
+      "vercel_bot_id_check_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "botCheckResult": "Bot",
+      "clientJa4Digest": "t13d1517h2_8daaf6152771_cb7bf5808d99",
+      "referrerUrl": "https://vercel-observability-lab.vercel.app/botid",
+      "vercel_bot_id_check_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "botCheckResult": "Human",
+      "clientJa4Digest": "t13d1517h2_8daaf6152771_cb7bf5808d99",
+      "referrerUrl": "https://vercel-observability-lab.vercel.app/botid",
+      "vercel_bot_id_check_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "botCheckResult": "Bot",
+      "clientJa4Digest": "t13d4907h2_0d8feac7bc37_7395dae3b2f3",
+      "referrerUrl": "",
+      "vercel_bot_id_check_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "botCheckResult": "Bot",
+      "clientJa4Digest": "t13d1517h2_8daaf6152771_cb7bf5808d99",
+      "referrerUrl": "https://vercel-observability-lab.vercel.app/botid",
+      "vercel_bot_id_check_count_count": 4
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

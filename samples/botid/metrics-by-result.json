@@ -1,0 +1,64 @@
+{
+  "query": {
+    "metric": "vercel.bot_id_check.count",
+    "aggregation": "count",
+    "groupBy": [
+      "botCheckResult",
+      "deepAnalysisCheck",
+      "route"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "botCheckResult": "Bot",
+      "deepAnalysisCheck": "0",
+      "route": "/api/botid",
+      "vercel_bot_id_check_count_count": 21
+    },
+    {
+      "botCheckResult": "Human",
+      "deepAnalysisCheck": "0",
+      "route": "/api/botid",
+      "vercel_bot_id_check_count_count": 15
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "botCheckResult": "Bot",
+      "deepAnalysisCheck": "0",
+      "route": "/api/botid",
+      "vercel_bot_id_check_count_count": 11
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "botCheckResult": "Human",
+      "deepAnalysisCheck": "0",
+      "route": "/api/botid",
+      "vercel_bot_id_check_count_count": 13
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "botCheckResult": "Bot",
+      "deepAnalysisCheck": "0",
+      "route": "/api/botid",
+      "vercel_bot_id_check_count_count": 10
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "botCheckResult": "Human",
+      "deepAnalysisCheck": "0",
+      "route": "/api/botid",
+      "vercel_bot_id_check_count_count": 2
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

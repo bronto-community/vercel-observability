@@ -1,0 +1,100 @@
+{
+  "query": {
+    "metric": "vercel.external_api_request.count",
+    "aggregation": "count",
+    "groupBy": [
+      "requestHostname",
+      "requestPath",
+      "httpStatus",
+      "originRoute"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_57FZJ1atQJYPXcESx0x8Kp5pVnGS/cmd",
+      "httpStatus": "200",
+      "originRoute": "/api/sandbox",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_zsZthcumQQ5hiI74bfd1MF6CayC3/cmd",
+      "httpStatus": "200",
+      "originRoute": "/api/sandbox",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "httpStatus": "200",
+      "originRoute": "/api/sandbox",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_57FZJ1atQJYPXcESx0x8Kp5pVnGS/stop",
+      "httpStatus": "200",
+      "originRoute": "/api/sandbox",
+      "vercel_external_api_request_count_count": 1
+    },
+    {
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_zsZthcumQQ5hiI74bfd1MF6CayC3/stop",
+      "httpStatus": "200",
+      "originRoute": "/api/sandbox",
+      "vercel_external_api_request_count_count": 1
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_57FZJ1atQJYPXcESx0x8Kp5pVnGS/cmd",
+      "httpStatus": "200",
+      "originRoute": "/api/sandbox",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_zsZthcumQQ5hiI74bfd1MF6CayC3/cmd",
+      "httpStatus": "200",
+      "originRoute": "/api/sandbox",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v3/sandboxes",
+      "httpStatus": "200",
+      "originRoute": "/api/sandbox",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_57FZJ1atQJYPXcESx0x8Kp5pVnGS/stop",
+      "httpStatus": "200",
+      "originRoute": "/api/sandbox",
+      "vercel_external_api_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "requestHostname": "vercel.com",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_zsZthcumQQ5hiI74bfd1MF6CayC3/stop",
+      "httpStatus": "200",
+      "originRoute": "/api/sandbox",
+      "vercel_external_api_request_count_count": 1
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

@@ -22,9 +22,9 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | [Routing Middleware](emitters/routing-middleware.md) | ✓ | ✓ (Plus) | ✓ | | LD, TD | **Done** 2026-10-26 |
 | [CDN: static, ISR, PPR, cache](emitters/cdn.md) | ✓ | ✓ (Plus) | ✓ | | LD, TD | **Done** 2026-10-26 (PPR: needs a PPR route) |
 | [Redirects and external rewrites](emitters/redirects-rewrites.md) | ✓ | ✓ (Plus) | ✓ | | LD, TD | **Done** 2026-10-26 |
-| Image Optimization | | ✓ (Plus) | | | — | Needs test project |
+| [Image Optimization](emitters/image-optimization.md) | ✓ | ✓ (Plus) | | | LD | **Done** 2026-10-27 |
 | [Firewall, WAF, rate limits](emitters/firewall.md) | ✓ | ✓ (Plus) | | Attack alerts | LD, WH | **Done** 2026-10-26 (log/challenge actions, attack alerts: need config) |
-| BotID | | ✓ (Plus) | | | — | Needs test project |
+| [BotID](emitters/botid.md) | ✓ | ✓ (Plus) | ✓ | | LD, TD | **Done** 2026-10-27 |
 | [Builds](emitters/builds.md) | ✓ | | | | LD | **Done** 2026-10-26 |
 | [Deployments, Rolling Releases, domains](emitters/deployments.md) | | | | ✓ | WH | **Done** 2026-10-26 (rollback, Rolling Release, domain events: need more webhook events) |
 | [Cron Jobs](emitters/cron-jobs.md) | ✓ | | ✓ | | LD, TD | **Done** 2026-10-26 |
@@ -32,14 +32,14 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | [Workflow](emitters/workflow.md) | ✓ | ✓ (Plus) | ✓ | | LD, TD, OTLP | **Done** 2026-10-26 |
 | [AI Gateway](emitters/ai-gateway.md) | | ✓ (Plus) | ✓ | Generation API | AGD, API | **Done** 2026-10-26 (fallback in production: not observed) |
 | [Agent Runs (eve, agent harnesses)](emitters/agent-runs.md) | | | ✓ | | TD, OTLP | **Done** 2026-10-26 |
-| Sandbox | | ✓ (Plus) | | | — | Needs test project |
+| [Sandbox](emitters/sandbox.md) | | ✓ (Plus) | | Per-sandbox usage | API | **Done** 2026-10-27 (spans: not observed) |
 | [Blob](emitters/blob.md) | | | via OTLP from code | Usage, billing | API, OTLP | **Done** 2026-10-27 |
 | [Global Config (formerly Edge Config)](emitters/global-config.md) | | | via OTLP from code | Usage, billing | API, OTLP | **Done** 2026-10-27 |
 | [Flags](emitters/flags.md) | | ✓ | ✓ | Evaluations, webhooks | TD, AD, WH, API | **Done** 2026-10-27 |
 | Speed Insights | | ✓ | | | SID | Blocked: Speed Insights drain not created yet; no visits recorded since 2026-10-23 |
 | [Web Analytics](emitters/web-analytics.md) | | ✓ | | Page views, custom events | AD | **Done** 2026-10-26 |
 | [AI traffic (crawlers, assistants)](emitters/ai-traffic.md) | | ✓ (Plus) | | | — | **Done** 2026-10-26 (no recognized AI bot on the lab project yet) |
-| Custom Metrics | | ✓ | | | — | Needs test project (Plus now enabled) |
+| [Custom Metrics](emitters/custom-metrics.md) | | ✓ (Plus) | | | — | **Done** 2026-10-27 |
 | [Alerts](emitters/alerts.md) | | | | ✓ | WH, API | **Done** 2026-10-26 (no alert fired yet; first possible 2026-10-27) |
 | Vercel Connect | | | | ✓ | Drain (`connect`) | Needs test project |
 | Audit Logs | ✓ | | | | Drain (`audit_log`) | Blocked: Enterprise only |
@@ -55,7 +55,7 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | eve, durable-harness | Agent spans | TD, OTLP | Covered in [Agent Runs](emitters/agent-runs.md) |
 | `@vercel/analytics` | Page views, custom events | AD | Covered in [Web Analytics](emitters/web-analytics.md) |
 | `@vercel/speed-insights` | Web Vitals | SID | Blocked with Speed Insights |
-| `@vercel/functions` (`metric()`, `waitUntil`) | Custom metrics, `waitUntil` spans | — | With Custom Metrics |
+| `@vercel/functions` (`metric()`, `waitUntil`) | Custom metrics, `waitUntil` spans | — | Covered in [Custom Metrics](emitters/custom-metrics.md) and [Functions](emitters/functions.md) |
 | Flags SDK | `flag` spans, flag values on Web Analytics | TD, AD | Covered in [Flags](emitters/flags.md) |
 | Turborepo | Run metrics (OTLP) | OTLP | Needs test project |
 

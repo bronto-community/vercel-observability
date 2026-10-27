@@ -1,0 +1,32 @@
+{
+  "id": "1793090808461405533158518894",
+  "timestamp": 1793090808461,
+  "requestId": "dmtrc-1793090808337-f346bb274d0c",
+  "executionRegion": "fra1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "vercelId": "dmtrc-1793090808337-f346bb274d0c",
+    "vercelCache": "MISS",
+    "userAgent": [
+      "catalog-check/1.0"
+    ],
+    "method": "GET",
+    "clientIp": "203.0.113.10",
+    "timestamp": 1793090808337,
+    "pathType": "STATIC",
+    "host": "vercel-observability-lab.vercel.app",
+    "path": "/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Fgradient.1ucu3hliyzcw1.png&w=1080&q=75",
+    "region": "fra1",
+    "statusCode": 200,
+    "scheme": "https"
+  },
+  "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+  "projectName": "vercel-observability-lab",
+  "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+  "source": "static",
+  "host": "vercel-observability-lab.vercel.app",
+  "path": "_next/static/immutable/media/gradient.1ucu3hliyzcw1.png",
+  "environment": "production",
+  "ja4Digest": "t13d4907h2_0d8feac7bc37_7395dae3b2f3"
+}

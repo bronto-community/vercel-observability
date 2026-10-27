@@ -1,0 +1,3 @@
+NAME                                 STATUS    CREATED        REGION   MEMORY     VCPUS   IMAGE/RUNTIME                                   TIMEOUT        SNAPSHOT   MOUNTS   TAGS   CPU     NETWORK (OUT/IN)
+aquamarine-colourful-quokka-z45VGz   stopped   18 hours ago   iad1     2,048 MB   1       vercel/sandbox/universal@sha256:7a812a4ad9cb…   18 hours ago   -          -        -      944ms   2.5 KB / 3 KB   
+beige-dirty-cardinal-P4qDoP          stopped   18 hours ago   iad1     2,048 MB   1       vercel/sandbox/universal@sha256:7a812a4ad9cb…   18 hours ago   -          -        -      814ms   2.4 KB / 3 KB   

@@ -1,0 +1,54 @@
+{
+    "sandboxes": [
+        {
+            "name": "aquamarine-colourful-quokka-z45VGz",
+            "currentSessionId": "sbx_57FZJ1atQJYPXcESx0x8Kp5pVnGS",
+            "status": "stopped",
+            "statusUpdatedAt": 1793027178342,
+            "persistent": false,
+            "workloadType": "sandbox",
+            "region": "iad1",
+            "failoverRegions": [],
+            "vcpus": 1,
+            "memory": 2048,
+            "runtime": "node22",
+            "architecture": "amd64",
+            "image": "vercel/sandbox/universal@sha256:7a812a4ad9cbf6fc78aba06c60b30cb2d2a3f59a5e969683f578d2ec4020b90c",
+            "timeout": 60000,
+            "totalEgressBytes": 2576,
+            "totalIngressBytes": 3067,
+            "totalActiveCpuDurationMs": 944,
+            "totalDurationMs": 910,
+            "cwd": "/vercel",
+            "createdAt": 1793027177126,
+            "updatedAt": 1793027177126
+        },
+        {
+            "name": "beige-dirty-cardinal-P4qDoP",
+            "currentSessionId": "sbx_zsZthcumQQ5hiI74bfd1MF6CayC3",
+            "status": "stopped",
+            "statusUpdatedAt": 1793026834000,
+            "persistent": false,
+            "workloadType": "sandbox",
+            "region": "iad1",
+            "failoverRegions": [],
+            "vcpus": 1,
+            "memory": 2048,
+            "runtime": "node22",
+            "architecture": "amd64",
+            "image": "vercel/sandbox/universal@sha256:7a812a4ad9cbf6fc78aba06c60b30cb2d2a3f59a5e969683f578d2ec4020b90c",
+            "timeout": 60000,
+            "totalEgressBytes": 2452,
+            "totalIngressBytes": 3063,
+            "totalActiveCpuDurationMs": 814,
+            "totalDurationMs": 889,
+            "cwd": "/vercel",
+            "createdAt": 1793026832770,
+            "updatedAt": 1793026832770
+        }
+    ],
+    "pagination": {
+        "count": 2,
+        "next": null
+    }
+}

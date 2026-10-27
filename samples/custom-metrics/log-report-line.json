@@ -1,0 +1,38 @@
+{
+  "id": "96693232190179309082298910200000",
+  "message": "START RequestId: 737a807e-a188-4f90-b49e-a1c55e45680e\n[GET] /api/metric status=200\nEND RequestId: 737a807e-a188-4f90-b49e-a1c55e45680e\nREPORT RequestId: 737a807e-a188-4f90-b49e-a1c55e45680e Duration: 10 ms Billed Duration: 10 ms Memory Size: 2048 MB Max Memory Used: 234 MB",
+  "timestamp": 1793090822989,
+  "type": "stdout",
+  "requestId": "mgff2-1793090822970-371391773e78",
+  "executionRegion": "dub1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "timestamp": 1793090822970,
+    "method": "GET",
+    "host": "vercel-observability-lab.vercel.app",
+    "path": "/api/metric",
+    "statusCode": 200,
+    "scheme": "https",
+    "userAgent": [
+      "catalog-check/1.0"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "fra1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func",
+    "pathTypeVariant": "lambda"
+  },
+  "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+  "projectName": "vercel-observability-lab",
+  "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+  "source": "lambda",
+  "host": "vercel-observability-lab.vercel.app",
+  "path": "/api/metric",
+  "environment": "production",
+  "traceId": "a574e1c4c72ece3e413e0504d0777174",
+  "spanId": "9653cc7e907e7cd2",
+  "invocationId": "01M5Y8N8TD3C6RXD2E8KHRF3H5",
+  "instanceId": "alcAZsyTjaUU"
+}

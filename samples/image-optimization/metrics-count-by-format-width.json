@@ -1,0 +1,115 @@
+{
+  "query": {
+    "metric": "vercel.image_transformation.count",
+    "aggregation": "count",
+    "groupBy": [
+      "optimizedFormatMimeType",
+      "optimizedWidthPixels",
+      "httpStatus"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "optimizedFormatMimeType": "",
+      "optimizedWidthPixels": "128",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "optimizedFormatMimeType": "",
+      "optimizedWidthPixels": "750",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "optimizedFormatMimeType": "",
+      "optimizedWidthPixels": "96",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "optimizedFormatMimeType": "image/webp",
+      "optimizedWidthPixels": "1080",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "optimizedFormatMimeType": "image/webp",
+      "optimizedWidthPixels": "256",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "optimizedFormatMimeType": "image/webp",
+      "optimizedWidthPixels": "384",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "optimizedFormatMimeType": "image/webp",
+      "optimizedWidthPixels": "640",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedFormatMimeType": "",
+      "optimizedWidthPixels": "128",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedFormatMimeType": "",
+      "optimizedWidthPixels": "96",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedFormatMimeType": "image/webp",
+      "optimizedWidthPixels": "256",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedFormatMimeType": "image/webp",
+      "optimizedWidthPixels": "384",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedFormatMimeType": "image/webp",
+      "optimizedWidthPixels": "640",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "optimizedFormatMimeType": "",
+      "optimizedWidthPixels": "750",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "optimizedFormatMimeType": "image/webp",
+      "optimizedWidthPixels": "1080",
+      "httpStatus": "200",
+      "vercel_image_transformation_count_count": 1
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

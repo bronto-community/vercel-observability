@@ -1,0 +1,63 @@
+{
+  "query": {
+    "metric": "lab.orders.created",
+    "aggregation": "sum",
+    "groupBy": [
+      "plan",
+      "functionRegion"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "plan": "pro",
+      "functionRegion": "dub1",
+      "lab_orders_created_sum": 11
+    },
+    {
+      "plan": "free",
+      "functionRegion": "dub1",
+      "lab_orders_created_sum": 7
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "plan": "pro",
+      "functionRegion": "dub1",
+      "lab_orders_created_sum": 7
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "plan": "free",
+      "functionRegion": "dub1",
+      "lab_orders_created_sum": 2
+    },
+    {
+      "timestamp": "2026-10-26T21:00:00.000Z",
+      "plan": "free",
+      "functionRegion": "dub1",
+      "lab_orders_created_sum": 1
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "plan": "pro",
+      "functionRegion": "dub1",
+      "lab_orders_created_sum": 4
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "plan": "free",
+      "functionRegion": "dub1",
+      "lab_orders_created_sum": 4
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

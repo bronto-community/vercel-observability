@@ -1,0 +1,36 @@
+{
+  "id": "1793090875412055313633082745",
+  "timestamp": 1793090875412,
+  "requestId": "n79md-1793090875333-489717cc51fa",
+  "executionRegion": "fra1",
+  "statusCode": 200,
+  "level": "info",
+  "proxy": {
+    "vercelId": "n79md-1793090875333-489717cc51fa",
+    "vercelCache": "MISS",
+    "scheme": "https",
+    "pathType": "EXTERNAL",
+    "referer": "https://vercel-observability-lab.vercel.app/botid",
+    "region": "fra1",
+    "path": "/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/a-4-a/c.js?i=0&v=3&h=vercel-observability-lab.vercel.app",
+    "userAgent": [
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
+    ],
+    "timestamp": 1793090875333,
+    "clientIp": "203.0.113.10",
+    "statusCode": 200,
+    "host": "vercel-observability-lab.vercel.app",
+    "method": "GET"
+  },
+  "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+  "projectName": "vercel-observability-lab",
+  "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+  "source": "external",
+  "host": "vercel-observability-lab.vercel.app",
+  "destination": "https://api.vercel.com/bot-protection/v1/challenge?i=0&v=3&h=vercel-observability-lab.vercel.app",
+  "path": "/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/a-4-a/c.js?i=0&v=3&h=vercel-observability-lab.vercel.app",
+  "environment": "production",
+  "ja4Digest": "t13d1517h2_8daaf6152771_cb7bf5808d99",
+  "traceId": "c1a2c50f86b5226f2003d3e54654b50e",
+  "spanId": "374c958e526a3466"
+}

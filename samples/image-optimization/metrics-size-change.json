@@ -1,0 +1,100 @@
+{
+  "query": {
+    "metric": "vercel.image_transformation.size_change_percent",
+    "aggregation": "avg",
+    "groupBy": [
+      "optimizedWidthPixels",
+      "optimizedFormatMimeType"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "optimizedWidthPixels": "1080",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_size_change_percent_avg": -99.37001772273605
+    },
+    {
+      "optimizedWidthPixels": "128",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_size_change_percent_avg": -94.20531108065639
+    },
+    {
+      "optimizedWidthPixels": "256",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_size_change_percent_avg": -99.37001772273605
+    },
+    {
+      "optimizedWidthPixels": "384",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_size_change_percent_avg": -99.37001772273605
+    },
+    {
+      "optimizedWidthPixels": "640",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_size_change_percent_avg": -99.37001772273605
+    },
+    {
+      "optimizedWidthPixels": "750",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_size_change_percent_avg": -85.18393616944945
+    },
+    {
+      "optimizedWidthPixels": "96",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_size_change_percent_avg": -96.36145771297778
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedWidthPixels": "128",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_size_change_percent_avg": -94.20531108065639
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedWidthPixels": "256",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_size_change_percent_avg": -99.37001772273605
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedWidthPixels": "384",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_size_change_percent_avg": -99.37001772273605
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedWidthPixels": "640",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_size_change_percent_avg": -99.37001772273605
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedWidthPixels": "96",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_size_change_percent_avg": -96.36145771297778
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "optimizedWidthPixels": "1080",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_size_change_percent_avg": -99.37001772273605
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "optimizedWidthPixels": "750",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_size_change_percent_avg": -85.18393616944945
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

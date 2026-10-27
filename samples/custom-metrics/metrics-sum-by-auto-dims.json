@@ -1,0 +1,76 @@
+{
+  "query": {
+    "metric": "lab.orders.created",
+    "aggregation": "sum",
+    "groupBy": [
+      "pathType",
+      "edgeNetworkRegion",
+      "deploymentId"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "pathType": "streaming_func",
+      "edgeNetworkRegion": "fra1",
+      "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+      "lab_orders_created_sum": 8
+    },
+    {
+      "pathType": "streaming_func",
+      "edgeNetworkRegion": "fra1",
+      "deploymentId": "dpl_GZb7tJbrGMo2QeHS4SQHqGVLsSyn",
+      "lab_orders_created_sum": 7
+    },
+    {
+      "pathType": "streaming_func",
+      "edgeNetworkRegion": "fra1",
+      "deploymentId": "dpl_ri5y7XcJApStwTHPU7aw4SYqSjf9",
+      "lab_orders_created_sum": 2
+    },
+    {
+      "pathType": "streaming_func",
+      "edgeNetworkRegion": "pdx1",
+      "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+      "lab_orders_created_sum": 1
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "pathType": "streaming_func",
+      "edgeNetworkRegion": "fra1",
+      "deploymentId": "dpl_GZb7tJbrGMo2QeHS4SQHqGVLsSyn",
+      "lab_orders_created_sum": 7
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "pathType": "streaming_func",
+      "edgeNetworkRegion": "fra1",
+      "deploymentId": "dpl_ri5y7XcJApStwTHPU7aw4SYqSjf9",
+      "lab_orders_created_sum": 2
+    },
+    {
+      "timestamp": "2026-10-26T21:00:00.000Z",
+      "pathType": "streaming_func",
+      "edgeNetworkRegion": "pdx1",
+      "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+      "lab_orders_created_sum": 1
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "pathType": "streaming_func",
+      "edgeNetworkRegion": "fra1",
+      "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+      "lab_orders_created_sum": 8
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

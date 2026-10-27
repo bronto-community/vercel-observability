@@ -1,0 +1,29 @@
+{
+  "query": {
+    "metric": "vercel.sandbox.public_ingress_bytes",
+    "aggregation": "sum",
+    "groupBy": [
+      "sandboxName"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "sandboxName": "aquamarine-colourful-quokka-z45VGz",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    },
+    {
+      "sandboxName": "beige-dirty-cardinal-P4qDoP",
+      "vercel_sandbox_public_ingress_bytes_sum": 0
+    }
+  ],
+  "data": [],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

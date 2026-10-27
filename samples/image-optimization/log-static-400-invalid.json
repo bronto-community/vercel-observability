@@ -1,0 +1,33 @@
+{
+  "id": "1793090814938365244483178861",
+  "message": "INVALID_IMAGE_OPTIMIZE_REQUEST: Bad request",
+  "timestamp": 1793090814938,
+  "requestId": "tlmlq-1793090814812-9f2d82f714fd",
+  "executionRegion": "fra1",
+  "level": "warning",
+  "proxy": {
+    "host": "vercel-observability-lab.vercel.app",
+    "scheme": "https",
+    "vercelCache": "MISS",
+    "errorCode": "INVALID_IMAGE_OPTIMIZE_REQUEST",
+    "userAgent": [
+      "catalog-check/1.0"
+    ],
+    "region": "fra1",
+    "clientIp": "203.0.113.10",
+    "path": "/_next/image?url=%2Fnope.png&w=640&q=75",
+    "timestamp": 1793090814812,
+    "statusCode": 400,
+    "pathType": "STATIC",
+    "vercelId": "tlmlq-1793090814812-9f2d82f714fd",
+    "method": "GET"
+  },
+  "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+  "projectName": "vercel-observability-lab",
+  "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+  "source": "static",
+  "host": "vercel-observability-lab.vercel.app",
+  "path": "404",
+  "environment": "production",
+  "ja4Digest": "t13d4907h2_0d8feac7bc37_7395dae3b2f3"
+}

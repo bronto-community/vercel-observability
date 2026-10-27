@@ -1,0 +1,100 @@
+{
+  "query": {
+    "metric": "vercel.image_transformation.optimized_size_bytes",
+    "aggregation": "avg",
+    "groupBy": [
+      "optimizedWidthPixels",
+      "optimizedFormatMimeType"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "optimizedWidthPixels": "1080",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_optimized_size_bytes_avg": 878
+    },
+    {
+      "optimizedWidthPixels": "128",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_optimized_size_bytes_avg": 8076
+    },
+    {
+      "optimizedWidthPixels": "256",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_optimized_size_bytes_avg": 878
+    },
+    {
+      "optimizedWidthPixels": "384",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_optimized_size_bytes_avg": 878
+    },
+    {
+      "optimizedWidthPixels": "640",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_optimized_size_bytes_avg": 878
+    },
+    {
+      "optimizedWidthPixels": "750",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_optimized_size_bytes_avg": 20649
+    },
+    {
+      "optimizedWidthPixels": "96",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_optimized_size_bytes_avg": 5071
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedWidthPixels": "128",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_optimized_size_bytes_avg": 8076
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedWidthPixels": "256",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_optimized_size_bytes_avg": 878
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedWidthPixels": "384",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_optimized_size_bytes_avg": 878
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedWidthPixels": "640",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_optimized_size_bytes_avg": 878
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "optimizedWidthPixels": "96",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_optimized_size_bytes_avg": 5071
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "optimizedWidthPixels": "1080",
+      "optimizedFormatMimeType": "image/webp",
+      "vercel_image_transformation_optimized_size_bytes_avg": 878
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "optimizedWidthPixels": "750",
+      "optimizedFormatMimeType": "",
+      "vercel_image_transformation_optimized_size_bytes_avg": 20649
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

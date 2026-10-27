@@ -1,0 +1,90 @@
+{
+  "query": {
+    "metric": "vercel.external_api_request.request_duration_ms",
+    "aggregation": "sum",
+    "groupBy": [
+      "requestMethod",
+      "requestPath",
+      "functionRegion"
+    ],
+    "filter": "originRoute eq '/api/sandbox'",
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "requestMethod": "POST",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_57FZJ1atQJYPXcESx0x8Kp5pVnGS/cmd",
+      "functionRegion": "dub1",
+      "vercel_external_api_request_request_duration_ms_sum": 290
+    },
+    {
+      "requestMethod": "POST",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_zsZthcumQQ5hiI74bfd1MF6CayC3/cmd",
+      "functionRegion": "dub1",
+      "vercel_external_api_request_request_duration_ms_sum": 284
+    },
+    {
+      "requestMethod": "POST",
+      "requestPath": "/api/v3/sandboxes",
+      "functionRegion": "dub1",
+      "vercel_external_api_request_request_duration_ms_sum": 596
+    },
+    {
+      "requestMethod": "POST",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_57FZJ1atQJYPXcESx0x8Kp5pVnGS/stop",
+      "functionRegion": "dub1",
+      "vercel_external_api_request_request_duration_ms_sum": 1168
+    },
+    {
+      "requestMethod": "POST",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_zsZthcumQQ5hiI74bfd1MF6CayC3/stop",
+      "functionRegion": "dub1",
+      "vercel_external_api_request_request_duration_ms_sum": 1173
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "requestMethod": "POST",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_57FZJ1atQJYPXcESx0x8Kp5pVnGS/cmd",
+      "functionRegion": "dub1",
+      "vercel_external_api_request_request_duration_ms_sum": 290
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "requestMethod": "POST",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_zsZthcumQQ5hiI74bfd1MF6CayC3/cmd",
+      "functionRegion": "dub1",
+      "vercel_external_api_request_request_duration_ms_sum": 284
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "requestMethod": "POST",
+      "requestPath": "/api/v3/sandboxes",
+      "functionRegion": "dub1",
+      "vercel_external_api_request_request_duration_ms_sum": 596
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "requestMethod": "POST",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_57FZJ1atQJYPXcESx0x8Kp5pVnGS/stop",
+      "functionRegion": "dub1",
+      "vercel_external_api_request_request_duration_ms_sum": 1168
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "requestMethod": "POST",
+      "requestPath": "/api/v2/sandboxes/sessions/sbx_zsZthcumQQ5hiI74bfd1MF6CayC3/stop",
+      "functionRegion": "dub1",
+      "vercel_external_api_request_request_duration_ms_sum": 1173
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

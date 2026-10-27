@@ -1,0 +1,89 @@
+{
+  "query": {
+    "metric": "vercel.bot_id_check.count",
+    "aggregation": "count",
+    "groupBy": [
+      "botCheckResult",
+      "clientUserAgent"
+    ],
+    "startTime": "2026-10-26T00:00:00.000Z",
+    "endTime": "2026-10-27T09:00:00.000Z",
+    "granularity": {
+      "hours": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "botCheckResult": "Human",
+      "clientUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "vercel_bot_id_check_count_count": 13
+    },
+    {
+      "botCheckResult": "Bot",
+      "clientUserAgent": "catalog-check/1.0",
+      "vercel_bot_id_check_count_count": 6
+    },
+    {
+      "botCheckResult": "Bot",
+      "clientUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "vercel_bot_id_check_count_count": 6
+    },
+    {
+      "botCheckResult": "Bot",
+      "clientUserAgent": "curl/8.7.1",
+      "vercel_bot_id_check_count_count": 5
+    },
+    {
+      "botCheckResult": "Bot",
+      "clientUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "vercel_bot_id_check_count_count": 4
+    },
+    {
+      "botCheckResult": "Human",
+      "clientUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "vercel_bot_id_check_count_count": 2
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "botCheckResult": "Human",
+      "clientUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "vercel_bot_id_check_count_count": 13
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "botCheckResult": "Bot",
+      "clientUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "vercel_bot_id_check_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-26T15:00:00.000Z",
+      "botCheckResult": "Bot",
+      "clientUserAgent": "curl/8.7.1",
+      "vercel_bot_id_check_count_count": 5
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "botCheckResult": "Bot",
+      "clientUserAgent": "catalog-check/1.0",
+      "vercel_bot_id_check_count_count": 6
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "botCheckResult": "Bot",
+      "clientUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "vercel_bot_id_check_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "botCheckResult": "Human",
+      "clientUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "vercel_bot_id_check_count_count": 2
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}
