@@ -1,0 +1,166 @@
+{
+  "query": {
+    "metric": "vercel.analytics.event.count",
+    "aggregation": "count",
+    "groupBy": [
+      "eventName",
+      "flags"
+    ],
+    "startTime": "2026-10-27T07:00:00.000Z",
+    "endTime": "2026-10-27T08:55:00.000Z",
+    "granularity": {
+      "minutes": 5
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 3
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-27T07:00:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:05:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:10:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:15:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:20:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:25:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:30:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:35:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:40:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:45:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:50:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T07:55:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T08:05:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T08:10:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T08:15:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T08:20:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T08:25:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T08:30:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T08:35:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T08:40:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 0
+    },
+    {
+      "timestamp": "2026-10-27T08:45:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-27T08:50:00.000Z",
+      "eventName": "Flag button clicked",
+      "flags": "lab-flag",
+      "vercel_analytics_event_count_count": null
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

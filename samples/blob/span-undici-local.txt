@@ -1,0 +1,42 @@
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '2.12.0'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-undici',
+    version: '0.34.0',
+    schemaUrl: undefined
+  },
+  traceId: 'd0d462b70d537186284207eb24fcd203',
+  parentSpanContext: undefined,
+  traceState: undefined,
+  name: 'GET',
+  id: '95aefb661e9183ed',
+  kind: 2,
+  timestamp: 1793090885723000,
+  duration: 153117.792,
+  attributes: {
+    'http.request.method': 'GET',
+    'http.request.method_original': 'GET',
+    'url.full': 'https://vercel.com/api/blob?url=https%3A%2F%2Fexample.public.blob.vercel-storage.com%2Fx.txt',
+    'url.path': '/api/blob',
+    'url.query': '?url=https%3A%2F%2Fexample.public.blob.vercel-storage.com%2Fx.txt',
+    'url.scheme': 'https',
+    'server.address': 'vercel.com',
+    'server.port': 443,
+    'user_agent.original': 'undici',
+    'network.peer.address': '64.239.109.129',
+    'network.peer.port': 443,
+    'network.protocol.version': '1.1',
+    'http.response.status_code': 404,
+    'error.type': '404'
+  },
+  status: { code: 2 },
+  events: [],
+  links: []
+}

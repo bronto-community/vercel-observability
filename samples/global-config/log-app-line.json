@@ -1,0 +1,35 @@
+{
+  "id": "30064631240179309068018060100000",
+  "message": "{\"msg\":\"global config read\",\"key\":\"greeting\",\"found\":true}",
+  "timestamp": 1793090680180,
+  "type": "stdout",
+  "requestId": "zt2wh-1793090680143-612107c6734d",
+  "executionRegion": "dub1",
+  "level": "info",
+  "proxy": {
+    "timestamp": 1793090680143,
+    "method": "GET",
+    "host": "vercel-observability-lab.vercel.app",
+    "path": "/api/config",
+    "scheme": "https",
+    "userAgent": [
+      "curl/8.7.1"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "fra1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func",
+    "pathTypeVariant": "lambda"
+  },
+  "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+  "projectName": "vercel-observability-lab",
+  "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+  "source": "lambda",
+  "host": "vercel-observability-lab.vercel.app",
+  "path": "/api/config",
+  "environment": "production",
+  "traceId": "661614b14688541d10c9fb20f30f92d8",
+  "spanId": "7192f3b6a4960f91",
+  "invocationId": "01M5Y8GXB4AW2GJ50WJW0Y91B3"
+}

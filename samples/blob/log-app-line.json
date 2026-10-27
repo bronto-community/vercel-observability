@@ -1,0 +1,35 @@
+{
+  "id": "30064631240179309068007527900000",
+  "message": "{\"msg\":\"blob roundtrip\",\"pathname\":\"lab/hello-1793090678530.txt\",\"size\":32,\"listed\":1}",
+  "timestamp": 1793090680075,
+  "type": "stdout",
+  "requestId": "2wwx5-1793090678489-859b08ea338e",
+  "executionRegion": "dub1",
+  "level": "info",
+  "proxy": {
+    "timestamp": 1793090678489,
+    "method": "GET",
+    "host": "vercel-observability-lab.vercel.app",
+    "path": "/api/blob",
+    "scheme": "https",
+    "userAgent": [
+      "curl/8.7.1"
+    ],
+    "clientIp": "203.0.113.10",
+    "region": "fra1",
+    "lambdaRegion": "dub1",
+    "vercelCache": "MISS",
+    "pathType": "streaming_func",
+    "pathTypeVariant": "lambda"
+  },
+  "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+  "projectName": "vercel-observability-lab",
+  "deploymentId": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+  "source": "lambda",
+  "host": "vercel-observability-lab.vercel.app",
+  "path": "/api/blob",
+  "environment": "production",
+  "traceId": "4a1b5554fd39aeadd233e4bc4a7b5bbf",
+  "spanId": "3ee2fb9d8ac5142f",
+  "invocationId": "01M5Y8GVQCT98W5GRZBDG9BFEH"
+}

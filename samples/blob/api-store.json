@@ -1,0 +1,37 @@
+{
+  "store": {
+    "id": "store_186lljFsKYsfqxFe",
+    "ownerId": "team_REDACTED",
+    "createdAt": 1793026700952,
+    "updatedAt": 1793026700952,
+    "type": "blob",
+    "name": "vercel-observability-lab-blob",
+    "billingState": "active",
+    "projectsMetadata": [
+      {
+        "id": "spc_LcKKDY3qy8cYCFGB",
+        "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+        "name": "vercel-observability-lab",
+        "framework": null,
+        "latestDeployment": "dpl_GY4JDgMZ4S78TcdqVojqu3FK6h1c",
+        "environments": [
+          "production",
+          "preview",
+          "development"
+        ],
+        "envVarPrefix": "BLOB",
+        "environmentVariables": [
+          "BLOB_READ_WRITE_TOKEN"
+        ]
+      }
+    ],
+    "usageQuotaExceeded": false,
+    "status": "available",
+    "size": 0,
+    "count": 0,
+    "region": "dub1",
+    "access": "public",
+    "isTokenExpired": false,
+    "totalConnectedProjects": 1
+  }
+}

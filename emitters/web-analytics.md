@@ -145,7 +145,7 @@ Queries against the lab's last 30 days, run 2026-10-26 (traffic ran 2026-10-17 t
 
 ## Gotchas
 
-1. **Headless browsers are invisible.** `navigator.webdriver = true` suppresses every event, so Playwright checks and most bots never appear. Counted synthetic traffic needs the flag off and a marker of your own (Observed, D11).
+1. **Headless browsers are invisible.** `navigator.webdriver = true` suppresses every event, so Playwright checks and most bots never appear (Observed, D11). Turning the flag off isn't always enough: on 2026-10-27, headless Chrome with its default `HeadlessChrome/156` user agent and the flag off still sent no beacons; with a regular Chrome user agent it sent all of them (Observed in the second lab, see the Flags entry). Counted synthetic traffic needs the flag off, a regular user agent and a marker of your own.
 2. **`origin` is the full URL.** It holds the path and query string, not just scheme and host. Together with `queryParams`, anything in the query string leaves Vercel: two lab records carry `{"error":"access_denied","error_description":"This Vercel account does not have access to this app."}` from an OAuth redirect. Strip sensitive parameters with `beforeSend` (Captured: `pageview-synthetic.json`).
 3. **`queryParams` and `eventData` are JSON strings.** Vercel's docs show `queryParams` as a URL query string (`utm_source=google&…`); the lab receives JSON (`{"utm_source":"synthetic"}`) (Captured).
 4. **`deployment`, not `deploymentId`.** The same ID is `deploymentId` in the log drain and `vercel.deployment_id` on spans; join on the value.

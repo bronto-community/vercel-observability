@@ -33,9 +33,9 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | [AI Gateway](emitters/ai-gateway.md) | | ✓ (Plus) | ✓ | Generation API | AGD, API | **Done** 2026-10-26 (fallback in production: not observed) |
 | [Agent Runs (eve, agent harnesses)](emitters/agent-runs.md) | | | ✓ | | TD, OTLP | **Done** 2026-10-26 |
 | Sandbox | | ✓ (Plus) | | | — | Needs test project |
-| Blob | | | | Usage | — | Needs test project |
-| Global Config (formerly Edge Config) | | | | Usage | — | Needs test project |
-| Flags | | | | ✓ | WH, AD | Needs test project |
+| [Blob](emitters/blob.md) | | | via OTLP from code | Usage, billing | API, OTLP | **Done** 2026-10-27 |
+| [Global Config (formerly Edge Config)](emitters/global-config.md) | | | via OTLP from code | Usage, billing | API, OTLP | **Done** 2026-10-27 |
+| [Flags](emitters/flags.md) | | ✓ | ✓ | Evaluations, webhooks | TD, AD, WH, API | **Done** 2026-10-27 |
 | Speed Insights | | ✓ | | | SID | Blocked: Speed Insights drain not created yet; no visits recorded since 2026-10-23 |
 | [Web Analytics](emitters/web-analytics.md) | | ✓ | | Page views, custom events | AD | **Done** 2026-10-26 |
 | [AI traffic (crawlers, assistants)](emitters/ai-traffic.md) | | ✓ (Plus) | | | — | **Done** 2026-10-26 (no recognized AI bot on the lab project yet) |
@@ -56,7 +56,7 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | `@vercel/analytics` | Page views, custom events | AD | Covered in [Web Analytics](emitters/web-analytics.md) |
 | `@vercel/speed-insights` | Web Vitals | SID | Blocked with Speed Insights |
 | `@vercel/functions` (`metric()`, `waitUntil`) | Custom metrics, `waitUntil` spans | — | With Custom Metrics |
-| Flags SDK | Flag evaluations | AD | Needs test project |
+| Flags SDK | `flag` spans, flag values on Web Analytics | TD, AD | Covered in [Flags](emitters/flags.md) |
 | Turborepo | Run metrics (OTLP) | OTLP | Needs test project |
 
 ### Reference

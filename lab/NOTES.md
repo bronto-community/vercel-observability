@@ -78,7 +78,7 @@ All times UTC. `vercel` below means `npx vercel@65.2.0` run from this folder (li
 ### Web Analytics and Speed Insights
 
 - Page views: `/ 12, /botid 6, /flags 6, /image 6` in the first hour (`vercel.analytics.page_view.count --group-by route`).
-- The analytics script sends nothing from headless Chrome while `navigator.webdriver` is set; page views appeared only after disabling that flag.
+- The analytics script sends nothing from headless Chrome while `navigator.webdriver` is set; page views appeared only after disabling that flag. Correction 2026-10-27: disabling the flag isn't enough on its own. With the default `HeadlessChrome/156` user agent no beacons were sent; the page views counted here came from runs with a regular Chrome user agent.
 - Speed Insights: `vercel.speed_insights.lcp_ms` has samples (`/ 26, /botid 13, /flags 13, /image 13` counts) although `vercel project speed-insights enable` was never run.
 
 ### Functions (all routes)
