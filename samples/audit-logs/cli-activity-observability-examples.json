@@ -1,0 +1,1065 @@
+[
+  {
+    "text": "You created a drain with endpoint url bronto.io (via Vercel CLI)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "bold",
+        "start": 38,
+        "end": 47
+      }
+    ],
+    "createdAt": 1793092637126,
+    "created": 1793092637126,
+    "type": "drain-created",
+    "categories": [
+      "observability"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "via": [
+      {
+        "name": "Vercel CLI",
+        "type": "app",
+        "id": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp",
+        "clientId": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+      }
+    ],
+    "viaIds": [
+      "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+    ],
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "sessionId": "session_REDACTED",
+    "requestId": "wcnwd-1793092637078-d92c0284e5fa",
+    "id": "uev_xaJgnKTLAI6cRLvfEfJaKxR6",
+    "payload": {
+      "id": "drn_QzDJlobvAjI07U5R",
+      "drainUrl": "bronto.io",
+      "drainName": "petclinic-agent-speed-insights"
+    }
+  },
+  {
+    "text": "user-3 updated a drain with endpoint url bronto.io",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "type": "bold",
+        "start": 41,
+        "end": 50
+      }
+    ],
+    "createdAt": 1792850181275,
+    "created": 1792850181275,
+    "type": "drain-updated",
+    "categories": [
+      "observability"
+    ],
+    "user": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "principal": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "userId": "user_REDACTED_3",
+    "principalId": "user_REDACTED_3",
+    "tokenId": "token_REDACTED",
+    "requestId": "g6gc9-1792850181207-83b6eb49551c",
+    "id": "uev_nWunyYq06MI1qlSRQWcVF6m2",
+    "payload": {
+      "id": "drn_MLrAXRbWi9KGnP8K",
+      "drainUrl": "bronto.io",
+      "drainName": "user-3 Drain - team-bot-a-analytics",
+      "integrationName": "user-3"
+    }
+  },
+  {
+    "text": "You deleted a drain with endpoint url bronto.io (via Vercel CLI)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "bold",
+        "start": 38,
+        "end": 47
+      }
+    ],
+    "createdAt": 1793008919743,
+    "created": 1793008919743,
+    "type": "drain-deleted",
+    "categories": [
+      "observability"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "via": [
+      {
+        "name": "Vercel CLI",
+        "type": "app",
+        "id": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp",
+        "clientId": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+      }
+    ],
+    "viaIds": [
+      "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+    ],
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "sessionId": "session_REDACTED",
+    "requestId": "dtjxk-1793008919672-d5b26c2f16ca",
+    "id": "uev_HExR1rF2WFexT1cxWiFwLU0G",
+    "payload": {
+      "id": "drn_qkDlSHZYYMHV3loG",
+      "drainUrl": "bronto.io",
+      "drainName": "apato-storefront-traces"
+    }
+  },
+  {
+    "text": "You enabled Speed Insights for project vercel-observability-lab (via Vercel CLI)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "project_name",
+        "start": 39,
+        "end": 63
+      }
+    ],
+    "createdAt": 1793092615648,
+    "created": 1793092615648,
+    "type": "project-speed-insights-enabled",
+    "categories": [
+      "observability",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "via": [
+      {
+        "name": "Vercel CLI",
+        "type": "app",
+        "id": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp",
+        "clientId": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+      }
+    ],
+    "viaIds": [
+      "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+    ],
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "sessionId": "session_REDACTED",
+    "requestId": "pdzls-1793092615470-507acce2337f",
+    "id": "uev_Jyyh3mSRBvjIRK3jJk0F2PSs",
+    "payload": {
+      "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+      "projectName": "vercel-observability-lab",
+      "projectSpeedInsights": {
+        "id": "ts8RsHMcAQFBqCb1hv4hoIDec93",
+        "hasData": true,
+        "dataReceivedAt": 1793027058818,
+        "enabledAt": 1793092615599
+      },
+      "prevProjectSpeedInsights": {
+        "id": "ts8RsHMcAQFBqCb1hv4hoIDec93",
+        "hasData": true,
+        "dataReceivedAt": 1793027058818
+      }
+    }
+  },
+  {
+    "text": "You enabled Web Analytics on vercel-observability-lab (via Vercel CLI)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "project_name",
+        "start": 29,
+        "end": 53
+      }
+    ],
+    "createdAt": 1793026964330,
+    "created": 1793026964330,
+    "type": "project-web-analytics-enabled",
+    "categories": [
+      "observability",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "via": [
+      {
+        "name": "Vercel CLI",
+        "type": "app",
+        "id": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp",
+        "clientId": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+      }
+    ],
+    "viaIds": [
+      "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+    ],
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "sessionId": "session_REDACTED",
+    "requestId": "jllq4-1793026964061-560da629fd06",
+    "id": "uev_2cf8QToDKRIOo1yLoRxBUVl2",
+    "payload": {
+      "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+      "projectName": "vercel-observability-lab",
+      "projectWebAnalytics": {
+        "id": "qai0gOOQvDbFLDZmlaQoR5n4J",
+        "enabledAt": 1793026964279
+      },
+      "prevProjectWebAnalytics": {
+        "id": "qai0gOOQvDbFLDZmlaQoR5n4J"
+      }
+    }
+  },
+  {
+    "text": "You configured tracing for project vercel-observability-lab (via Vercel CLI)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "project_name",
+        "start": 35,
+        "end": 59
+      }
+    ],
+    "createdAt": 1793027338662,
+    "created": 1793027338662,
+    "type": "tracing-configured",
+    "categories": [
+      "observability",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "via": [
+      {
+        "name": "Vercel CLI",
+        "type": "app",
+        "id": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp",
+        "clientId": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+      }
+    ],
+    "viaIds": [
+      "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+    ],
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "sessionId": "session_REDACTED",
+    "requestId": "gb2b7-1793027338558-1c70b93e52ac",
+    "id": "uev_iTAY9uOSfxPAKJsr6c7uhyig",
+    "payload": {
+      "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+      "projectName": "vercel-observability-lab",
+      "sampling": [
+        {
+          "type": "head_sampling",
+          "rate": 1
+        }
+      ]
+    }
+  },
+  {
+    "text": "You enabled Observability Plus",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      }
+    ],
+    "createdAt": 1793007734065,
+    "created": 1793007734065,
+    "type": "observability-enabled",
+    "categories": [
+      "observability"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "requestId": "h7w6b-1793007732102-51c3f4789649",
+    "id": "uev_UfeNLdmrJEcIUuJlsE4bjGzX",
+    "payload": {}
+  },
+  {
+    "text": "You created a webhook to vercel.app (via Vercel CLI)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "bold",
+        "start": 25,
+        "end": 35
+      }
+    ],
+    "createdAt": 1792438283669,
+    "created": 1792438283669,
+    "type": "webhook-created",
+    "categories": [
+      "observability"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "via": [
+      {
+        "name": "Vercel CLI",
+        "type": "app",
+        "id": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp",
+        "clientId": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+      }
+    ],
+    "viaIds": [
+      "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+    ],
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "sessionId": "session_REDACTED",
+    "requestId": "qzdkl-1792438283450-e359ee74f809",
+    "id": "uev_D2Mw4ZAP04fctY6mv8eaGTiR",
+    "payload": {
+      "id": "account_hook_FtW3PwGbKclpkVxBtaVI2XuM",
+      "url": "https://petclinic-agent.vercel.app/api/vercel-webhook"
+    }
+  },
+  {
+    "text": "You published version #1 with 2 changes (via Vercel CLI)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "bold",
+        "start": 22,
+        "end": 24
+      },
+      {
+        "type": "bold",
+        "start": 30,
+        "end": 31
+      }
+    ],
+    "createdAt": 1792477526780,
+    "created": 1792477526780,
+    "type": "firewall-config-promoted",
+    "categories": [
+      "firewall",
+      "security",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "via": [
+      {
+        "name": "Vercel CLI",
+        "type": "app",
+        "id": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp",
+        "clientId": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+      }
+    ],
+    "viaIds": [
+      "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+    ],
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "sessionId": "session_REDACTED",
+    "requestId": "rhbbl-1792477526645-75233bb78375",
+    "id": "uev_dOe68tgxbIUsDsf7NQm8PRIh",
+    "payload": {
+      "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+      "projectName": "petclinic-agent",
+      "restore": false,
+      "configVersion": 1,
+      "configChangeCount": 2,
+      "configChanges": [
+        {
+          "action": "rules.insert",
+          "createdAt": "2026-10-20T06:25:18.780Z",
+          "id": "rule_block_scanner_paths_jbLxqj",
+          "userId": "user_REDACTED_1",
+          "username": "user-1",
+          "value": {
+            "action": {
+              "mitigate": {
+                "action": "deny",
+                "actionDuration": null,
+                "rateLimit": null,
+                "redirect": null
+              }
+            },
+            "active": true,
+            "conditionGroup": [
+              {
+                "conditions": [
+                  {
+                    "op": "inc",
+                    "type": "path",
+                    "value": [
+                      "/.env",
+                      "/wp-login.php",
+                      "/.git/config",
+                      "/xmlrpc.php"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "description": "Typical vulnerability scanner probes",
+            "name": "Block scanner paths"
+          }
+        },
+        {
+          "action": "rules.insert",
+          "createdAt": "2026-10-20T06:25:25.377Z",
+          "id": "rule_rate_limit_new_chats_vbkYGF",
+          "userId": "user_REDACTED_1",
+          "username": "user-1",
+          "value": {
+            "action": {
+              "mitigate": {
+                "action": "rate_limit",
+                "actionDuration": null,
+                "rateLimit": {
+                  "action": "deny",
+                  "algo": "fixed_window",
+                  "keys": [
+                    "ip"
+                  ],
+                  "limit": 20,
+                  "window": 60
+                },
+                "redirect": null
+              }
+            },
+            "active": true,
+            "conditionGroup": [
+              {
+                "conditions": [
+                  {
+                    "op": "eq",
+                    "type": "path",
+                    "value": "/eve/v1/session"
+                  },
+                  {
+                    "op": "eq",
+                    "type": "method",
+                    "value": "POST"
+                  }
+                ]
+              }
+            ],
+            "description": "At most 20 new chat sessions per minute per IP",
+            "name": "Rate limit new chats"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "text": "You added Environment Variable NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY to Project petclinic-agent for Development (via Vercel CLI)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "env_var_name",
+        "start": 31,
+        "end": 67
+      },
+      {
+        "type": "project_name",
+        "start": 79,
+        "end": 94
+      },
+      {
+        "type": "bold",
+        "start": 99,
+        "end": 110
+      }
+    ],
+    "createdAt": 1793091796648,
+    "created": 1793091796648,
+    "type": "env-variable-add",
+    "categories": [
+      "env-variable",
+      "security",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "via": [
+      {
+        "name": "Vercel CLI",
+        "type": "app",
+        "id": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp",
+        "clientId": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+      }
+    ],
+    "viaIds": [
+      "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+    ],
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "sessionId": "session_REDACTED",
+    "requestId": "vgwbc-1793091796568-1b94e943b4c5",
+    "id": "uev_kXS7BqNKU0894yh7SrBCE1Mj",
+    "payload": {
+      "type": "encrypted",
+      "target": [
+        "development"
+      ],
+      "configurationId": null,
+      "id": "0LbTPUYCIgmscVF3",
+      "key": "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
+      "createdAt": 1793091796626,
+      "updatedAt": 1793091796626,
+      "createdBy": "user_REDACTED_1",
+      "updatedBy": null,
+      "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+      "projectName": "petclinic-agent",
+      "customEnvironmentSlugs": []
+    }
+  },
+  {
+    "text": "user-3 updated Environment Variable TEAMMATE_SLACK_USER_ID in Project team-bot-a for Production and Preview - Submitted a value.",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "env_var_name",
+        "start": 42,
+        "end": 63
+      },
+      {
+        "type": "project_name",
+        "start": 75,
+        "end": 84
+      },
+      {
+        "type": "bold",
+        "start": 89,
+        "end": 111
+      }
+    ],
+    "createdAt": 1792550240340,
+    "created": 1792550240340,
+    "type": "env-variable-edit",
+    "categories": [
+      "env-variable",
+      "security",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "principal": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "userId": "user_REDACTED_3",
+    "principalId": "user_REDACTED_3",
+    "tokenId": "token_REDACTED",
+    "requestId": "n85gk-1792550240257-57ff532b6a49",
+    "id": "uev_PD5iZbHx8i7HuiFW2Y2uGxrs",
+    "payload": {
+      "key": "TEAMMATE_SLACK_USER_ID",
+      "updateDiff": {
+        "key": "TEAMMATE_SLACK_USER_ID",
+        "newKey": "TEAMMATE_SLACK_USER_ID",
+        "oldTarget": [
+          "production",
+          "preview"
+        ],
+        "newTarget": [
+          "production",
+          "preview"
+        ],
+        "oldType": "sensitive",
+        "newType": "sensitive",
+        "oldCustomEnvironmentIds": [],
+        "newCustomEnvironmentIds": [],
+        "changedGitBranch": false,
+        "changedComment": false,
+        "changedValue": true
+      },
+      "id": "rvGxkt2R2LQkVWlk",
+      "target": [
+        "production",
+        "preview"
+      ],
+      "projectId": "prj_OTHER_2",
+      "projectName": "team-bot-a",
+      "customEnvironmentSlugs": []
+    }
+  },
+  {
+    "text": "You deleted Environment Variable LAB_SECRET from Project vercel-observability-lab (was in Production) (via Vercel CLI)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "env_var_name",
+        "start": 33,
+        "end": 43
+      },
+      {
+        "type": "project_name",
+        "start": 57,
+        "end": 81
+      },
+      {
+        "type": "bold",
+        "start": 90,
+        "end": 100
+      }
+    ],
+    "createdAt": 1793026774782,
+    "created": 1793026774782,
+    "type": "env-variable-delete",
+    "categories": [
+      "env-variable",
+      "security",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "via": [
+      {
+        "name": "Vercel CLI",
+        "type": "app",
+        "id": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp",
+        "clientId": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+      }
+    ],
+    "viaIds": [
+      "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+    ],
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "sessionId": "session_REDACTED",
+    "requestId": "8psdd-1793026774721-1bb31c948c1e",
+    "id": "uev_9PwA7mXQ5eS445qRymyakItA",
+    "payload": {
+      "key": "LAB_SECRET",
+      "id": "YwwTwUrUuIgoTKM5",
+      "target": [
+        "production"
+      ],
+      "projectId": "prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM",
+      "projectName": "vercel-observability-lab",
+      "customEnvironmentSlugs": []
+    }
+  },
+  {
+    "text": "You used vc env ls to view all environment variables in Project petclinic-agent (via Vercel CLI)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "bold",
+        "start": 9,
+        "end": 18
+      },
+      {
+        "type": "project_name",
+        "start": 64,
+        "end": 79
+      }
+    ],
+    "createdAt": 1793091797928,
+    "created": 1793091797928,
+    "type": "env-variable-read:cli:env:ls",
+    "categories": [
+      "env-variable",
+      "security",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "via": [
+      {
+        "name": "Vercel CLI",
+        "type": "app",
+        "id": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp",
+        "clientId": "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+      }
+    ],
+    "viaIds": [
+      "cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp"
+    ],
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "tokenId": "token_REDACTED",
+    "sessionId": "session_REDACTED",
+    "requestId": "w6np5-1793091797870-280f9a0d580f",
+    "id": "uev_hwxCVONo2ve3OYLe1UaGYJ8h",
+    "payload": {
+      "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+      "projectName": "petclinic-agent"
+    }
+  },
+  {
+    "text": "You deployed petclinic-agent from bronto-community/petclinic-agent (fa24c46 in main) to production",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "type": "project_name",
+        "start": 13,
+        "end": 28
+      },
+      {
+        "type": "git_link",
+        "start": 34,
+        "end": 66,
+        "url": "https://github.com/bronto-community/petclinic-agent"
+      },
+      {
+        "type": "git_link",
+        "start": 68,
+        "end": 75,
+        "url": "https://github.com/bronto-community/petclinic-agent/commit/fa24c461c091aa9bd5a9fa712ab6ae6b69fa98d9"
+      },
+      {
+        "type": "git_link",
+        "start": 79,
+        "end": 83,
+        "url": "https://github.com/bronto-community/petclinic-agent/tree/main"
+      },
+      {
+        "type": "target",
+        "start": 88,
+        "end": 98,
+        "target": "production",
+        "host": "petclinic-agent-brontoio.vercel.app"
+      },
+      {
+        "type": "github_login",
+        "start": -1,
+        "end": -1,
+        "login": "user-1",
+        "name": "Commit Author"
+      }
+    ],
+    "createdAt": 1793092546879,
+    "created": 1793092546879,
+    "type": "deployment",
+    "categories": [
+      "deployment",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "requestId": "2ph4m-1793092546435-4c96acbcd119",
+    "id": "uev_mymyXlXifFoonffnYLJy8Hpd",
+    "payload": {
+      "alias": [
+        "petclinic-agent-brontoio.vercel.app",
+        "petclinic-agent-git-main-brontoio.vercel.app"
+      ],
+      "deployment": {
+        "id": "dpl_8bxsxvA36JnzWxanBs48GsdL91R1",
+        "name": "petclinic-agent",
+        "url": "petclinic-agent-85fdk9p6i-brontoio.vercel.app",
+        "meta": {
+          "githubCommitAuthorName": "Commit Author",
+          "githubCommitAuthorEmail": "user-1@example.com",
+          "githubCommitMessage": "Save the chat history in Supabase\n\nThe history moves from localStorage to a chat_sessions table in Supabase,\nwith row-level security per visitor. The browser signs in anonymously\nwith the first saved chat; /api/history reads and writes through\n@supabase/ssr with tracePropagation, so Supabase's API gateway logs\ncarry the trace ID of the Next.js request.\n\nAssisted-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "githubCommitOrg": "bronto-community",
+          "githubCommitRef": "main",
+          "githubCommitRepo": "petclinic-agent",
+          "githubCommitSha": "fa24c461c091aa9bd5a9fa712ab6ae6b69fa98d9",
+          "githubDeployment": "1",
+          "githubOrg": "bronto-community",
+          "githubRepo": "petclinic-agent",
+          "githubRepoOwnerType": "Organization",
+          "githubCommitRepoId": "1426010849",
+          "githubRepoId": "1426010849",
+          "githubRepoVisibility": "public",
+          "githubHost": "github.com",
+          "githubCommitAuthorLogin": "user-1",
+          "githubCommitVerification": "unverified",
+          "repoPushedAt": "1793092543000",
+          "branchAlias": "petclinic-agent-git-main-brontoio.vercel.app"
+        },
+        "readyState": "INITIALIZING"
+      },
+      "deploymentId": "dpl_8bxsxvA36JnzWxanBs48GsdL91R1",
+      "name": "petclinic-agent",
+      "plan": "pro",
+      "project": "petclinic-agent",
+      "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+      "regions": [
+        "iad1"
+      ],
+      "target": "production",
+      "type": "LAMBDAS",
+      "url": "petclinic-agent-85fdk9p6i-brontoio.vercel.app",
+      "forced": false
+    }
+  },
+  {
+    "text": "user-1 assigned 3 aliases to petclinic-agent-85fdk9p6i-brontoio.vercel.app",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "type": "bold",
+        "start": 15,
+        "end": 24
+      },
+      {
+        "type": "deployment_host",
+        "start": 28,
+        "end": 73
+      },
+      {
+        "type": "github_login",
+        "start": -1,
+        "end": -1,
+        "login": "user-1",
+        "name": "Commit Author"
+      }
+    ],
+    "createdAt": 1793092601549,
+    "created": 1793092601549,
+    "type": "aliases-assigned",
+    "categories": [
+      "domain",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "principal": {
+      "uid": "user_REDACTED_1",
+      "username": "user-1",
+      "email": "user-1@example.com",
+      "avatar": "REDACTED"
+    },
+    "userId": "user_REDACTED_1",
+    "principalId": "user_REDACTED_1",
+    "id": "uev_UFwQ1KwEjD8CTLg24pVlTUrB",
+    "payload": {
+      "projectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+      "aliasCount": 3,
+      "deployment": {
+        "id": "dpl_8bxsxvA36JnzWxanBs48GsdL91R1",
+        "name": "petclinic-agent",
+        "url": "petclinic-agent-85fdk9p6i-brontoio.vercel.app",
+        "meta": {
+          "githubCommitAuthorName": "Commit Author",
+          "githubCommitAuthorEmail": "user-1@example.com",
+          "githubCommitMessage": "Save the chat history in Supabase\n\nThe history moves from localStorage to a chat_sessions table in Supabase,\nwith row-level security per visitor. The browser signs in anonymously\nwith the first saved chat; /api/history reads and writes through\n@supabase/ssr with tracePropagation, so Supabase's API gateway logs\ncarry the trace ID of the Next.js request.\n\nAssisted-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "githubCommitOrg": "bronto-community",
+          "githubCommitRef": "main",
+          "githubCommitRepo": "petclinic-agent",
+          "githubCommitSha": "fa24c461c091aa9bd5a9fa712ab6ae6b69fa98d9",
+          "githubDeployment": "1",
+          "githubOrg": "bronto-community",
+          "githubRepo": "petclinic-agent",
+          "githubRepoOwnerType": "Organization",
+          "githubCommitRepoId": "1426010849",
+          "githubRepoId": "1426010849",
+          "githubRepoVisibility": "public",
+          "githubHost": "github.com",
+          "githubCommitAuthorLogin": "user-1",
+          "githubCommitVerification": "unverified",
+          "repoPushedAt": "1793092543000",
+          "branchAlias": "petclinic-agent-git-main-brontoio.vercel.app",
+          "lambdaRuntimeStats": "{\"nodejs\":9}"
+        }
+      }
+    }
+  }
+]

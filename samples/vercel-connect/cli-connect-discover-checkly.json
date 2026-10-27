@@ -1,0 +1,25 @@
+{
+  "services": [
+    {
+      "service": "checkly",
+      "name": "Checkly",
+      "description": "Inspect synthetic checks, test results, and incidents.",
+      "categories": [
+        "developer-tools"
+      ],
+      "connectionMethods": [
+        "mcp"
+      ],
+      "targets": [
+        "mcp"
+      ],
+      "supportsTriggers": false,
+      "beta": false,
+      "website": "https://www.checklyhq.com",
+      "docsite": "https://www.checklyhq.com/docs/ai/mcp-server/"
+    }
+  ],
+  "pagination": {
+    "next": null
+  }
+}

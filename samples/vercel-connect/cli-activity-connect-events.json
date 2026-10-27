@@ -1,0 +1,312 @@
+[
+  {
+    "text": "user-3 created Connector slack/agentic-gtm",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "bold",
+        "start": 31,
+        "end": 48
+      }
+    ],
+    "createdAt": 1792537234308,
+    "created": 1792537234308,
+    "type": "connect-create-connector",
+    "categories": [
+      "connect"
+    ],
+    "user": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "principal": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "userId": "user_REDACTED_3",
+    "principalId": "user_REDACTED_3",
+    "tokenId": "token_REDACTED",
+    "requestId": "5xlgn-1792537233644-e42ee3188dba",
+    "id": "uev_RH1CijQQT4XVLfqtxWlbvBzv",
+    "payload": {
+      "clientId": "scl_wxD0oAnojqRFZ3gigDdSZg",
+      "clientUid": "slack/agentic-gtm",
+      "clientType": "slack",
+      "clientService": "slack",
+      "clientName": "team-bot-c",
+      "id": "scl_wxD0oAnojqRFZ3gigDdSZg"
+    }
+  },
+  {
+    "text": "user-3 attached project team-bot-a to Connector slack/agentic-gtm for Production, Preview and Development environments",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "project_name",
+        "start": 30,
+        "end": 39
+      },
+      {
+        "type": "bold",
+        "start": 53,
+        "end": 70
+      }
+    ],
+    "createdAt": 1792537234478,
+    "created": 1792537234478,
+    "type": "connect-attach-project",
+    "categories": [
+      "connect",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "principal": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "userId": "user_REDACTED_3",
+    "principalId": "user_REDACTED_3",
+    "tokenId": "token_REDACTED",
+    "requestId": "5xlgn-1792537233644-e42ee3188dba",
+    "id": "uev_LqtDwAfBmF9vSTgqrUZqSbNw",
+    "payload": {
+      "clientId": "scl_wxD0oAnojqRFZ3gigDdSZg",
+      "clientUid": "slack/agentic-gtm",
+      "clientType": "slack",
+      "clientService": "slack",
+      "clientName": "team-bot-c",
+      "projectId": "prj_OTHER_2",
+      "environments": [
+        "development",
+        "preview",
+        "production"
+      ],
+      "id": "scl_wxD0oAnojqRFZ3gigDdSZg"
+    }
+  },
+  {
+    "text": "user-3 updated trigger destinations for Connector slack/agentic-gtm",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "bold",
+        "start": 56,
+        "end": 73
+      }
+    ],
+    "createdAt": 1792537234555,
+    "created": 1792537234555,
+    "type": "connect-update-trigger-destinations",
+    "categories": [
+      "connect",
+      "project"
+    ],
+    "user": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "principal": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "userId": "user_REDACTED_3",
+    "principalId": "user_REDACTED_3",
+    "tokenId": "token_REDACTED",
+    "requestId": "5xlgn-1792537233644-e42ee3188dba",
+    "id": "uev_7V0Ndlq5uCZjVOW0BTe5LDAk",
+    "payload": {
+      "clientId": "scl_wxD0oAnojqRFZ3gigDdSZg",
+      "clientUid": "slack/agentic-gtm",
+      "clientType": "slack",
+      "clientService": "slack",
+      "clientName": "team-bot-c",
+      "triggerDestinationCount": 1,
+      "id": "scl_wxD0oAnojqRFZ3gigDdSZg"
+    }
+  },
+  {
+    "text": "user-3 installed or updated installation T_SLACK_REDACTED for Connector slack/agentic-gtm",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "bold",
+        "start": 47,
+        "end": 58
+      },
+      {
+        "type": "bold",
+        "start": 73,
+        "end": 90
+      }
+    ],
+    "createdAt": 1792779132221,
+    "created": 1792779132221,
+    "type": "connect-upsert-installation",
+    "categories": [
+      "connect"
+    ],
+    "user": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "principal": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "userId": "user_REDACTED_3",
+    "principalId": "user_REDACTED_3",
+    "tokenId": "token_REDACTED",
+    "requestId": "4ldmc-1792779131535-c8639163b283",
+    "id": "uev_1T15FoWJxfXZWzgzBcnC1K8w",
+    "payload": {
+      "clientId": "scl_wxD0oAnojqRFZ3gigDdSZg",
+      "clientUid": "slack/agentic-gtm",
+      "clientType": "slack",
+      "clientService": "slack",
+      "clientName": "team-bot-c",
+      "installationId": "T_SLACK_REDACTED",
+      "tenantId": "T_SLACK_REDACTED",
+      "id": "scl_wxD0oAnojqRFZ3gigDdSZg"
+    }
+  },
+  {
+    "text": "user-3 updated Connector slack/bronto-team-bot-a (uid, name, data.clientSecret, data.signingSecret, data.verificationToken)",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "bold",
+        "start": 31,
+        "end": 53
+      }
+    ],
+    "createdAt": 1792536797005,
+    "created": 1792536797005,
+    "type": "connect-update-connector",
+    "categories": [
+      "connect"
+    ],
+    "user": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "principal": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "userId": "user_REDACTED_3",
+    "principalId": "user_REDACTED_3",
+    "tokenId": "token_REDACTED",
+    "requestId": "nfbsh-1792536796620-be07ae8b56ed",
+    "id": "uev_5f3cxmOct861QyUeIdj76WUE",
+    "payload": {
+      "clientId": "scl_RG8XeMLbPJt98wqk2zltXQ",
+      "clientUid": "slack/bronto-team-bot-a",
+      "clientType": "slack",
+      "clientService": "slack",
+      "clientName": "bronto-team-bot-a",
+      "fields": [
+        "uid",
+        "name",
+        "data.clientSecret",
+        "data.signingSecret",
+        "data.verificationToken"
+      ],
+      "id": "scl_RG8XeMLbPJt98wqk2zltXQ"
+    }
+  },
+  {
+    "text": "user-3 deleted installation T_SLACK_REDACTED for Connector slack/bronto-team-bot-a",
+    "entities": [
+      {
+        "type": "author",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "type": "bold",
+        "start": 34,
+        "end": 45
+      },
+      {
+        "type": "bold",
+        "start": 60,
+        "end": 82
+      }
+    ],
+    "createdAt": 1792526885208,
+    "created": 1792526885208,
+    "type": "connect-delete-installation",
+    "categories": [
+      "connect"
+    ],
+    "user": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "principal": {
+      "uid": "user_REDACTED_3",
+      "username": "user-3",
+      "email": "user-3@example.com",
+      "avatar": ""
+    },
+    "userId": "user_REDACTED_3",
+    "principalId": "user_REDACTED_3",
+    "tokenId": "token_REDACTED",
+    "requestId": "vpz9b-1792526885135-755ef0e30d60",
+    "id": "uev_xDZV9mY5RKBrxfM1V6IFFcAP",
+    "payload": {
+      "clientId": "scl_RG8XeMLbPJt98wqk2zltXQ",
+      "clientUid": "slack/bronto-team-bot-a",
+      "clientType": "slack",
+      "clientService": "slack",
+      "clientName": "bronto-team-bot-a",
+      "installationId": "T_SLACK_REDACTED",
+      "id": "scl_RG8XeMLbPJt98wqk2zltXQ"
+    }
+  }
+]

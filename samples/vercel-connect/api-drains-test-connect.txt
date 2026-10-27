@@ -1,0 +1,17 @@
+$ vercel api /v1/drains/test -X POST --input body.json -i
+# body: {"schemas":{"connect":{"version":"v1"}},"delivery":{"type":"http","endpoint":"https://example.com/vercel-drain-test","encoding":"ndjson","compression":"none","headers":{}}}
+# Vercel CLI 65.2.0, Pro team, 2026-10-27T09:26Z. Validation only: no drain is created. example.com answers 405 to the POST.
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+HTTP 200 OK
+access-control-allow-methods: OPTIONS, GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin: *
+cache-control: private, max-age=0, must-revalidate
+content-length: 88
+content-type: application/json; charset=utf-8
+date: Tue, 27 Oct 2026 09:26:54 GMT
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-ratelimit-limit: 30
+x-ratelimit-remaining: 28
+x-ratelimit-reset: 1793093275
+{"status":"failure","statusCode":405,"endpoint":"https://example.com/vercel-drain-test"}

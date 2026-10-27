@@ -1,0 +1,147 @@
+{
+  "query": {
+    "metric": "vercel.external_api_request.count",
+    "aggregation": "count",
+    "groupBy": [
+      "requestHostname",
+      "requestPath",
+      "requestMethod"
+    ],
+    "filter": "requestPath:/v1/connect/*",
+    "startTime": "2026-10-20T00:00:00.000Z",
+    "endTime": "2026-10-28T00:00:00.000Z",
+    "granularity": {
+      "days": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fagentic-gtm",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 59
+    },
+    {
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fbronto-team-bot-a",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 24
+    },
+    {
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 15
+    },
+    {
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/authorize/slack%2Fagentic-gtm",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 1
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fbronto-team-bot-a",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 20
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fagentic-gtm",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 44
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fbronto-team-bot-a",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 4
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/authorize/slack%2Fagentic-gtm",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 1
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fagentic-gtm",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 12
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fagentic-gtm",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 2
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 3
+    },
+    {
+      "timestamp": "2026-10-27T00:00:00.000Z",
+      "requestHostname": "api.vercel.com",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "requestMethod": "POST",
+      "vercel_external_api_request_count_count": 1
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

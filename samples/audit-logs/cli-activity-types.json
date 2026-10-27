@@ -1,0 +1,5021 @@
+{
+  "types": [
+    {
+      "name": "access-group-created",
+      "description": "A user created an access group.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "access-group-deleted",
+      "description": "An access group was deleted.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "access-group-project-updated",
+      "description": "A project was changed in an access group.",
+      "categories": [
+        "security",
+        "team",
+        "project"
+      ]
+    },
+    {
+      "name": "access-group-updated",
+      "description": "An access group was updated.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "access-group-user-added",
+      "description": "A user was added to an access group.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "access-group-user-removed",
+      "description": "A user was removed from an access group.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "admin-saml-idp-material-deleted",
+      "description": "The identity provider details for a team's SAML Single Sign-On were removed by Vercel Support.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "admin-saml-idp-material-set",
+      "description": "The identity provider details for a team's SAML Single Sign-On were set by Vercel Support.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "admin-saml-sp-signing-key-created",
+      "description": "A request signing key for a team's SAML Single Sign-On was created by Vercel Support.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "admin-saml-sp-signing-key-updated",
+      "description": "A request signing key for a team's SAML Single Sign-On was enabled or disabled by Vercel Support.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "agentic-provisioning-account-blocked",
+      "description": "Agentic provisioning of an account was blocked (fraud, enterprise-managed, or recently-deleted).",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "agentic-provisioning-account-linked",
+      "description": "An account was linked to a Vercel team via agentic provisioning.",
+      "categories": [
+        "integration",
+        "team"
+      ]
+    },
+    {
+      "name": "agentic-provisioning-account-relinked",
+      "description": "An account was relinked to an existing Vercel team via agentic provisioning.",
+      "categories": [
+        "integration",
+        "team"
+      ]
+    },
+    {
+      "name": "agentic-provisioning-account-unlinked",
+      "description": "An agentic provisioning provider's account was unlinked from a Vercel team.",
+      "categories": [
+        "integration",
+        "team"
+      ]
+    },
+    {
+      "name": "agentic-provisioning-credentials-rotated",
+      "description": "Credentials were rotated for an agentically provisioned resource.",
+      "categories": [
+        "integration",
+        "project"
+      ]
+    },
+    {
+      "name": "agentic-provisioning-plan-changed",
+      "description": "A team billing plan was changed via agentic provisioning.",
+      "categories": [
+        "integration",
+        "billing"
+      ]
+    },
+    {
+      "name": "agentic-provisioning-team-created",
+      "description": "A new Vercel team was created via agentic provisioning.",
+      "categories": [
+        "integration",
+        "team"
+      ]
+    },
+    {
+      "name": "ai-alert-investigation",
+      "description": "AI alert investigation was configured for a team.",
+      "categories": [
+        "ai"
+      ]
+    },
+    {
+      "name": "ai-code-review",
+      "description": "AI code review was configured for a team.",
+      "categories": [
+        "ai"
+      ]
+    },
+    {
+      "name": "ai-gateway-access-policy-created",
+      "description": "A user created an AI Gateway access policy.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-access-policy-deleted",
+      "description": "A user deleted an AI Gateway access policy.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-access-policy-member-added",
+      "description": "A user applied an AI Gateway access policy to the team, a project, or a user.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-access-policy-member-removed",
+      "description": "A user removed an AI Gateway access policy from the team, a project, or a user.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-access-policy-updated",
+      "description": "A user updated an AI Gateway access policy.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-api-key-created",
+      "description": "A user created an AI Gateway API key.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-api-key-deleted",
+      "description": "A user deleted an AI Gateway API key.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-api-key-quota-updated",
+      "description": "A user set or changed the budget on an AI Gateway API key.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-auto-reload-updated",
+      "description": "A user enabled, changed, or disabled automatic AI Gateway credit reloads, whether charged to a card or drawn from a flexible commitment.",
+      "categories": [
+        "ai-gateway",
+        "billing"
+      ]
+    },
+    {
+      "name": "ai-gateway-budget-default-updated",
+      "description": "A user set, changed, or removed one scope's AI Gateway budget default.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-byok-credential-created",
+      "description": "A user created an AI Gateway BYOK credential.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-byok-credential-deleted",
+      "description": "A user deleted an AI Gateway BYOK credential.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-byok-credential-updated",
+      "description": "A user updated an AI Gateway BYOK credential.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-byok-model-mappings-updated",
+      "description": "A user changed which gateway models an AI Gateway BYOK credential maps to custom model IDs.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-credits-purchased",
+      "description": "A user manually purchased AI Gateway credits. Automatic reloads are not recorded, as they have no acting user.",
+      "categories": [
+        "ai-gateway",
+        "billing"
+      ]
+    },
+    {
+      "name": "ai-gateway-guardrails-updated",
+      "description": "A user updated the AI Gateway guardrail settings.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-hipaa-compliance-toggled",
+      "description": "Required HIPAA-compliant providers was enabled or disabled for a team on AI Gateway.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-inference-regions-updated",
+      "description": "The AI Gateway inference region pin was updated for a team.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-model-allowlist-models-updated",
+      "description": "Models were added to or removed from the AI Gateway model allowlist.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-model-allowlist-toggled",
+      "description": "The AI Gateway model allowlist was enabled or disabled for a team.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-model-catalog-alert-settings-updated",
+      "description": "A user updated AI Gateway model catalog alert settings.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-private-model-created",
+      "description": "A user created an AI Gateway private model.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-private-model-deleted",
+      "description": "A user removed an AI Gateway private model.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-private-model-updated",
+      "description": "A user updated an AI Gateway private model.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-private-provider-created",
+      "description": "A user created an AI Gateway private provider.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-private-provider-deleted",
+      "description": "A user removed an AI Gateway private provider.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-private-provider-updated",
+      "description": "A user updated an AI Gateway private provider.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-prompt-training-opt-out-toggled",
+      "description": "The prompt training opt-out was enabled or disabled for a team on AI Gateway.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-provider-allowlist-providers-updated",
+      "description": "Providers were added to or removed from the AI Gateway provider allowlist.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-provider-allowlist-toggled",
+      "description": "The AI Gateway provider allowlist was enabled or disabled for a team.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-rule-created",
+      "description": "A user created an AI Gateway routing rule.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-rule-deleted",
+      "description": "A user removed an AI Gateway routing rule.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-rule-updated",
+      "description": "A user updated an AI Gateway routing rule.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-scope-budget-updated",
+      "description": "A user set, changed, or removed a team-, project-, or user-scope AI Gateway budget.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-transcripts-default-disabled",
+      "description": "AI Gateway Transcripts capture-by-default was disabled for a team.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-transcripts-default-enabled",
+      "description": "AI Gateway Transcripts capture-by-default was enabled for a team.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-transcripts-disabled",
+      "description": "AI Gateway Transcripts was disabled for a team.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-transcripts-enabled",
+      "description": "AI Gateway Transcripts was enabled for a team.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-transcripts-retention-updated",
+      "description": "The AI Gateway Transcripts retention policy was changed for a team.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-virtual-model-config-archived",
+      "description": "A user archived an AI Gateway virtual model.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-virtual-model-config-created",
+      "description": "A user created an AI Gateway virtual model.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-virtual-model-config-deleted",
+      "description": "A user deleted an AI Gateway virtual model.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-virtual-model-config-restored",
+      "description": "A user restored an AI Gateway virtual model.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-virtual-model-config-updated",
+      "description": "A user updated an AI Gateway virtual model.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-gateway-zero-data-retention-toggled",
+      "description": "Required Zero Data Retention was enabled or disabled for a team on AI Gateway.",
+      "categories": [
+        "ai-gateway"
+      ]
+    },
+    {
+      "name": "ai-omniagent",
+      "description": "Vercel Agent was configured for a team.",
+      "categories": [
+        "ai"
+      ]
+    },
+    {
+      "name": "alert-investigation-project-allowlist-updated",
+      "description": "Alert Investigation project allowlist was updated.",
+      "categories": [
+        "ai",
+        "observability"
+      ]
+    },
+    {
+      "name": "alert-rule-created",
+      "description": "An alert rule was created.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "alert-rule-deleted",
+      "description": "An alert rule was deleted.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "alert-rule-updated",
+      "description": "An alert rule was updated.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "alias",
+      "description": "An alias was assigned.",
+      "categories": [
+        "domain",
+        "project"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "aliases-assigned"
+      ]
+    },
+    {
+      "name": "alias-delete",
+      "description": "An alias was deleted.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "alias-invite-created",
+      "description": "An invite was sent for an alias.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "alias-invite-joined",
+      "description": "A user joined an alias they were given access to.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "alias-invite-revoked",
+      "description": "An invite was revoked for an alias.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "alias-protection-bypass-created",
+      "description": "A shareable link was created for an alias.",
+      "categories": [
+        "domain",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "alias-protection-bypass-exception",
+      "description": "A Deployment Protection Exception was updated for an alias.",
+      "categories": [
+        "domain",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "alias-protection-bypass-regenerated",
+      "description": "A shareable link was regenerated for an alias.",
+      "categories": [
+        "domain",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "alias-protection-bypass-revoked",
+      "description": "A shareable link was revoked for an alias.",
+      "categories": [
+        "domain",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "alias-system",
+      "description": "A system alias was assigned.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "alias-user-scoped-access-denied",
+      "description": "User-scoped access was denied for an alias.",
+      "categories": [
+        "domain",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "alias-user-scoped-access-granted",
+      "description": "User-scoped access was granted for an alias.",
+      "categories": [
+        "domain",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "alias-user-scoped-access-requested",
+      "description": "A user requested access to an alias.",
+      "categories": [
+        "domain",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "alias-user-scoped-access-revoked",
+      "description": "User-scoped access was revoked for an alias.",
+      "categories": [
+        "domain",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "aliases-assigned",
+      "description": "Aliases were assigned.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "attack-mode-disabled",
+      "description": "Attack challenge mode was disabled.",
+      "categories": [
+        "firewall",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "attack-mode-enabled",
+      "description": "Attack challenge mode was enabled.",
+      "categories": [
+        "firewall",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "auto-expose-system-envs",
+      "description": "Automatically exposing System Environment Variables for the project.",
+      "categories": [
+        "env-variable",
+        "security"
+      ]
+    },
+    {
+      "name": "avatar",
+      "description": "An avatar was created for the profile of a personal account.",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "billing-settings-updated",
+      "description": "Billing settings were updated.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "bulk-redirects-settings-updated",
+      "description": "The capacity for bulk redirects was updated.",
+      "categories": [
+        "security",
+        "edge"
+      ]
+    },
+    {
+      "name": "bulk-redirects-version-promoted",
+      "description": "A bulk redirects version was promoted.",
+      "categories": [
+        "security",
+        "edge"
+      ]
+    },
+    {
+      "name": "bulk-redirects-version-restored",
+      "description": "A bulk redirects version was restored.",
+      "categories": [
+        "security",
+        "edge"
+      ]
+    },
+    {
+      "name": "cert",
+      "description": "An SSL certificate was created for a custom domain in a personal account or team.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "cert-autorenew",
+      "description": "An SSL certificate was auto-renewed.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "cert-clone",
+      "description": "An SSL certificate was successfully cloned.",
+      "categories": [
+        "domain",
+        "project"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "cert-delete",
+      "description": "An SSL certificate connected to a custom domain was deleted.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "cert-renew",
+      "description": "An SSL certificate was renewed.",
+      "categories": [
+        "domain",
+        "project"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "cert-autorenew"
+      ]
+    },
+    {
+      "name": "cert-replace",
+      "description": "An SSL certificate connected to a custom domain was successfully replaced by a new one, such as by uploading a new certificate in the dashboard.",
+      "categories": [
+        "domain",
+        "project"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "cert-system-create",
+      "description": "A system SSL certificate was created.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "code-owners-config-updated",
+      "description": "A repository's Code Owners settings were updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "compliance-document-downloaded",
+      "description": "A compliance document was downloaded.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "compliance-document-previewed",
+      "description": "A compliance document was previewed.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "compliance-documents-bulk-downloaded",
+      "description": "A bulk set of compliance documents was downloaded.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "concurrent-builds-update",
+      "description": "The concurrent builds limit was updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "connect-attach-project",
+      "description": "A Connector was attached to a project",
+      "categories": [
+        "connect",
+        "project"
+      ]
+    },
+    {
+      "name": "connect-bitbucket",
+      "description": "A BitBucket account was connected to a personal.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "connect-bitbucket-app",
+      "description": "A Bitbucket app was connected.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "connect-cancel-mcp-event-subscription",
+      "description": "An MCP Event Subscription was cancelled",
+      "categories": [
+        "connect"
+      ]
+    },
+    {
+      "name": "connect-configuration-created",
+      "description": "A Secure Compute network was created.",
+      "categories": [
+        "network",
+        "security"
+      ]
+    },
+    {
+      "name": "connect-configuration-deleted",
+      "description": "A Secure Compute network was deleted.",
+      "categories": [
+        "network",
+        "security"
+      ]
+    },
+    {
+      "name": "connect-configuration-link-updated",
+      "description": "A Secure Compute network link was updated.",
+      "categories": [
+        "network",
+        "security"
+      ]
+    },
+    {
+      "name": "connect-configuration-linked",
+      "description": "A project was linked to a Secure Compute network.",
+      "categories": [
+        "network",
+        "security"
+      ]
+    },
+    {
+      "name": "connect-configuration-unlinked",
+      "description": "A project was unlinked from a Secure Compute network.",
+      "categories": [
+        "network",
+        "security"
+      ]
+    },
+    {
+      "name": "connect-configuration-updated",
+      "description": "A Secure Compute network was updated.",
+      "categories": [
+        "network",
+        "security"
+      ]
+    },
+    {
+      "name": "connect-create-connector",
+      "description": "A Connector was created",
+      "categories": [
+        "connect"
+      ]
+    },
+    {
+      "name": "connect-create-mcp-event-subscription",
+      "description": "An MCP Event Subscription was created",
+      "categories": [
+        "connect"
+      ]
+    },
+    {
+      "name": "connect-delete-connector",
+      "description": "A Connector was deleted",
+      "categories": [
+        "connect"
+      ]
+    },
+    {
+      "name": "connect-delete-installation",
+      "description": "A Connector installation was deleted",
+      "categories": [
+        "connect"
+      ]
+    },
+    {
+      "name": "connect-detach-project",
+      "description": "A Connector was detached from a project",
+      "categories": [
+        "connect",
+        "project"
+      ]
+    },
+    {
+      "name": "connect-github",
+      "description": "A GitHub account was connected to a personal.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "connect-github-custom-host",
+      "description": "A GitHub Enterprise host was connected.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "connect-github-limited",
+      "description": "A GitHub account was connected with limited access.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "connect-gitlab",
+      "description": "A GitLab account was connected to a personal.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "connect-gitlab-app",
+      "description": "A GitLab app was connected.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "connect-import-tokens",
+      "description": "Connector tokens were imported",
+      "categories": [
+        "connect",
+        "security"
+      ]
+    },
+    {
+      "name": "connect-revoke-all-tokens",
+      "description": "All matching Connector tokens were revoked",
+      "categories": [
+        "connect",
+        "security"
+      ]
+    },
+    {
+      "name": "connect-update-connector",
+      "description": "A Connector was updated",
+      "categories": [
+        "connect"
+      ]
+    },
+    {
+      "name": "connect-update-trigger-destinations",
+      "description": "Connector trigger destinations were updated",
+      "categories": [
+        "connect",
+        "project"
+      ]
+    },
+    {
+      "name": "connect-upsert-installation",
+      "description": "A Connector installation was created or updated",
+      "categories": [
+        "connect"
+      ]
+    },
+    {
+      "name": "custom-alert-created",
+      "description": "A custom alert was created.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "custom-alert-deleted",
+      "description": "A custom alert was deleted.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "custom-alert-updated",
+      "description": "A custom alert was updated.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "custom-environments-settings-updated",
+      "description": "The purchased custom environment capacity was updated for a project.",
+      "categories": [
+        "project",
+        "billing"
+      ]
+    },
+    {
+      "name": "custom-metric-metadata-deleted",
+      "description": "Custom metric metadata was removed.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "custom-metric-metadata-updated",
+      "description": "Custom metric metadata was updated.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "custom-suffix-clear",
+      "description": "A custom deployment suffix was cleared.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "custom-suffix-disable",
+      "description": "A custom suffix for a project was disabled.",
+      "categories": [
+        "deployment"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "preview-deployment-suffix-disabled"
+      ]
+    },
+    {
+      "name": "custom-suffix-enable",
+      "description": "A custom suffix for a project was enabled.",
+      "categories": [
+        "deployment"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "preview-deployment-suffix-enabled"
+      ]
+    },
+    {
+      "name": "custom-suffix-pending",
+      "description": "A custom deployment suffix is pending verification.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "custom-suffix-ready",
+      "description": "A custom deployment suffix is ready.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "default-password-protection",
+      "description": "Default Password Protection settings for new projects were modified.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "default-sso-protection",
+      "description": "Default Vercel Authentication settings for new projects were modified.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "deploy-hook-created",
+      "description": "A deploy hook was created.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "deploy-hook-deduped",
+      "description": "If a deploy hook triggers a deployment for a commit that already triggered a deployment via Git, then the deployment from the deploy hook is stopped. This action is reported with the deploy-hook-deduped event.",
+      "categories": [
+        "deployment",
+        "project"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "deploy-hook-deleted",
+      "description": "A deploy hook was deleted.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "deploy-hook-processed",
+      "description": "A deployment was successfully triggered by a specific deploy hook.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "deployment",
+      "description": "A deployment was created for a project.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "deployment-check-created",
+      "description": "A deployment check was created for a project.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "deployment-check-deleted",
+      "description": "A deployment check was deleted from a project.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "deployment-check-updated",
+      "description": "A deployment check was updated for a project.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "deployment-creation-blocked",
+      "description": "A deployment was blocked because the Git user could not be authorized for the team.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "deployment-delete",
+      "description": "A specific deployment was deleted.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "deployment-policy-blocked",
+      "description": "A deployment was blocked by the team or project deployment policy.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "deployment-protection-access-requests",
+      "description": "Deployment Protection access requests were updated.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "disconnect-bitbucket-app",
+      "description": "A Bitbucket app was disconnected.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "disconnect-github",
+      "description": "A GitHub account was disconnected.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "disconnect-github-custom-host",
+      "description": "A GitHub Enterprise host was disconnected.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "disconnect-github-limited",
+      "description": "A limited GitHub account was disconnected.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "disconnect-gitlab-app",
+      "description": "A GitLab app was disconnected.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "dns-add",
+      "description": "A DNS record was added to the personal account or team domain records for a specific domain.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "dns-delete",
+      "description": "A DNS record was deleted from the personal account or team domain records for a specific domain.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "dns-update",
+      "description": "A DNS record was updated in the personal account or team domain records for a specific domain.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "dns-zonefile-import",
+      "description": "A DNS zone file was imported.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain",
+      "description": "A domain connection was created in a personal account or team.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-buy",
+      "description": "A domain was successfully purchased in a personal account or team.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-cdn",
+      "description": "The CDN feature for a domain was enabled or disabled.",
+      "categories": [
+        "domain"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "domain-custom-ns-change",
+      "description": "Domain custom nameservers were changed.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-delegated",
+      "description": "A domain was successfully delegated to another personal account or team so it can also be used there.",
+      "categories": [
+        "domain"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "domain-delete",
+      "description": "A domain was removed from a personal account or team.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-ech-change",
+      "description": "Encrypted Client Hello enrollment was changed for a domain.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-move-in",
+      "description": "A domain was moved in from another personal account or team to the current personal account or team.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-move-out",
+      "description": "A domain was moved out from the current personal account or team to another personal account or team.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-move-out-request-sent",
+      "description": "The request to move a domain from the current personal account or team to another personal account or team was sent.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-renew-change",
+      "description": "A domain hosted with Vercel was renewed.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-service-type-updated",
+      "description": "Domain DNS service type was updated.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-transfer-in",
+      "description": "A domain was transferred from an external provider to Vercel.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "domain-transfer-in-canceled",
+      "description": "A domain transfer-in was canceled.",
+      "categories": [
+        "domain"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "domain-transfer-in-completed",
+      "description": "A domain transfer-in was completed.",
+      "categories": [
+        "domain"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "domain-zone-change",
+      "description": "DNS zone was enabled or disabled for a domain.",
+      "categories": [
+        "domain"
+      ]
+    },
+    {
+      "name": "drain-created",
+      "description": "A drain was created.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "drain-deleted",
+      "description": "A drain was deleted.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "drain-disabled",
+      "description": "A drain was disabled.",
+      "categories": [
+        "observability"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "drain-updated"
+      ]
+    },
+    {
+      "name": "drain-enabled",
+      "description": "A drain was enabled.",
+      "categories": [
+        "observability"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "drain-updated"
+      ]
+    },
+    {
+      "name": "drain-updated",
+      "description": "A drain was updated.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "edge-cache-dangerously-delete-by-src-images",
+      "description": "The CDN cache was dangerously deleted by source images.",
+      "categories": [
+        "edge",
+        "project"
+      ]
+    },
+    {
+      "name": "edge-cache-dangerously-delete-by-tags",
+      "description": "The CDN cache was dangerously deleted by tags.",
+      "categories": [
+        "edge",
+        "project"
+      ]
+    },
+    {
+      "name": "edge-cache-dangerously-delete-immutable-static",
+      "description": "The immutable static assets cache was dangerously deleted by path.",
+      "categories": [
+        "edge",
+        "project"
+      ]
+    },
+    {
+      "name": "edge-cache-invalidate-by-src-images",
+      "description": "The CDN cache was invalidated by source images.",
+      "categories": [
+        "edge",
+        "project"
+      ]
+    },
+    {
+      "name": "edge-cache-invalidate-by-tags",
+      "description": "The CDN cache was invalidated by tags.",
+      "categories": [
+        "edge",
+        "project"
+      ]
+    },
+    {
+      "name": "edge-cache-purge-all",
+      "description": "The CDN cache was purged.",
+      "categories": [
+        "edge",
+        "project"
+      ]
+    },
+    {
+      "name": "edge-cache-rollback-purge",
+      "description": "The CDN cache purge was rolled back.",
+      "categories": [
+        "edge",
+        "project"
+      ]
+    },
+    {
+      "name": "edge-config-backup-restored",
+      "description": "An Edge Config was restored from a backup.",
+      "categories": [
+        "storage"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-backup-restored"
+      ]
+    },
+    {
+      "name": "edge-config-created",
+      "description": "An Edge Config was created.",
+      "categories": [
+        "storage"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-created"
+      ]
+    },
+    {
+      "name": "edge-config-deleted",
+      "description": "An Edge Config was deleted.",
+      "categories": [
+        "storage"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-deleted"
+      ]
+    },
+    {
+      "name": "edge-config-items-updated",
+      "description": "The values in an Edge Config were updated.",
+      "categories": [
+        "storage"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-items-updated"
+      ]
+    },
+    {
+      "name": "edge-config-schema-deleted",
+      "description": "An Edge Config schema was deleted.",
+      "categories": [
+        "storage"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-schema-deleted"
+      ]
+    },
+    {
+      "name": "edge-config-schema-updated",
+      "description": "An Edge Config schema was updated.",
+      "categories": [
+        "storage"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-schema-updated"
+      ]
+    },
+    {
+      "name": "edge-config-token-created",
+      "description": "An access token for an Edge Config was created.",
+      "categories": [
+        "storage",
+        "security"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-token-created"
+      ]
+    },
+    {
+      "name": "edge-config-token-deleted",
+      "description": "An access token for an Edge Config was deleted.",
+      "categories": [
+        "storage",
+        "security"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-token-deleted"
+      ]
+    },
+    {
+      "name": "edge-config-transfer-in",
+      "description": "An Edge Config was transferred in.",
+      "categories": [
+        "storage"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-transfer-in"
+      ]
+    },
+    {
+      "name": "edge-config-transfer-out",
+      "description": "An Edge Config was transferred out.",
+      "categories": [
+        "storage"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-transfer-out"
+      ]
+    },
+    {
+      "name": "edge-config-updated",
+      "description": "An Edge Config was updated.",
+      "categories": [
+        "storage"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "global-config-updated"
+      ]
+    },
+    {
+      "name": "email",
+      "description": "The email of the current user was updated.",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "emu-member-removed-unverified-domain",
+      "description": "A team member was removed because their email domain is not a verified enterprise managed domain.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "enforce-disjunctive-production-secrets",
+      "description": "Separate production secret group enforcement was updated for a team.",
+      "categories": [
+        "team",
+        "security",
+        "env-variable"
+      ]
+    },
+    {
+      "name": "enforce-sensitive-environment-variables",
+      "description": "Sensitive environment variable enforcement was updated.",
+      "categories": [
+        "team",
+        "security",
+        "env-variable"
+      ]
+    },
+    {
+      "name": "env-variable-add",
+      "description": "An automatically encrypted environment variable was added to a project.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-delete",
+      "description": "An existing environment variable was deleted from a project.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-edit",
+      "description": "An existing environment variable in a project was updated.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-masked",
+      "description": "A sensitive environment variable value was masked from build logs.",
+      "categories": [
+        "env-variable",
+        "security",
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-read",
+      "description": "The plain text value of an encrypted environment variable was read.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-read:cli:dev",
+      "description": "An environment variable was decrypted via CLI dev.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-read:cli:env:add",
+      "description": "An environment variable was decrypted via CLI env add.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-read:cli:env:ls",
+      "description": "An environment variable was decrypted via CLI env ls.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-read:cli:env:pull",
+      "description": "An environment variable was decrypted via CLI env pull.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-read:cli:env:rm",
+      "description": "An environment variable was decrypted via CLI env rm.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-read:cli:pull",
+      "description": "An environment variable was decrypted via CLI pull.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-read:unknown-source",
+      "description": "An environment variable was decrypted from an unknown source.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "env-variable-rotated",
+      "description": "An integration-managed environment variable was rotated during a secret rotation.",
+      "categories": [
+        "env-variable",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "experiment-created",
+      "description": "An experiment and its Flag were created.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "experiment-deleted",
+      "description": "An experiment was deleted.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "experiment-transitioned",
+      "description": "An experiment changed lifecycle state or ramp.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "experiment-updated",
+      "description": "An experiment configuration was updated.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "firewall-bypass-created",
+      "description": "A bypass of system firewall rules was created",
+      "categories": [
+        "firewall",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "firewall-bypass-deleted",
+      "description": "A bypass of system firewall rules was deleted",
+      "categories": [
+        "firewall",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "firewall-conditional-bypass-created",
+      "description": "A host-scoped conditional firewall bypass was created",
+      "categories": [
+        "firewall",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "firewall-conditional-bypass-deleted",
+      "description": "A host-scoped conditional firewall bypass was deleted",
+      "categories": [
+        "firewall",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "firewall-config-modified",
+      "description": "A firewall configuration was modified.",
+      "categories": [
+        "firewall",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "firewall-config-promoted",
+      "description": "A firewall configuration was promoted.",
+      "categories": [
+        "firewall",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "firewall-config-removed",
+      "description": "A firewall configuration was removed.",
+      "categories": [
+        "firewall",
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "flag",
+      "description": "A Flag was created, updated, deleted, archived, or unarchived.",
+      "categories": [
+        "feature-flags"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "flag-created",
+        "flag-updated",
+        "flag-deleted",
+        "flag-archived",
+        "flag-unarchived"
+      ]
+    },
+    {
+      "name": "flag-archived",
+      "description": "A Flag was archived.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "flag-created",
+      "description": "A Flag was created.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "flag-deleted",
+      "description": "A Flag was deleted.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "flag-unarchived",
+      "description": "A Flag was unarchived.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "flag-updated",
+      "description": "A Flag was updated.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "flags-explorer-subscription",
+      "description": "The Flags Explorer subscription was updated.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "flags-sdk-key",
+      "description": "An SDK Key for Vercel Flags was added, deleted, or read.",
+      "categories": [
+        "feature-flags",
+        "security"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "flags-sdk-key-added",
+        "flags-sdk-key-deleted"
+      ]
+    },
+    {
+      "name": "flags-sdk-key-added",
+      "description": "An SDK Key for Vercel Flags was added.",
+      "categories": [
+        "feature-flags",
+        "security"
+      ]
+    },
+    {
+      "name": "flags-sdk-key-deleted",
+      "description": "An SDK Key for Vercel Flags was deleted.",
+      "categories": [
+        "feature-flags",
+        "security"
+      ]
+    },
+    {
+      "name": "flags-segment",
+      "description": "A Segment definition for the Flags tab was created, updated, or deleted.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "flags-settings",
+      "description": "Settings for the Flags tab were created, updated, or deleted.",
+      "categories": [
+        "feature-flags"
+      ]
+    },
+    {
+      "name": "git_account_integration_link_added",
+      "description": "A GitHub account was linked to an additional Vercel account as an integration.",
+      "categories": [
+        "integration",
+        "deployment"
+      ]
+    },
+    {
+      "name": "global-config-backup-restored",
+      "description": "A Global Config was restored from a backup.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "global-config-created",
+      "description": "A Global Config was created.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "global-config-deleted",
+      "description": "A Global Config was deleted.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "global-config-items-updated",
+      "description": "The values in a Global Config were updated.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "global-config-schema-deleted",
+      "description": "A Global Config schema was deleted.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "global-config-schema-updated",
+      "description": "A Global Config schema was updated.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "global-config-token-created",
+      "description": "An access token for a Global Config was created.",
+      "categories": [
+        "storage",
+        "security"
+      ]
+    },
+    {
+      "name": "global-config-token-deleted",
+      "description": "An access token for a Global Config was deleted.",
+      "categories": [
+        "storage",
+        "security"
+      ]
+    },
+    {
+      "name": "global-config-transfer-in",
+      "description": "A Global Config was transferred in.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "global-config-transfer-out",
+      "description": "A Global Config was transferred out.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "global-config-updated",
+      "description": "A Global Config was updated.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "instant-rollback-created",
+      "description": "An instant rollback was created.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "integration-configuration-credential-revoked",
+      "description": "An installed integration revoked an access token it used to call the Vercel API.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-configuration-credential-rotated",
+      "description": "An installed integration rotated the access token it uses to call the Vercel API.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-configuration-owner-changed",
+      "description": "An integration configuration owner was changed.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-configuration-scope-change-confirmed",
+      "description": "The permissions upgrade request from an installed integration was confirmed.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-configuration-transfer-in-success",
+      "description": "An integration was transferred into the current team or account.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-configuration-transfer-out-success",
+      "description": "An integration was transferred out of the current team or account.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-configurations-disabled",
+      "description": "One or more integrations were disabled because their owner has left the team",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-installation-billing-plan-updated",
+      "description": "An integration billing plan was updated.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-installation-completed",
+      "description": "An integration was installed in one or all projects under a personal account or team.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-installation-permission-updated",
+      "description": "The permissions for an installed integration was updated.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-installation-removed",
+      "description": "An integration was removed from a project or personal account or team.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "integration-resource-redis-command-executed",
+      "description": "A redis command was executed against a marketplace database resource.",
+      "categories": [
+        "integration",
+        "storage"
+      ]
+    },
+    {
+      "name": "integration-resource-sql-query-executed",
+      "description": "A SQL query was executed against a marketplace database resource.",
+      "categories": [
+        "integration",
+        "storage"
+      ]
+    },
+    {
+      "name": "integration-scope-changed",
+      "description": "The scopes for an integration were changed.",
+      "categories": [
+        "integration"
+      ]
+    },
+    {
+      "name": "kms-issuer-created",
+      "description": "A KMS signing issuer was created.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "kms-issuer-deleted",
+      "description": "A KMS signing issuer was deleted.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "kms-issuer-key-activated",
+      "description": "A pending signing key for a KMS issuer was activated.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "kms-issuer-key-created",
+      "description": "A new signing key was created for a KMS issuer.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "kms-issuer-key-revoked",
+      "description": "A signing key for a KMS issuer was revoked.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "kms-issuer-key-rotated",
+      "description": "The signing key for a KMS issuer was rotated.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "kms-issuer-policy-created",
+      "description": "A policy was added to a KMS issuer.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "kms-issuer-policy-deleted",
+      "description": "A policy was removed from a KMS issuer.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "kms-issuer-policy-updated",
+      "description": "A policy on a KMS issuer was updated.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "kms-issuer-updated",
+      "description": "A KMS signing issuer was updated.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "log-drain-created",
+      "description": "A log drain was created.",
+      "categories": [
+        "observability"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "drain-created"
+      ]
+    },
+    {
+      "name": "log-drain-deleted",
+      "description": "A log drain was deleted.",
+      "categories": [
+        "observability"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "drain-deleted"
+      ]
+    },
+    {
+      "name": "log-drain-disabled",
+      "description": "A log drain was disabled.",
+      "categories": [
+        "observability"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "drain-updated"
+      ]
+    },
+    {
+      "name": "log-drain-enabled",
+      "description": "A log drain was enabled.",
+      "categories": [
+        "observability"
+      ],
+      "deprecated": true,
+      "replacedBy": [
+        "drain-updated"
+      ]
+    },
+    {
+      "name": "login-connection-linked",
+      "description": "An OAuth/SSO login connection was linked to the account.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "login-connection-unlinked",
+      "description": "An OAuth/SSO login connection was disconnected from the account.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "manual-deployment-promotion-created",
+      "description": "A deployment was manually promoted to production.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "marketplace-auto-card-collection-updated",
+      "description": "Automatic card payments for Marketplace invoices were enabled or disabled for the team.",
+      "categories": [
+        "billing",
+        "integration"
+      ]
+    },
+    {
+      "name": "marketplace-billing-collection-updated",
+      "description": "The team's Marketplace billing collection preference was changed between invoice and automatic card collection.",
+      "categories": [
+        "billing",
+        "integration"
+      ]
+    },
+    {
+      "name": "marketplace-flex-commit-opt-in",
+      "description": "The team opted in to paying Marketplace invoices from its Flexible Commitment.",
+      "categories": [
+        "billing",
+        "integration"
+      ]
+    },
+    {
+      "name": "marketplace-integration-allowlist-updated",
+      "description": "The team's marketplace integration allowlist configuration was changed.",
+      "categories": [
+        "integration",
+        "team"
+      ]
+    },
+    {
+      "name": "microfrontend-group-added",
+      "description": "A new microfrontend group was created",
+      "categories": [
+        "microfrontends"
+      ]
+    },
+    {
+      "name": "microfrontend-group-deleted",
+      "description": "A microfrontend group was deleted",
+      "categories": [
+        "microfrontends"
+      ]
+    },
+    {
+      "name": "microfrontend-group-updated",
+      "description": "A microfrontend group was updated",
+      "categories": [
+        "microfrontends"
+      ]
+    },
+    {
+      "name": "microfrontend-project-added-to-group",
+      "description": "A project was added to a microfrontend group",
+      "categories": [
+        "microfrontends",
+        "project"
+      ]
+    },
+    {
+      "name": "microfrontend-project-removed-from-group",
+      "description": "A project was removed from a microfrontend group",
+      "categories": [
+        "microfrontends",
+        "project"
+      ]
+    },
+    {
+      "name": "microfrontend-project-updated",
+      "description": "A microfrontend project configuration was updated.",
+      "categories": [
+        "microfrontends",
+        "project"
+      ]
+    },
+    {
+      "name": "monitoring-disabled",
+      "description": "Monitoring was disabled for the team",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "monitoring-enabled",
+      "description": "Monitoring was enabled for the team.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "oauth-app-connection-created",
+      "description": "A user authorized an app.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "oauth-app-connection-removed",
+      "description": "A user removed an app authorization.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "oauth-app-connection-updated",
+      "description": "A user updated an app authorization.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "oauth-app-created",
+      "description": "A user created an app.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "oauth-app-deleted",
+      "description": "A user deleted an app.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "oauth-app-secret-deleted",
+      "description": "A user deleted a secret for an app.",
+      "categories": [
+        "vercel-app",
+        "security"
+      ]
+    },
+    {
+      "name": "oauth-app-secret-generated",
+      "description": "A user generated a secret for an app.",
+      "categories": [
+        "vercel-app",
+        "security"
+      ]
+    },
+    {
+      "name": "oauth-app-token-created",
+      "description": "A token was created for an app.",
+      "categories": [
+        "vercel-app",
+        "security"
+      ]
+    },
+    {
+      "name": "oauth-app-updated",
+      "description": "A user updated an app.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "observability-disabled",
+      "description": "Observability Plus was disabled for the team.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "observability-enabled",
+      "description": "Observability Plus was enabled for the team.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "observability-plus-project-disabled",
+      "description": "Observability Plus was disabled for a project.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "observability-plus-project-enabled",
+      "description": "Observability Plus was enabled for a project.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "oidc-policy-created",
+      "description": "An OIDC federation policy was created for an App.",
+      "categories": [
+        "vercel-app",
+        "security"
+      ]
+    },
+    {
+      "name": "oidc-policy-deleted",
+      "description": "An OIDC federation policy was deleted for an App.",
+      "categories": [
+        "vercel-app",
+        "security"
+      ]
+    },
+    {
+      "name": "oidc-policy-updated",
+      "description": "An OIDC federation policy was updated for an App.",
+      "categories": [
+        "vercel-app",
+        "security"
+      ]
+    },
+    {
+      "name": "organization-avatar-update",
+      "description": "The avatar of an organization was updated.",
+      "categories": [
+        "team",
+        "account"
+      ]
+    },
+    {
+      "name": "organization-create",
+      "description": "An organization was created.",
+      "categories": [
+        "team",
+        "account"
+      ]
+    },
+    {
+      "name": "organization-delete",
+      "description": "An organization was deleted.",
+      "categories": [
+        "team",
+        "account"
+      ]
+    },
+    {
+      "name": "organization-dsync-delete",
+      "description": "Directory sync was disconnected for an organization.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "organization-dsync-group-delete",
+      "description": "A directory sync group configuration was deleted for an organization.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "organization-dsync-group-upsert",
+      "description": "A directory sync group configuration was created or updated for an organization.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "organization-dsync-sync-start",
+      "description": "Directory sync was started for an organization.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "organization-name-update",
+      "description": "The name of an organization was updated.",
+      "categories": [
+        "team",
+        "account"
+      ]
+    },
+    {
+      "name": "organization-slug-update",
+      "description": "The slug of an organization was updated.",
+      "categories": [
+        "team",
+        "account"
+      ]
+    },
+    {
+      "name": "organization-sso-deleted",
+      "description": "An Organization's SSO connection was deleted.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "organization-sso-enforced",
+      "description": "SSO enforcement was configured for an Organization.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "organization-team-create",
+      "description": "A team was created in an organization.",
+      "categories": [
+        "team",
+        "billing"
+      ]
+    },
+    {
+      "name": "organization-team-delete",
+      "description": "A team was deleted from an organization.",
+      "categories": [
+        "team",
+        "billing"
+      ]
+    },
+    {
+      "name": "organization-team-sso-update",
+      "description": "A team's Organization SSO selection was updated.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "page-integrity-config-updated",
+      "description": "Page Integrity configuration was updated.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "page-integrity-header-approved",
+      "description": "A header was approved in Page Integrity.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "page-integrity-header-rejected",
+      "description": "A header was rejected in Page Integrity.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "page-integrity-inventory-cleared",
+      "description": "The Page Integrity resource inventory was cleared.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "page-integrity-resource-approved",
+      "description": "A resource was approved in Page Integrity.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "page-integrity-resource-deleted",
+      "description": "A resource was deleted from the Page Integrity resource inventory.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "page-integrity-resource-rejected",
+      "description": "A resource was rejected in Page Integrity.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "page-integrity-script-approval-rule-created",
+      "description": "A Page Integrity script approval rule was created.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "page-integrity-script-approval-rule-deleted",
+      "description": "A Page Integrity script approval rule was deleted.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "passkey-created",
+      "description": "A new passkey was created.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "passkey-deleted",
+      "description": "An existing passkey was deleted.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "passkey-updated",
+      "description": "The name of the existing passkey was updated.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "passport-access-granted",
+      "description": "A visitor authenticated to a Passport-protected project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "password-protection-disabled",
+      "description": "Advanced Deployment Protection was disabled for the team.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "password-protection-enabled",
+      "description": "Advanced Deployment Protection was enabled for the team.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "payment-method-added",
+      "description": "A payment method was added to the account.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "payment-method-default-updated",
+      "description": "The default payment method was updated.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "payment-method-removed",
+      "description": "A payment method was removed from the account.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "plan",
+      "description": "A payment plan (hobby, pro or enterprise) was added to a personal account.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "preview-deployment-suffix-disabled",
+      "description": "The preview deployment suffix for a team was disabled.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "preview-deployment-suffix-enabled",
+      "description": "The preview deployment suffix for a team was enabled.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "preview-deployment-suffix-update",
+      "description": "The preview deployment suffix for a team was updated.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "privatelink-endpoint-created",
+      "description": "A PrivateLink endpoint was created for a project or Secure Compute network.",
+      "categories": [
+        "network"
+      ]
+    },
+    {
+      "name": "privatelink-endpoint-deleted",
+      "description": "A PrivateLink endpoint was deleted from a project or Secure Compute network.",
+      "categories": [
+        "network"
+      ]
+    },
+    {
+      "name": "privatelink-endpoint-updated",
+      "description": "A PrivateLink endpoint was updated.",
+      "categories": [
+        "network"
+      ]
+    },
+    {
+      "name": "production-branch-updated",
+      "description": "The production branch for a project was updated.",
+      "categories": [
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-add-alias",
+      "description": "An alias was added to a project domain.",
+      "categories": [
+        "project",
+        "domain"
+      ]
+    },
+    {
+      "name": "project-add-redirect",
+      "description": "A redirect was added to a project domain.",
+      "categories": [
+        "project",
+        "domain"
+      ]
+    },
+    {
+      "name": "project-affected-projects-deployments-updated",
+      "description": "The skip deployments when root and dependencies are unchanged setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-alias-configured-change",
+      "description": "A project alias configuration was changed.",
+      "categories": [
+        "project",
+        "domain"
+      ]
+    },
+    {
+      "name": "project-analytics-disabled",
+      "description": "Legacy Speed Insights was disabled for a specific project.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "project-analytics-enabled",
+      "description": "Legacy Speed Insights was enabled for a specific project.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "project-auto-assign-custom-production-domains-updated",
+      "description": "The auto-assign custom production domains setting was updated for a project.",
+      "categories": [
+        "project",
+        "domain"
+      ]
+    },
+    {
+      "name": "project-automation-bypass",
+      "description": "Protection Bypass for Automation for a project was modified.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-avatar-dark-mode-update",
+      "description": "The dark mode avatar of a specific project was updated.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-avatar-update",
+      "description": "The avatar of a specific project was updated.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-build-command-updated",
+      "description": "The build command for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-build-logs-and-source-protection-updated",
+      "description": "Build logs and source protection was updated for a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-build-machine-updated",
+      "description": "The build machine for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-card-widget-preference-updated",
+      "description": "A project card widget preference was updated.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-client-cert-delete",
+      "description": "A client certificate was deleted from a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-client-cert-upload",
+      "description": "A client certificate was uploaded to a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-connect-configurations",
+      "description": "Project Secure Compute configurations were updated.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-consolidated-git-commit-status-updated",
+      "description": "The consolidated git commit status setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-created",
+      "description": "A new project was created.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-cron-jobs-toggled",
+      "description": "Cron jobs were toggled for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-custom-environment-created",
+      "description": "A custom environment was created for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-custom-environment-deleted",
+      "description": "A custom environment was deleted from a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-custom-environment-schedules-default-updated",
+      "description": "The default state for new schedules in a custom environment was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-custom-environment-updated",
+      "description": "A custom environment branch tracking was updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-customer-success-code-visibility-updated",
+      "description": "Customer success code visibility was updated for a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-delete",
+      "description": "A specific project was deleted.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-deployment-policy-updated",
+      "description": "Project deployment policy was updated.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-deployment-retention-updated",
+      "description": "The deployment retention policy was updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-directory-listing",
+      "description": "The directory listing setting was updated for a project.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-domain-deleted",
+      "description": "A domain was deleted from a project.",
+      "categories": [
+        "project",
+        "domain"
+      ]
+    },
+    {
+      "name": "project-domain-moved",
+      "description": "A domain was moved between projects.",
+      "categories": [
+        "project",
+        "domain"
+      ]
+    },
+    {
+      "name": "project-domain-unverified",
+      "description": "The ownership of a domain added to Vercel became unverified.",
+      "categories": [
+        "project",
+        "domain"
+      ]
+    },
+    {
+      "name": "project-domain-updated",
+      "description": "A project domain configuration was updated.",
+      "categories": [
+        "project",
+        "domain"
+      ]
+    },
+    {
+      "name": "project-domain-verified",
+      "description": "The project domain ownership was verified.",
+      "categories": [
+        "project",
+        "domain"
+      ]
+    },
+    {
+      "name": "project-elastic-concurrency-updated",
+      "description": "On-demand concurrency for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-expiration-locked",
+      "description": "A project was locked.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-expiration-reached",
+      "description": "A project reached its expiration deadline and was automatically soft deleted.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-expiration-scheduled",
+      "description": "A project was scheduled for expiration.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-expiration-unlocked",
+      "description": "A project was unlocked and re-scheduled for expiration.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-external-rewrite-caching-updated",
+      "description": "The external rewrite caching setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-framework-updated",
+      "description": "The framework for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-function-cpu-memory",
+      "description": "Function CPU and memory settings were updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-function-failover",
+      "description": "Function failover settings were updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-function-max-duration",
+      "description": "Function max duration was updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-function-regions",
+      "description": "Function regions were updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-functions-beta-updated",
+      "description": "Functions Beta setting was updated for a specific project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-functions-fluid-disabled",
+      "description": "Fluid compute was disabled for a specific project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-functions-fluid-enabled",
+      "description": "Fluid compute was enabled for a specific project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-git-commit-comments-toggled",
+      "description": "The Git commit comments setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-git-commit-status-toggled",
+      "description": "The git commit status setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-git-create-deployments-toggled",
+      "description": "The GitHub deployments setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-git-fork-protection-updated",
+      "description": "Git fork protection was updated for a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-git-lfs-toggled",
+      "description": "The Git LFS setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-git-pr-comments-toggled",
+      "description": "The Git PR comments setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-git-repository-connected",
+      "description": "A Git repository was connected to a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-git-repository-disconnected",
+      "description": "A Git repository was disconnected from a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-git-repository-dispatch-events-toggled",
+      "description": "The repository dispatch events setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-git-require-verified-commits-toggled",
+      "description": "The verified commits requirement setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-ignored-build-step-updated",
+      "description": "The ignored build step setting was updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-install-command-updated",
+      "description": "The install command for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-member-added",
+      "description": "A user was added to a project.",
+      "categories": [
+        "project",
+        "team"
+      ]
+    },
+    {
+      "name": "project-member-invited",
+      "description": "A user was invited to a project.",
+      "categories": [
+        "project",
+        "team"
+      ]
+    },
+    {
+      "name": "project-member-removed",
+      "description": "A user was removed from a project.",
+      "categories": [
+        "project",
+        "team"
+      ]
+    },
+    {
+      "name": "project-member-removed-batch",
+      "description": "Multiple members were removed from a project.",
+      "categories": [
+        "project",
+        "team"
+      ]
+    },
+    {
+      "name": "project-member-updated",
+      "description": "A user was updated in a project.",
+      "categories": [
+        "project",
+        "team"
+      ]
+    },
+    {
+      "name": "project-move-in-success",
+      "description": "The transfer of a project to the current personal account or team succeeded.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-move-out-failed",
+      "description": "The transfer of a project from the current personal account or team failed.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-move-out-started",
+      "description": "The transfer of a project from the current personal account or team was initiated.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-move-out-success",
+      "description": "The transfer of a project from the current personal account or team succeeded.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-name",
+      "description": "A project was renamed.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-node-version-updated",
+      "description": "The Node.js version for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-oidc-issuer-mode-updated",
+      "description": "The OIDC issuer mode was updated for a project.",
+      "categories": [
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "project-oidc-token-created",
+      "description": "A project OIDC token was created.",
+      "categories": [
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "project-options-allowlist",
+      "description": "OPTIONS Allowlist was modified.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-output-directory-updated",
+      "description": "The output directory for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-passport-updated",
+      "description": "The Passport configuration was updated for a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-password-protection",
+      "description": "Password Protection for a project was modified.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-paused",
+      "description": "A project was paused.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-preview-deployment-suffix",
+      "description": "The preview deployment suffix was updated for a project.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-preview-environment-branch-tracking-updated",
+      "description": "Preview environment branch tracking was updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-prioritize-production-builds-updated",
+      "description": "The prioritize production builds setting was updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-program-enrollment-changed",
+      "description": "Program enrollment was updated for a project.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-protected-sourcemaps-updated",
+      "description": "The protected sourcemaps setting was updated for a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-rolling-release-aborted",
+      "description": "A production canary rollout was aborted for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-rolling-release-approved",
+      "description": "Advancing to the next stage of a production canary rollout was approved for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-rolling-release-completed",
+      "description": "A production canary rollout was completed for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-rolling-release-configured",
+      "description": "The rolling release configuration was updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-rolling-release-continued",
+      "description": "A production canary rollout was resumed for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-rolling-release-disabled",
+      "description": "Rolling releases were disabled for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-rolling-release-enabled",
+      "description": "Rolling releases were enabled for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-rolling-release-paused",
+      "description": "A production canary rollout was paused for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-rolling-release-started",
+      "description": "A production canary rollout was started for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-rolling-release-suggested-actions-generated",
+      "description": "Suggested actions were generated for a production canary rollout.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-rolling-release-timer",
+      "description": "A production canary rollout was automatically advanced to the next stage for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-root-directory-updated",
+      "description": "The root directory was updated for a project.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-routes-version-promoted",
+      "description": "A project routes version was promoted.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-routes-version-restored",
+      "description": "A project routes version was restored.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-sandbox-config-updated",
+      "description": "The default sandbox region and failover regions were updated for a project.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "project-sandbox-url-protection-updated",
+      "description": "Sandbox URL protection was updated for a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-skew-protection-allowed-domains-updated",
+      "description": "Skew Protection allowed domains were updated for a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-skew-protection-max-age-updated",
+      "description": "Skew Protection max age was updated for a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-skew-protection-threshold-updated",
+      "description": "Skew Protection threshold was updated for a project.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-source-files-outside-root-directory-updated",
+      "description": "The include files outside root directory setting for a project was updated.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-speed-insights-disabled",
+      "description": "Speed Insights was disabled for a specific project.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "project-speed-insights-enabled",
+      "description": "Speed Insights was enabled for a specific project.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "project-speed-insights-free-data-started",
+      "description": "A project without Speed Insights enabled received its first data point (Speed Insights free tier started).",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "project-sso-protection",
+      "description": "Vercel Authentication (formerly SSO protection) for a project was modified.",
+      "categories": [
+        "security",
+        "project"
+      ]
+    },
+    {
+      "name": "project-static-ips-updated",
+      "description": "Static IPs were updated for a project.",
+      "categories": [
+        "network",
+        "project"
+      ]
+    },
+    {
+      "name": "project-trusted-ips",
+      "description": "Trusted IPs for a project was modified.",
+      "categories": [
+        "network",
+        "project"
+      ]
+    },
+    {
+      "name": "project-trusted-sources",
+      "description": "Trusted Sources for a project was modified.",
+      "categories": [
+        "network",
+        "project"
+      ]
+    },
+    {
+      "name": "project-unpaused",
+      "description": "A project was unpaused.",
+      "categories": [
+        "project",
+        "deployment"
+      ]
+    },
+    {
+      "name": "project-web-analytics-disabled",
+      "description": "Web Analytics was disabled for a project.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "project-web-analytics-enabled",
+      "description": "Web Analytics was enabled for a project.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "protected-git-scope-added",
+      "description": "A Protected Git Scope was added for the team.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "protected-git-scope-removed",
+      "description": "A Protected Git Scope was removed from the team.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "runtime-cache-purge-all",
+      "description": "All runtime cache was purged.",
+      "categories": [
+        "edge",
+        "project"
+      ]
+    },
+    {
+      "name": "saml-connection-created",
+      "description": "A team's SAML Single Sign-On was connected to an identity provider.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "saml-connection-deleted",
+      "description": "A team's SAML Single Sign-On was disconnected from an identity provider.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "sandbox-alias-assigned",
+      "description": "An alias was assigned to a sandbox.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "sandbox-alias-delete",
+      "description": "An alias was removed from a sandbox.",
+      "categories": [
+        "domain",
+        "project"
+      ]
+    },
+    {
+      "name": "sandbox-drive-created",
+      "description": "A sandbox drive was created.",
+      "categories": [
+        "storage",
+        "project"
+      ]
+    },
+    {
+      "name": "sandbox-drive-deleted",
+      "description": "A sandbox drive was deleted.",
+      "categories": [
+        "storage",
+        "project"
+      ]
+    },
+    {
+      "name": "sandbox-snapshot-regions-updated",
+      "description": "The regions of a sandbox snapshot were updated.",
+      "categories": [
+        "project"
+      ]
+    },
+    {
+      "name": "scale",
+      "description": "A deployment was scaled.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "scale-auto",
+      "description": "Auto-scaling was configured for a deployment.",
+      "categories": [
+        "deployment",
+        "project"
+      ]
+    },
+    {
+      "name": "secondary-email-added",
+      "description": "An email was added to the account",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "secondary-email-removed",
+      "description": "An email was removed from the account",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "secondary-email-verified",
+      "description": "An email was verified",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "secret-add",
+      "description": "An encrypted environment variable was added to a project. (Only possible through the API and CLI)",
+      "categories": [
+        "env-variable",
+        "security"
+      ]
+    },
+    {
+      "name": "secret-delete",
+      "description": "An encrypted environment variable was deleted from a project. (Only possible through the API and CLI)",
+      "categories": [
+        "env-variable",
+        "security"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "secret-rename",
+      "description": "An encrypted environment variable was renamed in a project. (Only possible through the API and CLI)",
+      "categories": [
+        "env-variable",
+        "security"
+      ]
+    },
+    {
+      "name": "security-list-created",
+      "description": "A team security list was created.",
+      "categories": [
+        "firewall",
+        "security"
+      ]
+    },
+    {
+      "name": "security-list-deleted",
+      "description": "A team security list was deleted.",
+      "categories": [
+        "firewall",
+        "security"
+      ]
+    },
+    {
+      "name": "security-list-updated",
+      "description": "A team security list was updated.",
+      "categories": [
+        "firewall",
+        "security"
+      ]
+    },
+    {
+      "name": "security-plus-updated",
+      "description": "Security Plus configuration was updated.",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "set-scale",
+      "description": "If a deployment needs to be scaled up or down by increasing or decreasing the docker container size, this event is created.",
+      "categories": [
+        "deployment",
+        "project"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "shared-env-variable-create",
+      "description": "An automatically encrypted shared environment variable was created.",
+      "categories": [
+        "env-variable",
+        "security"
+      ]
+    },
+    {
+      "name": "shared-env-variable-delete",
+      "description": "An existing shared environment variable was deleted.",
+      "categories": [
+        "env-variable",
+        "security"
+      ]
+    },
+    {
+      "name": "shared-env-variable-read",
+      "description": "The plain text value of an encrypted shared environment variable was read.",
+      "categories": [
+        "env-variable",
+        "security"
+      ]
+    },
+    {
+      "name": "shared-env-variable-repo-link",
+      "description": "A shared environment variable was linked to a git repository, exposing it to Vercel CI runs for that repository.",
+      "categories": [
+        "env-variable",
+        "security"
+      ]
+    },
+    {
+      "name": "shared-env-variable-repo-unlink",
+      "description": "A shared environment variable was unlinked from a git repository.",
+      "categories": [
+        "env-variable",
+        "security"
+      ]
+    },
+    {
+      "name": "shared-env-variable-update",
+      "description": "An existing shared environment variable was updated.",
+      "categories": [
+        "env-variable",
+        "security"
+      ]
+    },
+    {
+      "name": "show-ip-addresses",
+      "description": "The show IP addresses setting was updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "signup",
+      "description": "A new user account was created.",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "signup-via-bitbucket",
+      "description": "A new user account was created via Bitbucket.",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "signup-via-github",
+      "description": "A new user account was created via GitHub.",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "signup-via-gitlab",
+      "description": "A new user account was created via GitLab.",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "speed-insights-settings-updated",
+      "description": "Speed Insights settings were updated.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "spend-created",
+      "description": "A spend management budget was added.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "spend-deleted",
+      "description": "A spend management budget was deleted.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "spend-updated",
+      "description": "A spend management budget was updated.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "sso-login",
+      "description": "A user logged in to a team via SAML Single Sign-On.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "startup-terms-accepted",
+      "description": "An owner accepted the Flexible Commitment for Startups terms.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "storage-accept-tos",
+      "description": "Acceptance of storage terms of service",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-access-token-set",
+      "description": "A storage access token was set.",
+      "categories": [
+        "storage",
+        "security"
+      ]
+    },
+    {
+      "name": "storage-accessed-data-browser",
+      "description": "Made a query to the store from the Data tab",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-connect-project",
+      "description": "A store was connected to a project",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-create",
+      "description": "A new store was created",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-delete",
+      "description": "A store was deleted",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-disconnect-project",
+      "description": "A store was disconnected to a project",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-disconnect-projects",
+      "description": "A store was disconnected from multiple projects.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-inactive-store-deleted",
+      "description": "An inactive store was deleted",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-reset-credentials",
+      "description": "The credentials for a store were reset",
+      "categories": [
+        "storage",
+        "security"
+      ]
+    },
+    {
+      "name": "storage-resource-repl-command",
+      "description": "A storage REPL command was executed.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-set-locked",
+      "description": "A store was locked down or unlocked.",
+      "categories": [
+        "storage",
+        "security"
+      ]
+    },
+    {
+      "name": "storage-transfer-in-success",
+      "description": "A store was transferred into the current team or account.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-transfer-out-success",
+      "description": "A store was transferred out of the current team or account.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-transfer-request-created",
+      "description": "A transfer request was created for a store.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-update",
+      "description": "A store was updated",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-update-project-connection",
+      "description": "A storage project connection was updated.",
+      "categories": [
+        "storage"
+      ]
+    },
+    {
+      "name": "storage-upgrade-project-connection-to-oidc",
+      "description": "A storage project connection was upgraded to OIDC.",
+      "categories": [
+        "storage",
+        "security"
+      ]
+    },
+    {
+      "name": "storage-view-secret",
+      "description": "Viewed a secret for a store",
+      "categories": [
+        "storage",
+        "security"
+      ]
+    },
+    {
+      "name": "strict-connectors",
+      "description": "Strict connectors settings were updated.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "strict-deployment-protection-settings",
+      "description": "Strict deployment protection settings were updated.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "strict-password-protection-settings",
+      "description": "Strict password protection settings were updated.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "strict-shareable-links",
+      "description": "Strict shareable links settings were updated.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "subscription-product-added",
+      "description": "A self-serve product was added to a subscription.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "subscription-product-removed",
+      "description": "A self-serve product was removed from a subscription.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "team",
+      "description": "A team was created.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-agent-billing-migration-decision-changed",
+      "description": "The Vercel Agent billing migration decision was updated for a team.",
+      "categories": [
+        "team",
+        "billing"
+      ]
+    },
+    {
+      "name": "team-avatar-update",
+      "description": "The avatar of a specific team was updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-collaboration-settings-updated",
+      "description": "Team collaboration settings were updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-default-build-machine-updated",
+      "description": "The default build machine for a team was updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-default-passport-updated",
+      "description": "The default Passport configuration was updated for a team.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "team-delete",
+      "description": "A specific team was deleted.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-deployment-policy-updated",
+      "description": "Team deployment policy was updated.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "team-deployment-storage-high-retention-opt-in",
+      "description": "The team confirmed paid longer deployment retention and was metered.",
+      "categories": [
+        "team",
+        "billing",
+        "storage"
+      ]
+    },
+    {
+      "name": "team-deployment-storage-retention-opt-out",
+      "description": "The team opted to keep deployment retention settings before a force reduce.",
+      "categories": [
+        "team",
+        "storage"
+      ]
+    },
+    {
+      "name": "team-domain-verification-created",
+      "description": "A domain was added to a managed team.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-domain-verification-verified",
+      "description": "A domain was verified for a managed team.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-email-domain-update",
+      "description": "The team email domain was updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-ended-trial",
+      "description": "A team trial ended.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "team-firewall-config-modified",
+      "description": "A team-scoped firewall configuration was modified.",
+      "categories": [
+        "firewall",
+        "security"
+      ]
+    },
+    {
+      "name": "team-firewall-config-promoted",
+      "description": "A team-scoped firewall configuration was published.",
+      "categories": [
+        "firewall",
+        "security"
+      ]
+    },
+    {
+      "name": "team-git-repository-dispatch-events-toggled",
+      "description": "The team-wide repository dispatch events default setting was updated.",
+      "categories": [
+        "team",
+        "deployment"
+      ]
+    },
+    {
+      "name": "team-git-require-verified-commits-toggled",
+      "description": "The team-wide verified commits requirement setting was updated.",
+      "categories": [
+        "team",
+        "deployment"
+      ]
+    },
+    {
+      "name": "team-invite-bulk-delete",
+      "description": "One or more team invites were deleted.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-invite-code-reset",
+      "description": "The team invite code was reset.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-invite-link-created",
+      "description": "A team invite link was created.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-invite-link-deleted",
+      "description": "A team invite link was deleted.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-ip-blocking-rules-created",
+      "description": "Team IP blocking rules were created.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "team-ip-blocking-rules-removed",
+      "description": "Team IP blocking rules were removed.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-add",
+      "description": "A member was added to a specific team.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-confirm-request",
+      "description": "The request for a user to join a team was confirmed.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-decline-request",
+      "description": "The request for a user to join a team was declined.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-delete",
+      "description": "A specific team member was deleted from a team.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-entitlement-added",
+      "description": "A team member was added to an entitlement.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-entitlement-canceled",
+      "description": "A team member entitlement was canceled and set not to renew.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-entitlement-reactivated",
+      "description": "A team member had an entitlement reactivated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-entitlement-removed",
+      "description": "A team member was removed from an entitlement.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-join",
+      "description": "A team member joined the current team.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-leave",
+      "description": "A team member left the current team.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-request-access",
+      "description": "A user requested access to join a team.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-member-role-update",
+      "description": "The roles or permissions of a team member were updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-mfa-enforcement-updated",
+      "description": "The 2FA enforcement of a team was updated.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "team-name-update",
+      "description": "The name of a team was updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-paid-invoice",
+      "description": "A team invoice was paid.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "team-program-enrollment-changed",
+      "description": "Program enrollment was updated for a team.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-remote-caching-purge",
+      "description": "All Remote Cache artifacts were deleted.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-remote-caching-update",
+      "description": "The Remote Caching status was changed.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "team-saml-enforced",
+      "description": "SAML enforcement was configured for a team.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "team-saml-roles",
+      "description": "SAML roles were configured for a team.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    },
+    {
+      "name": "team-slug-update",
+      "description": "The slug of a team was updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "tracing-configured",
+      "description": "Tracing was configured for a project.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "tracing-disabled",
+      "description": "Tracing was disabled for a project.",
+      "categories": [
+        "observability",
+        "project"
+      ]
+    },
+    {
+      "name": "tracing-paused",
+      "description": "Tracing was paused for all projects of the team.",
+      "categories": [
+        "observability",
+        "team"
+      ]
+    },
+    {
+      "name": "tracing-resumed",
+      "description": "Tracing was resumed for all projects of the team.",
+      "categories": [
+        "observability",
+        "team"
+      ]
+    },
+    {
+      "name": "unlink-login-connection",
+      "description": "A login connection was unlinked.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "update-account-flow-dismissed",
+      "description": "The completed account update flow status was dismissed for a team with enterprise managed users.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "update-account-flow-triggered",
+      "description": "The account update flow was started for a team with enterprise managed users.",
+      "categories": [
+        "team",
+        "security"
+      ]
+    },
+    {
+      "name": "user-delete",
+      "description": "A user account was deleted.",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "user-delete-requested",
+      "description": "A user requested deletion of their account.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-emu-account-archived",
+      "description": "A user archived their personal account during enterprise-managed user setup.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-emu-account-deleted",
+      "description": "A user deleted their personal account during enterprise-managed user setup.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-emu-account-recovered",
+      "description": "A user recovered their archived account using a recovery code.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-emu-account-update-opted-in",
+      "description": "A user opted in to the enterprise-managed account transition for a team.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-emu-account-update-opted-out",
+      "description": "A user opted out of the enterprise-managed account transition for a team.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-mfa-challenge-failed",
+      "description": "A two-factor challenge attempt failed.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-mfa-change-failed",
+      "description": "An attempt to change two-factor configuration failed.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-mfa-configuration-updated",
+      "description": "Two-factor configuration was updated",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-mfa-recovery-code-used",
+      "description": "A two-factor recovery (backup) code was used.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-mfa-recovery-codes-regenerated",
+      "description": "Two-factor recovery codes were regenerated",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-mfa-setup-skipped",
+      "description": "Two-factor authentication setup was skipped",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-mfa-totp-verified",
+      "description": "A Two-factor authenticator app was added",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-phone-updated",
+      "description": "A phone number was added to a user account.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-primary-email-updated",
+      "description": "The primary email was changed",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "user-token-created",
+      "description": "A Personal Access Token was created.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-token-deleted",
+      "description": "A Token was deleted.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "user-tokens-deleted",
+      "description": "All Tokens (except the current one) were deleted.",
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    {
+      "name": "username",
+      "description": "The username of a personal account was updated.",
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "name": "v0-migration-payment-confirmed",
+      "description": "An owner confirmed the team payment method for a v0 subscription migration.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "v0-migration-subscription-completed",
+      "description": "An owner moved their personal v0 Premium subscription to the team.",
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "vcr-image-deleted",
+      "description": "A container image was deleted from a registry repository.",
+      "categories": [
+        "storage",
+        "project"
+      ]
+    },
+    {
+      "name": "vcr-image-pushed",
+      "description": "A container image was pushed to a registry repository.",
+      "categories": [
+        "storage",
+        "project"
+      ]
+    },
+    {
+      "name": "vcr-repository-created",
+      "description": "A container registry repository was created for a project.",
+      "categories": [
+        "storage",
+        "project"
+      ]
+    },
+    {
+      "name": "vcr-repository-deleted",
+      "description": "A container registry repository was deleted from a project.",
+      "categories": [
+        "storage",
+        "project"
+      ]
+    },
+    {
+      "name": "vcr-repository-permission-added",
+      "description": "A team was granted access to a container registry repository.",
+      "categories": [
+        "storage",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "vcr-repository-permission-removed",
+      "description": "A team's access to a container registry repository was revoked.",
+      "categories": [
+        "storage",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "vcr-repository-permissions-cleared",
+      "description": "Every team's access to a container registry repository was revoked.",
+      "categories": [
+        "storage",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "vcr-repository-visibility-changed",
+      "description": "A container registry repository was made public or private.",
+      "categories": [
+        "storage",
+        "project",
+        "security"
+      ]
+    },
+    {
+      "name": "vercel-agent-elevated-permissions-approved",
+      "description": "A Vercel Agent elevated access request was approved.",
+      "categories": [
+        "ai",
+        "security"
+      ]
+    },
+    {
+      "name": "vercel-agent-elevated-permissions-requested",
+      "description": "A Vercel Agent plan requested elevated access.",
+      "categories": [
+        "ai",
+        "security"
+      ]
+    },
+    {
+      "name": "vercel-agent-session-created",
+      "description": "A Vercel Agent session was created.",
+      "categories": [
+        "ai"
+      ]
+    },
+    {
+      "name": "vercel-app-installation-request-dismissed",
+      "description": "A user dismissed an app installation request.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "vercel-app-installation-requested",
+      "description": "A user requested an app installation.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "vercel-app-installation-updated",
+      "description": "A user updated an app installation.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "vercel-app-installed",
+      "description": "A user installed an app.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "vercel-app-tokens-revoked",
+      "description": "A user revoked tokens for an app.",
+      "categories": [
+        "vercel-app",
+        "security"
+      ]
+    },
+    {
+      "name": "vercel-app-uninstalled",
+      "description": "A user uninstalled an app.",
+      "categories": [
+        "vercel-app"
+      ]
+    },
+    {
+      "name": "vercel-ci-repository-settings-updated",
+      "description": "Vercel CI was enabled or disabled for a repository.",
+      "categories": [
+        "workflow"
+      ]
+    },
+    {
+      "name": "vercel-toolbar",
+      "description": "The Vercel Toolbar setting was updated.",
+      "categories": [
+        "team"
+      ]
+    },
+    {
+      "name": "vpc-peering-connection-accepted",
+      "description": "A VPC peering connection was accepted.",
+      "categories": [
+        "network"
+      ]
+    },
+    {
+      "name": "vpc-peering-connection-deleted",
+      "description": "A VPC peering connection was deleted.",
+      "categories": [
+        "network"
+      ]
+    },
+    {
+      "name": "vpc-peering-connection-rejected",
+      "description": "A VPC peering connection was rejected.",
+      "categories": [
+        "network"
+      ]
+    },
+    {
+      "name": "vpc-peering-connection-updated",
+      "description": "A VPC peering connection was updated.",
+      "categories": [
+        "network"
+      ]
+    },
+    {
+      "name": "vulnerability-banner-dismissed",
+      "description": "A vulnerability banner was dismissed, optionally with deployment protection enabled.",
+      "categories": [
+        "observability",
+        "security"
+      ]
+    },
+    {
+      "name": "web-analytics-tier-updated",
+      "description": "The Web Analytics subscription tier was changed.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "webhook-created",
+      "description": "A webhook was created.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "webhook-deleted",
+      "description": "A webhook was deleted.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "webhook-updated",
+      "description": "A webhook was updated.",
+      "categories": [
+        "observability"
+      ]
+    },
+    {
+      "name": "xaa-updated",
+      "description": "Trusted identity providers for cross-app access were modified.",
+      "categories": [
+        "security",
+        "team"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "name": "account",
+      "label": "Account"
+    },
+    {
+      "name": "ai",
+      "label": "AI"
+    },
+    {
+      "name": "ai-gateway",
+      "label": "AI Gateway"
+    },
+    {
+      "name": "billing",
+      "label": "Billing"
+    },
+    {
+      "name": "connect",
+      "label": "Connect"
+    },
+    {
+      "name": "deployment",
+      "label": "Deployments"
+    },
+    {
+      "name": "domain",
+      "label": "Domains"
+    },
+    {
+      "name": "edge",
+      "label": "Edge"
+    },
+    {
+      "name": "env-variable",
+      "label": "Environment Variables"
+    },
+    {
+      "name": "feature-flags",
+      "label": "Feature Flags"
+    },
+    {
+      "name": "firewall",
+      "label": "Firewall"
+    },
+    {
+      "name": "integration",
+      "label": "Integrations"
+    },
+    {
+      "name": "microfrontends",
+      "label": "Microfrontends"
+    },
+    {
+      "name": "network",
+      "label": "Network"
+    },
+    {
+      "name": "observability",
+      "label": "Observability"
+    },
+    {
+      "name": "project",
+      "label": "Project"
+    },
+    {
+      "name": "security",
+      "label": "Security"
+    },
+    {
+      "name": "storage",
+      "label": "Storage"
+    },
+    {
+      "name": "team",
+      "label": "Team"
+    },
+    {
+      "name": "vercel-app",
+      "label": "Apps"
+    },
+    {
+      "name": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

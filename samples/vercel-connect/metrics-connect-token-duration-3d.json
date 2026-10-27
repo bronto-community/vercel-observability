@@ -1,0 +1,56 @@
+{
+  "query": {
+    "metric": "vercel.external_api_request.request_duration_ms",
+    "aggregation": "avg",
+    "groupBy": [
+      "requestPath"
+    ],
+    "filter": "requestPath:/v1/connect/*",
+    "startTime": "2026-10-24T00:00:00.000Z",
+    "endTime": "2026-10-28T00:00:00.000Z",
+    "granularity": {
+      "days": 1
+    },
+    "orderBy": "count",
+    "orderDirection": "desc"
+  },
+  "summary": [
+    {
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "vercel_external_api_request_request_duration_ms_avg": 336.125
+    },
+    {
+      "requestPath": "/v1/connect/token/slack%2Fagentic-gtm",
+      "vercel_external_api_request_request_duration_ms_avg": 379
+    }
+  ],
+  "data": [
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "vercel_external_api_request_request_duration_ms_avg": 337.5
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "requestPath": "/v1/connect/token/slack%2Fagentic-gtm",
+      "vercel_external_api_request_request_duration_ms_avg": 379
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "vercel_external_api_request_request_duration_ms_avg": 333
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "vercel_external_api_request_request_duration_ms_avg": 323.3333333333333
+    },
+    {
+      "timestamp": "2026-10-27T00:00:00.000Z",
+      "requestPath": "/v1/connect/token/slack%2Fteam-bot-b",
+      "vercel_external_api_request_request_duration_ms_avg": 378
+    }
+  ],
+  "orderBy": "count",
+  "orderDirection": "desc"
+}

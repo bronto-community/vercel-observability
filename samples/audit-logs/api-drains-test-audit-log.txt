@@ -1,0 +1,5 @@
+$ vercel api /v1/drains/test -X POST --input body.json
+# body: {"schemas":{"audit_log":{"version":"v1"}},"delivery":{"type":"http","endpoint":"https://example.com/vercel-drain-test","encoding":"ndjson","compression":"none","headers":{}}}
+# Vercel CLI 65.2.0, Pro team, 2026-10-27T09:26Z
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Error: Audit Log Drains are only available on the Enterprise plan. (402)

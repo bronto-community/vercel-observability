@@ -41,8 +41,8 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | [AI traffic (crawlers, assistants)](emitters/ai-traffic.md) | | ✓ (Plus) | | | — | **Done** 2026-10-26 (no recognized AI bot on the lab project yet) |
 | [Custom Metrics](emitters/custom-metrics.md) | | ✓ (Plus) | | | — | **Done** 2026-10-27 |
 | [Alerts](emitters/alerts.md) | | | | ✓ | WH, API | **Done** 2026-10-26 (no alert fired yet; first possible 2026-10-27) |
-| Vercel Connect | | | | ✓ | Drain (`connect`) | Needs test project |
-| Audit Logs | ✓ | | | | Drain (`audit_log`) | Blocked: Enterprise only |
+| [Vercel Connect](emitters/vercel-connect.md) | | ✓ (Plus) | | Token and trigger events | Drain (`connect`) | **Done** 2026-10-27 (drain records: not observed yet) |
+| [Audit Logs and the Activity Log](emitters/audit-logs.md) | ✓ | | | Team activity events | Drain (`audit_log`, Enterprise), API | **Done** 2026-10-27 (audit drain: Enterprise only) |
 | [Billing and usage](emitters/billing.md) | | | | FOCUS cost records | API | **Done** 2026-10-26 (no backend queries yet: needs a forwarder) |
 | [Vercel Drives](emitters/vercel-drive.md) | | ✓ (Plus) | | Usage, billing | — | Documented only (team has no drives) |
 

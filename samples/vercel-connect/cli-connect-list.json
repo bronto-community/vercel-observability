@@ -1,0 +1,79 @@
+{
+  "connectors": [
+    {
+      "uid": "mcp.atlassian.com/atlassian",
+      "id": "scl_pv4darH2JgzeDXknx3i0g",
+      "name": "atlassian",
+      "type": "oauth",
+      "typeName": "OAuth",
+      "createdAt": 1783698264916,
+      "icon": null,
+      "backgroundColor": null,
+      "accentColor": null,
+      "projects": [
+        {
+          "id": "prj_OTHER_1",
+          "name": "team-bot-b"
+        }
+      ],
+      "hasMoreProjects": false
+    },
+    {
+      "uid": "slack/agentic-gtm",
+      "id": "scl_wxD0oAnojqRFZ3gigDdSZg",
+      "name": "team-bot-c",
+      "type": "slack",
+      "typeName": "Slack",
+      "createdAt": 1792537234293,
+      "icon": null,
+      "backgroundColor": "#b82398",
+      "accentColor": null,
+      "projects": [
+        {
+          "id": "prj_OTHER_2",
+          "name": "team-bot-a"
+        }
+      ],
+      "hasMoreProjects": false
+    },
+    {
+      "uid": "slack/team-bot-b",
+      "id": "scl_DwyzLORaHhFYvATOR9b1A",
+      "name": "team-bot-b",
+      "type": "slack",
+      "typeName": "Slack",
+      "createdAt": 1783698220240,
+      "icon": "2666e53a757dd9704df236e3e6107ae7fb1eaa04",
+      "backgroundColor": "#fac039",
+      "accentColor": null,
+      "projects": [
+        {
+          "id": "prj_OTHER_1",
+          "name": "team-bot-b"
+        }
+      ],
+      "hasMoreProjects": false
+    },
+    {
+      "uid": "slack/bronto-team-bot-a",
+      "id": "scl_RG8XeMLbPJt98wqk2zltXQ",
+      "name": "bronto-team-bot-a",
+      "type": "slack",
+      "typeName": "Slack",
+      "createdAt": 1783789981446,
+      "icon": "b771a6aa04e53749393e9c1234303ac03a78a107",
+      "backgroundColor": "#5c15b2",
+      "accentColor": null,
+      "projects": [
+        {
+          "id": "prj_OTHER_2",
+          "name": "team-bot-a"
+        }
+      ],
+      "hasMoreProjects": false
+    }
+  ],
+  "pagination": {
+    "next": null
+  }
+}

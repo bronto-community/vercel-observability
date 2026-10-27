@@ -1,0 +1,50 @@
+$ vercel api list | Connect endpoints   (Vercel CLI 65.2.0, public OpenAPI spec, 2026-10-27)
+
+/v1/connect/authorize/{connector}
+  POST     Create a Connect authorization request
+
+/v1/connect/connectors
+  POST     Create a connector
+
+/v1/connect/connectors/{connector}
+  GET      Get a connector
+  DELETE   Delete a connector
+
+/v1/connect/connectors/{connector}/managed/eject
+  POST     Eject a managed connector
+
+/v1/connect/connectors/{connector}/projects/{projectId}
+  GET      Get a connector project connection
+  POST     Create or update a connector project connection
+  DELETE   Disconnect a connector from a project
+
+/v1/connect/connectors/{connector}/trigger-destinations
+  PATCH    Update connector trigger destinations
+
+/v1/connect/networks
+  GET      List Secure Compute networks
+  POST     Create a Secure Compute network
+
+/v1/connect/networks/{networkId}
+  GET      Read a Secure Compute network
+  PATCH    Update a Secure Compute network
+  DELETE   Delete a Secure Compute network
+
+/v1/connect/token/{connector}
+  POST     Get a Connect token
+
+/v1/projects/{idOrName}/shared-connect-links
+  PATCH    Configures Static IPs for a project
+
+/v2/connect/connectors
+  GET      List connectors
+
+/v2/connect/connectors/{connector}
+  PATCH    Update a connector
+
+/v2/connect/connectors/{connector}/projects
+  GET      List projects for a connector
+
+/v2/connect/projects/{projectId}/connectors
+  GET      List connectors for a project
+

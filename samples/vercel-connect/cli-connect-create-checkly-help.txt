@@ -1,0 +1,21 @@
+$ vercel connect create checkly --help   (Vercel CLI 65.2.0, 2026-10-27; read-only)
+
+  Connection methods for Checkly:
+
+    api-key  MCP (API Key) — bring your own credentials
+      Get credentials at https://www.checklyhq.com/docs/ai/mcp-server/setup/
+      Create a user API key under User Settings > API Keys, or an Enterprise
+      service API key under Account Settings > API Keys, and paste it below.
+      --data with values: [{ "value": "<api key>" }]
+
+  Examples:
+
+  - Connect with MCP (API Key)
+
+    $ vercel connect create checkly --connection-method api-key --name checkly-api-key --data @credentials.json
+
+  Run `vercel connect create --help` for all options.
+
+  Vercel Connect guide:
+
+    https://vercel.com/kb/guide/vercel-connect
