@@ -1,0 +1,58 @@
+[
+  {
+    "count": 0,
+    "key": "Resource:deployment.environment.name",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "local"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "Resource:service.name",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "turbo-catalog-lab",
+      "turbo-otel-lab"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "Resource:service.namespace",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "telemetry-catalog"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.run.exit_code",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.scm.branch",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "main"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.version",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "2.11.10"
+    ]
+  }
+]

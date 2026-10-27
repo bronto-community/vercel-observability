@@ -1,0 +1,543 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "turbo-otel-lab"
+            }
+          }
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "scope": {
+            "name": "turborepo"
+          },
+          "metrics": [
+            {
+              "name": "turbo.run.duration_ms",
+              "description": "Turborepo run duration in milliseconds",
+              "unit": "ms",
+              "histogram": {
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093194887662000",
+                    "timeUnixNano": "1793093194909690000",
+                    "count": "1",
+                    "sum": 11,
+                    "bucketCounts": [
+                      "1",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0"
+                    ],
+                    "explicitBounds": [
+                      100,
+                      500,
+                      1000,
+                      2500,
+                      5000,
+                      10000,
+                      15000,
+                      30000,
+                      60000,
+                      120000,
+                      300000,
+                      600000,
+                      900000,
+                      1800000,
+                      3600000
+                    ],
+                    "min": 11,
+                    "max": 11
+                  }
+                ],
+                "aggregationTemporality": 1
+              }
+            },
+            {
+              "name": "turbo.run.tasks.attempted",
+              "description": "Tasks attempted per run",
+              "sum": {
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093194887668000",
+                    "timeUnixNano": "1793093194909703000",
+                    "asInt": "2"
+                  }
+                ],
+                "aggregationTemporality": 1,
+                "isMonotonic": true
+              }
+            },
+            {
+              "name": "turbo.run.tasks.failed",
+              "description": "Tasks failed per run",
+              "sum": {
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093194887671000",
+                    "timeUnixNano": "1793093194909713000",
+                    "asInt": "0"
+                  }
+                ],
+                "aggregationTemporality": 1,
+                "isMonotonic": true
+              }
+            },
+            {
+              "name": "turbo.run.tasks.cached",
+              "description": "Tasks served from cache per run",
+              "sum": {
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093194887673000",
+                    "timeUnixNano": "1793093194909717000",
+                    "asInt": "2"
+                  }
+                ],
+                "aggregationTemporality": 1,
+                "isMonotonic": true
+              }
+            },
+            {
+              "name": "turbo.task.duration_ms",
+              "description": "Task execution duration in milliseconds",
+              "unit": "ms",
+              "histogram": {
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.name",
+                        "value": {
+                          "stringValue": "build"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.package",
+                        "value": {
+                          "stringValue": "pkg-a"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.command",
+                        "value": {
+                          "stringValue": "mkdir -p dist && node -e \"setTimeout(()=>{require('fs').writeFileSync('dist/out.txt', String(Date.now()));console.log('built a')}, 300)\""
+                        }
+                      },
+                      {
+                        "key": "turbo.task.cache_status",
+                        "value": {
+                          "stringValue": "hit"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.cache_source",
+                        "value": {
+                          "stringValue": "LOCAL"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.exit_code",
+                        "value": {
+                          "intValue": "0"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093194887675000",
+                    "timeUnixNano": "1793093194909721000",
+                    "count": "1",
+                    "sum": 1,
+                    "bucketCounts": [
+                      "1",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0"
+                    ],
+                    "explicitBounds": [
+                      100,
+                      500,
+                      1000,
+                      2500,
+                      5000,
+                      10000,
+                      15000,
+                      30000,
+                      60000,
+                      120000,
+                      300000,
+                      600000,
+                      900000,
+                      1800000,
+                      3600000
+                    ],
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.cache_source",
+                        "value": {
+                          "stringValue": "LOCAL"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.cache_status",
+                        "value": {
+                          "stringValue": "hit"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.command",
+                        "value": {
+                          "stringValue": "mkdir -p dist && node -e \"setTimeout(()=>{require('fs').writeFileSync('dist/out.txt', String(Date.now()));console.log('built b')}, 300)\""
+                        }
+                      },
+                      {
+                        "key": "turbo.task.exit_code",
+                        "value": {
+                          "intValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.name",
+                        "value": {
+                          "stringValue": "build"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.package",
+                        "value": {
+                          "stringValue": "pkg-b"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093194887675000",
+                    "timeUnixNano": "1793093194909721000",
+                    "count": "1",
+                    "sum": 1,
+                    "bucketCounts": [
+                      "1",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0"
+                    ],
+                    "explicitBounds": [
+                      100,
+                      500,
+                      1000,
+                      2500,
+                      5000,
+                      10000,
+                      15000,
+                      30000,
+                      60000,
+                      120000,
+                      300000,
+                      600000,
+                      900000,
+                      1800000,
+                      3600000
+                    ],
+                    "min": 1,
+                    "max": 1
+                  }
+                ],
+                "aggregationTemporality": 1
+              }
+            },
+            {
+              "name": "turbo.task.cache.events",
+              "description": "Cache hit/miss events",
+              "sum": {
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.name",
+                        "value": {
+                          "stringValue": "build"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.package",
+                        "value": {
+                          "stringValue": "pkg-a"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.command",
+                        "value": {
+                          "stringValue": "mkdir -p dist && node -e \"setTimeout(()=>{require('fs').writeFileSync('dist/out.txt', String(Date.now()));console.log('built a')}, 300)\""
+                        }
+                      },
+                      {
+                        "key": "turbo.task.cache_status",
+                        "value": {
+                          "stringValue": "hit"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.cache_source",
+                        "value": {
+                          "stringValue": "LOCAL"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.exit_code",
+                        "value": {
+                          "intValue": "0"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093194887678000",
+                    "timeUnixNano": "1793093194909730000",
+                    "asInt": "1"
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.cache_source",
+                        "value": {
+                          "stringValue": "LOCAL"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.cache_status",
+                        "value": {
+                          "stringValue": "hit"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.command",
+                        "value": {
+                          "stringValue": "mkdir -p dist && node -e \"setTimeout(()=>{require('fs').writeFileSync('dist/out.txt', String(Date.now()));console.log('built b')}, 300)\""
+                        }
+                      },
+                      {
+                        "key": "turbo.task.exit_code",
+                        "value": {
+                          "intValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.name",
+                        "value": {
+                          "stringValue": "build"
+                        }
+                      },
+                      {
+                        "key": "turbo.task.package",
+                        "value": {
+                          "stringValue": "pkg-b"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093194887678000",
+                    "timeUnixNano": "1793093194909730000",
+                    "asInt": "1"
+                  }
+                ],
+                "aggregationTemporality": 1,
+                "isMonotonic": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

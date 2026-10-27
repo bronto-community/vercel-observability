@@ -1,0 +1,35 @@
+{
+  "period": {
+    "from": "2026-09-30T07:00:00.000Z",
+    "to": "2026-10-30T07:00:00.000Z"
+  },
+  "services": [
+    {
+      "name": "Drive Storage",
+      "product": "driveStorage",
+      "quantity": 0,
+      "unit": "gigabyte",
+      "cost": 0,
+      "included": false,
+      "category": "usage"
+    },
+    {
+      "name": "Drive Writes",
+      "product": "driveWrite",
+      "quantity": 0,
+      "unit": "gigabyte",
+      "cost": 0,
+      "included": false,
+      "category": "usage"
+    },
+    {
+      "name": "Drive Reads",
+      "product": "driveRead",
+      "quantity": 0,
+      "unit": "gigabyte",
+      "cost": 0,
+      "included": false,
+      "category": "usage"
+    }
+  ]
+}

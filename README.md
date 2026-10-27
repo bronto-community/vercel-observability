@@ -44,7 +44,7 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | Vercel Connect | | | | ✓ | Drain (`connect`) | Needs test project |
 | Audit Logs | ✓ | | | | Drain (`audit_log`) | Blocked: Enterprise only |
 | [Billing and usage](emitters/billing.md) | | | | FOCUS cost records | API | **Done** 2026-10-26 (no backend queries yet: needs a forwarder) |
-| Vercel Drive | | ✓ | | | — | To research (appears in the metric catalog) |
+| [Vercel Drives](emitters/vercel-drive.md) | | ✓ (Plus) | | Usage, billing | — | Documented only (team has no drives) |
 
 ### Libraries and client scripts
 
@@ -57,10 +57,11 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 | `@vercel/speed-insights` | Web Vitals | SID | Covered in [Speed Insights](emitters/speed-insights.md) |
 | `@vercel/functions` (`metric()`, `waitUntil`) | Custom metrics, `waitUntil` spans | — | Covered in [Custom Metrics](emitters/custom-metrics.md) and [Functions](emitters/functions.md) |
 | Flags SDK | `flag` spans, flag values on Web Analytics | TD, AD | Covered in [Flags](emitters/flags.md) |
-| Turborepo | Run metrics (OTLP) | OTLP | Needs test project |
+| [Turborepo](emitters/turborepo.md) | Run and task metrics (OTLP) | OTLP | **Done** 2026-10-27 (Remote Cache hits: need `turbo link`) |
 
 ### Reference
 
+- [`reference/inventory-sweep-2026-10-27.md`](reference/inventory-sweep-2026-10-27.md): every Vercel CLI command and product checked for telemetry, with candidates for new entries (Daemons, Spend Management, Schedules).
 - [`reference/vercel-metrics-schema.json`](reference/vercel-metrics-schema.json): all 108 platform metrics with their dimensions, units and aggregations (Vercel CLI 65.2.0, 2026-10-26).
 
 ## Cross-cutting findings

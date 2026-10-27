@@ -1,0 +1,300 @@
+{
+  "id": "3LGvvSIcXCqtYqPcDWpEoh3MulQ",
+  "version": "1",
+  "turboVersion": "2.11.10",
+  "monorepo": true,
+  "globalCacheInputs": {
+    "rootKey": "I can’t see ya, but I know you’re here",
+    "files": {},
+    "hashOfExternalDependencies": "10dbb66a3f40957d",
+    "hashOfInternalDependencies": "",
+    "environmentVariables": {
+      "specified": {
+        "env": [],
+        "passThroughEnv": null
+      },
+      "configured": [],
+      "inferred": [],
+      "passthrough": null
+    },
+    "engines": null
+  },
+  "execution": {
+    "command": "turbo run test --continue=always",
+    "repoPath": "",
+    "success": 0,
+    "failed": 1,
+    "cached": 3,
+    "attempted": 4,
+    "startTime": 1793093449553,
+    "endTime": 1793093449682,
+    "exitCode": 1
+  },
+  "packages": [
+    "pkg-a",
+    "pkg-b"
+  ],
+  "envMode": "strict",
+  "frameworkInference": true,
+  "tasks": [
+    {
+      "taskId": "pkg-a#build",
+      "task": "build",
+      "package": "pkg-a",
+      "hash": "34fd193a2ec52761",
+      "inputs": {
+        "package.json": "25b061acedbbf2d5b66061a0498866cf501005bf"
+      },
+      "hashOfExternalDependencies": "459c029558afe716",
+      "cache": {
+        "local": true,
+        "remote": false,
+        "status": "HIT",
+        "source": "LOCAL",
+        "timeSaved": 443,
+        "sha": "3062061a20a7f1a3fbe0860f3ae4bad49f8bea6e"
+      },
+      "command": "mkdir -p dist && node -e \"setTimeout(()=>{require('fs').writeFileSync('dist/out.txt', String(Date.now()));console.log('built a')}, 300)\"",
+      "cliArguments": [],
+      "outputs": [
+        "dist/**"
+      ],
+      "excludedOutputs": null,
+      "logFile": "packages/a/.turbo/turbo-build.log",
+      "directory": "packages/a",
+      "dependencies": [],
+      "dependents": [
+        "pkg-a#test"
+      ],
+      "with": [],
+      "resolvedTaskDefinition": {
+        "outputs": [
+          "dist/**"
+        ],
+        "cache": true,
+        "dependsOn": [],
+        "inputs": [],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": null,
+        "interactive": false
+      },
+      "expandedOutputs": [
+        "packages/a/.turbo/turbo-build.log",
+        "packages/a/dist",
+        "packages/a/dist/out.txt"
+      ],
+      "framework": "",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": null
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": null
+      },
+      "execution": {
+        "startTime": 1793093449568,
+        "endTime": 1793093449569,
+        "exitCode": 0
+      }
+    },
+    {
+      "taskId": "pkg-a#test",
+      "task": "test",
+      "package": "pkg-a",
+      "hash": "52ced9858e8ac14a",
+      "inputs": {
+        "package.json": "25b061acedbbf2d5b66061a0498866cf501005bf"
+      },
+      "hashOfExternalDependencies": "459c029558afe716",
+      "cache": {
+        "local": true,
+        "remote": false,
+        "status": "HIT",
+        "source": "LOCAL",
+        "timeSaved": 107,
+        "sha": "3062061a20a7f1a3fbe0860f3ae4bad49f8bea6e"
+      },
+      "command": "node -e \"console.log('test a');process.exit(0)\"",
+      "cliArguments": [],
+      "outputs": null,
+      "excludedOutputs": null,
+      "logFile": "packages/a/.turbo/turbo-test.log",
+      "directory": "packages/a",
+      "dependencies": [
+        "pkg-a#build"
+      ],
+      "dependents": [],
+      "with": [],
+      "resolvedTaskDefinition": {
+        "outputs": [],
+        "cache": true,
+        "dependsOn": [
+          "build"
+        ],
+        "inputs": [],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": null,
+        "interactive": false
+      },
+      "expandedOutputs": [
+        "packages/a/.turbo/turbo-test.log"
+      ],
+      "framework": "",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": null
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": null
+      },
+      "execution": {
+        "startTime": 1793093449569,
+        "endTime": 1793093449570,
+        "exitCode": 0
+      }
+    },
+    {
+      "taskId": "pkg-b#build",
+      "task": "build",
+      "package": "pkg-b",
+      "hash": "c80636d653e94705",
+      "inputs": {
+        "package.json": "6caf8ffd2fe31e2b9103fb1eeff707591da6863d"
+      },
+      "hashOfExternalDependencies": "459c029558afe716",
+      "cache": {
+        "local": true,
+        "remote": false,
+        "status": "HIT",
+        "source": "LOCAL",
+        "timeSaved": 443,
+        "sha": "3062061a20a7f1a3fbe0860f3ae4bad49f8bea6e"
+      },
+      "command": "mkdir -p dist && node -e \"setTimeout(()=>{require('fs').writeFileSync('dist/out.txt', String(Date.now()));console.log('built b')}, 300)\"",
+      "cliArguments": [],
+      "outputs": [
+        "dist/**"
+      ],
+      "excludedOutputs": null,
+      "logFile": "packages/b/.turbo/turbo-build.log",
+      "directory": "packages/b",
+      "dependencies": [],
+      "dependents": [
+        "pkg-b#test"
+      ],
+      "with": [],
+      "resolvedTaskDefinition": {
+        "outputs": [
+          "dist/**"
+        ],
+        "cache": true,
+        "dependsOn": [],
+        "inputs": [],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": null,
+        "interactive": false
+      },
+      "expandedOutputs": [
+        "packages/b/.turbo/turbo-build.log",
+        "packages/b/dist",
+        "packages/b/dist/out.txt"
+      ],
+      "framework": "",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": null
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": null
+      },
+      "execution": {
+        "startTime": 1793093449568,
+        "endTime": 1793093449569,
+        "exitCode": 0
+      }
+    },
+    {
+      "taskId": "pkg-b#test",
+      "task": "test",
+      "package": "pkg-b",
+      "hash": "939a1d47c69fae90",
+      "inputs": {
+        "package.json": "6caf8ffd2fe31e2b9103fb1eeff707591da6863d"
+      },
+      "hashOfExternalDependencies": "459c029558afe716",
+      "cache": {
+        "local": false,
+        "remote": false,
+        "status": "MISS",
+        "timeSaved": 0
+      },
+      "command": "node -e \"console.log('test b');process.exit(1)\"",
+      "cliArguments": [],
+      "outputs": null,
+      "excludedOutputs": null,
+      "logFile": "packages/b/.turbo/turbo-test.log",
+      "directory": "packages/b",
+      "dependencies": [
+        "pkg-b#build"
+      ],
+      "dependents": [],
+      "with": [],
+      "resolvedTaskDefinition": {
+        "outputs": [],
+        "cache": true,
+        "dependsOn": [
+          "build"
+        ],
+        "inputs": [],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": null,
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": null
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": null
+      },
+      "execution": {
+        "startTime": 1793093449569,
+        "endTime": 1793093449682,
+        "error": "command (/home/user/turbo-otel-lab/packages/b) /usr/local/bin/npm run test exited (1)",
+        "exitCode": 1
+      }
+    }
+  ],
+  "user": "",
+  "scm": {
+    "type": "git",
+    "sha": "3062061a20a7f1a3fbe0860f3ae4bad49f8bea6e",
+    "branch": "main"
+  }
+}

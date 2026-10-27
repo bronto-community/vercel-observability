@@ -54,7 +54,7 @@ The rule schema (`vercel alerts rules schema --format json`, `schemaVersion: 3`)
 | `notificationSettings` | `enableTeamOwnerNotifications`, `vercelNotificationsMinimumSeverityLevel` (`critical`), `incidentIoRoutingKey` (added to this rule's webhook payloads) |
 | `tags` | Up to 10 |
 
-Custom alert rules in the sense of "threshold on any metric" don't exist in this schema; a custom rule is a built-in detector with your own scope, filter, severity and destinations (Observed).
+Custom alert rules in the sense of "threshold on any metric" don't exist in this schema; a custom rule is a built-in detector with your own scope, filter, severity and destinations (Observed). Vercel's docs for `vercel monitors`, the CLI command that replaces `vercel alerts rules` (docs updated 2026-10-26), describe a `custom` type with thresholds on any metric; this team's schema didn't offer it on 2026-10-27, so it is Documented only here (see `reference/inventory-sweep-2026-10-27.md`).
 
 ### Alert history
 

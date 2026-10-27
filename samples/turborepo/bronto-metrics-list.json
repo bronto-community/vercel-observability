@@ -1,0 +1,92 @@
+[
+  {
+    "aggregation_temporality": "DELTA",
+    "description": "Tasks failed per run",
+    "metadata": {
+      "last_heartbeat_at": 1793059200000
+    },
+    "metric_id": "0a0884c6-39f8-31e9-b0c5-8791a5ab1fcc",
+    "metric_name": "turbo.run.tasks.failed",
+    "source": {
+      "services": [],
+      "tags": {}
+    },
+    "type": "SUM",
+    "unit": ""
+  },
+  {
+    "aggregation_temporality": "DELTA",
+    "description": "Tasks attempted per run",
+    "metadata": {
+      "last_heartbeat_at": 1793059200000
+    },
+    "metric_id": "160b25f9-4366-36e0-b8fa-e278752ed037",
+    "metric_name": "turbo.run.tasks.attempted",
+    "source": {
+      "services": [],
+      "tags": {}
+    },
+    "type": "SUM",
+    "unit": ""
+  },
+  {
+    "aggregation_temporality": "DELTA",
+    "description": "Task execution duration in milliseconds",
+    "metadata": {
+      "last_heartbeat_at": 1793059200000
+    },
+    "metric_id": "2c1f7420-c877-3cf1-94aa-2a7b5008bb9c",
+    "metric_name": "turbo.task.duration_ms",
+    "source": {
+      "services": [],
+      "tags": {}
+    },
+    "type": "HISTOGRAM",
+    "unit": "ms"
+  },
+  {
+    "aggregation_temporality": "DELTA",
+    "description": "Turborepo run duration in milliseconds",
+    "metadata": {
+      "last_heartbeat_at": 1793059200000
+    },
+    "metric_id": "53f28899-7962-309a-ae47-297b00841848",
+    "metric_name": "turbo.run.duration_ms",
+    "source": {
+      "services": [],
+      "tags": {}
+    },
+    "type": "HISTOGRAM",
+    "unit": "ms"
+  },
+  {
+    "aggregation_temporality": "DELTA",
+    "description": "Tasks served from cache per run",
+    "metadata": {
+      "last_heartbeat_at": 1793059200000
+    },
+    "metric_id": "d966bd68-b4ab-3288-9050-60c674082a1a",
+    "metric_name": "turbo.run.tasks.cached",
+    "source": {
+      "services": [],
+      "tags": {}
+    },
+    "type": "SUM",
+    "unit": ""
+  },
+  {
+    "aggregation_temporality": "DELTA",
+    "description": "Cache hit/miss events",
+    "metadata": {
+      "last_heartbeat_at": 1793059200000
+    },
+    "metric_id": "defa8ff2-aebc-3d11-936f-50da923359f9",
+    "metric_name": "turbo.task.cache.events",
+    "source": {
+      "services": [],
+      "tags": {}
+    },
+    "type": "SUM",
+    "unit": ""
+  }
+]

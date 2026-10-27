@@ -1,0 +1,119 @@
+[
+  {
+    "count": 0,
+    "key": "Resource:deployment.environment.name",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "local"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "Resource:service.name",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "turbo-catalog-lab",
+      "turbo-otel-lab"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "Resource:service.namespace",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "telemetry-catalog"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.run.exit_code",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.scm.branch",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "main"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.task.cache_source",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "LOCAL"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.task.cache_status",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "hit",
+      "miss"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.task.command",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "mkdir -p dist && node -e \"setTimeout(()=>{require('fs').writeFileSync('dist/out.txt', String(Date.now()));console.log('built a')}, 300)\"",
+      "mkdir -p dist && node -e \"setTimeout(()=>{require('fs').writeFileSync('dist/out.txt', String(Date.now()));console.log('built b')}, 300)\"",
+      "node -e \"console.log('test a');process.exit(0)\"",
+      "node -e \"console.log('test b');process.exit(1)\""
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.task.exit_code",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.task.name",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "build",
+      "test"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.task.package",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "pkg-a",
+      "pkg-b"
+    ]
+  },
+  {
+    "count": 0,
+    "key": "turbo.version",
+    "source": "message",
+    "type": "string",
+    "values": [
+      "2.11.10"
+    ]
+  }
+]

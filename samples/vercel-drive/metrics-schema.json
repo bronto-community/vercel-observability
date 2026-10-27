@@ -1,0 +1,49 @@
+[
+  {
+    "id": "vercel.drive.read_bytes",
+    "description": "Drive Bytes Read",
+    "dimensions": [
+      "projectId",
+      "driveId",
+      "billableRegion",
+      "cacheResult"
+    ],
+    "unit": "bytes",
+    "aggregations": [
+      "count",
+      "sum",
+      "avg",
+      "min",
+      "max",
+      "p50",
+      "p75",
+      "p90",
+      "p95",
+      "p99",
+      "stddev"
+    ]
+  },
+  {
+    "id": "vercel.drive.write_bytes",
+    "description": "Drive Bytes Written",
+    "dimensions": [
+      "projectId",
+      "driveId",
+      "billableRegion"
+    ],
+    "unit": "bytes",
+    "aggregations": [
+      "count",
+      "sum",
+      "avg",
+      "min",
+      "max",
+      "p50",
+      "p75",
+      "p90",
+      "p95",
+      "p99",
+      "stddev"
+    ]
+  }
+]

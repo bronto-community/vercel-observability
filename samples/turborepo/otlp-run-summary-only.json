@@ -1,0 +1,203 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "turbo-otel-lab"
+            }
+          }
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "scope": {
+            "name": "turborepo"
+          },
+          "metrics": [
+            {
+              "name": "turbo.run.duration_ms",
+              "description": "Turborepo run duration in milliseconds",
+              "unit": "ms",
+              "histogram": {
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093193566642000",
+                    "timeUnixNano": "1793093194035935000",
+                    "count": "1",
+                    "sum": 461,
+                    "bucketCounts": [
+                      "0",
+                      "1",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "0"
+                    ],
+                    "explicitBounds": [
+                      100,
+                      500,
+                      1000,
+                      2500,
+                      5000,
+                      10000,
+                      15000,
+                      30000,
+                      60000,
+                      120000,
+                      300000,
+                      600000,
+                      900000,
+                      1800000,
+                      3600000
+                    ],
+                    "min": 461,
+                    "max": 461
+                  }
+                ],
+                "aggregationTemporality": 1
+              }
+            },
+            {
+              "name": "turbo.run.tasks.attempted",
+              "description": "Tasks attempted per run",
+              "sum": {
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093193566662000",
+                    "timeUnixNano": "1793093194035945000",
+                    "asInt": "2"
+                  }
+                ],
+                "aggregationTemporality": 1,
+                "isMonotonic": true
+              }
+            },
+            {
+              "name": "turbo.run.tasks.failed",
+              "description": "Tasks failed per run",
+              "sum": {
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093193566664000",
+                    "timeUnixNano": "1793093194035950000",
+                    "asInt": "0"
+                  }
+                ],
+                "aggregationTemporality": 1,
+                "isMonotonic": true
+              }
+            },
+            {
+              "name": "turbo.run.tasks.cached",
+              "description": "Tasks served from cache per run",
+              "sum": {
+                "dataPoints": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "turbo.run.exit_code",
+                        "value": {
+                          "stringValue": "0"
+                        }
+                      },
+                      {
+                        "key": "turbo.version",
+                        "value": {
+                          "stringValue": "2.11.10"
+                        }
+                      },
+                      {
+                        "key": "turbo.scm.branch",
+                        "value": {
+                          "stringValue": "main"
+                        }
+                      }
+                    ],
+                    "startTimeUnixNano": "1793093193566666000",
+                    "timeUnixNano": "1793093194035955000",
+                    "asInt": "0"
+                  }
+                ],
+                "aggregationTemporality": 1,
+                "isMonotonic": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
