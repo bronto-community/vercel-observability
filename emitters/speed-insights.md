@@ -9,6 +9,7 @@
 | Signals | Events (one data point per metric) · Metrics (inside Vercel) |
 | Exit paths | Speed Insights drain (`speed_insights` v1) · `vercel metrics` pull |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `@vercel/speed-insights` 2.0.0 (`scriptVersion` 0.1.3 on the wire) · Next.js 16.4.3 · lab projects `vercel-observability-lab` and `petclinic-agent` |
+| Refreshed | 2026-11-12 · docs, changelog and releases to 2026-11-12, no new captures · `@vercel/speed-insights` 2.1.0 (release notes; the lab still runs 2.0.0) · Vercel CLI 65.14.0 |
 
 ## 1. What it emits
 
@@ -23,7 +24,7 @@ The lab app (`lab/app/layout.tsx`) renders `<SpeedInsights />` from `@vercel/spe
 
 ### Enablement is per project
 
-Each project has its own Speed Insights switch (`vercel project speed-insights enable`, or the dashboard). The project record shows it (Captured: `project-speed-insights.ndjson`):
+Each project has its own Speed Insights switch (`vercel project speed-insights enable`, or the dashboard). Unlike `vercel project web-analytics enable` (non-interactive since CLI 64.2.0, 2026-10-28), `speed-insights enable` and `disable` still ask for confirmation and have no flag to skip it, so they need an interactive terminal (Documented, `vercel project` docs read 2026-11-12). The project record shows it (Captured: `project-speed-insights.ndjson`):
 
 ```json
 "speedInsights": { "id": "WHBHxr7CQ7jqPxYuPCjZFaTn19W", "hasData": true,
@@ -59,7 +60,7 @@ One drain record per metric per page view. Fields seen on all 187 records from 2
 | `connectionSpeed` | `4g` | The browser's effective connection type |
 | `browserEngine` | `Blink` | |
 | `sdkName`, `sdkVersion`, `scriptVersion` | `@vercel/speed-insights/next`, `2.0.0`, `0.1.3` | `sdkVersion` is the npm version here; Web Analytics puts it in `sdkVersionFull` |
-| `vercelEnvironment`, `vercelUrl`, `deploymentId` | `production`, `petclinic-agent-85fdk9p6i-brontoio.vercel.app`, `dpl_8bxs…` | |
+| `vercelEnvironment`, `vercelUrl`, `deploymentId` | `production`, `petclinic-agent-85fdk9p6i-brontoio.vercel.app`, `dpl_8bxs…` | Since 2026-11-10, data from custom environments is attributed to that environment instead of Preview in the dashboard and `vercel metrics` (Documented); the drain's `vercelEnvironment` value for a custom environment: Not observed |
 | `attribution` | `"{\"eventTarget\":\"html>body>main>img\"}"` | A JSON **string**. See below |
 | `isFree` | `false` | **Not in Vercel's published schema** |
 
@@ -78,7 +79,7 @@ Which metrics a page view produces depends on what the visitor did (Observed, 35
 
 Without an interaction there is no INP and no FID. LCP was missing on 3 page views, all with a click straight after `load` (one each on `petclinic-agent` `/` and `/vets`, one on the lab's `/flags`); the cause wasn't established. Vercel's docs say 3 to 6 data points per visit on average (Documented). TTFB, FCP and CLS were present on every page view, so a count of TTFB records is the page-view count.
 
-Speed Insights measures hard navigations only; in a Next.js app that is the first page of a session (Documented). The lab visits were all hard navigations; soft navigations: Not observed.
+Speed Insights measures hard navigations only; in a Next.js app that is the first page of a session (Documented, Metrics docs, last updated 2026-09-01, unchanged on 2026-11-12). `@vercel/speed-insights` 2.1.0 (2026-11-05) adds a `softNavs` option (`<SpeedInsights softNavs={false} />`, `injectSpeedInsights({ softNavs: false })`) that sets `data-soft-navs` on the injected script to opt out of soft-navigation reporting; its release notes say the injected script has a separate default-on soft-navigation rollout, and that omitting the option leaves that default unchanged (Documented, release notes and PR #124). So soft navigations may now produce data points without any change in your code; the docs don't describe this yet. The lab visits were all hard navigations on 2.0.0; soft-navigation records: Not observed.
 
 ### `attribution`
 
@@ -104,7 +105,7 @@ Vercel's privacy page says Speed Insights doesn't collect anything that could "r
 
 `false` on all 187 records, all from projects with Speed Insights Plus enabled (Observed). The field isn't documented. It most likely marks data points collected under the free tier, which don't count toward Plus usage; free-tier projects can't be drained, so a `true` value: Not observed.
 
-### FID is still sent
+### FID was still sent on 2026-10-27
 
 Google replaced FID with INP as a Core Web Vital on 2024-03-12 ([web.dev](https://web.dev/blog/inp-cwv-march-12)). On 2026-10-27, `@vercel/speed-insights` 2.0.0 still sends FID on every page view with an interaction (25 of 25), and the drain delivers it. Vercel's changelog of 2026-10-01 says Speed Insights "will stop recording new measurements on November 1st" for FID (Documented). Whether FID records stop arriving in the drain after 2026-11-01: Not observed. `vercel metrics` has no FID metric already.
 
@@ -131,6 +132,7 @@ html · pointerdown 15
 | --- | --- | --- |
 | Speed Insights Plus, per project | All Core Web Vitals and Poor entries in the dashboard, 30-day range on Pro, element selectors in breakdowns, and the drain | $10 per project per month on Pro, plus $0.65 per 10,000 events; no included events on Pro (Documented) |
 | `beforeSend` on `<SpeedInsights />` | Rewrite events in the browser before they are sent, for example strip the query string from the URL so it doesn't land in `origin` (Documented) | None |
+| `softNavs` option (2.1.0) | `false` opts out of soft-navigation reporting; `true` opts in explicitly; omitted leaves the script's default (Documented, release notes) | None |
 | `route` option | The route pattern for frameworks without an integration; set automatically by `@vercel/speed-insights/next` (Documented) | None |
 | `endpoint`, `scriptSrc` | Send beacons to another project's intake when several projects share a domain (Documented) | None |
 
@@ -210,11 +212,11 @@ Joins: `deploymentId` matches `deploymentId` in the log drain and `deployment` i
 2. **Records are not page views.** One record per metric; a page view gave 4 to 6. Count page views with `metricType = 'TTFB'` (present on all 35) (Observed).
 3. **LCP can be missing.** 3 of 25 page views with an early click had no LCP record, while TTFB, FCP and CLS were there (Observed). Per-page LCP counts run lower than page views.
 4. **No interaction, no INP.** Pages people only look at produce no INP or FID records, so INP p75 describes the visitors who clicked (Observed).
-5. **FID is still drained.** Google retired it as a Core Web Vital on 2024-03-12; Vercel stops recording it on 2026-11-01 (Documented). Until then FID records arrive, with no matching metric in `vercel metrics`.
+5. **FID was still drained in October 2026.** Google retired it as a Core Web Vital on 2024-03-12; Vercel stopped recording it on 2026-11-01 (Documented). Before that date FID records arrived, with no matching metric in `vercel metrics`; whether they stopped after it: Not observed (the lab had no browser traffic in November).
 6. **`timestamp` isn't ISO 8601.** `2026-10-27 09:18:48.325`, no `T`, no zone, unlike the documented example; parse it as UTC (Captured).
 7. **`origin` is the full URL.** The query string leaves Vercel with every data point, as in Web Analytics. Strip it with `beforeSend` if URLs carry tokens (Captured).
 8. **`deviceId` doesn't join.** It is per project and differs from the Web Analytics `deviceId` for the same visit (Observed).
-9. **Headless browsers.** As with Web Analytics, the script sends nothing while `navigator.webdriver` is set (research I, D11). The lab's visits ran with the flag off and a regular Chrome user agent, which Web Analytics also needed (see that entry); Speed Insights with the default `HeadlessChrome` user agent: Not observed.
+9. **Headless browsers.** As with Web Analytics, the script sends nothing while `navigator.webdriver` is set (Observed in a lab test, 2026-10-20). The lab's visits ran with the flag off and a regular Chrome user agent, which Web Analytics also needed (see that entry); Speed Insights with the default `HeadlessChrome` user agent: Not observed.
 
 ## Samples
 
@@ -237,4 +239,5 @@ Joins: `deploymentId` matches `deploymentId` in the log drain and `deployment` i
 ## Sources
 
 - Vercel docs, read 2026-10-27: [Speed Insights Drains reference](https://vercel.com/docs/drains/reference/speed-insights) (last updated 2026-09-01), [Limits and pricing](https://vercel.com/docs/speed-insights/limits-and-pricing) (2026-09-23), [Metrics and data points](https://vercel.com/docs/speed-insights/metrics) (2026-09-01), [Managing usage](https://vercel.com/docs/speed-insights/managing-usage) (2026-09-01), [`@vercel/speed-insights` package](https://vercel.com/docs/speed-insights/package) (2026-03-18), [Privacy and compliance](https://vercel.com/docs/speed-insights/privacy-policy) (2026-03-18); changelog [Speed Insights deprecates First Input Delay on November 1st](https://vercel.com/changelog/speed-insights-deprecates-first-input-delay-on-november-first) (2026-10-01). Google: [INP becomes a Core Web Vital on March 12](https://web.dev/blog/inp-cwv-march-12) (2024).
-- Lab, 2026-10-27: Speed Insights enabled on both projects at 09:16 UTC and drains created at 09:17 UTC; 15 headless-Chrome visits at 09:17–09:19 UTC (desktop, click, `utm_source=catalog-check`) and 20 at 09:23–09:25 UTC (desktop and Android profiles, with and without a click, `utm_source=catalog-check-2-*`), regular Chrome 141 user agent, `navigator.webdriver` off. Bronto EU datasets `petclinic-agent/vercel-speed-insights`, `vercel-observability-lab/vercel-speed-insights`, `vercel-observability-lab/vercel-web-analytics`, `vercel-observability-lab/vercel-logs`; `vercel metrics vercel.speed_insights.*`, `vercel api /v9/projects/<id>`, `/v1/drains`, `/v1/billing/charges` (CLI 65.2.0); `petclinic/browser/visit.mjs`; research I, D11.
+- Lab, 2026-10-27: Speed Insights enabled on both projects at 09:16 UTC and drains created at 09:17 UTC; 15 headless-Chrome visits at 09:17–09:19 UTC (desktop, click, `utm_source=catalog-check`) and 20 at 09:23–09:25 UTC (desktop and Android profiles, with and without a click, `utm_source=catalog-check-2-*`), regular Chrome 141 user agent, `navigator.webdriver` off. Bronto EU datasets `petclinic-agent/vercel-speed-insights`, `vercel-observability-lab/vercel-speed-insights`, `vercel-observability-lab/vercel-web-analytics`, `vercel-observability-lab/vercel-logs`; `vercel metrics vercel.speed_insights.*`, `vercel api /v9/projects/<id>`, `/v1/drains`, `/v1/billing/charges` (CLI 65.2.0); `petclinic/browser/visit.mjs`; lab test notes from 2026-10-20.
+- Read 2026-11-12: [`@vercel/speed-insights` v2.1.0 release](https://github.com/vercel/speed-insights/releases/tag/v2.1.0) (2026-11-05) and [PR #124](https://github.com/vercel/speed-insights/pull/124), [Speed Insights and Web Analytics now support custom environments](https://vercel.com/changelog/speed-insights-and-web-analytics-now-support-custom-environments) (2026-11-10), [`vercel project`](https://vercel.com/docs/cli/project) (`speed-insights`), [Metrics and data points](https://vercel.com/docs/speed-insights/metrics) (unchanged, 2026-09-01), [Speed Insights Drains reference](https://vercel.com/docs/drains/reference/speed-insights) (unchanged, 2026-09-01).

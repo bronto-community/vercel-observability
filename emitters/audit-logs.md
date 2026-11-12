@@ -9,15 +9,16 @@
 | Signals | Events |
 | Exit paths | Pro: CLI and REST pull (`vercel activity`, `GET /v3/events`) · Enterprise: Audit Log drain (`audit_log` v1) to HTTP, S3, Splunk HEC, Datadog, Panther; CSV export |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · team `brontoio` (Pro) |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures; read-only `vercel activity types` (668 types) · Vercel CLI 65.14.0 |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
-| Activity events | One event per team or project change, 635 event types in 21 categories | Dashboard › Activity, `vercel activity`, `GET /v3/events` | Since the team was created: the oldest event returned is the team's first, 2026-01-30 (Observed). Docs: "chronologically organized since its creation" |
-| Audit Log events (Enterprise) | The Activity Log events plus IP address, user agent, actor type | Team Settings › Security & Privacy › Audit Log (CSV), Audit Log drain | CSV: any timeframe; exports of the last 90 days aren't billed (Documented) |
+| Activity events | One event per team or project change, 668 event types in 21 categories (635 on 2026-10-27) | Dashboard › Activity, `vercel activity`, `GET /v3/events` | Since the team was created: the oldest event returned is the team's first, 2026-01-30 (Observed). Docs: "chronologically organized since its creation" |
+| Audit Log events (Enterprise) | The Activity Log events plus IP address, user agent, actor type; also Security Review findings (`vercel-agent-security-finding-created`, since 2026-11-03) | Team Settings › Security & Privacy › Audit Log (CSV), Audit Log drain | CSV: any timeframe; exports of the last 90 days aren't billed (Documented) |
 
-The type catalog comes from `vercel activity types --format json` (Captured: `cli-activity-types.json`). The categories that matter for observability: `observability` (drains, tracing, Observability Plus, alert rules, webhooks, Speed Insights settings), `deployment`, `env-variable`, `firewall`, `feature-flags`, `connect`, `ai-gateway`. The docs table lists 624 types, of which 592 Active, 9 Deprecated and 23 Replaced (`log-drain-*` became `drain-*`) (Documented, page updated 2026-06-29).
+The type catalog comes from `vercel activity types --format json` (Captured: `cli-activity-types.json`, 635 types on 2026-10-27). On 2026-11-12 the same command (CLI 65.14.0) returned 668 types in the same 21 categories, none removed (Observed). The 33 additions include `schedule-created`, `-updated`, `-deleted`, `-enabled`, `-disabled`, `-invoked` (Vercel Schedules), `drive-created`, `drive-deleted`, `ai-security-review` (Security Review configured for a team), `flags-connection-created`, `-deleted`, `team-runtime-cache-updated`, `team-data-cache-user-disabled-updated` and `repository-ci-env-variable-*` (Vercel CI). The categories that matter for observability: `observability` (drains, tracing, Observability Plus, alert rules, webhooks, Speed Insights settings), `deployment`, `env-variable`, `firewall`, `feature-flags`, `connect`, `ai-gateway`. The docs table lists 624 types, of which 592 Active, 9 Deprecated and 23 Replaced (`log-drain-*` became `drain-*`) (Documented, page updated 2026-06-29).
 
 Over 30 days the team (about 15 projects) produced 754 events (Captured: `cli-activity-30d-type-counts.json`): `deployment` 227, `aliases-assigned` 197, env var reads 162 (`env-variable-read:*`), `env-variable-add` 40, `drain-created` 14, `connect-upsert-installation` 14, `drain-updated` 9, `drain-deleted` 4, `tracing-configured` 3, `project-speed-insights-enabled` 3, `observability-enabled` 1, `webhook-created` 1.
 
@@ -72,6 +73,12 @@ Earlier in the 30 days: `observability-enabled` (Observability Plus, 2026-10-26 
 
 Not in 30 days: a manual promotion (`manual-deployment-promotion-created`), an instant rollback, alert rule changes. The lab's Git pushes deploy straight to production, which logs as `deployment` with `target: production` plus `aliases-assigned`.
 
+### Security Review findings (Documented)
+
+Vercel Security Review (public beta since 2026-11-03, Pro and Enterprise) reviews every push to a connected GitHub repository. Each new finding writes an audit log event with the action `vercel-agent-security-finding-created`, which Enterprise teams can send through an Audit Log drain (Documented: Audit Logs page, `vercel-agent-security` actions, and Vercel's announcement, read 2026-11-12). The action is not scoped to a resource like the others, so match the name exactly when filtering. A finding records the project, environment, branch and commit, a summary, a suggested fix and an AI-assigned severity (Documented, changelog); the fields of the audit event's `payload`: Not observed.
+
+The finding action is not in the Activity Log catalog: `vercel activity types` on 2026-11-12 lists `ai-security-review` (the team setting) but no finding type (Observed). On Pro, findings leave Vercel by pull: `vercel security vulnerabilities --json` (CLI 65.10.0 or later; list, `inspect`, `dismiss`, `reopen`; JSON without descriptions and fixes, with a `pagination.next` cursor), or copied from the dashboard as Markdown or JSON (Documented). The lab team hasn't enabled Security Review (Not observed).
+
 ### An Audit Log record (Documented)
 
 Vercel's reference (page updated 2026-08-07) for the drain record, NDJSON:
@@ -112,6 +119,7 @@ The CSV export has `timestamp`, `action`, `actor_vercel_id`, `actor_name`, `acto
 | Pro | `GET /v3/events?teamId=…&since=…&limit=…&withPayload=true` (what the CLI calls, seen with `--debug`) | Through the CLI (Observed) |
 | Enterprise | Audit Log drain, schema `audit_log` v1 | Not available: `POST /v1/drains/test` with `audit_log` returned `402 Audit Log Drains are only available on the Enterprise plan` (Captured: `api-drains-test-audit-log.txt`) |
 | Enterprise | CSV export from Team Settings, emailed link valid 24 h | Not available on Pro |
+| Pro and Enterprise | Security Review findings: `vercel security vulnerabilities --json`, polled (Enterprise also gets `vercel-agent-security-finding-created` in the Audit Log drain) | Not observed (Security Review not enabled) |
 
 No webhook event carries activity events, and no other drain type does. To get them into an OTLP backend on Pro, run a scheduled job (a Vercel Cron Job works) that reads `GET /v3/events` since the last `createdAt` it saw and writes each event as an OpenTelemetry log record with the Logs SDK and the standard OTLP exporter, using the event `id` as the deduplication key. Not built in the lab.
 
@@ -146,4 +154,6 @@ People are replaced with `user-n` / `user-n@example.com` (numbering per file), G
 ## Sources
 
 - Vercel docs, read 2026-10-27: [Audit Logs](https://vercel.com/docs/audit-log) (last updated 2026-08-26), [Audit Log Drains reference](https://vercel.com/docs/drains/reference/audit-logs) (2026-08-07), [Using the Activity Log](https://vercel.com/docs/activity-log) (2026-06-29), [`vercel activity`](https://vercel.com/docs/cli/activity) (2026-03-17), [Working with Drains](https://vercel.com/docs/drains) (2026-09-01), [Using Drains](https://vercel.com/docs/drains/using-drains) (2026-09-17).
+- Read 2026-11-12: [Audit Logs](https://vercel.com/docs/audit-log) (`vercel-agent-security` actions), [Vercel Security Review now in public beta](https://vercel.com/changelog/vercel-security-review-public-beta) (2026-11-03), [Introducing Vercel Security Review](https://vercel.com/blog/vercel-security-review) (2026-11-02), [Security Review](https://vercel.com/docs/agent/security-review) (last updated 2026-10-30), [`vercel security`](https://vercel.com/docs/cli/security).
+- Lab, 2026-11-12: Vercel CLI 65.14.0 `vercel activity types --format json`, diffed against the 2026-10-27 capture.
 - Lab, 2026-10-27: Vercel CLI 65.2.0 `vercel activity` (`--all`, `--type`, `--since`, `--until`, `--format json`, `--debug` for the endpoint), `vercel activity types`, `vercel api /v1/drains/test`.

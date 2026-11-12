@@ -9,6 +9,7 @@
 | Signals | Metrics (inside Vercel only) |
 | Exit paths | None pushed. `vercel metrics --json` pull |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `@vercel/functions` 3.10.3 · Next.js 16.4.3 · lab project `vercel-observability-lab` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · `@vercel/functions` 3.11.1 (changelog: no change to `metric()`) · Vercel CLI 65.14.0 |
 
 ## 1. What it emits
 
@@ -80,6 +81,7 @@ Each data point is one Observability event at $1.20 per 1M (Documented). The bil
 | Extra | What it adds |
 | --- | --- |
 | Attributes | Each attribute key becomes a dimension for `--group-by` and `--filter`. Keep values bounded (plan, outcome, provider); unique values such as user or request IDs make every data point its own group |
+| Custom monitors (since 2026-10-26) | Threshold or anomaly alerts on an Observability metric, per project, at $0.0035 per GB scanned (see the [Alerts](alerts.md) entry). The docs take metric names from `vercel metrics schema`, where custom metrics appear after their first data point; a monitor on a custom metric: Not observed |
 | A structured log line next to the call | The only way to see the individual values outside Vercel; one JSON `console.log` per event, as in the Functions entry |
 
 ## 4. Getting it out
@@ -134,5 +136,6 @@ To chart the values in Bronto, forward the rows of a scheduled `vercel metrics -
 ## Sources
 
 - Vercel docs, read 2026-10-27: [Emit Custom Metrics from Vercel Functions](https://vercel.com/docs/observability/custom-metrics) (last updated 2026-09-10), [changelog: Custom metrics are now supported in Vercel Observability](https://vercel.com/changelog/custom-metrics-are-now-supported-in-vercel-observability) (2026-08-20), [`vercel metrics`](https://vercel.com/docs/cli/metrics). Vercel's agent plugin skill `custom-metrics` (0.50.0) for the reserved `vercel.` prefix.
+- Read 2026-11-12: [Configure alerts: custom monitors](https://vercel.com/docs/alerts/configure-alerts#configure-custom-rules), [`@vercel/functions` CHANGELOG](https://www.npmjs.com/package/@vercel/functions) to 3.11.1.
 - `@vercel/functions` 3.10.3: `metric.js`, `CHANGELOG.md` (`metric()` added in 3.9.0).
 - Lab: `lab/app/api/metric/route.ts`; Vercel CLI 65.2.0 (`vercel metrics schema`, `vercel metrics`, `vercel api /v1/billing/charges`); Bronto EU datasets `vercel-observability-lab/vercel-logs` and `.traces/vercel-observability-lab`, 2026-10-27.

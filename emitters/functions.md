@@ -5,17 +5,18 @@
 | | |
 | --- | --- |
 | Kind | Platform service (Node.js, Bun, Python runtimes; Fluid Compute) |
-| Plans | Logs and traces on all plans in the dashboard; drains need Pro or Enterprise; metrics queries need Observability Plus |
+| Plans | Logs on all plans in the dashboard; traces on all plans once the project has a tracing sampling rule (added by default for new Next.js 16.5+ projects since 2026-11-06; Hobby includes 1M span units a month); drains need Pro or Enterprise; metrics queries need Observability Plus |
 | Signals | Logs · Traces · Metrics (inside Vercel only) |
 | Exit paths | Log drain (`source: lambda`) · Trace drain · OTLP from code |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · Next.js 16.3.6 · `@vercel/otel` 2.1.3 · lab project `petclinic-agent` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 docs · `@vercel/otel` 2.3.0 |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Logs | `console.*`/stdout/stderr lines from your code, platform lines (invocation report, timeout, process exit) | Runtime Logs, `vercel logs` | Hobby 1 h, Pro 1 day, Enterprise 3 days, with Observability Plus 30 days (Documented) |
-| Traces | Infrastructure spans for every request (edge network and function runtime), framework spans if the framework emits them | Observability › Tracing, trace drain | As for logs (Documented) |
+| Traces | Infrastructure spans for every request (edge network and function runtime), `fetch` spans for outgoing calls, framework spans if the framework emits them | Traces page (Vercel Tracing), `vercel traces`, trace drain | In Vercel: Hobby 3 days, Pro 14 days, Enterprise 14 days since 2026-11-06; before that as for logs (Documented). Drained spans: your backend's retention |
 | Metrics | `vercel.function_invocation.*` (10 metrics), `vercel.external_api_request.*` (outgoing calls), `vercel.request.*` | Observability dashboard, Query, `vercel metrics` | Hobby 12 h, Pro 1 day, Enterprise 3 days, Plus 30 days (Documented) |
 
 The metric catalog with every dimension is in [`reference/vercel-metrics-schema.json`](../reference/vercel-metrics-schema.json). The function metrics are `count`, `function_duration_ms`, `function_cpu_time_ms`, `cpu_throttle_percent`, `peak_memory_mb`, `provisioned_memory_mb`, `ttfb_ms` and Fast Origin Transfer in, out and total. Each has 19 dimensions, among them `route`, `errorCode`, `functionStartType`, `functionRegion`, `edgeNetworkRegion`, `httpStatus`, `serverActionName` and `deploymentId`.
@@ -132,7 +133,7 @@ GET /api/synthetic                         vercel.edge-network        128.8 ms
 - `Invoke Function` (`service.name: vercel.serverless-runtime`) carries only IDs: no route, no region, no start type, no memory (Captured: `span-invoke-function.json`).
 - `Route across regions` appears when the request enters in one region and the function runs in another. Its duration is the extra hop.
 - Infrastructure spans are always `STATUS_CODE_UNSET`, including for 4xx responses (Observed: 1.59M runtime spans, 3,606 edge spans with 4xx). Whether a 5xx sets an error status: Not observed yet.
-- The Next.js spans (`petclinic-web`) appear because the app registers `@vercel/otel`; without it the tree stops at `Invoke Function` (Documented).
+- The Next.js spans (`petclinic-web`) appear because the app registers `@vercel/otel`. Without an OpenTelemetry setup, Vercel records `fetch` spans for outgoing calls itself, but there are no framework spans. A project that lists `@opentelemetry/api` 1.7+, `@vercel/otel` 1.11+ or `@opentelemetry/sdk-trace-node` 1.19+ and never registers an SDK has no `fetch` spans at all (Documented, Instrumentation, read 2026-11-12). Projects that qualify for default tracing (created from 2026-11-05, Next.js 16.5+, no own `instrumentation` file) get `@vercel/otel` added at build and so get the framework spans (Documented; see the Next.js entry).
 
 ### Metrics
 
@@ -161,7 +162,7 @@ Middleware invocations write report lines with `source: lambda` like any functio
 | Extra | What it adds | Cost |
 | --- | --- | --- |
 | Observability Plus | Querying the `vercel.function_invocation.*` metrics (percentiles, Active CPU, CPU throttle, memory, start type, TTFB), 30-day retention, alerts. After enabling it, the previous day's data was queryable at once | $1.20 per 1M events (Documented). Without it, `vercel metrics` refuses every function query, even counts: `payment_required: Observability Plus is required for this query` (Observed, CLI 65.2.0) |
-| `@vercel/otel` in `instrumentation.ts` | Framework spans under `Invoke Function`; `fetch` spans for outgoing calls; `traceparent` on calls to `propagateContextUrls` | None; spans are billed as trace drain volume when drained |
+| `@vercel/otel` in `instrumentation.ts` | Framework spans under `Invoke Function`; `fetch` spans for outgoing calls; `traceparent` on calls to `propagateContextUrls` | None from the package; spans count as Drains Volume when drained and as span units when Vercel Tracing collects them ($0.50 per 1M on Pro, Documented) |
 | Structured logging | One JSON object per `console.log` line keeps fields queryable after the drain (`{"msg":"synthetic run","free":0,"premium":1,…}` in `log-app-stdout.json`) | None |
 | `metric()` from `@vercel/functions` | Custom metrics next to the platform ones | Counts as Observability Plus events; no drain (see the Custom Metrics entry) |
 
@@ -170,7 +171,7 @@ Middleware invocations write report lines with `source: lambda` like any functio
 | Signal | Exit path | Tested configuration |
 | --- | --- | --- |
 | Logs | Log drain, schema `log` v1, delivery `http`, encoding `ndjson` | Drain `petclinic-agent-logs`: one project, no source filter, so it carries all sources (`lambda`, `static`, `external`, `build`, `redirect`, `firewall`) |
-| Traces | Trace drain, schema `trace` v1, delivery `otlphttp`, encoding `proto` | Drain `petclinic-agent-traces`: endpoint `…/v1/traces` |
+| Traces | Trace drain, schema `trace` v1, delivery `otlphttp`, encoding `proto` | Drain `petclinic-agent-traces`: endpoint `…/v1/traces`, no sampling rules (forwards everything) |
 | Traces from your code | Either the trace drain (with `@vercel/otel`) or an OTLP exporter in your code, **not both** | See below |
 | Duration, peak memory, invocation count | Log drain: parse the report line | Matches the metrics exactly (section 2) |
 | New instance started (cold or pre-warmed) | Log drain: `Init Duration` in the report line | Close to the metric, not exact (section 2) |
@@ -192,7 +193,9 @@ The lab's drains, as the Vercel API returns them (`GET /v1/drains`, secrets remo
 
 **Send each span once.** Spans created inside the function can leave twice: through the trace drain and through an OTLP exporter your code configures. In the lab, the eve agent exports with `OTLPTraceExporter` and the project also has a trace drain; the same span IDs arrive through both, about 290,000 duplicate spans a day (Observed 2026-10-26). Pick one path per service. The trace drain is the only way to get Vercel's infrastructure spans, so the usual split is: trace drain for everything, no exporter in code; or exporter in code and accept that the infrastructure spans stay in Vercel.
 
-**The trace drain is not complete for every kind of request.** Requests that arrive without trace context came through in full: on 2026-10-25, 1,440 of 1,440 cron requests to `/api/synthetic` had their traces in the drain, and the Next.js app's spans matched the direct export (8,617 against 8,623). Function invocations triggered by Vercel Queues (Workflow deliveries to `/.well-known/workflow/v1/flow`) did not: 17,482 traces in the drain for 20,836 invocations (84%), missing in every hour of the day (13–29% per hour), while the direct export had spans for all 20,836 (Observed). Neither the drain configuration (no sampling rules) nor the trace flags explain the gap. For queue-triggered work, the exporter in code was the complete path.
+**The trace drain is not complete for every kind of request.** Requests that arrive without trace context came through in full: on 2026-10-25, 1,440 of 1,440 cron requests to `/api/synthetic` had their traces in the drain, and the Next.js app's spans matched the direct export (8,617 against 8,623). Function invocations triggered by Vercel Queues (Workflow deliveries to `/.well-known/workflow/v1/flow`) did not: 17,482 traces in the drain for 20,836 invocations (84%), missing in every hour of the day (13–29% per hour), while the direct export had spans for all 20,836 (Observed). Neither the drain configuration (no sampling rules) nor the trace flags explain the gap. For queue-triggered work, the exporter in code was the complete path. The question is with Vercel; still the case on 2026-11-12 (docs and releases checked, no answer and no change that addresses it).
+
+**Tracing and the trace drain sample separately.** Since GA on 2026-11-06, Vercel Tracing and trace drains have separate sampling rules. With no rules, tracing collects nothing while a drain forwards all traces; with rules, each collects only what its own rules match (Documented, Tracing › Sampling). So the Traces page and `vercel traces search` can hold fewer (or more) traces than the drain delivered. An inbound `traceparent` marked not-sampled drops the trace whatever the rules say (Documented, Instrumentation › Sampling behavior).
 
 Drain delivery behaviour (batching, retries, signatures, failed deliveries) is the same for every drain and is covered in the Drains entry.
 
@@ -253,4 +256,5 @@ Templates: the "Vercel Overview" dashboard (requests, status codes, Lambda crash
 ## Sources
 
 - Vercel docs, read 2026-10-16 to 2026-10-20: [Log Drains reference](https://vercel.com/docs/drains/reference/logs), [Trace Drains reference](https://vercel.com/docs/drains/reference/traces), [Runtime Logs](https://vercel.com/docs/logs/runtime), [Observability Plus](https://vercel.com/docs/observability/observability-plus), [`vercel metrics`](https://vercel.com/docs/cli/metrics).
+- Docs, read 2026-11-12: [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06), [Tracing](https://vercel.com/docs/tracing), [Configuring Tracing](https://vercel.com/docs/tracing/configure-tracing) and [Instrumentation](https://vercel.com/docs/tracing/instrumentation) (all last updated 2026-11-03; retention, sampling rules, span units, default tracing, Vercel's own `fetch` spans), [`vercel traces`](https://vercel.com/docs/cli/traces) (last updated 2026-11-03), [Trace Drains reference](https://vercel.com/docs/drains/reference/traces) (last updated 2026-08-21), [Runtime Logs](https://vercel.com/docs/logs/runtime) (last updated 2026-08-28; log retention unchanged).
 - Lab: Bronto EU datasets `petclinic-agent/vercel-logs` and `.traces/vercel-traces`, 2026-10-12 to 2026-10-26; Vercel CLI 65.2.0 (`vercel metrics schema`, `vercel metrics`); Vercel REST API `GET /v1/drains`.

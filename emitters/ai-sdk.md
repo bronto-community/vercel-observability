@@ -6,18 +6,22 @@
 | --- | --- |
 | Kind | Library |
 | Plans | Any; spans need an OpenTelemetry tracer provider (here `@vercel/otel`) |
-| Signals | Traces |
-| Exit paths | OTLP from code · Trace drain (spans created inside a Vercel function) |
+| Signals | Traces · Metrics (one histogram, since `@ai-sdk/otel` 1.0.160) |
+| Exit paths | OTLP from code · Trace drain (spans created inside a Vercel function; spans only) |
 | Verified | 2026-10-26 · `ai` 7.0.148 · `@ai-sdk/otel` 1.0.148 · `@vercel/otel` 2.1.3 · Next.js 16.3.6 · lab route `apps/web/app/api/visit-note` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · `ai` 7.0.170 · `@ai-sdk/otel` 1.0.170 · `@vercel/otel` 2.3.0 |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Traces | One span tree per call (`generateText`, `streamText`, `generateObject`, embeddings, reranking, tool executions) | Wherever the app's tracer provider exports; nothing is kept by the library | |
+| Metrics | `gen_ai.client.inference.duration` histogram, seconds, per `generateText` / `streamText` model call, including errors, cancellations and failed stream retry attempts (Documented, `@ai-sdk/otel` 1.0.160, 2026-11-02) | Wherever the app's OpenTelemetry meter provider exports; nowhere without one | |
 | Response metadata | `providerMetadata.gateway` (cost, routing, generation ID) on the call's result | In memory, in your code | |
 
-No logs or metrics. Without `registerTelemetry()` the AI SDK creates no spans.
+No logs. Without `registerTelemetry()` the AI SDK creates no spans and records no metric.
+
+The histogram is recorded through the global OpenTelemetry metrics API (meter `gen_ai`) with the attributes `gen_ai.operation.name = chat`, `gen_ai.provider.name`, `gen_ai.request.model`, `gen_ai.response.model` and `error.type`, and bucket boundaries from 0.01 s doubling to 81.92 s (`@ai-sdk/otel` 1.0.170 source). It is not on any span, so a trace pipeline doesn't carry it. Not observed: the lab runs 1.0.148 and registers no meter provider.
 
 ## 2. Out-of-the-box shape
 
@@ -55,9 +59,17 @@ POST /api/visit-note                                   petclinic-web   2.37 s
 | `step <n>` | `gen_ai.operation.name = agent_step`; nothing else from the SDK |
 | `chat <model>` | `gen_ai.operation.name = chat`, `gen_ai.provider.name = gateway`, `gen_ai.request.model`, `gen_ai.response.model` (`anthropic/claude-haiku-5.5`), `gen_ai.response.id` (`aitxt-…`, the SDK's own ID), `gen_ai.response.finish_reasons.0`, `gen_ai.client.operation.duration` (seconds), token usage, and the same instructions, input and output messages |
 
+Since `@ai-sdk/otel` 1.0.163 (2026-11-05), `chat` spans also carry `server.address` and `server.port` for providers that report their HTTP endpoint: the OpenAI Chat endpoint, also used by Azure Chat and Bedrock Mantle Chat. Only host and port are recorded, never credentials, path or query. Providers that report no endpoint leave both unset; whether the gateway provider reports one is Not observed (Documented, release notes).
+
 All three are `STATUS_CODE_UNSET` on success. Resource attributes come from `@vercel/otel` (`service.name`, `vercel.project_id`, `vercel.deployment_id`, `vercel.region`, `vcs.*`); the AI SDK adds none.
 
 Content: `gen_ai.input.messages` held the prompt (`Visit for Rosy on 2026-10-30. Reason: Vaccination`) and `gen_ai.output.messages` the generated note, on both `invoke_agent` and `chat`. Recording is on by default (`recordInputs` and `recordOutputs` default to `true`, Documented in `ai` 7.0.148 types).
+
+Redaction and content filtering added since (Documented, release notes):
+
+- `ai` 7.0.163 (2026-11-05): `recordInputs` and `recordOutputs` are also respected for events delivered to telemetry integrations and the `ai:telemetry` channel; nested content and raw span results are left out when recording is off.
+- `@ai-sdk/otel` 1.0.163 (2026-11-05): Code Interpreter and shell domain secrets and MCP authorization and header values are redacted from the tool definitions both telemetry integrations export (`gen_ai.tool.definitions`); 1.0.168 (2026-11-10) restores that redaction for unannotated OpenAI MCP, Code Interpreter and shell tool definitions.
+- `ai` 7.0.165 (2026-11-07): provider request URLs are sanitized before results reach telemetry integrations and tracing subscribers.
 
 No cost attribute exists on these spans without `providerMetadata: true`.
 
@@ -69,6 +81,9 @@ No cost attribute exists on these spans without `providerMetadata: true`.
 | `telemetry: { functionId }` per call | `gen_ai.agent.name` on `invoke_agent` | None |
 | `telemetry: { recordInputs: false, recordOutputs: false }` per call | Removes prompts and outputs from the spans | None |
 | `enrichSpan` option | Your own attributes on every span, for example the generation ID copied out of the metadata | None |
+| `agentSpanName: "functionId"` (or a callback) | Names the root span `invoke_agent <functionId>` instead of `invoke_agent <model>` (Documented, `@ai-sdk/otel` 1.0.149, 2026-10-22) | None |
+| A meter provider with a metric reader (for `@vercel/otel`, the `metricReaders` option of `registerOTel`) | Exports the `gen_ai.client.inference.duration` histogram (Documented; not tested) | Metric volume |
+| `new OpenTelemetry({ durable })` with an `OpenTelemetryIdGenerator` | One telemetry operation per durable `WorkflowAgent` run (below) (Documented, `@ai-sdk/otel` 1.0.162, 2026-11-03) | None |
 | `@vercel/otel` `propagateContextUrls` with the gateway's origin | `traceparent` on the gateway call, so the gateway's spans join this trace | None |
 | Other options (`usage`, `headers`, `schema`, `toolChoice`, `runtimeContext`) | Further attributes, off by default (Documented, `@ai-sdk/otel` 1.0.148 types) | Not tested |
 
@@ -93,6 +108,16 @@ The gateway part of `ai.response.providerMetadata` for one call (Captured: `prov
 
 This carries more than the gateway's own trace for the same request: the planned provider order, the providers left as fallbacks, and correct start and end times of the provider call. A request that falls back lists every model attempt here (`modelAttemptCount` > 1); the lab's 64 calls all had one attempt, so a fallback in this metadata is Not observed.
 
+### Durable `WorkflowAgent` runs
+
+Since `@ai-sdk/otel` 1.0.162 and `ai` 7.0.162 (2026-11-03), a durable `WorkflowAgent` run can be one telemetry operation: prompt, final output, steps and tools (Documented, release notes; Not observed). Pass the same `OpenTelemetryIdGenerator` instance as the tracer provider's `idGenerator` and `sampler` and as `new OpenTelemetry({ durable })`. With that bridge:
+
+- parent trace context and the sampling decision carry across workflow steps;
+- model spans are reported live, with the provider requests beneath them;
+- the enclosing `invoke_agent` tree is rebuilt when the run completes or suspends, with the events' original timestamps.
+
+So the root of a durable run arrives at completion or suspension, after its model spans, with start times in the past. Without the bridge, live per-model tracing stays as before.
+
 ## 4. Getting it out
 
 | Signal | Exit path | Tested configuration |
@@ -100,8 +125,9 @@ This carries more than the gateway's own trace for the same request: the planned
 | Spans | `@vercel/otel` exporter from `OTEL_EXPORTER_OTLP_ENDPOINT` / `OTEL_EXPORTER_OTLP_HEADERS` | `registerOTel({ serviceName: "petclinic-web" })`, OTLP/HTTP protobuf |
 | Spans | Vercel trace drain | The project's trace drain forwarded the same spans: all 64 `chat` spans of the period appear in both datasets |
 | Cost per call | `ai.response.providerMetadata` on the spans, or `result.providerMetadata.gateway` in code | |
+| `gen_ai.client.inference.duration` | An OTLP metric exporter from code. The trace drain carries spans only | Not tested |
 
-**Send each span once.** On Vercel, spans created inside a function reach the trace drain, and `@vercel/otel` also exports them when `OTEL_EXPORTER_OTLP_*` is set. In the lab the AI SDK's `chat` span `0eb4e8b54a5b9af5` is in both `.traces/petclinic-web` (direct export) and `.traces/vercel-traces` (drain) (Observed). Pick one path; the Functions entry covers the choice.
+**Send each span once.** On Vercel, spans created inside a function reach the trace drain, and `@vercel/otel` also exports them when `OTEL_EXPORTER_OTLP_*` is set. In the lab the AI SDK's `chat` span `0eb4e8b54a5b9af5` arrived both through the direct export and through the drain (Observed). Pick one path; the Functions entry covers the choice.
 
 The trace joins downstream and upstream: the AI SDK's spans sit under the Next.js route, which sits under the eve agent's tool call that invoked it, and the gateway's spans sit under the AI SDK's `fetch`. Of 57 BYOK gateway requests from this route, 54 had their parent `fetch` span in the app's data (Observed). Anthropic's server-side span for the same call is a separate trace, joined on `providerRequestId` (see the AI Gateway entry).
 
@@ -145,4 +171,5 @@ The routing and cost fields are inside one JSON string, so they are matched with
 ## Sources
 
 - `ai` 7.0.148 type definitions (`TelemetryOptions`), `@ai-sdk/otel` 1.0.148 README and types (`OpenTelemetryOptions`), read 2026-10-26; [AI SDK telemetry docs](https://ai-sdk.dev/docs/ai-sdk-core/telemetry).
-- Lab: `apps/web/instrumentation.ts`, `apps/web/app/api/visit-note/route.ts` (commits 350b3ce, aeee21d); Bronto EU datasets `.traces/petclinic-web`, `.traces/vercel-traces`, `.traces/ai-gateway`, 2026-10-22 to 2026-10-23; trace `8f4dd49762ae87052acded4ce063c7cf`.
+- Release notes, read 2026-11-12: [`@ai-sdk/otel` 1.0.149](https://github.com/vercel/ai/releases/tag/%40ai-sdk%2Fotel%401.0.149), [1.0.160](https://github.com/vercel/ai/releases/tag/%40ai-sdk%2Fotel%401.0.160), [1.0.162](https://github.com/vercel/ai/releases/tag/%40ai-sdk%2Fotel%401.0.162), [1.0.163](https://github.com/vercel/ai/releases/tag/%40ai-sdk%2Fotel%401.0.163), [1.0.168](https://github.com/vercel/ai/releases/tag/%40ai-sdk%2Fotel%401.0.168); [`ai` 7.0.162](https://github.com/vercel/ai/releases/tag/ai%407.0.162), [7.0.163](https://github.com/vercel/ai/releases/tag/ai%407.0.163), [7.0.165](https://github.com/vercel/ai/releases/tag/ai%407.0.165). Source: `@ai-sdk/otel` 1.0.170 `dist/index.js` (histogram, `server.*` attributes); `@vercel/otel` 2.3.0 types (`metricReaders`), read 2026-11-12.
+- Lab: `apps/web/instrumentation.ts`, `apps/web/app/api/visit-note/route.ts` (commits 350b3ce, aeee21d); lab backend (Bronto EU) datasets `.traces/petclinic-web`, `.traces/vercel-traces`, `.traces/ai-gateway`, 2026-10-22 to 2026-10-23; trace `8f4dd49762ae87052acded4ce063c7cf`.

@@ -1,6 +1,8 @@
 # Cron Jobs
 
 > A cron job is an ordinary HTTP `GET` from Vercel's scheduler to a path in your production deployment, so its telemetry is the telemetry of that function: log drain records and a trace with the user agent `vercel-cron/1.0`. There is no record of the schedule itself. Vercel emits no "run started", "run missed" or "run failed" event, no webhook and no metric, so a missed run leaves nothing behind and has to be detected from the absence of the expected request. In the lab every cron request entered Vercel in `iad1` and crossed to the function in `dub1`, and each run produced two report lines (middleware in `iad1`, function in `dub1`). The thing most people get wrong: counting records with the cron user agent counts lines, not runs. Count function report lines per schedule interval, and expect the occasional run that executes twice inside one request.
+>
+> **Successor: [Schedules](schedules.md).** Vercel Schedules (public beta 2026-11-05) is "the successor to Cron Jobs. Existing Cron Jobs continue to work" (changelog), and the docs call Cron Jobs "a legacy feature" that "will be migrated to Schedules in the future" (Documented 2026-11-12). Schedules add per-schedule execution history; a schedule with a `path` target calls the route the same way, with `vercel-cron/1.0`, so the records below also describe migrated path schedules.
 
 | | |
 | --- | --- |
@@ -9,15 +11,16 @@
 | Signals | Logs · Traces (both from the invoked function; nothing from the scheduler) |
 | Exit paths | Log drain (`source: lambda`) · Trace drain |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · Next.js 16.3.6 · `@vercel/otel` 2.1.3 · lab project `petclinic-agent`, data up to 2026-10-26 10:00 UTC |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 (`crons --help`, `activity types`) |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Logs | The invoked function's records: report line, your `console` output, timeouts and crashes. Middleware writes its own report line for the same request | Runtime Logs (Settings › Cron Jobs › View Logs filters them), `vercel logs` | As for Functions (Documented) |
-| Traces | The request's span tree: edge network, `Route across regions`, middleware, function, framework spans | Observability › Tracing, trace drain | As for Functions (Documented) |
+| Traces | The request's span tree: edge network, `Route across regions`, middleware, function, framework spans | Observability › Tracing (the Traces page since Tracing GA), `vercel traces search`, trace drain | Hobby 3 days, Pro 14 days, Enterprise 14 days since Tracing GA on 2026-11-06 (Documented). Before, traces followed runtime log retention: 1 hour, 1 day, 3 days |
 | Metrics | None of its own. Cron invocations are counted in `vercel.function_invocation.*` like any request; the metric catalog has no cron metric or cron dimension | Observability | |
-| Events | None. No run, miss or failure event, no webhook (Documented, and nothing found in the lab) | | |
+| Events | None per run. No run, miss or failure event, no webhook (Documented, and nothing found in the lab). The Activity Log has one type, `project-cron-jobs-toggled`, for turning a project's cron jobs on or off (Observed in `vercel activity types`, CLI 65.14.0) | Activity Log | See the Audit Logs entry |
 
 The lab's crons, defined in `vercel.ts`:
 
@@ -115,9 +118,11 @@ GET /api/synthetic                          vercel.edge-network        135.7 ms 
 | Cron run records | Log drain | Drain `petclinic-agent-logs`, all sources (see the Functions entry) |
 | Cron traces | Trace drain | Drain `petclinic-agent-traces` (see the Functions entry) |
 | Schedule, missed runs, failure events | None. Vercel keeps no record of them that you can export | |
-| Schedule definition | Your repo (`vercel.ts` / `vercel.json`); the deployment's cron list is visible in Settings › Cron Jobs | |
+| Schedule definition | Your repo (`vercel.ts` / `vercel.json`); the deployment's cron list is visible in Settings › Cron Jobs, the Cron Jobs tab of the project's Schedules page, and `vercel crons list` | |
 
-A missed run can only be detected outside Vercel, from the drained records: count function report lines per cron path and alert when a window holds fewer than expected. Section 5 has the query.
+Run history per job exists only after migrating to [Schedules](schedules.md) (`vercel schedules executions list`); still the case on 2026-11-12 (docs checked).
+
+A missed run can only be detected outside Vercel, from the drained records: count function report lines per cron path and alert when a window holds fewer than expected. Section 5 shows the query in the example backend.
 
 ## 5. In Bronto
 
@@ -150,6 +155,7 @@ A cron record's `traceId` is the `$trace_id` of its trace in `.traces/vercel-tra
 6. **`requestType: cron` is UI-only.** The Runtime Logs filter exists, but the drained record has no such field. Use `proxy.userAgent`.
 7. **The scheduler targets the deployment URL.** `host` is `petclinic-agent-<hash>-brontoio.vercel.app`, the current production deployment, not the production domain. After a promotion or rollback, cron requests move to the new deployment (Observed: 8 deployment IDs on 2026-10-23).
 8. **No retries.** A run that returns `5xx` or times out isn't repeated (Documented). The 11 `504` runs in the lab were followed by the next scheduled run, not a retry (Observed).
+9. **Migrating to Schedules changes the method and timing.** Path schedules send `POST` unless `requestMethod: "GET"` is set, and start within a jitter window (1 minute by default on Pro) instead of a fixed offset in the minute. Keeping both `crons` and `schedules` for the same route runs it twice (Documented, migration guide). A missed-run monitor built on the counts above needs a window that covers the jitter.
 
 ## Samples
 
@@ -168,5 +174,6 @@ A cron record's `traceId` is the `$trace_id` of its trace in `.traces/vercel-tra
 
 ## Sources
 
+- Vercel docs and changelog, read 2026-11-12: [Cron Jobs](https://vercel.com/docs/schedules/cron-jobs) (now under Schedules; "a legacy feature"), changelog [Vercel Schedules is now in public beta](https://vercel.com/changelog/vercel-schedules-is-now-in-public-beta) (2026-11-05), [Migrating from Cron Jobs to Schedules](https://vercel.com/docs/schedules/migrate-from-cron-jobs), [Schedules](https://vercel.com/docs/schedules), changelog [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06), [Configuring Tracing](https://vercel.com/docs/tracing/configure-tracing) (Retention); `vercel crons --help` and `vercel activity types`, CLI 65.14.0.
 - Vercel docs, read 2026-10-16 to 2026-10-20: [Cron Jobs](https://vercel.com/docs/cron-jobs), [Managing Cron Jobs](https://vercel.com/docs/cron-jobs/manage-cron-jobs) (no retries, duplicate delivery, `CRON_SECRET`, Hobby limits), [Troubleshooting cron jobs](https://vercel.com/kb/guide/troubleshooting-vercel-cron-jobs), [Runtime Logs](https://vercel.com/docs/logs/runtime) (`requestType` filter).
 - Lab: Bronto EU dataset `petclinic-agent/vercel-logs` (cron report lines 2026-10-20 06:27 to 2026-10-26 10:00 UTC) and `.traces/vercel-traces`; lab code `vercel.ts`, `apps/web/app/api/synthetic/route.ts`, `apps/web/app/api/ops/route.ts`, `apps/web/lib/stop-at.ts`; Vercel CLI 65.2.0 (`vercel metrics schema`).

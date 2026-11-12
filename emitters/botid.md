@@ -9,6 +9,7 @@
 | Signals | Metrics (inside Vercel only) · Traces (the check's `fetch` span, with `@vercel/otel`) · Logs (your code's lines, the library's warning, the client script's rewrite) |
 | Exit paths | Trace drain · Log drain · `vercel metrics` pull |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `botid` 1.5.11 · `@vercel/otel` 2.1.3 · Next.js 16.4.3 · lab project `vercel-observability-lab`, BotID mode Basic |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · `botid` 1.5.13 (same `is-bot?v=3` call and warning text in `dist/server/index.mjs`) · `@vercel/otel` 2.3.0 · Vercel CLI 65.14.0 docs |
 
 ## 1. What it emits
 
@@ -16,7 +17,7 @@
 | --- | --- | --- | --- |
 | Metrics | `vercel.bot_id_check.count`: one data point per `checkBotId()` call, 13 dimensions | Firewall tab (BotID traffic filter), Query, `vercel metrics` | Pro 1 day, Plus 30 days (Documented) |
 | Metrics | `vercel.external_api_request.*`: the call to `api.vercel.com/bot-protection/v1/is-bot` | Observability › External APIs, `vercel metrics` | As above |
-| Traces | `fetch POST https://api.vercel.com/bot-protection/v1/is-bot?v=3` under the route span | Trace drain (with `@vercel/otel` or another fetch instrumentation) | |
+| Traces | `fetch POST https://api.vercel.com/bot-protection/v1/is-bot?v=3` under the route span | Traces page (Vercel Tracing), `vercel traces`, trace drain | In Vercel: Hobby 3 days, Pro 14 days, Enterprise 14 days since 2026-11-06 (Documented) |
 | Logs | The `botid` library's warning for requests without client headers; your own lines; one `source: external` record per load of BotID's client script | Log drain, Runtime Logs | |
 | Billing | `BotID Deep Analysis Requests` | `GET /v1/billing/charges` | |
 
@@ -99,7 +100,7 @@ Per checked request, the log drain carries (Observed, 9 requests):
 | Extra | What it adds | Cost |
 | --- | --- | --- |
 | Deep Analysis (Firewall › BotID, or `checkBotId({ advancedOptions: { checkLevel: 'deepAnalysis' } })`) | Kasada's ML check after the Basic check passes; `deepAnalysisCheck` would show it in the metric (Not observed) | $1 per 1,000 calls on Pro (Documented) |
-| `@vercel/otel` (or any fetch instrumentation) | The `is-bot` span, which is the verdict's only drained trace | Trace drain volume |
+| `@vercel/otel` (or any fetch instrumentation) | The `is-bot` span as captured here, which is the verdict's only drained trace | Drains Volume; span units when Vercel Tracing collects it |
 | Logging the full result | `checkBotId()` returns `isBot`, `isHuman`, `isVerifiedBot`, `verifiedBotName`, `verifiedBotCategory`, `bypassed` and `classificationReason` (library source). Logging them as one JSON line puts the reason and verified-bot name into the log drain. The lab logs `isBot` only | |
 | Observability Plus | Querying `vercel.bot_id_check.count` | $1.20 per 1M events (Documented) |
 
@@ -132,15 +133,17 @@ Queries, each run on 2026-10-27 over the drained data (from 08:43 UTC):
 
 A log record's `traceId` is the `$trace_id` of the trace that holds the `is-bot` span, so verdict and report line can be joined.
 
+After the lab's switch to `@opentelemetry/instrumentation-undici` (see Gotchas), match both span forms: `("$http.url" LIKE '%/bot-protection/v1/is-bot%' OR "$url.full" LIKE '%/bot-protection/v1/is-bot%')`, grouped by `"$http.status_code"` or `"$http.response.status_code"`.
+
 ## Gotchas
 
-**Span shape depends on the fetch instrumentation.** Everything above was captured with `@vercel/otel`'s default fetch instrumentation: a span named `fetch POST <url>` with `http.url` and `http.status_code`. From 2026-10-27 ~10:00 UTC the lab uses `@opentelemetry/instrumentation-undici` instead (see the Blob entry for why): the same call is a span named `POST` with `url.full`, `server.address` and `http.response.status_code`, still `400` for Bot and `200` for Human (Captured: `samples/blob/span-undici-botid.json`). In the backend, match both forms: `("$http.url" LIKE '%/bot-protection/v1/is-bot%' OR "$url.full" LIKE '%/bot-protection/v1/is-bot%')` and group by `$http.status_code` or `$http.response.status_code`.
+**Span shape depends on the fetch instrumentation.** Everything above was captured with `@vercel/otel`'s default fetch instrumentation: a span named `fetch POST <url>` with `http.url` and `http.status_code`. From 2026-10-27 ~10:00 UTC the lab uses `@opentelemetry/instrumentation-undici` instead (see the Blob entry for why): the same call is a span named `POST` with `url.full`, `server.address` and `http.response.status_code`, still `400` for Bot and `200` for Human (Captured: `samples/blob/span-undici-botid.json`). Match both forms: the URL in `http.url` or `url.full`, the status in `http.status_code` or `http.response.status_code` (query in section 5).
 
 1. **The `is-bot` call answers `400` for bots.** A fetch error-rate alert on `api.vercel.com` fires on bot traffic. Treat `400` from `/bot-protection/v1/is-bot` as the Bot verdict, not as a failure (Observed, 36 of 36 calls agreed with the metric).
 2. **The verdict isn't a firewall event.** Requests your code rejects after `checkBotId()` count as `allow` in the firewall metric and never produce `source: firewall` records. Firewall dashboards don't show BotID blocks.
 3. **The warning is from the library, at `warning`.** "Possible misconfiguration of Vercel BotId or malicious request…" is `console.warn` in production; `curl` and scripts without BotID's client trigger it on every request. In preview and development the same case is a `console.error` with a different text, so a filter on the production text misses it there.
 4. **`HeadlessChrome` was enough to be a Bot.** Headless Chrome with `navigator.webdriver` switched off was classified Bot 2 of 2 times with its default user agent, and Human 2 of 2 times once the user agent said `Chrome` (Basic mode, Observed). This narrows `lab/NOTES.md`, which recorded the webdriver flag as the difference.
-5. **Without `@vercel/otel` the verdict has no drained trace.** The span exists because the lab registers fetch instrumentation; an app without it has only the metric and its own logs.
+5. **Without `@vercel/otel` the verdict's span is not the one captured here.** The span above exists because the lab registers fetch instrumentation. Vercel's docs (Instrumentation, read 2026-11-12) say Vercel records its own `fetch` spans when a project has no OpenTelemetry setup, and none at all when the project lists an OpenTelemetry package (such as `@opentelemetry/api` 1.7+) without registering an SDK. Whether Vercel's own `fetch` span for `is-bot` reaches the drain, and with which status attribute, is Not observed.
 6. **ASN is empty.** `asnName` was empty on all 36 data points, so the metric can't group bot traffic by network for this lab's clients (Observed).
 
 ## Samples
@@ -166,5 +169,6 @@ A log record's `traceId` is the `$trace_id` of the trace that holds the `is-bot`
 ## Sources
 
 - Vercel docs, read 2026-10-27: [BotID](https://vercel.com/docs/botid) (last updated 2026-06-16), [Firewall Observability](https://vercel.com/docs/vercel-firewall/firewall-observability), [Log Drains reference](https://vercel.com/docs/drains/reference/logs).
+- Docs, read 2026-11-12: [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06), [Configuring Tracing](https://vercel.com/docs/tracing/configure-tracing) (retention), [Instrumentation](https://vercel.com/docs/tracing/instrumentation) (both last updated 2026-11-03; how OpenTelemetry affects `fetch` spans); `botid` 1.5.13 `dist/server/index.mjs`.
 - `botid` 1.5.11: `dist/server/index.mjs` (warning text, `is-bot` request, result fields).
 - Lab: `lab/app/botid/`, `lab/app/api/botid/route.ts`, `lab/instrumentation-client.ts`, `lab/next.config.ts`; Bronto EU datasets `vercel-observability-lab/vercel-logs` and `.traces/vercel-observability-lab`, 2026-10-27; Vercel CLI 65.2.0 (`vercel metrics`, `vercel traces search`, `vercel logs requests`, `vercel api /v1/billing/charges`); headless Chrome 156 via Playwright, 2026-10-27 08:47 UTC.

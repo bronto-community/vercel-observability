@@ -9,6 +9,7 @@
 | Signals | Logs (one CDN record per request) · Metrics (inside Vercel only) · Billing lines |
 | Exit paths | Log drain (`source: static`) · `vercel metrics` pull · `GET /v1/billing/charges` pull |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · Next.js 16.4.3 · `@vercel/otel` 2.1.3 · lab project `vercel-observability-lab` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 docs |
 
 ## 1. What it emits
 
@@ -16,7 +17,7 @@
 | --- | --- | --- | --- |
 | Logs | One record per `/_next/image` request: cache state, status, URL | Log drain, `vercel logs requests` | As for other request logs (Documented) |
 | Metrics | `vercel.image_transformation.*` (6 metrics), one data point per transformation (cache miss) | Observability › Image Optimization, Query, `vercel metrics` | Pro 1 day, Plus 30 days (Documented) |
-| Traces | None. No span in the trace drain or in `vercel traces search` for any image request (Observed) | | |
+| Traces | None. No span in the trace drain or in `vercel traces search` for any image request (Observed 2026-10-27) | | |
 | Billing | Image Optimization Transformation, Cache Reads, Cache Writes, per region and day | `GET /v1/billing/charges` | See the Billing entry |
 
 The six metrics are `count`, `request_duration_ms`, `source_size_bytes`, `optimized_size_bytes`, `compression_ratio` and `size_change_percent`. They share 12 dimensions: `projectId`, `deploymentId`, `environment`, `imageTransformationRegion`, `optimizedFormatMimeType`, `sourceImagePathname`, `sourceImageHostname`, `sourceImage`, `sourceImageHash`, `optimizedQuality`, `optimizedWidthPixels`, `httpStatus`. `count` also has `cacheTags` ([`reference/vercel-metrics-schema.json`](../reference/vercel-metrics-schema.json)).
@@ -164,4 +165,5 @@ Group by `path` to count per source image; it holds the image path, while `"prox
 ## Sources
 
 - Vercel docs, read 2026-10-27: [Limits and Pricing for Image Optimization](https://vercel.com/docs/image-optimization/limits-and-pricing) (last updated 2026-08-11), [Observability Insights](https://vercel.com/docs/observability/insights) (last updated 2026-08-11), [Log Drains reference](https://vercel.com/docs/drains/reference/logs).
+- Docs, read 2026-11-12: [`vercel traces`](https://vercel.com/docs/cli/traces) (last updated 2026-11-03; `search --request-id` unchanged), [Configuring Tracing](https://vercel.com/docs/tracing/configure-tracing) (last updated 2026-11-03). No change found for Image Optimization telemetry between 2026-10-27 and 2026-11-12.
 - Lab: Bronto EU dataset `vercel-observability-lab/vercel-logs` and `.traces/vercel-observability-lab`, 2026-10-27; Vercel CLI 65.2.0 (`vercel metrics`, `vercel logs requests`, `vercel traces search --request-id`, `vercel api /v1/billing/charges`); `lab/app/image/page.tsx`; response headers from `curl -A "catalog-check/1.0"`, 2026-10-27 08:46 UTC.

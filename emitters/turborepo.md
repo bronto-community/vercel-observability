@@ -9,6 +9,7 @@
 | Signals | Metrics (OTLP) · Run summary file (JSON, local) · Remote Cache usage on Vercel's Usage page |
 | Exit paths | OTLP from the `turbo` process (gRPC or `http/protobuf`) · run summary file · Remote Cache usage: none |
 | Verified | 2026-10-27 · Turborepo 2.11.10 (latest, 2026-10-20) · OpenTelemetry Collector contrib 0.139.0 · Vercel CLI 65.2.0 · throwaway two-package monorepo, not deployed |
+| Refreshed | 2026-11-12 · release notes to 2026-11-12, no new captures · Turborepo 2.11.11 (2026-11-11): no change to the OTLP export in its notes |
 
 ## 1. What it emits
 
@@ -200,6 +201,7 @@ Metric monitors (Monitors › Data source: Metrics) fit two checks: `turbo.run.t
 
 ## Sources
 
+- Read 2026-11-12: [Turborepo v2.11.11 release notes](https://github.com/vercel/turborepo/releases/tag/v2.11.11) (2026-11-11).
 - Turborepo docs, read 2026-10-27: [`turbo.json` reference](https://turborepo.dev/docs/reference/configuration) (`futureFlags`, `experimentalObservability.otel`, env vars, CLI flags, precedence); the `with-otel` example in `vercel/turborepo` (`examples/with-otel`, Collector config and expected metric names).
 - Release history: npm `turbo` publish dates (2.8.13 on 2026-03-03, 2.8.14 on 2026-03-06, 2.11.10 on 2026-10-20); [2.8.13 release note](https://newreleases.io/project/npm/turbo/release/2.8.13) (OTel backend, #11130); [2.8.14 release note](https://newreleases.io/project/npm/turbo/release/2.8.14) (delta temporality).
 - Vercel docs, read 2026-10-27: [Remote Caching](https://vercel.com/docs/monorepos/remote-caching) (last updated 2026-08-13: free on all plans, fair-use limits, 7-day expiry, Usage page metrics, automatic use during Vercel builds).

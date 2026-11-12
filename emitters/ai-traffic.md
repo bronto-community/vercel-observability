@@ -9,6 +9,7 @@
 | Signals | Metrics (inside Vercel only); the underlying requests as log records |
 | Exit paths | None for the metrics (pull with `vercel metrics --json`) · Log drain for the requests (`proxy.userAgent`) |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · lab project `petclinic-agent` · Observability Plus enabled 2026-10-26 |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 (`firewall rules` help and `inspect ai-bots`, read-only) |
 
 ## 1. What it emits
 
@@ -31,6 +32,8 @@ What the five metrics count, per `vercel metrics` docs (Documented, read 2026-10
 All five support only the `count` aggregation. `ai_traffic.count` has no path or status dimension; use the per-kind metrics for those.
 
 **Markdown requests** (Documented only): requests from AI bots that asked for `text/markdown`, which is how agents ask for the Markdown version of a page through content negotiation (`Accept: text/markdown`). The AI Traffic tab lists "paths that AI bots request as Markdown". The lab app serves no Markdown, and no AI request was counted, so this metric was empty (Not observed). The log drain has no `Accept` header field, so a markdown request can't be told apart from an HTML request outside Vercel (Observed: no such field in 589 bot records).
+
+Vercel announced the Observability › AI Traffic page in its changelog on 2026-10-28: requests by verified AI bot, most-crawled pages, assistant retrievals, Markdown requests and error pages, with `vercel metrics` queries needing Observability Plus (Documented). The Observability Insights docs already described the AI Traffic tab (last updated 2026-08-11), and this entry used it on 2026-10-26; the changelog adds no new metric or exit path.
 
 **Crawler or assistant** comes from Vercel's verified bots directory, which gives each bot a category: `gptbot`, `claudebot`, `ccbot`, `applebot`, `amazonbot`, `meta-externalagent` are `ai_crawler`; `chatgpt-user`, `oai-searchbot`, `claude-user`, `claude-searchbot`, `perplexitybot`, `perplexity-user`, `mistralai-user`, `mistralai-index`, `duckassistbot` are `ai_assistant` (Documented, Bot Management docs, 2026-09-10). Vercel verifies bots by IP range, reverse DNS or Web Bot Auth signatures (Documented).
 
@@ -138,7 +141,7 @@ Every page request in the lab runs Routing Middleware, which writes its own `sou
 | Extra | What it adds | Cost |
 | --- | --- | --- |
 | Observability Plus | Querying `vercel.ai_traffic.*` and the `botName`/`botCategory` dimensions, filtering CDN Requests by bot category, 30-day retention | $1.20 per 1M events (Documented). Data from before enabling Plus was queryable: `vercel.request.count` returned rows for 2026-10-19 on 2026-10-26 (Observed) |
-| AI bots managed ruleset (Firewall) | `log` or `deny` for known AI bots. In the lab it is set to Allow (inactive) | All plans (Documented) |
+| AI Bots managed ruleset (Firewall) | Since 2026-10-29, a separate action (`allow`, `log`, `deny`) for AI crawlers and for AI assistants, using the same categories as these metrics; Vercel updates the bot list. `vercel firewall rules update ai-bots --category ai-crawlers --action deny` (`edit` is an alias), then `vercel firewall publish`. Denied requests appear in `vercel.firewall_action.count` and, as for other denies, in the log drain as `source: firewall` (see the Firewall entry; for this ruleset Not observed). In the lab it is set to Allow (inactive) (Observed 2026-11-12, `vercel firewall rules inspect ai-bots`) | All plans (Documented) |
 | Serving Markdown to agents (content negotiation, `.md` routes) | Something for `markdown_requests.count` to count | Your code |
 
 ## 4. Getting it out
@@ -214,4 +217,5 @@ Queries, each run against the lab's last 30 days on 2026-10-26:
 ## Sources
 
 - Vercel docs, read 2026-10-26: [`vercel metrics`](https://vercel.com/docs/cli/metrics) (AI traffic section, last updated 2026-09-10), [Observability Insights](https://vercel.com/docs/observability/insights) (AI Traffic and CDN Requests tabs, 2026-08-11), [Bot Management](https://vercel.com/docs/bot-management) (verified bots directory, verification methods, AI bots ruleset, 2026-09-10).
+- Vercel docs and changelog, read 2026-11-12: [AI traffic insights now available in Vercel Observability](https://vercel.com/changelog/ai-traffic-insights-now-available-in-vercel-observability) (2026-10-28), [Control AI crawlers and assistants separately in Vercel Firewall](https://vercel.com/changelog/block-ai-crawlers-and-assistants-independently-with-managed-rules) (2026-10-29), [WAF Managed Rulesets: AI Bots](https://vercel.com/docs/vercel-firewall/vercel-waf/managed-rulesets#configure-ai-bots-managed-ruleset), [Observability Insights](https://vercel.com/docs/observability/insights) (AI Traffic, unchanged since 2026-08-11).
 - Lab: Vercel CLI 65.2.0 `vercel metrics` for `vercel.ai_traffic.*`, `vercel.request.count` and `vercel.firewall_action.count`, 2026-09-26 to 2026-10-26; Bronto EU dataset `petclinic-agent/vercel-logs`, 2026-09-26 to 2026-10-26; two test requests to `https://petclinic-agent.vercel.app/?catalog-test=…` on 2026-10-26 15:05 UTC.

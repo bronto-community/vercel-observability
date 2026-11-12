@@ -9,6 +9,7 @@
 | Signals | Events (page views, custom events) · Metrics (inside Vercel only) |
 | Exit paths | Web Analytics drain (`analytics` v2) |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · `@vercel/analytics` 2.0.1 (`sdkVersion` 0.1.3 on the wire) · Next.js 16.3.6 · lab project `petclinic-agent` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 · `@vercel/analytics` 2.0.1 (still current on npm) |
 
 ## 1. What it emits
 
@@ -18,6 +19,8 @@
 | Metrics | `vercel.analytics.page_view.count`, `vercel.analytics.event.count` | Web Analytics dashboard, Query, `vercel metrics` | As above (Documented) |
 
 Both metrics have the same 17 dimensions, among them `route`, `requestPath`, `referrerHostname`, `country`, `deviceType`, `osName`, `browserName`, the five `utm*` fields, `flags` and `visitorId`; `event.count` adds `eventName` and `eventData` ([`reference/vercel-metrics-schema.json`](../reference/vercel-metrics-schema.json)).
+
+Since 2026-11-10, page views and events from deployments to a custom environment (Pro and Enterprise) are attributed to that environment, not to Preview, in the dashboard's Environment dropdown, `vercel metrics`, the query builder and the Aggregation API. Vercel says no new data points are collected and no configuration is needed (Documented, changelog 2026-11-10). Whether data collected before 2026-11-10 is re-attributed isn't stated. The lab has no custom environment (Not observed).
 
 The script is added once in the root layout. The lab app (`apps/web/app/layout.tsx`) renders `<Analytics />` from `@vercel/analytics/next` and calls `track()` in three places: `example_clicked` and `message_sent` with `{ plan }` (and `followUp`), and `upgrade_clicked` with no data.
 
@@ -48,7 +51,7 @@ One drain record per event, no batching inside a record. Fields seen in the lab 
 | `deviceBrand` | `Apple` | Absent when unknown (121 of 500 sampled had it) |
 | `browserEngine`, `browserEngineVersion` | `Blink`, `605.1` | Version often absent |
 | `sdkName`, `sdkVersion`, `sdkVersionFull` | `@vercel/analytics/next`, `0.1.3`, `2.0.1` | `sdkVersionFull` is the npm version |
-| `vercelEnvironment` | `production` | |
+| `vercelEnvironment` | `production` | Since 2026-11-10, data from custom environments is attributed to that environment instead of Preview (Documented); what the drain sends in this field for a custom environment: Not observed |
 | `vercelUrl` | `petclinic-agent-1gvj2sndw-brontoio.vercel.app` | The deployment URL |
 | `deployment` | `dpl_4NKTKHthxj6KqejUJ8MSaWjNkDeA` | Named `deployment`, not `deploymentId` as in the log drain |
 
@@ -94,6 +97,7 @@ null 2,155
 
 | Extra | What it adds | Cost |
 | --- | --- | --- |
+| Enabling from scripts or agents | `vercel project web-analytics enable [name]` runs without an interactive terminal since CLI 64.2.0 (2026-10-28); `disable` asks for confirmation unless `--yes`. On Pro and Enterprise, enabling incurs charges (Documented) | As for Web Analytics |
 | `track(name, data)` | `event` records with `eventName` and `eventData` (flat values: strings, numbers, booleans, null) | Each event counts as a Web Analytics event, like a page view |
 | `beforeSend` on `<Analytics />` | Rewrite or drop events in the browser before they are sent (for example, strip query strings from URLs) (Documented) | None |
 | UTM parameters in the URL | `queryParams` in the drain, at no extra cost. `utm*` dimensions in Vercel's own queries need Web Analytics Plus | Web Analytics Plus: add-on (Documented) |
@@ -101,7 +105,7 @@ null 2,155
 
 ### Automated browsers send nothing
 
-The script sends no events while the browser reports `navigator.webdriver = true`, which every Playwright, Puppeteer and Selenium browser does by default (Observed 2026-10-20, research I, D11: one Playwright visit with the flag on gave 0 events, with it off 1 page view and 2 custom events). The lab's synthetic visitor (`petclinic/browser/visit.mjs`) launches Chromium with `--disable-blink-features=AutomationControlled` so that its visits are counted, and tags every URL with `utm_source=synthetic` so they can be told apart. Bots and crawlers that don't run JavaScript never load the script at all. Nothing in the drain marks a visit as automated; filter on your own marker.
+The script sends no events while the browser reports `navigator.webdriver = true`, which every Playwright, Puppeteer and Selenium browser does by default (Observed 2026-10-20 in a lab test: one Playwright visit with the flag on gave 0 events, with it off 1 page view and 2 custom events). The lab's synthetic visitor (`petclinic/browser/visit.mjs`) launches Chromium with `--disable-blink-features=AutomationControlled` so that its visits are counted, and tags every URL with `utm_source=synthetic` so they can be told apart. Bots and crawlers that don't run JavaScript never load the script at all. Nothing in the drain marks a visit as automated; filter on your own marker.
 
 ## 4. Getting it out
 
@@ -145,7 +149,7 @@ Queries against the lab's last 30 days, run 2026-10-26 (traffic ran 2026-10-17 t
 
 ## Gotchas
 
-1. **Headless browsers are invisible.** `navigator.webdriver = true` suppresses every event, so Playwright checks and most bots never appear (Observed, D11). Turning the flag off isn't always enough: on 2026-10-27, headless Chrome with its default `HeadlessChrome/156` user agent and the flag off still sent no beacons; with a regular Chrome user agent it sent all of them (Observed in the second lab, see the Flags entry). Counted synthetic traffic needs the flag off, a regular user agent and a marker of your own.
+1. **Headless browsers are invisible.** `navigator.webdriver = true` suppresses every event, so Playwright checks and most bots never appear (Observed 2026-10-20). Turning the flag off isn't always enough: on 2026-10-27, headless Chrome with its default `HeadlessChrome/156` user agent and the flag off still sent no beacons; with a regular Chrome user agent it sent all of them (Observed in the second lab, see the Flags entry). Counted synthetic traffic needs the flag off, a regular user agent and a marker of your own.
 2. **`origin` is the full URL.** It holds the path and query string, not just scheme and host. Together with `queryParams`, anything in the query string leaves Vercel: two lab records carry `{"error":"access_denied","error_description":"This Vercel account does not have access to this app."}` from an OAuth redirect. Strip sensitive parameters with `beforeSend` (Captured: `pageview-synthetic.json`).
 3. **`queryParams` and `eventData` are JSON strings.** Vercel's docs show `queryParams` as a URL query string (`utm_source=google&…`); the lab receives JSON (`{"utm_source":"synthetic"}`) (Captured).
 4. **`deployment`, not `deploymentId`.** The same ID is `deploymentId` in the log drain and `vercel.deployment_id` on spans; join on the value.
@@ -170,4 +174,5 @@ Queries against the lab's last 30 days, run 2026-10-26 (traffic ran 2026-10-17 t
 ## Sources
 
 - Vercel docs, read 2026-10-26: [Web Analytics Drains reference](https://vercel.com/docs/drains/reference/analytics) (last updated 2026-07-03), [Web Analytics](https://vercel.com/docs/analytics), [Custom events](https://vercel.com/docs/analytics/custom-events), [`@vercel/analytics` package](https://vercel.com/docs/analytics/package), [Drains](https://vercel.com/docs/drains).
-- Lab: Bronto EU dataset `petclinic-agent/vercel-web-analytics`, 2026-10-17 to 2026-10-22; `vercel metrics vercel.analytics.*` (CLI 65.2.0, 2026-10-26); `GET /v1/drains`; `GET /v1/billing/charges` for 2026-10-20; lab code `apps/web/app/layout.tsx`, `apps/web/app/_components/agent-chat.tsx`, `petclinic/browser/visit.mjs`; research I, D11 and D14.
+- Lab: Bronto EU dataset `petclinic-agent/vercel-web-analytics`, 2026-10-17 to 2026-10-22; `vercel metrics vercel.analytics.*` (CLI 65.2.0, 2026-10-26); `GET /v1/drains`; `GET /v1/billing/charges` for 2026-10-20; lab code `apps/web/app/layout.tsx`, `apps/web/app/_components/agent-chat.tsx`, `petclinic/browser/visit.mjs`; lab test notes from 2026-10-20.
+- Read 2026-11-12: [Speed Insights and Web Analytics now support custom environments](https://vercel.com/changelog/speed-insights-and-web-analytics-now-support-custom-environments) (2026-11-10), [Agents can now enable Web Analytics and Observability Plus with Vercel CLI](https://vercel.com/changelog/agents-can-now-enable-web-analytics-and-observability-plus-with-vercel-cli) (2026-10-28), [`vercel project`](https://vercel.com/docs/cli/project) (`web-analytics`, `observability`), [Web Analytics Drains reference](https://vercel.com/docs/drains/reference/analytics) (unchanged, last updated 2026-07-03).

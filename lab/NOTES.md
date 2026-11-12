@@ -2,7 +2,7 @@
 
 Deployed 2026-10-26 to team `brontoio`, project `vercel-observability-lab` (`prj_Y3RSmZp5SNQvB6FhLb0LMH4HPWSM`), production, functions in `dub1`. URL: https://vercel-observability-lab.vercel.app
 
-Operations (Bronto org, where the API key is set, drains): see `LAB-OPS.md` in the parent vercel-deep-dive project folder (not part of this repo).
+Operations (Bronto org, where the API key is set, drains): kept outside this repo.
 
 Versions: Vercel CLI 65.2.0, Next.js 16.4.3, React 19.3.1, `@vercel/otel` 2.1.3, `@vercel/blob` 2.8.2, `@vercel/global-config` 1.5.1, `flags` 4.4.0, `@flags-sdk/vercel` 1.5.3, `@vercel/functions` 3.10.3, `botid` 1.5.11, `@vercel/sandbox` 3.9.0, `@vercel/analytics` 2.0.1, `@vercel/speed-insights` 2.0.0, Node.js 24.
 

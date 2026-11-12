@@ -9,13 +9,14 @@
 | Signals | Traces (with the SDK's `setTracerProvider`) · Other: read and write counts as billing records, store metadata and backups. No logs or metrics |
 | Exit paths | Trace drain (with the SDK's `setTracerProvider`) · REST API (`GET /v1/billing/charges`, store metadata) |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `@vercel/global-config` 1.5.1 · `@vercel/otel` 2.1.3 · lab project `vercel-observability-lab` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures, no change found · `@vercel/global-config` 1.5.1 (still current on npm) · Vercel CLI 65.14.0 |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Logs | Nothing from Global Config. Your own `console` lines | Runtime Logs, log drain | As for Functions |
-| Traces | Nothing by default. With `setTracerProvider`: a `get` span per `get()` (Captured); `has`, `getAll`, `digest` spans per call (from source) | Trace drain when enabled | As for Functions |
+| Traces | Nothing by default. With `setTracerProvider`: a `get` span per `get()` (Captured); `has`, `getAll`, `digest` spans per call (from source) | Trace drain when enabled | Vercel Tracing since 2026-11-06: Hobby 3 days, Pro and Enterprise 14 days (before: 1 h, 1 day, 3 days) (Documented); drained spans: your backend's retention |
 | Metrics | None in `vercel metrics schema` (Observed) | | |
 | Usage and cost | `Global Config Reads (formerly known as Edge Config Reads)` per project, `Global Config Writes (…)` per team, per billing day | Usage page (Reads chart by project, Writes chart by store; Documented), `GET /v1/billing/charges` | See the Billing entry |
 | Store metadata | Size, item count, digest, timestamps; backups on every change | `vercel global-config inspect`, `vercel global-config backups` | Backups: Hobby 7 days, Pro 90 days, Enterprise 365 days (Documented) |
@@ -179,6 +180,7 @@ Queries run 2026-10-27 against the lab's drained data (from 08:43 UTC; the SDK h
 
 ## Sources
 
+- Read 2026-11-12: [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06, trace retention); npm metadata for `@vercel/global-config`.
 - Vercel docs, read 2026-10-27: [Global Config Limits and pricing](https://vercel.com/docs/global-config/global-config-limits) (last updated 2026-07-29), [Webhooks API reference](https://vercel.com/docs/webhooks/webhooks-api) (last updated 2026-09-17), `@vercel/global-config` README (OpenTelemetry tracing, Next.js fetch cache).
 - Source: `@vercel/global-config` 1.5.1 (`dist/index.next-js.js`); npm registry metadata for `@vercel/global-config` (created 2026-07-20) and `@vercel/edge-config` (deprecated).
 - Lab: Bronto EU datasets `vercel-observability-lab/vercel-logs` and `.traces/vercel-observability-lab`, 2026-10-27 08:43 to 08:50 UTC and 10:03 to 10:10 UTC (SDK hook, deployments `dpl_9aBXamwMGAtPV1yDNvA8pY9xnFiE` to `dpl_42HLZRGEErtMw8aedmJ4Lq6LB1GX`); `vercel metrics`, `vercel global-config inspect` and `backups` (CLI 65.2.0); `GET /v1/billing/charges` for the billing day 2026-10-26; `lab/NOTES.md`.

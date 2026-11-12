@@ -9,6 +9,7 @@
 | Signals | Logs (denied requests) · Metrics (inside Vercel only) · Events (attack alerts by webhook) |
 | Exit paths | Log drain (`source: firewall`) · Webhook (Attack Detected Firewall Event) · `vercel metrics` / `vercel firewall` CLI pulls |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · lab project `petclinic-agent` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 (`firewall rules --help`, `rules inspect ai-bots`, read-only) |
 
 ## 1. What it emits
 
@@ -19,7 +20,7 @@
 | Events | DDoS attack alert when mitigation sees more than 100,000 malicious requests in 10 minutes | Firewall tab › Alerts, `vercel firewall alerts list`, webhook "Attack Detected Firewall Event", Slack (`/vercel subscribe {team_id} firewall_attack`) | (Documented) |
 | Metrics | `vercel.bot_id_check.count` (BotID) | Query, `vercel metrics` | See the BotID entry |
 
-The lab's firewall configuration (Captured: `cli-firewall-rules.json`): two custom rules, `rule_block_scanner_paths_jbLxqj` (deny `/.env`, `/wp-login.php`, `/.git/config`, `/xmlrpc.php`) and `rule_rate_limit_new_chats_vbkYGF` (rate limit, fixed window, 20 `POST /eve/v1/session` per IP per 60 s, then deny). Bot Protection off, AI Bots allow, OWASP off, BotID `basic`. A synthetic cron job requested a scanner path in about 1 run in 10 (user agent `sqlmap/1.8`) until 2026-10-23 22:00 UTC; the rate limit was hit once on purpose with `curl` (6 requests over the limit, 2026-10-20 ~08:59 UTC).
+The lab's firewall configuration (Captured: `cli-firewall-rules.json`): two custom rules, `rule_block_scanner_paths_jbLxqj` (deny `/.env`, `/wp-login.php`, `/.git/config`, `/xmlrpc.php`) and `rule_rate_limit_new_chats_vbkYGF` (rate limit, fixed window, 20 `POST /eve/v1/session` per IP per 60 s, then deny). Bot Protection off, AI Bots allow (unchanged on 2026-11-12, Observed), OWASP off, BotID `basic`. A synthetic cron job requested a scanner path in about 1 run in 10 (user agent `sqlmap/1.8`) until 2026-10-23 22:00 UTC; the rate limit was hit once on purpose with `curl` (6 requests over the limit, 2026-10-20 ~08:59 UTC).
 
 ## 2. Out-of-the-box shape
 
@@ -89,6 +90,7 @@ None in the lab: `vercel firewall alerts list` and `vercel firewall overview` sh
 | Extra | What it adds | Cost |
 | --- | --- | --- |
 | Custom rules (deny, rate limit) | A drain record per denied request, keyed by rule ID | See Vercel's Firewall pricing |
+| AI Bots managed ruleset | Since 2026-10-29, separate actions for AI crawlers and AI assistants (`allow`, `log`, `deny` each), from Vercel's verified bot categories. CLI: `vercel firewall rules update ai-bots --category <ai-crawlers or ai-assistants> --action …`, then `vercel firewall publish`. A `deny` should add `source: firewall` drain records like other denies; `log` is not expected in the drain (Documented; Not observed for this ruleset). Category counts are in the AI traffic metrics (see [AI traffic](ai-traffic.md)) | All plans (Documented) |
 | Observability Plus | Querying `vercel.firewall_action.count`: allowed traffic, challenges, platform mitigations, bot classification, ASN and country | $1.20 per 1M events (Documented) |
 | `vercel firewall` CLI (`overview`, `traffic`, `alerts`, `rules list --json`) | Read the last day of firewall activity and the rule definitions from scripts | None |
 | Webhook "Attack Detected Firewall Event" | A push event when DDoS mitigation fires | None (Documented) |
@@ -97,13 +99,13 @@ None in the lab: `vercel firewall alerts list` and `vercel firewall overview` sh
 
 | Signal | Exit path | Tested configuration |
 | --- | --- | --- |
-| Denied requests | Log drain, schema `log` v1 | Drain `petclinic-agent-logs`, no source filter (see the Functions entry). A drain filtered to `source eq 'firewall'` delivered only firewall records (research D4) |
+| Denied requests | Log drain, schema `log` v1 | Drain `petclinic-agent-logs`, no source filter (see the Functions entry). A drain filtered to `source eq 'firewall'` delivered only firewall records (lab test, 2026-10) |
 | Rule names | `vercel firewall rules list --json` or the REST API; join on rule ID | Read-only CLI call, output in `cli-firewall-rules.json` |
 | Allowed, challenged, platform-mitigated traffic | None. Pull `vercel metrics vercel.firewall_action.count --json` (Plus) on a schedule and send the result on | |
 | DDoS alerts | Account webhook with the Attack Detected Firewall Event | Not configured in the lab (Not observed) |
 | BotID verdicts | None (`vercel.bot_id_check.count` metric only) | The lab app doesn't call `checkBotId()`; the metric returned no rows for 7 days (Not observed) |
 
-Delivery delay: from the record's `timestamp` to ingestion in the backend, the 506 block records took median 5.6 s, p95 9.2 s, max 22.4 s. The 6 rate-limit records took 15.6 to 18.1 s (Observed). Research note D7 described rate-limit records arriving "minutes" after the request; this re-measurement on the same 6 records shows seconds, about three times the delay of the block records.
+Delivery delay: from the record's `timestamp` to ingestion in the backend, the 506 block records took median 5.6 s, p95 9.2 s, max 22.4 s. The 6 rate-limit records took 15.6 to 18.1 s (Observed). An earlier lab note described rate-limit records arriving "minutes" after the request; this re-measurement on the same 6 records shows seconds, about three times the delay of the block records.
 
 ## 5. In Bronto
 
@@ -132,7 +134,7 @@ Templates: the "Vercel Overview" dashboard has "Firewall Actions" and "Top Denie
 3. **Platform DDoS challenges never reach the drain.** 75 requests challenged by `sys_dos_mitigation` appear in `vercel.firewall_action.count` and nowhere in the log drain. Counting firewall activity from the drain counts custom-rule denies only (Observed).
 4. **Denied requests have a trace ID and no trace.** Every firewall record carries `traceId`/`spanId`, but the trace drain delivered no span for any of them, and no edge span with status 403 at all in 7 days (Observed). Don't build a "jump to trace" link for firewall records.
 5. **`executionRegion` holds two regions.** 480 of 512 records had values like `iad1:dub1`, although no code ran. Use `proxy.region` for where the request was stopped (Observed).
-6. **Rate limits count per region.** A limit of 20 per minute per IP can let through up to 20 per region the client reaches (research A1, Documented). The lab test used one region (`fra1`).
+6. **Rate limits count per region.** A limit of 20 per minute per IP can let through up to 20 per region the client reaches (Documented: "Rate limit counters are tracked on a per-region basis", [Rate limiting](https://vercel.com/docs/vercel-firewall/vercel-waf/rate-limiting), read 2026-11-12). The lab test used one region (`fra1`).
 
 ## Samples
 
@@ -150,4 +152,4 @@ Templates: the "Vercel Overview" dashboard has "Firewall Actions" and "Top Denie
 
 - Vercel docs, read 2026-10-26: [Log Drains reference](https://vercel.com/docs/drains/reference/logs) (last updated 2026-09-11), [Firewall Observability](https://vercel.com/docs/vercel-firewall/firewall-observability) (last updated 2026-09-10), [Webhooks API](https://vercel.com/docs/webhooks/webhooks-api).
 - Lab: Bronto EU dataset `petclinic-agent/vercel-logs`, 2026-10-19 to 2026-10-26; trace drain dataset `.traces/vercel-traces`; Vercel CLI 65.2.0 (`vercel metrics`, `vercel firewall status|overview|alerts list|rules list`); synthetic traffic in `apps/web/app/api/synthetic/route.ts`.
-- Research: `research/I-lab-findings.md` D2, D4, D7; `research/A1-vercel-platform.md` §7.
+- Vercel docs and changelog, read 2026-11-12: [WAF Managed Rulesets: AI Bots](https://vercel.com/docs/vercel-firewall/vercel-waf/managed-rulesets#configure-ai-bots-managed-ruleset), [Control AI crawlers and assistants separately in Vercel Firewall](https://vercel.com/changelog/block-ai-crawlers-and-assistants-independently-with-managed-rules) (2026-10-29), [Rate limiting](https://vercel.com/docs/vercel-firewall/vercel-waf/rate-limiting).

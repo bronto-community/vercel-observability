@@ -9,6 +9,7 @@
 | Signals | Metrics (inside Vercel only) · API objects (sandboxes, sessions) · Billing lines · the calling function's logs and spans |
 | Exit paths | `vercel metrics` pull · `GET /v2/sandboxes`, `GET /v2/sandboxes/sessions` pull · `GET /v1/billing/charges` pull · log and trace drain for the calling function only |
 | Verified | 2026-10-27 (runs of 2026-10-26 and 2026-10-27) · Vercel CLI 65.2.0 · `@vercel/sandbox` 3.9.0 · `@vercel/otel` 2.1.3 · `@opentelemetry/instrumentation-undici` 0.34.0 · lab project `vercel-observability-lab` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, `vercel metrics schema vercel.sandbox` re-run, no new captures · Vercel CLI 65.14.0 |
 
 ## 1. What it emits
 
@@ -16,11 +17,11 @@
 | --- | --- | --- | --- |
 | Metrics | `vercel.sandbox.*` (7 metrics) by `projectId`, `sandboxName`, `sandboxSessionId` | Observability › Sandbox, Query, `vercel metrics` | Pro 1 day, Plus 30 days (Documented) |
 | API objects | Per sandbox and per session: region, vCPUs, memory, timestamps, duration, Active CPU, network bytes | `vercel sandbox list --all`, REST API | Both runs still listed 18 h later (Observed) |
-| Calling function | Its own logs and spans; the SDK's calls in `vercel.external_api_request.*` | Function logs, trace drain, `vercel metrics` | As for Functions |
+| Calling function | Its own logs and spans; the SDK's calls in `vercel.external_api_request.*` | Function logs, trace drain, `vercel metrics` | Logs as for Functions; traces Hobby 3 days, Pro and Enterprise 14 days since Tracing GA on 2026-11-06 (before: Hobby 1 hour, Pro 1 day, Enterprise 3 days) (Documented) |
 | Billing | Sandbox Active CPU, Provisioned Memory, Data Transfer, Creations (and Snapshot, Drive lines) | `GET /v1/billing/charges` | See the Billing entry |
 | Logs, traces from inside the Sandbox | None. Command output is returned to the SDK (`stdout()`, `stderr()`, `logs()`) | | |
 
-The seven metrics: `cpu_total_time_ms`, `cpu_usage`, `memory_requested_gb_hr`, `memory_peak_gb_hr`, `memory_used_bytes`, `public_egress_bytes`, `public_ingress_bytes`. The changelog also names running sandboxes and sessions, which have no metric in `vercel metrics schema`; see [`reference/vercel-metrics-schema.json`](../reference/vercel-metrics-schema.json) for units and aggregations. Memory usage (`memory_used_bytes`) was added on 2026-09-28, the per-sandbox grouping on 2026-07-07 (Documented, changelog).
+The seven metrics: `cpu_total_time_ms`, `cpu_usage`, `memory_requested_gb_hr`, `memory_peak_gb_hr`, `memory_used_bytes`, `public_egress_bytes`, `public_ingress_bytes`. The changelog also names running sandboxes and sessions, which have no metric in `vercel metrics schema`; see [`reference/vercel-metrics-schema.json`](../reference/vercel-metrics-schema.json) for units and aggregations. The seven metrics and their dimensions are unchanged on 2026-11-12 (`vercel metrics schema vercel.sandbox`, CLI 65.14.0, Observed). Memory usage (`memory_used_bytes`) was added on 2026-09-28, the per-sandbox grouping on 2026-07-07 (Documented, changelog).
 
 The lab: `GET /api/sandbox?secret=…` creates a 1-vCPU, non-persistent Sandbox with a 60 s timeout, runs `echo hello` and `node -v`, logs one JSON line with the outputs and stops the Sandbox. It ran twice on 2026-10-26 (15:00:32 and 15:06:15 UTC) and was answered `401` three times without the secret. The function ran in `dub1`; the Sandboxes ran in `iad1`, the project's Sandbox region. Both runs happened before the drains existed and before the project's trace sampling rule (first span 15:09:04 UTC), so they have no drained records and no spans.
 
@@ -187,7 +188,7 @@ With `@vercel/otel`'s default fetch instrumentation, the span field is `"$http.u
 5. **Session IDs make high-cardinality paths.** `vercel.external_api_request` groups the `cmd` and `stop` calls by a `requestPath` that contains the session ID, one group per sandbox.
 6. **`runtime: node22` ran Node.js 24.** The API reports `runtime: "node22"` for both sandboxes, while `node -v` inside them printed `v24.22.1` (image `vercel/sandbox/universal`). Don't take the runtime field as the version (Observed).
 7. **SDK spans are the only trace of a Sandbox.** With an undici or fetch instrumentation, each create, command and stop is a client span of the calling function; nothing comes from the VM (Observed, three runs).
-8. **Mounting a drive slows create.** `POST /api/v3/sandboxes` took 584–673 ms with a drive mount against 292 ms median without (Observed, 3 and 2 runs).
+8. **Mounting a drive slowed create.** `POST /api/v3/sandboxes` took 584–673 ms with a drive mount against 292 ms median without (Observed 2026-10-27, 3 and 2 runs). On 2026-11-02 Vercel reported median creation of sandboxes with Drives down from 1.7 s to 0.7 s (p95 2.2 s to 1.6 s), with no SDK change (Documented); the lab hasn't measured it since.
 
 ## Samples
 
@@ -215,5 +216,6 @@ With `@vercel/otel`'s default fetch instrumentation, the span field is `"$http.u
 ## Sources
 
 - Vercel docs, read 2026-10-27: [Vercel Sandbox pricing and quotas](https://vercel.com/docs/sandbox/pricing) (last updated 2026-09-10), [Observability Insights](https://vercel.com/docs/observability/insights) (last updated 2026-08-11), changelogs [More granular observability for Vercel Sandbox](https://vercel.com/changelog/more-granular-observability-for-vercel-sandbox) (2026-07-07) and [Vercel Sandbox now supports memory observability](https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability) (2026-09-28).
+- Read 2026-11-12: [Vercel Sandbox with Drives now starts up to 2.4× faster](https://vercel.com/changelog/vercel-sandbox-with-drives-now-starts-up-to-2-4x-faster) (2026-11-02), [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06).
 - `@vercel/sandbox` 3.9.0: `dist/api-client/base-client.js`.
-- Lab: `lab/app/api/sandbox/route.ts`, `lab/app/api/drive/route.ts` (runs 2026-10-27 10:11 UTC, deployment `dpl_14UbnR1c1cgJ2Kk4RkNXj5ChK3XJ`), Bronto EU datasets `vercel-observability-lab/vercel-logs` and `.traces/vercel-observability-lab`, `lab/NOTES.md`; Vercel CLI 65.2.0 (`vercel metrics`, `vercel sandbox list --all`, `vercel api /v2/sandboxes`, `vercel api /v2/sandboxes/sessions`, `vercel logs`, `vercel logs requests`, `vercel traces search`, `vercel api /v1/billing/charges`), read-only, 2026-10-27.
+- Lab: `lab/app/api/sandbox/route.ts`, `lab/app/api/drive/route.ts` (runs 2026-10-27 10:11 UTC, deployment `dpl_14UbnR1c1cgJ2Kk4RkNXj5ChK3XJ`), lab backend (Bronto EU) datasets `vercel-observability-lab/vercel-logs` and `.traces/vercel-observability-lab`, `lab/NOTES.md`; Vercel CLI 65.2.0 (`vercel metrics`, `vercel sandbox list --all`, `vercel api /v2/sandboxes`, `vercel api /v2/sandboxes/sessions`, `vercel logs`, `vercel logs requests`, `vercel traces search`, `vercel api /v1/billing/charges`), read-only, 2026-10-27.

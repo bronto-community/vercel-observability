@@ -1,0 +1,9 @@
+# vercel activity types (Vercel CLI 65.14.0, 2026-11-12), filtered to schedule types
+  project-cron-jobs-toggled                                Cron jobs were toggled for a project.
+  project-custom-environment-schedules-default-updated     The default state for new schedules in a custom environment was updated.
+  schedule-created                                         A schedule was created.
+  schedule-deleted                                         A schedule was deleted.
+  schedule-disabled                                        A schedule was disabled.
+  schedule-enabled                                         A schedule was enabled.
+  schedule-invoked                                         A schedule was invoked manually, outside its cadence.
+  schedule-updated                                         A schedule was updated.

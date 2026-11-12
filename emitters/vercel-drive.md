@@ -9,16 +9,17 @@
 | Signals | Metrics (inside Vercel only) · billing lines · API objects (drives) · the calling function's spans and logs |
 | Exit paths | `vercel metrics` pull · `vercel usage` / `GET /v1/billing/charges` pull · `GET /v2/sandboxes/drives` pull · trace and log drain for the calling function only |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `@vercel/sandbox` 3.9.0 · `@opentelemetry/instrumentation-undici` 0.34.0 · lab project `vercel-observability-lab`, drive `lab-drive` in `iad1` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, `vercel metrics schema vercel.drive` re-run, no new captures (the lab drive was deleted on 2026-10-27) · Vercel CLI 65.14.0 |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Metrics | `vercel.drive.read_bytes` by `projectId`, `driveId`, `billableRegion`, `cacheResult` (Captured); `vercel.drive.write_bytes` by `projectId`, `driveId`, `billableRegion` (no rows in the lab) | Query, `vercel metrics` | As for other metrics: Pro 1 day, Plus 30 days (Documented, Observability Plus docs) |
-| Billing | Drive Storage (GB, measured hourly on logical used size), Drive Reads (GB), Drive Writes (GB), per region | Usage page, `vercel usage`, `GET /v1/billing/charges` | See the Billing entry |
+| Billing | Drive Storage (GB, measured hourly on logical used size), Drive Reads (GB), Drive Writes (GB), per region | Usage page, `vercel billing usage` (`vercel usage` before CLI 65.11.0, now deprecated), `GET /v1/billing/charges` | See the Billing entry |
 | API objects | One object per drive: name, region, maximum size, creation and update times, `workloadType` (Captured); the sandbox it's mounted on, `parentDriveId` and `rootDriveId` for forks (Documented) | `GET /v2/sandboxes/drives?projectId=…`, `sandbox drives ls` | Until the drive is deleted |
 | Sandbox objects | The mount on each sandbox: `"mounts": {"/data": {"drive": "lab-drive", "mode": "read-write"}}` (Captured) | `GET /v2/sandboxes?project=…` | As for sandboxes |
-| Calling function | The SDK's drive API call as an outgoing request; your own log line | Trace drain (with fetch/undici instrumentation), log drain, `vercel.external_api_request.*` | As for Functions |
+| Calling function | The SDK's drive API call as an outgoing request; your own log line | Trace drain (with fetch/undici instrumentation), log drain, `vercel.external_api_request.*` | Logs as for Functions; traces Hobby 3 days, Pro and Enterprise 14 days since Tracing GA on 2026-11-06 (before: Hobby 1 hour, Pro 1 day, Enterprise 3 days) (Documented) |
 | Logs, spans | None from the drive or from inside the Sandbox | | |
 
 The lab route `GET /api/drive` (`lab/app/api/drive/route.ts`, protected by a bearer secret) calls `Drive.getOrCreate({ name: "lab-drive", region: "iad1", maxSize: 1 GiB })`, creates a 1-vCPU, non-persistent Sandbox in `iad1` with the drive mounted read-write at `/data`, writes `/data/run-<ms>.txt` (about 31 bytes), runs `cat /data/*.txt`, logs one JSON line and stops the Sandbox. It ran three times on 2026-10-27 at 10:11:24, 10:11:33 and 10:11:37 UTC; the runs read 1, 2 and 3 files, so the drive kept its contents between sandboxes. The drive was deleted with `vercel sandbox drives delete lab-drive` at 10:47:47 UTC (`vercel sandbox drives ls` showed `SIZE 1 GB`, the maximum size, not the used size); the route creates it again on its next run.
@@ -49,7 +50,7 @@ The lab route `GET /api/drive` (`lab/app/api/drive/route.ts`, protected by a bea
   "createdAt": 1793095883800, "updatedAt": 1793095897883 }
 ```
 
-No used size, no read or write counters, and no current sandbox while nothing has it mounted. `updatedAt` moved with the last mount (10:11:37.883 UTC). The sandboxes that mounted it carry the mount in `GET /v2/sandboxes` (see the Sandbox entry).
+No used size, no read or write counters, and no current sandbox while nothing has it mounted. The used size is still missing on 2026-11-12: the REST reference for [Get a drive](https://vercel.com/docs/rest-api/drives/get-a-drive) (last updated 2026-11-12) returns `maxSizeBytes` only, although Drive Storage is billed on the logical used size (docs and releases checked). `updatedAt` moved with the last mount (10:11:37.883 UTC). The sandboxes that mounted it carry the mount in `GET /v2/sandboxes` (see the Sandbox entry).
 
 ### The calling function
 
@@ -126,6 +127,7 @@ The `vercel.drive.*` numbers reach Bronto only through a scheduled pull that sen
 6. **Billing lines appear before any drive does.** The daily FOCUS export has zero-value Drive lines for every region (Captured). Filter on `ConsumedQuantity > 0` to find real use.
 7. **The drives list needs a project.** `GET /v2/sandboxes/drives` without `projectId` returns 400 (Observed).
 8. **Region is fixed.** A drive stays in the region it was created in (default `iad1`), and sandboxes that mount it must run there (Documented). The lab's function runs in `dub1`, its drive and sandboxes in `iad1`.
+9. **No used size anywhere but the bill.** The drives API and `sandbox drives ls` show the maximum size; storage is billed on the logical used size, which no API or metric returns (Observed 2026-10-27; still the case in the docs on 2026-11-12).
 
 ## Samples
 
@@ -146,5 +148,6 @@ The `vercel.drive.*` numbers reach Bronto only through a scheduled pull that sen
 ## Sources
 
 - Vercel docs and changelog, read 2026-10-27: [Drives](https://vercel.com/docs/sandbox/concepts/drives) (last updated 2026-09-21), [Sandbox pricing](https://vercel.com/docs/sandbox/pricing) (last updated 2026-09-10), [How Vercel Drives work](https://vercel.com/kb/guide/vercel-drives) (2026-10-15), [Drives private beta](https://vercel.com/changelog/drives-for-vercel-sandbox-in-private-beta) (2026-06-05), [Drives public beta](https://vercel.com/changelog/drives-for-vercel-sandbox-are-now-in-public-beta) (2026-09-23), [Vercel Drives GA](https://vercel.com/changelog/vercel-drives-is-now-generally-available) (2026-10-15).
+- Read 2026-11-12: [Get a drive](https://vercel.com/docs/rest-api/drives/get-a-drive) (last updated 2026-11-12), [Drives](https://vercel.com/docs/sandbox/concepts/drives) (still last updated 2026-09-21), [Vercel Sandbox with Drives now starts up to 2.4× faster](https://vercel.com/changelog/vercel-sandbox-with-drives-now-starts-up-to-2-4x-faster) (2026-11-02), [vercel billing usage](https://vercel.com/docs/cli/usage) (last updated 2026-10-30), [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06).
 - Source: `@vercel/sandbox` 3.9.0 (`dist/drive.d.ts`, `dist/sandbox.d.ts`).
-- Lab: `lab/app/api/drive/route.ts`, deployment `dpl_14UbnR1c1cgJ2Kk4RkNXj5ChK3XJ`, runs 2026-10-27 10:11 UTC; Vercel CLI 65.2.0 (`vercel metrics`, `vercel api /v2/sandboxes/drives`, `vercel api /v1/billing/charges`); Bronto EU datasets `vercel-observability-lab/vercel-logs` and `.traces/vercel-observability-lab`; `lab/NOTES.md`.
+- Lab: `lab/app/api/drive/route.ts`, deployment `dpl_14UbnR1c1cgJ2Kk4RkNXj5ChK3XJ`, runs 2026-10-27 10:11 UTC; Vercel CLI 65.2.0 (`vercel metrics`, `vercel api /v2/sandboxes/drives`, `vercel api /v1/billing/charges`); `vercel metrics schema vercel.drive --json` with CLI 65.14.0 on 2026-11-12 (both metrics and their dimensions unchanged); lab backend (Bronto EU) datasets `vercel-observability-lab/vercel-logs` and `.traces/vercel-observability-lab`; `lab/NOTES.md`.

@@ -1,0 +1,27 @@
+{
+  "BilledCost": 0.6231224129505892,
+  "EffectiveCost": 0.6231224129505892,
+  "PricingCategory": "Other",
+  "PricingCurrency": "USD",
+  "PricingQuantity": 0.6231224129505892,
+  "PricingUnit": "USD",
+  "ChargePeriodStart": "2026-11-10T08:00:00.000Z",
+  "ChargePeriodEnd": "2026-11-11T08:00:00.000Z",
+  "BillingCurrency": "USD",
+  "ServiceProviderName": "Vercel",
+  "ServiceName": "Drains Volume",
+  "ServiceCategory": "Observability",
+  "SkuId": "prod_01jvt9pkqbecssvtz6z30jsjwf",
+  "SkuPriceId": "prod_01jvt9pkqbecssvtz6z30jsjwf",
+  "ChargeCategory": "Usage",
+  "ConsumedQuantity": 1.2462448259011785,
+  "ConsumedUnit": "gigabyte",
+  "SubAccountId": "team_REDACTED",
+  "SubAccountName": "Bronto",
+  "SubAccountType": "Team",
+  "Tags": {
+    "ProjectId": "prj_b3WTvq01Qtd6lK3zThoF2COD7prM",
+    "ProjectName": "petclinic-agent"
+  },
+  "x_CostAttribution": null
+}

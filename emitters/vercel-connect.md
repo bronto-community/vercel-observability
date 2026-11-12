@@ -1,6 +1,6 @@
 # Vercel Connect
 
-> Vercel Connect records five runtime events per connector: token requests, completed OAuth authorizations, token revocations, inbound provider webhooks (triggers) and their forwarding to your projects. They live in each connector's Observability tab for 12 hours (Hobby), 3 days (Pro) or 30 days (Enterprise), and the only way out is a drain with schema `connect` v1 to a custom HTTP endpoint. There is no REST endpoint or CLI command that reads them. The drain works on Pro: Vercel's drain validation accepted a `connect` drain for the lab team, where an `audit_log` drain got a 402. Configuration changes to connectors (created, attached, installation updated, trigger destinations changed) are a separate stream in the team Activity Log. Inside the app, a `getToken` call is an outgoing `fetch` to `api.vercel.com/v1/connect/token/<connector>`, so Vercel's external-API metrics count it per connector: 98 token requests across the team's connectors in 7 days, about 0.3–0.4 s each. The lab has no `connect` drain yet, so no drain record is captured. The thing most people miss: you don't need a new connector to get records. The team's existing Slack connectors already produce token requests every day, and a team-wide `connect` drain would carry them.
+> Vercel Connect records five runtime events per connector: token requests, completed OAuth authorizations, token revocations, inbound provider webhooks (triggers) and their forwarding to your projects. They live in each connector's Observability tab for 12 hours (Hobby), 3 days (Pro) or 30 days (Enterprise), and the only way out is a drain with schema `connect` v1 to a custom HTTP endpoint. There is no REST endpoint or CLI command that reads them. The drain works on Pro: Vercel's drain validation accepted a `connect` drain for the lab team, where an `audit_log` drain got a 402. Configuration changes to connectors (created, attached, installation updated, trigger destinations changed) are a separate stream in the team Activity Log. Inside the app, a `getToken` call is an outgoing `fetch` to `api.vercel.com/v1/connect/token/<connector>`, so Vercel's external-API metrics count it per connector: 98 token requests across the team's connectors in 7 days, about 0.3–0.4 s each. No drain record is captured: a project-scoped `connect` drain for `petclinic-agent` (created 2026-10-28) delivered nothing through 2026-11-12, because that project has no connector (Not observed). The thing most people miss: you don't need a new connector to get records. The team's existing Slack connectors already produce token requests every day, and a team-wide `connect` drain would carry them.
 
 | | |
 | --- | --- |
@@ -9,6 +9,7 @@
 | Signals | Events (Connect runtime events) · Events (Activity Log config changes) · Metrics (outgoing `fetch` to the Connect API, Observability Plus) |
 | Exit paths | Drain (`connect` v1, custom HTTP endpoint only) · Activity Log via CLI/API pull for config changes · OTLP from code for the `fetch` span |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `@vercel/connect` 2.5.2 and eve 0.81.0 (source read, not running in the lab) · team `brontoio` (Pro) |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures; one read-only backend count for the `connect` drain dataset · `@vercel/connect` 2.9.1 current on npm (not read) · Vercel CLI 65.14.0 |
 
 ## 1. What it emits
 
@@ -17,15 +18,17 @@
 | Connect events | Token Request, Completed Authorization Request, Revoked Token Request, Inbound Trigger, Forward Trigger | Connector › Observability tab; `connect` drain | Hobby 12 h, Pro 3 days, Enterprise 30 days (Documented) |
 | Connector config changes | `connect-create-connector`, `connect-attach-project`, `connect-upsert-installation`, `connect-update-connector`, `connect-update-trigger-destinations`, `connect-delete-installation` and 6 more (12 in all) | Activity Log (`vercel activity`, `GET /v3/events`); Audit Logs on Enterprise | Since the team was created (Observed, see the [Audit Logs](audit-logs.md) entry) |
 | Token request calls from functions | `POST https://api.vercel.com/v1/connect/token/<connector>` as an external API request | `vercel.external_api_request.*` metrics (Plus) | Plus 30 days (Documented) |
-| Spans | The `fetch` span of `getToken` (with `@vercel/otel`); eve MCP and connection-event spans | Trace drain or your OTLP exporter | As for traces |
+| Spans | The `fetch` span of `getToken` (with `@vercel/otel`); eve MCP and connection-event spans | Vercel Tracing, trace drain or your OTLP exporter | Vercel Tracing since 2026-11-06: Hobby 3 days, Pro and Enterprise 14 days (before: 1 h, 1 day, 3 days) (Documented) |
 
 Connect launched in beta and became generally available on 2026-08-25; the Observability tab and the `connect` drain type arrived on 2026-08-11 (Documented, changelog).
+
+Trigger providers: Slack, Discord, Microsoft Teams, GitHub and Linear, and since 2026-10-29 also Resend, X, Twilio, Notion and Telegram. Connect verifies each incoming request, answers provider heartbeats and verification challenges itself, and registers the provider webhook automatically for Resend and Telegram; for Twilio, Notion and X you paste Connect's webhook URL into the provider. Connect verifies and forwards these the same way as for the earlier providers (Documented, changelog 2026-10-29 and Triggers docs). The events reference is provider-neutral, so they are expected as Inbound Trigger and Forward Trigger events with the provider's event type in `externalEventType` (Not observed). The connector's Observability tab has a **Live** view that streams incoming trigger events with request details (Documented, changelog 2026-10-29). The Triggers docs (last updated 2026-09-18) still say the dashboard shows aggregate trigger metrics rather than a per-event delivery log. Forwarding retries a delivery up to three times when your project answers `500`, `502`, `503` or `504` (Documented).
 
 ## 2. Out-of-the-box shape
 
 ### Connect events (Documented)
 
-No record has been captured: the lab team has no `connect` drain, and no API returns these events. The shape below is from Vercel's events reference (read 2026-10-27, page last updated 2026-08-11). Each event is a JSON object; the drain delivers "each event as a JSON webhook payload".
+No record has been captured, and no API returns these events. The lab's `connect` drain, created 2026-10-28 and scoped to `petclinic-agent`, delivered no records from 2026-10-28 to 2026-11-12; the project has no connector, so there was nothing to send (Not observed). The shape below is from Vercel's events reference (read 2026-10-27, page last updated 2026-08-11). Each event is a JSON object; the drain delivers "each event as a JSON webhook payload".
 
 Common fields:
 
@@ -101,7 +104,7 @@ Neither lab project calls Connect, so no span exists. From the code:
 | --- | --- | --- |
 | `connect` drain | Every Connect event, beyond the 3-day Pro retention | $0.50 per GB of drained JSON (Documented); the events are small |
 | Observability Plus | The `vercel.external_api_request.*` view of token requests (count, duration, status per connector path) | $1.20 per 1M events (Documented) |
-| Trigger forwarding | Inbound Trigger and Forward Trigger events, with your receiver's `statusCode` | $0.95 per 1,000 triggers on Pro; each destination counts once; an event with no destination still counts (Documented) |
+| Trigger forwarding | Inbound Trigger and Forward Trigger events, with your receiver's `statusCode`; ten providers since 2026-10-29 | $0.95 per 1,000 triggers on Pro; each destination counts once; an event with no destination still counts (Documented) |
 | Enterprise | 30-day event retention, connector audit logs, role-based access (Documented) | Contract |
 | `@vercel/otel` / eve | `fetch` spans for token requests; eve connection spans | None |
 
@@ -109,7 +112,7 @@ Neither lab project calls Connect, so no span exists. From the code:
 
 | Signal | Exit path | Tested configuration |
 | --- | --- | --- |
-| Connect events | Drain, schema `connect` v1, delivery `http` to a custom endpoint, JSON or NDJSON | Validation only: `POST /v1/drains/test` with `{"schemas":{"connect":{"version":"v1"}},"delivery":{"type":"http",…,"encoding":"ndjson"}}` returned `200` and ran a test delivery (Captured: `api-drains-test-connect.txt`). No drain created |
+| Connect events | Drain, schema `connect` v1, delivery `http` to a custom endpoint, JSON or NDJSON | Validation only: `POST /v1/drains/test` with `{"schemas":{"connect":{"version":"v1"}},"delivery":{"type":"http",…,"encoding":"ndjson"}}` returned `200` and ran a test delivery (Captured: `api-drains-test-connect.txt`). A `connect` drain scoped to `petclinic-agent` was then created on 2026-10-28; it delivered no records through 2026-11-12, as the project has no connector (Not observed) |
 | Connect events | REST API or CLI | None exists: `vercel api list` has no Connect events endpoint, and `vercel connect` has no events subcommand (Observed, CLI 65.2.0) |
 | Connector config changes | Activity Log: `vercel activity --type connect-create-connector,…`, `GET /v3/events?withPayload=true` | Ran read-only (Captured). Audit Log drain on Enterprise |
 | Token request volume and latency | `vercel metrics vercel.external_api_request.* --filter "requestPath:/v1/connect/*"` | Ran read-only (Captured). No drain carries metrics |
@@ -121,7 +124,7 @@ What can't leave Vercel: provider tokens and webhook bodies (by design); the Obs
 
 ## 5. In Bronto
 
-Not observed: the lab has no `connect` drain. With the drain pointed at Bronto's HTTP ingestion (`https://ingestion.eu.bronto.io/`, NDJSON, `x-bronto-collection` and `x-bronto-dataset` headers as for the log drain), each event becomes one log record with the fields as delivered (`eventType`, `clientId`, `subjectType`, `"statusCode"`). Queries belong here once records exist; the first ones to run are token requests per connector (`group by clientId`) and failed forwards (`status = 'error'`, `group by destinationPath, statusCode`).
+Not observed: the lab's `connect` drain, created 2026-10-28 for `petclinic-agent` with target dataset `petclinic-agent/vercel-connect`, had delivered no records by 2026-11-12, because that project has no connector. With the drain pointed at Bronto's HTTP ingestion (`https://ingestion.eu.bronto.io/`, NDJSON, `x-bronto-collection` and `x-bronto-dataset` headers as for the log drain), each event becomes one log record with the fields as delivered (`eventType`, `clientId`, `subjectType`, `"statusCode"`). Queries belong here once records exist; the first ones to run are token requests per connector (`group by clientId`) and failed forwards (`status = 'error'`, `group by destinationPath, statusCode`).
 
 ## Gotchas
 
@@ -151,4 +154,6 @@ Other team projects' IDs are replaced with `prj_OTHER_n`, people with `user-n`, 
 ## Sources
 
 - Vercel docs, read 2026-10-27: [Vercel Connect](https://vercel.com/docs/connect) (last updated 2026-10-14), [Connect Observability and events reference](https://vercel.com/docs/connect/observability) (2026-08-11), [Connect Pricing](https://vercel.com/docs/connect/pricing), [Connectors](https://vercel.com/docs/connect/concepts/connectors), [`vercel connect`](https://vercel.com/docs/cli/connect), [Working with Drains](https://vercel.com/docs/drains) (2026-09-01), [Using Drains](https://vercel.com/docs/drains/using-drains) (2026-09-17), [Validate Drain delivery configuration](https://vercel.com/docs/rest-api/drains/validate-drain-delivery-configuration), [Vercel Connect adds observability support](https://vercel.com/changelog/vercel-connect-adds-observability-support) (2026-08-11), [Vercel Connect GA](https://vercel.com/changelog/vercel-connect-ga) (2026-08-25).
+- Read 2026-11-12: [Vercel Connect adds webhook triggers for more providers](https://vercel.com/changelog/vercel-connect-adds-webhook-triggers-for-more-providers) (2026-10-29), [Webhook triggers for Vercel Connect](https://vercel.com/docs/connect/concepts/triggers) (last updated 2026-09-18), [Connect Observability](https://vercel.com/docs/connect/observability) (unchanged, 2026-08-11), [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06, trace retention).
+- Lab, 2026-11-12: record count in the `connect` drain's target dataset in Bronto EU, 2026-10-28 to 2026-11-12: none.
 - Lab, 2026-10-27: Vercel CLI 65.2.0 `vercel connect list|discover|create --help|--help`, `vercel activity`, `vercel metrics`, `vercel api list`, `vercel api /v1/drains` (no `connect` drain among the team's 49), `vercel api /v1/drains/test`; package source `@vercel/connect` 2.5.2 and eve 0.81.0 in `petclinic-agent/node_modules`.

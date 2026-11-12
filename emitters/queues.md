@@ -9,13 +9,14 @@
 | Signals | Logs (consumer function) · Traces (edge, runtime, library) · Metrics (inside Vercel only) |
 | Exit paths | Log drain (`source: lambda`) · Trace drain · OTLP from code |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · eve 0.81.0 (bundles Workflow 5.2.0 and its Vercel Queue client) · durable-harness 0.0.1-beta.6 · lab project `petclinic-agent`, data up to 2026-10-26 10:00 UTC |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · workflow 5.5.0 · Vercel CLI 65.14.0 (`vercel metrics schema vercel.queue_operation`: unchanged) |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Logs | The consumer function's records for each delivery (report line, your output, library errors) | Runtime Logs, `vercel logs` | As for Functions (Documented) |
-| Traces | Edge span for each delivery (`POST <consumer route>`), runtime spans for queue API calls, library spans if OpenTelemetry is registered | Observability › Tracing, trace drain | As for Functions (Documented) |
+| Traces | Edge span for each delivery (`POST <consumer route>`), runtime spans for queue API calls, library spans if OpenTelemetry is registered | Observability › Tracing, trace drain | Hobby 3 days, Pro and Enterprise 14 days since Tracing GA on 2026-11-06; before that as runtime logs (Hobby 1 hour, Pro 1 day, Enterprise 3 days) (Documented) |
 | Metrics | `vercel.queue_operation.count`, `.delivery_count`, `.message_age_on_receive_ms`, `.retention_seconds`, `.visibility_timeout` | Observability › Queues, Query, `vercel metrics` | As for other Observability metrics (Documented) |
 | Events | None. No event for an expired or dropped message, no dead-letter queue (Documented) | | |
 
@@ -97,6 +98,7 @@ POST /.well-known/workflow/v1/flow                                   vercel.edge
    └─ POST ingestion.eu.bronto.io/v1/traces                          vercel.serverless-runtime    8.0 ms   the app's own OTLP export
 ```
 
+- The `POST vercel-workflow.com/…/events/run_started` runtime span is the Workflow SDK's event write. Since Workflow 5.2.0 most other event writes (step and hook events) go over a WebSocket and don't appear as runtime spans; `run_started` and `run_created` mostly still do (see the Workflow entry). A sleeping run's wake-up, as here, writes only `run_started`.
 - The edge span has `http.request.header.user-agent: vercel-queue/v2beta` and a **parent span ID** (`4908ace3cceda9dc`) that isn't in the drain: the queue service's own span, which Vercel doesn't export (Captured: `span-queue-delivery-edge.json`).
 - The runtime spans for queue calls use older HTTP attributes: `http.method`, `http.host`, `http.target`, `http.status_code` (`201` on send) (Captured: `span-runtime-queue-send.json`, `span-runtime-queue-ack.json`).
 
@@ -185,4 +187,5 @@ For redeliveries and message age, the numbers live in Vercel: query them with `v
 ## Sources
 
 - Vercel docs, read 2026-10-16 to 2026-10-20: [Queues concepts](https://vercel.com/docs/queues/concepts), [Queues observability](https://vercel.com/docs/queues/observability), [Queues pricing and limits](https://vercel.com/docs/queues/pricing).
-- Lab: Bronto EU datasets `petclinic-agent/vercel-logs`, `.traces/vercel-traces`, `.traces/petclinic-agent`, 2026-10-12 to 2026-10-26 10:00 UTC; Vercel CLI 65.2.0 (`vercel metrics vercel.queue_operation.*`, `vercel metrics schema`); eve 0.81.0 source in `node_modules/eve/dist`.
+- Read 2026-11-12: [Workflow SDK now writes over WebSockets on Vercel](https://vercel.com/changelog/workflow-writes-now-use-websockets-on-vercel) (2026-11-09), [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06).
+- Lab: lab backend (Bronto EU) datasets `petclinic-agent/vercel-logs`, `.traces/vercel-traces`, `.traces/petclinic-agent`, 2026-10-12 to 2026-10-26 10:00 UTC; Vercel CLI 65.2.0 (`vercel metrics vercel.queue_operation.*`, `vercel metrics schema`); eve 0.81.0 source in `node_modules/eve/dist`.

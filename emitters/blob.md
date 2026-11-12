@@ -9,13 +9,14 @@
 | Signals | Traces (with an undici instrumentation) · Other: usage and cost records, store metadata. No logs or metrics of its own |
 | Exit paths | Trace drain (with an undici instrumentation in code) · REST API (`GET /v1/billing/charges`, `GET /v1/storage/stores/{id}`) |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `@vercel/blob` 2.8.2 (bundles `undici` 6.29.1) · `@vercel/otel` 2.1.3 · `@opentelemetry/instrumentation-undici` 0.34.0 (deployed 2026-10-27 10:03 UTC) · Next.js 16.4.3 · lab project `vercel-observability-lab` |
+| Refreshed | 2026-11-12 · docs, changelog and releases to 2026-11-12, no new captures · `@vercel/blob` 2.9.0 (2026-11-09; still depends on and imports its own `undici` 6.x, checked in the published `dist`, so Gotcha 1 still applies) · Vercel CLI 65.14.0 |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Logs | Nothing from Blob. Your own `console` lines around the calls; with `DEBUG=blob`, the SDK's `console.debug` lines (from source, not tested) | Runtime Logs, log drain | As for Functions |
-| Traces | Nothing by default: the calls run inside the function's spans without a child span. With `@opentelemetry/instrumentation-undici`: one `SPAN_KIND_CLIENT` span per Blob API call (Captured) | Trace drain | As for Functions |
+| Traces | Nothing by default: the calls run inside the function's spans without a child span. With `@opentelemetry/instrumentation-undici`: one `SPAN_KIND_CLIENT` span per Blob API call (Captured) | Trace drain | Vercel Tracing since 2026-11-06: Hobby 3 days, Pro and Enterprise 14 days (before: 1 h, 1 day, 3 days) (Documented); drained spans: your backend's retention |
 | Metrics | None. No Blob metric in `vercel metrics schema`, and Blob calls are not in `vercel.external_api_request.*` (Observed) | | |
 | Usage and cost | `Blob Storage Size`, `Blob Simple Operations`, `Blob Advanced Operations`, `Blob Data Transfer`, one line per region per billing day | Usage page, Blob Observability page in the dashboard (Documented), `GET /v1/billing/charges` | See the Billing entry |
 | Store metadata | Object count, total size, region, access, connected projects | `vercel blob get-store`, `GET /v1/storage/stores/{id}` | Current state only |
@@ -233,6 +234,7 @@ Queries run 2026-10-27 against the lab's drained data (from 08:43 UTC; the undic
 
 ## Sources
 
+- Read 2026-11-12: [`@vercel/blob` 2.9.0 release notes](https://github.com/vercel/storage/releases/tag/%40vercel%2Fblob%402.9.0) (TTL options; no telemetry change), package `dist` and `package.json` of 2.9.0; [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06, trace retention).
 - Vercel docs, read 2026-10-27: [Vercel Blob Pricing](https://vercel.com/docs/vercel-blob/usage-and-pricing) (last updated 2026-09-23), [Webhooks API reference](https://vercel.com/docs/webhooks/webhooks-api) (last updated 2026-09-17), [List FOCUS billing charges](https://vercel.com/docs/rest-api/billing/list-focus-billing-charges).
 - Source: `@vercel/blob` 2.8.2 (`dist/chunk-XKVPKJPO.js`, `package.json`), `@vercel/otel` 2.1.3 (`dist/edge/index.js`, `dist/node/index.js`, fetch instrumentation), `@opentelemetry/instrumentation-undici` 0.34.0 (npm metadata), `undici` 6.29.1 (`lib/core/diagnostics.js`), the lab's built server chunk.
 - Lab: Bronto EU datasets `vercel-observability-lab/vercel-logs` and `.traces/vercel-observability-lab`, 2026-10-27 08:43 to 08:50 UTC and 10:03 to 10:10 UTC (undici instrumentation, deployments `dpl_9aBXamwMGAtPV1yDNvA8pY9xnFiE`, `dpl_EWQV89riJZ21sXkqT7waRB8wQhG5`, `dpl_42HLZRGEErtMw8aedmJ4Lq6LB1GX`); `vercel metrics` and `vercel blob get-store` (CLI 65.2.0); `GET /v1/billing/charges` for the billing day 2026-10-26; `GET /v1/storage/stores/store_186lljFsKYsfqxFe`; local undici test, 2026-10-27; `lab/NOTES.md`.

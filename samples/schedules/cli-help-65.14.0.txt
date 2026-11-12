@@ -1,0 +1,83 @@
+=== vercel schedules --help
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 65.14.0 | schedules is in beta — https://vercel.com/feedback
+▲ vercel schedules <command> [options]
+Manage schedules for the current project
+
+Commands:
+  list            List schedules
+  inspect <name>  Show a schedule
+  create <name>   Create a schedule
+  update <name>   Update a schedule
+  enable <name>   Enable a schedule
+  disable <name>  Disable a schedule
+  invoke <name>   Invoke a schedule immediately
+  delete <name>   Delete a schedule
+  executions      Inspect schedule execution history
+
+Options:
+  --local  Use the local Schedules session started by vercel dev
+
+Global Options: See `vercel --help`
+=== vercel schedules executions --help
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 65.14.0 | schedules is in beta — https://vercel.com/feedback
+▲ vercel schedules executions <command> [options]
+Inspect schedule execution history
+
+Commands:
+  list <name>  List executions for a schedule
+
+Options:
+  --local  Local execution history is not supported
+
+Global Options: See `vercel --help`
+
+Examples:
+  List recent executions for a schedule
+    vercel schedules executions list daily-cleanup
+=== vercel schedules executions list --help
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 65.14.0 | schedules is in beta — https://vercel.com/feedback
+▲ vercel schedules executions list <name> [options]
+List executions for a schedule
+
+Options:
+  -e, --environment <ENVIRONMENT>  Use the schedules of production or a custom
+                                   environment by name or ID (default:
+                                   production)
+  --execution <EXECUTION>          Filter by execution ID substring
+  --git-branch <BRANCH>            Use the schedules of a Git branch's
+                                   deployments in the linked repository
+  --json                           Output as JSON
+  -n, --limit <NUMBER>             Number of results to return per page
+                                   (default: 20, max: 100)
+  --local                          Local execution history is not supported
+  --namespace <NAMESPACE>          Use a schedule namespace (default: default)
+  --next <CURSOR>                  Show the next page using the cursor from the
+                                   previous output
+  -s, --since <TIME>               Start time: ISO 8601 or relative, like 1h or
+                                   7d (at most 30 days before --until)
+  --sort <ORDER>                   Sort by time: asc or desc (default: desc)
+  -u, --until <TIME>               End time: ISO 8601 or relative; requires
+                                   --since (default: now)
+  --user <USER>                    Use the schedules of CLI deployments by a
+                                   user ID
+
+Global Options: See `vercel --help`
+
+Examples:
+  List recent executions for a schedule
+    vercel schedules executions list daily-cleanup
+
+  List executions from the last 7 days
+    vercel schedules executions list daily-cleanup --since 7d
+
+  List executions in a time range
+    vercel schedules executions list daily-cleanup --since 2026-09-01T00:00:00Z --until 2026-09-02T00:00:00Z
+
+  Continue listing executions
+    vercel schedules executions list daily-cleanup --next <CURSOR>
+
+  List executions as JSON
+    vercel schedules executions list daily-cleanup --json

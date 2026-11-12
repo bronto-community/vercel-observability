@@ -9,16 +9,19 @@
 | Signals | Traces · Metrics (inside Vercel only) · Generation lookup API |
 | Exit paths | AI Gateway trace drain · REST API (generation lookup, Custom Reporting) |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · lab project `petclinic-agent` · data 2026-10-19 to 2026-10-23 (the lab's model traffic stopped 2026-10-23 22:00 UTC) |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 (`vercel metrics schema vercel.ai_gateway`) |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Traces | One trace per request: `<operation> <model>` root, `vercel.ai_gateway.routing`, one `vercel.ai_gateway.model_attempt <model>` per model in the fallback chain, one `<model> (<provider>)` per upstream call | AI Gateway › Logs (per request, with a "Routed to" card per attempt), AI Gateway trace drain | Routing details 30 days, list 36 days (Documented) |
-| Metrics | `vercel.ai_gateway.request.*`: 32 metrics, among them `count`, `cost`, `input_tokens`, `output_tokens`, `cached_input_tokens`, `time_to_first_token_ms`, `request_duration_ms` | AI Gateway › Overview, `vercel metrics` | As other Observability metrics (Documented) |
+| Metrics | `vercel.ai_gateway.request.*`: 35 metrics on 2026-11-12, among them `count`, `cost`, `input_tokens`, `output_tokens`, `cached_input_tokens`, `time_to_first_token_ms`, `request_duration_ms` | AI Gateway › Overview, `vercel metrics` | As other Observability metrics (Documented) |
 | Generation record | Cost, latency, tokens and finish reason per generation ID | `GET https://ai-gateway.vercel.sh/v1/generation?id=…`, `gateway.getGenerationInfo()` in the AI SDK | Not documented |
 
-The metric catalog is in [`reference/vercel-metrics-schema.json`](../reference/vercel-metrics-schema.json). Every `ai_gateway.request` metric has 63 dimensions, among them `aiModel`, `aiProvider`, `isByok`, `appName`, `httpStatus`, `generationId`, `sessionId`, `evaluationFallbackTriggered` and `routerAttempts`.
+The metric catalog of 2026-10-26 is in [`reference/vercel-metrics-schema.json`](../reference/vercel-metrics-schema.json). Every `ai_gateway.request` metric then had 63 dimensions, among them `aiModel`, `aiProvider`, `isByok`, `appName`, `httpStatus`, `generationId`, `sessionId`, `virtualModelSlug`, `virtualModelKind`, `evaluationFallbackTriggered` and `routerAttempts`.
+
+On 2026-11-12 (`vercel metrics schema vercel.ai_gateway --json`, CLI 65.14.0, Observed) there are two more metrics, `request.billed_cost` ("cost plus ZDR, reporting write, allowlist and quota write surcharges", USD) and `request.succeeded_requests` (requests with a 2xx status), and every request metric has 73 dimensions. The ten new ones: `keyCreatedBy`, `keySpendAttribution`, `keyIsDeleted`, `credentialOwnerId`, `codingAgent`, `hasCachedInputTokens`, `appliedRuleId`, `requestAppliedRuleId`, `qualityTtftEligible`, `qualityTpsEligible`. Gateway tool calls already had their own metrics, `request.gateway_tool_call_count` and `request.gateway_tool_call_cost`.
 
 ## 2. Out-of-the-box shape
 
@@ -65,7 +68,7 @@ Resource attributes: `service.name: ai-gateway`, `service.namespace: vercel`. St
 
 Not seen in the lab, though documented: `vercel.ai_gateway.api_key.*`, `.service_tier`, `.tags`, `.user.id` (the lab sends no tags or user, which Custom Reporting bills per write).
 
-**Routing span**: `vercel.ai_gateway.vmc.used = false`, nothing else in the lab (Captured: `span-routing.json`).
+**Routing span**: `vercel.ai_gateway.vmc.used = false`, nothing else in the lab (Captured: `span-routing.json`). For a request through a virtual model, Vercel documents `vercel.ai_gateway.vmc.id` (the slug), `vmc.used = true`, `routing.provider_only_filter` and `routing.custom_provider_order` on this span, and `routing.inference_geo_region` where the provider endpoint has a region (Documented, trace drain reference; Not observed, see "Virtual models" below).
 
 **Model attempt span**: `gen_ai.request.model`, `vercel.ai_gateway.model_attempt.index`, `.total`, `.is_last`, `.success`, `.provider_attempt_count`. Always zero duration (Captured: `span-model-attempt.json`).
 
@@ -89,6 +92,26 @@ With `providerOptions.gateway.models: ['google/gemini-3.8-flash']` and the prima
 - cost was $0.00315 for 4,116 input tokens, about 10 times a Haiku call of that size.
 
 No production request fell back or had a failed provider attempt in the period (`attempt.success = false`: 0, Observed). One request was routed to `vertexAnthropic` for the same Haiku model on its first attempt; the provider span shows it (`anthropic/claude-haiku-5.5 (vertexAnthropic)`, `gen_ai.provider.name = gcp.vertex_ai`).
+
+### Virtual models
+
+Since 2026-10-28, a virtual model is a saved configuration called with the model ID `vmc/<slug>`: the model, provider order and `only` filter, fallbacks, regional inference, compliance settings, provider options and observability tags (Documented). Where it shows up:
+
+| Place | What | Evidence |
+| --- | --- | --- |
+| Routing span | `vercel.ai_gateway.vmc.id`, `vmc.used`, `routing.provider_only_filter`, `routing.custom_provider_order` | Documented |
+| Metrics | `virtualModelSlug`, `virtualModelKind` dimensions on every request metric | Schema, Observed |
+| Virtual Models page | Requests, spend and success rate per virtual model | Documented (launch post) |
+| Tags | The virtual model's observability tags replace any tags the request sends, so they land in `vercel.ai_gateway.tags` and Custom Reporting | Documented |
+| AI SDK result | `providerMetadata.gateway.virtualModelConfig.modelId` names the virtual model | Documented |
+
+Which value `gen_ai.request.model` takes on the root span for a `vmc/` request (the slug or the underlying model) isn't documented; Not observed, the lab used no virtual model. A team's allowlists and budgets still apply to the underlying model (Documented).
+
+### Gateway tools and Token Pass
+
+Gateway-provided tools are billed per call on top of model tokens; DeepSeek Search and DeepSeek Fetch, added 2026-11-06, cost $0.75 per 1,000 billable requests each, with no charge for failed, timed-out or empty requests (Documented). They count in `request.gateway_tool_call_count` and `request.gateway_tool_call_cost` (schema). The trace drain reference (last updated 2026-09-08) lists no tool-call attributes, so whether a tool call is visible on the gateway's spans is undocumented; Not observed.
+
+Since 2026-11-06, Token Pass credit applies to included model usage for any API key, OIDC token or fx login, and requests from a standard key or OIDC token fall back to the team's AI Gateway credits when it runs out (Documented). How a Token Pass request differs from a credit-funded one in spans or metrics isn't documented (`spendAttribution` and `keySpendAttribution` are candidate dimensions; Not observed).
 
 ### BYOK
 
@@ -136,14 +159,14 @@ Anthropic exports its own spans for Claude API requests to an OTLP/HTTP endpoint
 
 The span `anthropic.messages.create` (`service.name: claude-platform`) carries `anthropic.request.id`, the model, token usage, `anthropic.response.service_tier`, cache-write detail by TTL, and, unlike the gateway, the prompt, system instructions and output (`gen_ai.input.messages`, `gen_ai.output.messages`) (Captured: `span-claude-platform-messages-create.json`).
 
-The gateway doesn't pass a `traceparent` upstream, so this span is the root of its own trace. All 57 BYOK requests matched an Anthropic span on `anthropic.request.id` = the gateway's `vercel.ai_gateway.attempt.provider_request_id`, and all 57 Anthropic spans had no parent (Observed). Join by request ID.
+The gateway doesn't pass a `traceparent` upstream, so this span is the root of its own trace (still the case on 2026-11-12, docs and releases checked). All 57 BYOK requests matched an Anthropic span on `anthropic.request.id` = the gateway's `vercel.ai_gateway.attempt.provider_request_id`, and all 57 Anthropic spans had no parent (Observed). Join by request ID.
 
 ## 4. Getting it out
 
 | Signal | Exit path | Tested configuration |
 | --- | --- | --- |
 | Gateway traces | AI Gateway trace drain: schema `ai_gateway`, version `otelv1`, delivery `otlphttp`, encoding `proto` | Drain "Pet Clinic AI Gateway Drain", one project, created in the dashboard |
-| Gateway traces | A `trace` drain | Delivers none of them (research D6, 2026-10-20) |
+| Gateway traces | A `trace` drain | Delivers none of them (lab test, 2026-10-20) |
 | Metrics | None. Pull with `vercel metrics --json` (Plus) | |
 | Per-request cost from your code | `providerMetadata.gateway.cost` / `generationId` in the AI SDK response (see the AI SDK entry) | |
 | Generation records | `GET /v1/generation` | Documented |
@@ -159,7 +182,7 @@ The drain as the Vercel API returns it (`GET /v1/drains`, secret removed; Captur
   "delivery": { "type": "otlphttp", "endpoint": { "traces": "<your endpoint>/v1/traces" }, "encoding": "proto" } }
 ```
 
-Vercel's REST API reference lists the drain schemas `log`, `trace`, `analytics`, `speed_insights`, `audit_log` and `connect`, not `ai_gateway` (research D6). The dashboard creates the drain; whether `POST /v1/drains` accepts this schema is Not observed.
+Vercel's REST API reference lists the drain schemas `log`, `trace`, `analytics`, `speed_insights`, `audit_log` and `connect`, not `ai_gateway` (read 2026-10-20). The dashboard creates the drain; whether `POST /v1/drains` accepts this schema is Not observed.
 
 ### Joining the caller's trace
 
@@ -239,5 +262,6 @@ Queries over the lab's last 7 days, run 2026-10-26 (traffic 2026-10-19 to 2026-1
 ## Sources
 
 - Vercel docs, read 2026-10-26: [AI Gateway Trace Drains](https://vercel.com/docs/ai-gateway/observability-and-spend/trace-drains) (last updated 2026-09-08); read 2026-10-16: [Observability](https://vercel.com/docs/ai-gateway/observability-and-spend/observability), [Logs](https://vercel.com/docs/ai-gateway/observability-and-spend/logs), [Custom Reporting](https://vercel.com/docs/ai-gateway/observability-and-spend/custom-reporting), [Model fallbacks](https://vercel.com/docs/ai-gateway/models-and-providers/model-fallbacks), [changelog 2026-08-05](https://vercel.com/changelog/export-ai-gateway-traces-with-vercel-drains).
+- Read 2026-11-12: [AI Gateway Trace Drains](https://vercel.com/docs/ai-gateway/observability-and-spend/trace-drains) (still last updated 2026-09-08; virtual model attributes), [Virtual models](https://vercel.com/docs/ai-gateway/models-and-providers/virtual-models) (last updated 2026-10-02), changelog [Virtual models now available on AI Gateway](https://vercel.com/changelog/virtual-models-now-available-on-ai-gateway) and blog [Introducing Virtual Models on AI Gateway](https://vercel.com/blog/ai-gateway-virtual-models) (2026-10-28), [AI Gateway adds DeepSeek Search and Fetch tools](https://vercel.com/changelog/ai-gateway-adds-deepseek-search-and-fetch-tools) (2026-11-06), [Token Pass credit now applies automatically across AI Gateway](https://vercel.com/changelog/token-pass-credit-now-applies-automatically-across-ai-gateway) (2026-11-06).
 - eve 0.81.0 docs (`docs/guides/instrumentation/otel.mdx`, trace topology section).
-- Lab: Bronto EU datasets `.traces/ai-gateway`, `.traces/claude-platform`, `.traces/petclinic-web`, `.traces/petclinic-agent`, 2026-10-19 to 2026-10-23; `vercel metrics vercel.ai_gateway.request.*` (CLI 65.2.0, Observability Plus) for 2026-10-22; `GET /v1/drains`; research I-lab-findings D6, T4.
+- Lab: lab backend (Bronto EU) datasets `.traces/ai-gateway`, `.traces/claude-platform`, `.traces/petclinic-web`, `.traces/petclinic-agent`, 2026-10-19 to 2026-10-23; `vercel metrics vercel.ai_gateway.request.*` (CLI 65.2.0, Observability Plus) for 2026-10-22; `GET /v1/drains`; `vercel metrics schema vercel.ai_gateway --json` (CLI 65.14.0, 2026-11-12).

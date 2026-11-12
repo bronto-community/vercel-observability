@@ -5,17 +5,18 @@
 | | |
 | --- | --- |
 | Kind | Platform service (Vercel CDN: static files, ISR, PPR, cached responses) |
-| Plans | Logs and traces on all plans in the dashboard; drains need Pro or Enterprise; metrics queries need Observability Plus |
+| Plans | Logs on all plans in the dashboard; traces on all plans once the project has a tracing sampling rule (added by default for new Next.js 16.5+ projects since 2026-11-06; Hobby includes 1M span units a month); drains need Pro or Enterprise; metrics queries need Observability Plus |
 | Signals | Logs · Traces · Metrics (inside Vercel only) |
 | Exit paths | Log drain (`source: static`, `source: lambda`) · Trace drain |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · Next.js 16.3.6 (ISR page `/vets`, `revalidate = 60`; no PPR route) · lab project `petclinic-agent` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 docs |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Logs | One record per request served from a static file or the cache; one report line per ISR revalidation | Runtime Logs (Cache, Cache Reason, Cache Age, PPR State columns), `vercel logs` | Hobby 1 h, Pro 1 day, Enterprise 3 days, Plus 30 days (Documented) |
-| Traces | Root span `GET <route>` with `vercel.cache_level` and `http.response.header.x-vercel-cache` for ISR pages and functions; `Resolve Cache` span on cache lookups that miss | Observability › Tracing, trace drain | As for logs (Documented) |
+| Traces | Root span `GET <route>` with `vercel.cache_level` and `http.response.header.x-vercel-cache` for ISR pages and functions; `Resolve Cache` span on cache lookups that miss | Traces page (Vercel Tracing), `vercel traces`, trace drain | In Vercel: Hobby 3 days, Pro 14 days, Enterprise 14 days since 2026-11-06; before that as for logs (Documented). Drained spans: your backend's retention |
 | Metrics | `vercel.request.*` (count, Fast Data Transfer, routing CPU) with cache dimensions; `vercel.isr_operation.*` (count, read and write bytes, read and write units) | Observability › CDN, ISR; Query; `vercel metrics` | Hobby 12 h, Pro 1 day, Enterprise 3 days, Plus 30 days (Documented) |
 
 `vercel.request.*` has 60 dimensions, among them `pathType`, `cacheResult`, `cacheHitState`, `cacheHitLevel`, `cacheReason`, `pprState`, `cacheTags`, `triggeringTag`, `isrCacheRegion` and `route`. `vercel.isr_operation.*` adds `isrAction` (`write`, `shieldRead`, `ephemeralRead`) ([`reference/vercel-metrics-schema.json`](../reference/vercel-metrics-schema.json)).
@@ -203,4 +204,5 @@ Templates: the "Vercel Overview" dashboard has a cache state panel over the log 
 ## Sources
 
 - Vercel docs, read 2026-10-26: [Log Drains reference](https://vercel.com/docs/drains/reference/logs) (last updated 2026-09-11); read 2026-10-16 to 2026-10-20: [Cache Status](https://vercel.com/docs/caching/cache-status), [PPR state](https://vercel.com/docs/partial-prerendering/ppr-state), [Observability Plus](https://vercel.com/docs/observability/observability-plus), [`vercel metrics`](https://vercel.com/docs/cli/metrics).
+- Docs, read 2026-11-12: [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06), [Tracing](https://vercel.com/docs/tracing) and [Configuring Tracing](https://vercel.com/docs/tracing/configure-tracing) (both last updated 2026-11-03; retention, sampling rules, span units), [Trace Drains reference](https://vercel.com/docs/drains/reference/traces) (last updated 2026-08-21), [Runtime Logs](https://vercel.com/docs/logs/runtime) (last updated 2026-08-28; log retention unchanged).
 - Lab: `apps/web/app/vets/page.tsx` (`revalidate = 60`), synthetic traffic from `apps/web/app/api/synthetic/route.ts` (stopped 2026-10-23 22:00 UTC); Bronto EU datasets `petclinic-agent/vercel-logs` and `.traces/vercel-traces`, 2026-10-18 to 2026-10-26; Vercel CLI 65.2.0 `vercel metrics` for 2026-10-23.

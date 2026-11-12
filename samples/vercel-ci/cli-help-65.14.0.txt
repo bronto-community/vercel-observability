@@ -1,0 +1,146 @@
+=== vercel ci --help
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 65.14.0 | ci is in beta
+▲ vercel ci <command>
+Inspect Vercel CI and rerun runs
+
+Commands:
+  enable         Enable Vercel CI for the current repository. The repository
+                 must be connected to a project on the current team
+  disable        Disable Vercel CI for the current repository. The repository
+                 must be connected to a project on the current team
+  list           List Vercel CI runs for the current repository
+  inspect [run]  Show the jobs and tasks of a Vercel CI run (default: the run
+                 for the current commit)
+  logs [run]     Show task logs for a Vercel CI run (default: the run for the
+                 current commit)
+  grep <text>    Search the task logs of recent Vercel CI runs for the current
+                 repository (default: the last 20 runs on the current branch)
+  rerun [run]    Start a new attempt of a finished Vercel CI run (default: a
+                 failed run for the current commit; succeeded or skipped runs
+                 require a run ID)
+
+Global Options: See `vercel --help`
+=== vercel ci logs --help
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 65.14.0 | ci is in beta
+▲ vercel ci logs [run] [options]
+Show task logs for a Vercel CI run (default: the run for the current commit)
+
+Options:
+  --attempt <NUMBER>    Show logs for this attempt of the run (default: the
+                        latest attempt)
+  --failed              Only show logs for tasks that failed (cannot be combined
+                        with --follow)
+  -f, --follow          Stream logs for one task (requires --task; JSON uses
+                        JSONL). Reconnect replay is bounded; stopping does not
+                        cancel the run
+  --grep <TEXT>         Only show log lines containing this text, ignoring case.
+                        Searches every task in the run
+  --json                Output as JSON
+  --level <LEVEL>       Only show log lines with this level (trace, debug,
+                        command, info, warn, error, systemError, fatal); can be
+                        repeated
+  -n, --limit <NUMBER>  Maximum number of tasks to show (default: 10, max: 25)
+  --task <NAME>         Only show logs for this task (e.g., web#test); can be
+                        repeated
+
+Global Options: See `vercel --help`
+
+Examples:
+  Show logs for the failed tasks of the current commit
+    vercel ci logs --failed
+
+  Find every line mentioning a warning across the run
+    vercel ci logs --grep WARNING
+
+  Show only error lines for one task
+    vercel ci logs --task web#test --level error --level fatal
+
+  Stream a running task
+    vercel ci logs <run> --task web#build --follow
+=== vercel ci list --help
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 65.14.0 | ci is in beta
+▲ vercel ci list [options]
+List Vercel CI runs for the current repository
+
+Options:
+  --all-branches         List runs for every branch of the repository
+  --commit <SHA>         Only list runs for this commit on the current branch or
+                         --git-branch; cannot combine with --all-branches
+  --git-branch <BRANCH>  Only list runs for this Git branch (default: the
+                         current branch)
+  --json                 Output as JSON
+  -n, --limit <NUMBER>   Number of results to return per page (default: 20, max:
+                         100)
+  --next <CURSOR>        Show the next page using the cursor from the previous
+                         output
+  --status <STATUS>      Only list runs with this status (queued, running,
+                         succeeded, failed, skipped)
+
+Global Options: See `vercel --help`
+
+Examples:
+  List runs for the current branch
+    vercel ci list
+
+  List failed runs across every branch
+    vercel ci list --all-branches --status failed
+
+  List runs as JSON
+    vercel ci list --json
+=== vercel ci inspect --help
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 65.14.0 | ci is in beta
+▲ vercel ci inspect [run] [options]
+Show the jobs and tasks of a Vercel CI run (default: the run for the current
+commit)
+
+Options:
+  --attempt <NUMBER>  Show this attempt of the run (default: the latest attempt)
+  --json              Output as JSON
+  --wait              Wait up to 10 minutes for the run to finish, then exit
+                      with 1 if it failed. Stopping the wait does not cancel the
+                      run
+
+Global Options: See `vercel --help`
+
+Examples:
+  Show the run for the current commit
+    vercel ci inspect
+
+  Wait for the current commit to finish and exit with its result
+    vercel ci inspect --wait
+
+  Show a specific run as JSON
+    vercel ci inspect <run> --json
+=== vercel ci grep --help
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 65.14.0 | ci is in beta
+▲ vercel ci grep <text> [options]
+Search the task logs of recent Vercel CI runs for the current repository
+(default: the last 20 runs on the current branch)
+
+Options:
+  --all-branches         Search runs across every branch
+  --git-branch <BRANCH>  Search runs for this Git branch (default: the current
+                         branch)
+  --json                 Output as JSON
+  --level <LEVEL>        Only show log lines with this level (trace, debug,
+                         command, info, warn, error, systemError, fatal); can be
+                         repeated
+  --runs <NUMBER>        Maximum recent runs to search (default: 20, max: 50);
+                         bounded scans can return fewer runs with an explicit
+                         partial-result notice
+  --status <STATUS>      Only search runs whose latest attempt has this status
+                         (queued, running, succeeded, failed, skipped)
+
+Global Options: See `vercel --help`
+
+Examples:
+  Search the recent runs of the current branch
+    vercel ci grep ECONNRESET
+
+  Search the last 50 failed runs across every branch
+    vercel ci grep "out of memory" --all-branches --status failed --runs 50

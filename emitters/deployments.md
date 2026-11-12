@@ -7,8 +7,9 @@
 | Kind | Platform service (deployments, promotion, rollback, Rolling Releases, domains) |
 | Plans | Webhooks on all plans; Rolling Releases on Pro (one project) and Enterprise (Documented) |
 | Signals | Events (webhooks); state through the REST API |
-| Exit paths | Webhook → your receiver → OTLP logs (lab code) · REST API |
+| Exit paths | Webhook → your receiver → OTLP logs (lab code) · Vercel MCP events (expiring webhooks managed by Vercel MCP, since 2026-10-30) · REST API |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · `@opentelemetry/sdk-logs`, `api-logs`, `exporter-logs-otlp-proto` 0.223.0 · Next.js 16.3.6 · lab project `petclinic-agent` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 (`vercel api /v1/webhooks`, read-only: same two webhooks, `deployment.*` events only) |
 
 ## 1. What it emits
 
@@ -16,7 +17,7 @@
 | --- | --- | --- | --- |
 | Events | Webhook events, one POST per event: `deployment.*`, `project.rolling-release.*`, `domain.*`, `project.domain.*`, `alerts.triggered`, `flag.*` and others | Your endpoint only; Vercel keeps no event log you can query | Retried up to 24 h on non-2xx, then discarded (Documented) |
 | Other | Deployment state and timings (`readyState`, `errorCode`, `buildingAt`, `ready`), Rolling Release state | REST API, `vercel inspect`, `vercel list` | With the deployment |
-| Other | Rolling Release comparison (traffic split, metrics per version) | Observability › Rolling Releases | Not exportable (Documented, research A1) |
+| Other | Rolling Release comparison (traffic split, metrics per version) | Observability › Rolling Releases | No export path documented; the docs suggest propagating the deployment ID to other systems to compare versions there (Documented, Rolling Releases, read 2026-11-12) |
 
 Event families relevant here (Documented, [Webhooks API](https://vercel.com/docs/webhooks/webhooks-api), last updated 2026-09-17):
 
@@ -43,7 +44,7 @@ The lab didn't keep raw payloads; what reached the backend is what the receiver 
 | `createdAt` | `1792777634359` | **Milliseconds since epoch.** The docs' envelope shows an ISO date; the records' timestamps are only correct because it is a number |
 | `payload.target` | `production` or absent | Absent on all preview deployments and on 34 of 35 `deployment.promoted` events |
 | `payload.project.id`, `payload.deployment.{id,name,url}` | | On every event |
-| `payload.deployment.meta.githubCommit*`, `githubOrg`, `githubRepo` | branch, SHA, message, author login | With the Git integration. Deploys from the CLI carry no repository fields (research W2) |
+| `payload.deployment.meta.githubCommit*`, `githubOrg`, `githubRepo` | branch, SHA, message, author login | With the Git integration. Deploys from the CLI carry no repository fields (Observed in the lab) |
 
 ### What the lab's receiver writes
 
@@ -97,6 +98,7 @@ A full lifecycle of one production deployment is in `deployment-lifecycle.ndjson
 | --- | --- |
 | Git integration | Branch, commit SHA, message and author on every event (`meta.githubCommit*`) |
 | Subscribing to more events | `deployment.ready`, `.rollback`, `project.rolling-release.*`, `domain.certificate-renew-failed` and others need only a checkbox on the webhook and, in the lab's receiver, removing the `deployment.` prefix check |
+| Vercel MCP events (since 2026-10-30) | An agent connected to Vercel MCP subscribes once to platform events such as `deployment.succeeded` and `deployment.error`, filtered by team, project and environment. Vercel MCP runs an ordinary Vercel webhook behind it that expires unless refreshed; these webhooks have their own per-team limit and don't count against the 40 account webhooks. Deliveries are signed Standard Webhooks with Vercel's native webhook payload in `data` (Documented, changelog). The receiving side in the AI SDK (`experimental_createMCPEventWebhook` in `@ai-sdk/mcp`) is marked experimental and implements the draft MCP Events extension (Documented, AI SDK cookbook). Not observed |
 | `@vercel/otel` in the receiving app | Gives the event record the trace context of the delivery request, so a slow or failing delivery can be found in traces |
 
 ## 4. Getting it out
@@ -105,8 +107,11 @@ A full lifecycle of one production deployment is in `deployment-lifecycle.ndjson
 | --- | --- | --- |
 | Deployment events | Account webhook scoped to the project → receiver route in the same project → OTLP/HTTP protobuf logs | Webhook `account_hook_FtW3…`, five `deployment.*` events, URL `https://petclinic-agent.vercel.app/api/vercel-webhook`, secret in `VERCEL_WEBHOOK_SECRET`; exporter from `OTEL_EXPORTER_OTLP_*` |
 | Rolling Release and domain events | Same webhook, more event types | Not observed |
+| Deployment events for an agent | Vercel MCP event subscription → your MCP client's webhook receiver (Standard Webhooks signature, payload in `data`) | Not observed |
 | Deployment state, error code, timings | REST `GET /v13/deployments/{id}`, `vercel inspect` | Read-only calls |
 | Rolling Release comparison metrics | None | |
+
+MCP events are a second delivery path for the same events, built for agents that react to deployments. The signature scheme differs from the account webhook's `x-vercel-signature` (Standard Webhooks), and the subscription expires when the agent stops refreshing it, so it suits an agent's own reactions rather than a continuous event record. A receiver that forwards both paths to one backend would store each event twice; deduplicate on deployment ID plus event type, as for the duplicates in Gotcha 1.
 
 Running the receiver inside the project it reports on has a cost: when that project is down or its firewall blocks the call, the events go into Vercel's 24-hour retry, and after that they are gone. A receiver in a separate project or outside Vercel avoids the dependency. Send each event once: one webhook per destination, and a receiver that writes each delivery once.
 
@@ -134,8 +139,8 @@ Queries, each run against the lab's last 7 days on 2026-10-26:
 
 1. **Duplicates with new IDs.** Vercel delivered `deployment.canceled` twice for `dpl_8iqP16ZFN8YkuKzMGzy9bCF1Nd5b`, 108 ms apart, with two different event IDs (Captured: `otlp-log-canceled-twice.ndjson`). Deduplicating on the event ID doesn't help; use deployment ID plus event type.
 2. **No order.** `deployment.promoted` arrived before `deployment.succeeded` in 12 of 35 deployments, and one `created` arrived 22 hours late. Treat events as state updates, not a sequence.
-3. **`promoted` has no target.** 34 of 34 `deployment.promoted` events from Vercel had no `payload.target`; preview deployments have none on any event. Missing target doesn't mean preview on a promotion (research W4).
-4. **Nothing in the drains.** Log, trace and analytics drains carry no deployment events; without a webhook there are no deploy markers outside Vercel (research W1).
+3. **`promoted` has no target.** 34 of 34 `deployment.promoted` events from Vercel had no `payload.target`; preview deployments have none on any event. Missing target doesn't mean preview on a promotion (Observed).
+4. **Nothing in the drains.** Log, trace and analytics drains carry no deployment events; without a webhook (account webhook or MCP event subscription) there are no deploy markers outside Vercel (drain schemas, Documented; none seen in the lab's drains, Observed).
 5. **24 hours, then gone.** Undelivered events are retried with exponential backoff for 24 h and then discarded (Documented). Vercel keeps no event history you can re-read; the REST API shows the current state only.
 
 ## Samples
@@ -155,6 +160,6 @@ The `otlp-log-*` samples are records as stored by the backend after OTLP ingesti
 
 ## Sources
 
-- Vercel docs, read 2026-10-26: [Webhooks API](https://vercel.com/docs/webhooks/webhooks-api) (last updated 2026-09-17), [Rolling Releases](https://vercel.com/docs/rolling-releases) and [Instant Rollback](https://vercel.com/docs/instant-rollback) (via research A1).
+- Vercel docs, read 2026-10-26: [Webhooks API](https://vercel.com/docs/webhooks/webhooks-api) (last updated 2026-09-17), [Rolling Releases](https://vercel.com/docs/rolling-releases) and [Instant Rollback](https://vercel.com/docs/instant-rollback).
+- Read 2026-11-12: [Vercel MCP now supports MCP events](https://vercel.com/changelog/vercel-mcp-now-supports-mcp-events) (2026-10-30), [Receive MCP Webhook Events](https://ai-sdk.dev/cookbook/node/mcp-events) (AI SDK cookbook), [Rolling Releases](https://vercel.com/docs/rolling-releases) (last updated 2026-09-15). The [Vercel MCP](https://vercel.com/docs/agent-resources/vercel-mcp) docs page (last updated 2026-09-15) doesn't describe events yet.
 - Lab: Bronto EU dataset `petclinic-agent/vercel-deployments`, 2026-10-19 to 2026-10-23; trace drain dataset `.traces/vercel-traces`; `vercel api /v1/webhooks`, `/v13/deployments/{id}`; receiver code and its history in `apps/web/app/api/vercel-webhook/route.ts`.
-- Research: `research/I-lab-findings.md` W1–W4; `research/A1-vercel-platform.md` §6 and webhooks.

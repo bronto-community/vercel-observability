@@ -9,16 +9,19 @@
 | Signals | Traces · Agent Runs records (sessions, turns, tool calls, usage) |
 | Exit paths | Trace drain · OTLP from code · `vercel agent-runs` CLI (read) |
 | Verified | 2026-10-26 · eve 0.81.0 · durable-harness 0.0.1-beta.6 · Vercel CLI 65.2.0 · data 2026-10-19 to 2026-10-25 (agent turns stopped 2026-10-23 22:00 UTC) |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · eve 1.0.0-rc.10 · `@vercel/agent-runs` 1.0.0-rc.5 · `ai` 7.0.170 |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
-| Traces | One trace per agent turn: `invoke_agent`, `agent.step`, `chat`, `execute_tool`, plus spans from instrumentation libraries inside tools | Agent Runs, Observability › Tracing, trace drain, any OTLP destination you add | Agent Runs 30 days during beta (Documented) |
+| Traces | One trace per agent turn: `invoke_agent`, `agent.step`, `chat`, `execute_tool`, plus spans from instrumentation libraries inside tools | Agent Runs, Observability › Tracing, trace drain, any OTLP destination you add | Agent Runs 30 days during beta (Documented). Observability › Tracing: Hobby 3 days, Pro and Enterprise 14 days since Tracing GA on 2026-11-06; before that Hobby 1 hour, Pro 1 day, Enterprise 3 days (Documented) |
 | Agent Runs records | Run list (status, trigger, turns, tokens, cost), run detail, turn timeline with tool calls | Observability › Agent Runs, `vercel agent-runs` | As above |
 | Workflow spans | eve and durable-harness run on Vercel Workflow; its spans (`workflow.*`, `world.*`, `vqs.*`) come with them | As traces | See the Workflow entry |
 
-Agent Runs usage is billed at Always-on Tracing rates during beta (Documented, eve docs).
+Agent Runs usage is billed at Always-on Tracing rates during beta (Documented, eve docs). Since Tracing GA (2026-11-06) tracing is billed in span units: $0.50 per 1M on Pro, 1M included on Hobby, one unit per indexed span up to 2 KiB (Documented).
+
+eve 1.0.0-rc.0 and `@vercel/agent-runs` 1.0.0-rc.0 were released on 2026-10-30. The rc line adds spans and attributes to the turn trace (section 2, "Spans added in the 1.0 release candidates") and changes what third-party AI SDK telemetry integrations receive (section 3). The span tree below was captured with eve 0.81.0.
 
 ## 2. Out-of-the-box shape
 
@@ -48,11 +51,27 @@ invoke_agent petclinic-agent                           4.95 s   INTERNAL  root, 
 
 All spans are `STATUS_CODE_UNSET`, including failed tool calls; failure is in `agent.action.outcome` and `agent.turn.outcome`. Resource attributes include `service.name` (from `otel({ resource })`), `vercel.project_id`, `vercel.deployment_id`, `vercel.region`, `vcs.*`, `deployment.environment.name`.
 
-Content: eve recorded no prompt or output text on production spans (`private` and `unknown` audience); `gen_ai.input.messages` appeared only on 21 spans from local runs (`deployment.environment.name = local`) (Observed). That follows eve's default trace policy; `otel({ tracePolicy })` changes it (Documented).
+Content: eve recorded no prompt or output text on production spans (`private` and `unknown` audience); `gen_ai.input.messages` appeared only on 21 spans from local runs (`deployment.environment.name = local`) (Observed). That follows eve's default trace policy; `otel({ tracePolicy })` changes it (Documented). Since `@vercel/agent-runs` 1.0.0-rc.2 (2026-11-05), captured content is cut at 250 KiB per attribute and 512 KiB per checkpointed operation, up from 32 KiB and 64 KiB (Documented, release notes).
 
 What the eve agent produced in 7 days (Observed): 23,112 turns (`invoke_agent`), 41,834 steps, 35,845 `chat petclinic-basic-1` calls (the free plan's rule-based model, no gateway), 5,960 gateway model calls, 18,720 tool calls (34 `failed`), 1 failed turn.
 
 eve's `chat` span doesn't show which model served when the gateway falls back. In a forced fallback on 2026-10-22, `gen_ai.request.model` and `gen_ai.response.model` both named Claude Haiku while Gemini answered; only the about 10 times higher `gen_ai.usage.cost` on `agent.step` hinted at it (Observed during the lab build, local `eve dev` run, spans not retained). The gateway's spans show the fallback.
+
+### Spans added in the 1.0 release candidates
+
+From the eve and `@vercel/agent-runs` release notes (Documented, not yet seen in the lab):
+
+| Span or attribute | Since | What it records |
+| --- | --- | --- |
+| `agent.approval` | eve 1.0.0-rc.6, agent-runs 1.0.0-rc.3 (2026-11-05) | Every wait on a person: `agent.approval.kind` = `tool-approval`, `question`, `budget` or `sign-in`. It sits under the tool call it is about, or under the turn when no call owns it. A sign-in names its connection in `eve.connection.name`; the sign-in URL and code are not recorded |
+| `agent.approval` agent attributes | eve 1.0.0-rc.7 (2026-11-09) | `gen_ai.agent.name` and `agent.name`, so a query scoped to one agent includes its sign-in prompts. A failed sign-in records `agent.connection.authorization.reason` (a reason code such as `access_denied`; free text is never recorded) |
+| `execute_tool` on a refused connection | eve 1.0.0-rc.7 (2026-11-09) | `eve.connection.name` and `agent.connection.authorization.reason` (for example `principal_required`, `sign_in_unavailable`) when a call fails with `ConnectionAuthorizationFailedError` |
+| `decision <model>` | eve 1.0.0-rc.7, agent-runs 1.0.0-rc.4 (2026-11-09) | One span per `decide()` call, automatic model selection and tool-approval decision, with model, usage, cost and failure metadata that tells refusals from request failures. It sits under the operation it runs in, or under the turn when routing runs before the first step |
+| `gen_ai.memory.store.id`, `agent.memory.slot` on `execute_tool` | eve 1.0.0-rc.8, agent-runs 1.0.0-rc.5 (2026-11-10) | Memory provider tool calls (such as `profile__save`) carry the store ID and slot, matching the `search_memory` and `upsert_memory` spans of the same slot. The store ID is an opaque scope key and is recorded whatever the trace policy |
+| `agent.github.lease.wait` | eve 1.0.0-rc.9 (2026-11-10) | Each wait for a `gh` command's sandbox credential lock, with `agent.github.lease.outcome` and `agent.github.lease.attempts`. A command waits up to a minute, then fails with a retryable error (rc.8) |
+| `$eve.tool_count` | eve 1.0.0-rc.3 (2026-11-03) | Now counts the tools offered to the model rather than the tools the agent declares |
+
+The rc line also moves the bundled Workflow runtime: eve 1.0.0-rc.3 bundles Workflow 5.3.0 and creates new runs with spec version 9 (`WORKFLOW_SPEC_VERSION=8` keeps spec 8); 1.0.0-rc.10 bundles Workflow 5.5.0. See the Workflow entry for what that changes in the Workflow spans.
 
 ### durable-harness
 
@@ -104,6 +123,7 @@ turn_1  book_visit   costUsd 0.00035166     "traceRevision": "agent-otel:776df6e
 | `otelIntegration({ traceExporter })` (eve) / `agentRuns({ spanProcessors })` (durable-harness) | A second destination over OTLP | See "Send each span once" |
 | `agentRuns({ exportPolicy })` / `otelIntegration({ exportPolicy })` | Per-destination filtering and content redaction (Documented) | None |
 | `otel({ tracePolicy })` | Whether prompts and outputs are recorded, for every destination (Documented) | None |
+| A third-party AI SDK telemetry integration (not an OpenTelemetry destination) | Since eve 1.0.0-rc.10 (2026-11-11), such integrations receive model and `decide()` prompts and responses whenever the `otel()` trace policy or an instrumentation file's `tracePolicy` allows content, without an `otelIntegration()` destination. Before, eve turned off `recordInputs`/`recordOutputs` on every model call in apps without an OpenTelemetry destination, so these integrations got no prompts, responses or token usage. The default: content for public conversations and in development, otherwise only when a trace policy allows it. Tool arguments, results and raw errors are now removed before each integration is called when `recordInputs`/`recordOutputs` is off; before rc.10 an integration that ignored those settings could record tool arguments of private conversations (Documented, release notes) | None |
 
 `runtimeContext` exists only on `otelIntegration`, not on `agentRuns` (eve 0.81.0 types). Its values still land on the spans Agent Runs and the trace drain receive: the drain copy of `agent.step` carried `ai.settings.context.plan = premium` (Observed).
 
@@ -112,14 +132,16 @@ turn_1  book_visit   costUsd 0.00035166     "traceRevision": "agent-otel:776df6e
 | Path | What leaves | Tested configuration |
 | --- | --- | --- |
 | Agent Runs → trace drain | All agent spans, with `vercel.projectId`, `vercel.deploymentId`, `vercel.ownerId` added as resource attributes | eve's default Agent Runs export (no `agent/instrumentation/agent-runs.ts`); durable-harness `agentRuns()`; project trace drain `petclinic-agent-traces` |
-| OTLP from code | The same spans, without the `vercel.*` resource attributes the drain adds | eve: `otelIntegration({ traceExporter: new OTLPTraceExporter() })` reading `OTEL_EXPORTER_OTLP_*`; durable-harness: `spanProcessors: [new SimpleSpanProcessor(new OTLPTraceExporter())]` |
+| OTLP from code | The same spans, without the `vercel.*` resource attributes the drain adds | eve: `otelIntegration({ traceExporter: new OTLPTraceExporter() })`, with the exporter reading `OTEL_EXPORTER_OTLP_*`; durable-harness: `spanProcessors: [new SimpleSpanProcessor(new OTLPTraceExporter())]` |
 | `vercel agent-runs … --json` | Run and turn summaries, usage, cost | CLI 65.2.0, read-only |
+
+`otelIntegration()` doesn't build an exporter from the standard `OTEL_EXPORTER_OTLP_*` variables by itself; you pass one in (feature request vercel/eve#5163, open). Still the case on 2026-11-12 (docs and releases checked).
 
 ### Send each span once
 
-As of 2026-10-26 the lab uses both paths for both agents, and every span arrives twice (Observed):
+As of 2026-10-26 the lab uses both paths for both agents, and every span arrives twice (Observed; the lab backend keeps the direct export in `.traces/petclinic-agent` and the drain in `.traces/vercel-traces`):
 
-- The eve turn root `6069ab7a6a576edb` (trace `081c7a954d1efe5363c45d7e2ee0e7e5`, 2026-10-23 12:00 UTC) is in `.traces/petclinic-agent` (direct export) and in `.traces/vercel-traces` (drain) with the same span ID and the same attributes. The drain copy adds `vercel.projectId`, `vercel.deploymentId`, `vercel.ownerId` and has `span.flags = 0` instead of `257` (Captured: `duplicate-direct-copy.json`, `duplicate-drain-copy.json`).
+- The eve turn root `6069ab7a6a576edb` (trace `081c7a954d1efe5363c45d7e2ee0e7e5`, 2026-10-23 12:00 UTC) is in the direct export and in the drain with the same span ID and the same attributes. The drain copy adds `vercel.projectId`, `vercel.deploymentId`, `vercel.ownerId` and has `span.flags = 0` instead of `257` (Captured: `duplicate-direct-copy.json`, `duplicate-drain-copy.json`).
 - 40 of 40 span IDs sampled from the drain's `petclinic-agent` spans (2026-10-23 12:00 to 12:05) were also in the direct dataset.
 - On 2026-10-25: 344,225 spans through the direct export, 288,927 of the same service through the drain. After the agent's turns stopped, these were mostly eve's Workflow spans (session timeouts, queue processing).
 - The ops agent: 315 spans in each path, 2026-10-22 to 2026-10-23.
@@ -187,4 +209,6 @@ The eve cost on `agent.step` and the gateway's own spend agree: for 2026-10-23, 
 ## Sources
 
 - eve 0.81.0 docs, read 2026-10-26: `docs/guides/instrumentation/agent-runs.mdx`, `otel.mdx` (trace topology, `runtimeContext`, export policies); type definitions in `dist/src/tracing/eve/otel-declaration.d.ts`.
-- Lab: `agent/instrumentation/otel.ts`, `agent/instrumentation/otlp.ts`, `apps/web/agent-runs.ts`, `apps/web/lib/ops-agent.ts` (commits 0230eda, eea769e, 1346de3); Bronto EU datasets `.traces/petclinic-agent`, `.traces/petclinic-ops`, `.traces/vercel-traces`, `.traces/ai-gateway`, 2026-10-19 to 2026-10-25; Vercel CLI 65.2.0 `vercel agent-runs list | inspect | trace | projects`; research I-lab-findings T2, T8, V3; lab notes 2026-10-22 (fallback in eve's spans).
+- Release notes, read 2026-11-12: [eve 1.0.0-rc.0](https://github.com/vercel/eve/releases/tag/eve%401.0.0-rc.0) to [eve 1.0.0-rc.10](https://github.com/vercel/eve/releases/tag/eve%401.0.0-rc.10) (rc.3, rc.6, rc.7, rc.8, rc.9, rc.10 for the items above), [`@vercel/agent-runs` 1.0.0-rc.0](https://github.com/vercel/eve/releases/tag/%40vercel%2Fagent-runs%401.0.0-rc.0) to 1.0.0-rc.5; [`ai` 7.0.163](https://github.com/vercel/ai/releases/tag/ai%407.0.163) (`recordInputs`/`recordOutputs` respected for integrations); issue [vercel/eve#5163](https://github.com/vercel/eve/issues/5163) (read 2026-11-12).
+- Vercel, read 2026-11-12: [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06), [Configure tracing](https://vercel.com/docs/tracing/configure-tracing) (retention, span units).
+- Lab: `agent/instrumentation/otel.ts`, `agent/instrumentation/otlp.ts`, `apps/web/agent-runs.ts`, `apps/web/lib/ops-agent.ts` (commits 0230eda, eea769e, 1346de3); lab backend (Bronto EU) datasets `.traces/petclinic-agent`, `.traces/petclinic-ops`, `.traces/vercel-traces`, `.traces/ai-gateway`, 2026-10-19 to 2026-10-25; Vercel CLI 65.2.0 `vercel agent-runs list | inspect | trace | projects`; lab notes 2026-10-22 (fallback in eve's spans).

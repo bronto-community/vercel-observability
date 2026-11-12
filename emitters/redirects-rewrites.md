@@ -5,10 +5,11 @@
 | | |
 | --- | --- |
 | Kind | Platform service (redirect and rewrite rules from `next.config.ts`, `vercel.json` / `vercel.ts`, project-level routes) |
-| Plans | Logs and traces on all plans in the dashboard; drains need Pro or Enterprise; metrics queries need Observability Plus |
+| Plans | Logs on all plans in the dashboard; traces on all plans once the project has a tracing sampling rule (added by default for new Next.js 16.5+ projects since 2026-11-06; Hobby includes 1M span units a month); drains need Pro or Enterprise; metrics queries need Observability Plus |
 | Signals | Logs · Traces (external rewrites only) · Metrics (inside Vercel only) |
 | Exit paths | Log drain (`source: redirect`, `source: external`) · Trace drain |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · Next.js 16.3.6 · lab project `petclinic-agent` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 docs |
 
 The lab has one of each, in `apps/web/next.config.ts`: a redirect `/clinic` → `/vets` (`permanent: false`) and an external rewrite `/petclinic-openapi.yml` → `https://raw.githubusercontent.com/spring-petclinic/spring-petclinic-rest/master/src/main/resources/openapi.yml`. Synthetic traffic called them in 30% and 10% of its runs.
 
@@ -17,7 +18,7 @@ The lab has one of each, in `apps/web/next.config.ts`: a redirect `/clinic` → 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Logs | One record per redirected request; one per externally rewritten request | Runtime Logs, `vercel logs` | Hobby 1 h, Pro 1 day, Enterprise 3 days, Plus 30 days (Documented) |
-| Traces | External rewrite: root span plus `Fetch Host`. Redirect: `Resolve Deployment` and `Resolve Route` only | Observability › Tracing, trace drain | As for logs (Documented) |
+| Traces | External rewrite: root span plus `Fetch Host`. Redirect: `Resolve Deployment` and `Resolve Route` only | Traces page (Vercel Tracing), `vercel traces`, trace drain | In Vercel: Hobby 3 days, Pro 14 days, Enterprise 14 days since 2026-11-06; before that as for logs (Documented). Drained spans: your backend's retention |
 | Metrics | `vercel.request.count` with `redirectLocation`, `externalRewriteTargetHost`, `externalRewriteTargetPath`, `rewriteDestinationHostname`; `vercel.request.external_rewrite_dns_ms`, `vercel.request.external_rewrite_connect_ms` | Observability › External Rewrites, Query, `vercel metrics` | Hobby 12 h, Pro 1 day, Enterprise 3 days, Plus 30 days (Documented) |
 
 ## 2. Out-of-the-box shape
@@ -163,7 +164,7 @@ Templates: the "Vercel Overview" dashboard counts redirect and external records 
 
 ## Gotchas
 
-1. **Most external records are Vercel's own analytics.** Web Analytics and Speed Insights run as external rewrites through your domain: 95% of the lab's `external` records. Volume-based reasoning about "our rewrites" needs the analytics paths excluded.
+1. **Most external records are Vercel's own analytics.** Web Analytics and Speed Insights run as external rewrites through your domain: 95% of the lab's `external` records. Counting your own rewrites by volume needs the analytics paths excluded.
 2. **Cache hits lose `destination`.** A cached external rewrite (`proxy.vercelCache: HIT`) usually has no `destination` (655 of 700); group by `path`.
 3. **Redirects have no root span.** The trace drain delivers `Resolve Deployment` and `Resolve Route` under a parent ID that never arrives; the log record's `spanId` is that missing parent. Count and inspect redirects from the log drain only.
 4. **`http.route` on an external rewrite is the upstream path.** Grouping edge spans by `http.route` puts rewrites under the target's path (`/v1/script.js`, `/spring-petclinic/…/openapi.yml`), not under your route. Group by `http.target` for your path.
@@ -190,4 +191,5 @@ Templates: the "Vercel Overview" dashboard counts redirect and external records 
 ## Sources
 
 - Vercel docs, read 2026-10-26: [Log Drains reference](https://vercel.com/docs/drains/reference/logs) (last updated 2026-09-11; `destination` "only on `external` and `redirect` logs", `external` "includes cached external rewrites"); read 2026-10-16 to 2026-10-20: [Rewrites](https://vercel.com/docs/routing/rewrites), [Observability](https://vercel.com/docs/observability), [`vercel metrics`](https://vercel.com/docs/cli/metrics).
+- Docs, read 2026-11-12: [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06), [Tracing](https://vercel.com/docs/tracing) and [Configuring Tracing](https://vercel.com/docs/tracing/configure-tracing) (both last updated 2026-11-03; retention, sampling rules, span units), [Trace Drains reference](https://vercel.com/docs/drains/reference/traces) (last updated 2026-08-21), [Runtime Logs](https://vercel.com/docs/logs/runtime) (last updated 2026-08-28; log retention unchanged).
 - Lab: `apps/web/next.config.ts`; Bronto EU datasets `petclinic-agent/vercel-logs` and `.traces/vercel-traces`, 2026-10-18 to 2026-10-26; Vercel CLI 65.2.0 `vercel metrics` for 2026-10-20 and 2026-10-23.

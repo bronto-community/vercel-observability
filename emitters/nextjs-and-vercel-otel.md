@@ -1,20 +1,21 @@
 # Next.js and `@vercel/otel`
 
-> Next.js traces itself: with `registerOTel()` from `@vercel/otel` in `instrumentation.ts`, every request gets framework spans (`GET /route`, `middleware GET`, `render route (app) /`, `executing api route (app) /…`, `resolve segment modules`, `start response`) and a `fetch GET <url>` span for every outgoing call. On Vercel these spans join the platform's own trace under `Invoke Function` and leave through the trace drain with no extra setup. `propagateContextUrls` adds `traceparent` to calls to the hosts you list, and in the lab that turned one cron request into a single trace running from Vercel's edge through the Next.js route into Caddy, Spring PetClinic and its SQL queries. The trap: `@vercel/otel` exports to Vercel **and** to any OTLP endpoint in `OTEL_EXPORTER_OTLP_ENDPOINT`, so a project that has both a trace drain and that variable sends every app span twice (8,623 and 8,617 copies of the same spans on one day in the lab).
+> Next.js traces itself: with `registerOTel()` from `@vercel/otel` in `instrumentation.ts`, every request gets framework spans (`GET /route`, `middleware GET`, `render route (app) /`, `executing api route (app) /…`, `resolve segment modules`, `start response`) and a `fetch GET <url>` span for every outgoing call. On Vercel these spans join the platform's own trace under `Invoke Function` and leave through the trace drain with no extra setup. `propagateContextUrls` adds `traceparent` to calls to the hosts you list, and in the lab that turned one cron request into a single trace running from Vercel's edge through the Next.js route into Caddy, Spring PetClinic and its SQL queries. The trap: `@vercel/otel` exports to Vercel **and** to any OTLP endpoint in `OTEL_EXPORTER_OTLP_ENDPOINT`, so a project that has both a trace drain and that variable sends every app span twice (8,623 and 8,617 copies of the same spans on one day in the lab; reported to Vercel on 2026-10-26, still unanswered on 2026-11-12). Since Vercel Tracing went GA on 2026-11-06, new projects on Next.js 16.5 or later get `@vercel/otel` added at build time unless they bring their own `instrumentation` file.
 
 | | |
 | --- | --- |
 | Kind | Library (Next.js built-in tracing, `@vercel/otel`) |
-| Plans | All plans; the trace drain needs Pro or Enterprise |
+| Plans | All plans. Vercel Tracing (the Traces page) on all plans, Hobby with 1M span units a month included; the trace drain needs Pro or Enterprise (Documented) |
 | Signals | Traces |
 | Exit paths | Trace drain · OTLP from code (`OTEL_EXPORTER_OTLP_*`) |
 | Verified | 2026-10-26 · Next.js 16.3.6 · `@vercel/otel` 2.1.3 · `@opentelemetry/api` 1.9.1 · lab project `petclinic-agent`, service `petclinic-web` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · `@vercel/otel` 2.3.0 (release notes 2.1.4 to 2.3.0, `dist/node/index.js`) · Next.js 16.4.6 stable, 16.5.0-canary.48 · Vercel CLI 65.14.0 docs |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
-| Traces | Next.js framework spans, `fetch` client spans, spans from libraries that use the OpenTelemetry API (better-auth, Workflow SDK, AI SDK in the lab) | Observability › Tracing, trace drain, your OTLP endpoint | As for Vercel traces (Documented: Hobby 1 h, Pro 1 day, Enterprise 3 days) |
+| Traces | Next.js framework spans, `fetch` client spans, spans from libraries that use the OpenTelemetry API (better-auth, Workflow SDK, AI SDK in the lab) | Traces page (Vercel Tracing), `vercel traces`, trace drain, your OTLP endpoint | In Vercel: Hobby 3 days, Pro 14 days, Enterprise 14 days since 2026-11-06 (Documented). Before 2026-11-06 traces followed runtime log retention (1 h, 1 day, 3 days). Drained or exported spans: your backend's retention |
 
 The lab's setup (`apps/web/instrumentation.ts`):
 
@@ -30,11 +31,22 @@ registerOTel({
 
 No `NEXT_OTEL_VERBOSE`, no `NEXT_OTEL_FETCH_DISABLED`, no `onRequestError` (Observed: project environment and code).
 
+### Default tracing (since 2026-11-06)
+
+With Vercel Tracing GA on 2026-11-06, Vercel adds `@vercel/otel` at build time for projects that qualify (Documented, Configuring Tracing):
+
+- Project created on or after 2026-11-05, built on Vercel (not `vercel deploy --prebuilt`) with Next.js 16.5 or later, with at least one Node.js function, and tracing not turned off.
+- After the first successful build, Vercel adds one tracing sampling rule (100% of requests, all environments) and injects `@vercel/otel` into each build without changing `package.json`. The service name is the project name; `OTEL_SERVICE_NAME` changes it.
+- No injection when the project has its own `instrumentation` file (project root, `src`, or a monorepo parent), uses `@opentelemetry/api` 1.10 or later (directly or through a dependency), or sets `instrumentationInject` in its Next.js config. Tracing still collects infrastructure spans in that case.
+- Removing all sampling rules turns tracing off and stops the injection from the next deployment.
+
+On 2026-11-12, Next.js 16.5 is on the canary channel only (`16.5.0-canary.48`; stable is 16.4.6, npm). The lab has its own `instrumentation.ts` and Next.js 16.3.6, so it doesn't qualify; nothing in this entry was captured with injected instrumentation.
+
 ## 2. Out-of-the-box shape
 
 ### Span names
 
-Spans of `service.name = petclinic-web` over 7 days (Observed, `.traces/petclinic-web`):
+Spans of `service.name = petclinic-web` over 7 days (Observed, queried in the lab backend):
 
 | Span name | `next.span_type` | Kind | Count | What it is |
 | --- | --- | --- | --- | --- |
@@ -114,6 +126,8 @@ GET /api/synthetic                              vercel.edge-network        49.8 
 | `NEXT_OTEL_VERBOSE=1` | More Next.js spans (Documented; not set in the lab) |
 | `NEXT_OTEL_FETCH_DISABLED=1` | Turns off Next.js's own fetch spans (Documented) |
 | `onRequestError` in `instrumentation.ts` | A hook for every server error with route context (Documented) |
+| `spanProcessors` with `onEnding` (`@vercel/otel` 2.2.1+) | Change or remove span attributes before any exporter sends the span, including the `'auto'` exporters. 2.2.1 moved the bundled OpenTelemetry SDK from 2.1.0 (which never called `onEnding`) to 2.3.0 (Documented, release notes) |
+| `flushTimeoutMillis` in `registerOTel` (2.2.0+) | How long the span flush queued in `waitUntil` may take on Vercel; default 10 s (Documented) |
 | Libraries on the OpenTelemetry API | Their spans join the request trace with no extra setup (better-auth, Workflow SDK, AI SDK `registerTelemetry` in the lab) |
 
 ## 4. Getting it out
@@ -124,14 +138,27 @@ GET /api/synthetic                              vercel.edge-network        49.8 
 2. If `VERCEL_OTEL_ENDPOINTS` is set (an observability integration), an OTLP exporter to the local Vercel collector.
 3. Otherwise, if `OTEL_EXPORTER_OTLP_TRACES_ENDPOINT` or `OTEL_EXPORTER_OTLP_ENDPOINT` is set, an OTLP exporter to that endpoint (`http/protobuf` by default, headers from `OTEL_EXPORTER_OTLP_HEADERS`).
 
+Changes from 2.1.4 to 2.3.0 (Documented, release notes; the order above is unchanged in the 2.3.0 source):
+
+| Version | Date | Change |
+| --- | --- | --- |
+| 2.1.4 | 2026-10-29 | No more duplicate spans for `http.get`/`https.get` when code that ran before `registerOTel` replaced `get` with a wrapper around `request`. A different case from the trace-drain duplicates below |
+| 2.2.0 | 2026-10-30 | OTLP export requests abort after 10 s by default (before: no timeout). Set with `timeoutMillis` on the exporter or `OTEL_EXPORTER_OTLP_TRACES_TIMEOUT` / `OTEL_EXPORTER_OTLP_TIMEOUT`, in milliseconds. On Vercel the `waitUntil` flush gives up after 10 s (`flushTimeoutMillis`). Fix for CVE-2026-54285 in the default baggage propagator |
+| 2.2.1 | 2026-11-02 | `onEnding` for span processors (see section 3). OTLP JSON exports, including spans sent to Vercel, carry a span and link `flags` field (`257` sampled, `769` sampled with a remote parent); `http/protobuf` unchanged |
+| 2.3.0 | 2026-11-05 | With `VERCEL_OTEL_SOCKET_PATH` set and no OTLP endpoint, the `'auto'` exporter sends traces over that Unix socket. Vercel Daemons use it to reach the daemon controller (see the Daemons entry). It takes the place of step 2 or 3 above |
+
 | Path | What leaves | Cost on Vercel |
 | --- | --- | --- |
-| Trace drain (schema `trace` v1, `otlphttp`, `proto`) | App spans inside the full request trace, with the edge and runtime spans | Drains Volume ($0.50 per GB), and Tracing Spans ($0.50 per 1M span units) for the project (Observed in billing; the bill doesn't split app from infrastructure spans) |
+| Trace drain (schema `trace` v1, `otlphttp`, `proto`) | App spans inside the full request trace, with the edge and runtime spans | Drains Volume ($0.50 per GB), and Tracing Spans ($0.50 per 1M span units) for the project (Observed in billing; the bill doesn't split app from infrastructure spans). A span unit is one indexed span up to 2 KiB; Hobby includes 1M a month, then tracing pauses for the team (Documented, 2026-11-12) |
 | OTLP from code (`OTEL_EXPORTER_OTLP_*`) | App spans only; the trace is missing its edge and runtime spans | None from Vercel |
 
-**The lab sends `petclinic-web` spans both ways.** The project has `OTEL_EXPORTER_OTLP_ENDPOINT` and `OTEL_EXPORTER_OTLP_HEADERS` set for Production (for the eve agent, which shares the project) and a trace drain. On 2026-10-25, 8,623 `petclinic-web` spans arrived over OTLP and 8,617 through the drain, with the same span IDs (`05c904f4e070ab45`, `c6e5739e2020c894` and the rest of request `wg6xg-1793009254408-be09daa615d3`) (Observed). The drain copy carries three more attributes, `vercel.projectId`, `vercel.deploymentId` and `vercel.ownerId`; everything else is identical (Captured: `span-handle-request-drain-copy.json`). This corrects research I, which listed `petclinic-web` as OTLP-only.
+**The lab sends `petclinic-web` spans both ways.** The project has `OTEL_EXPORTER_OTLP_ENDPOINT` and `OTEL_EXPORTER_OTLP_HEADERS` set for Production (for the eve agent, which shares the project) and a trace drain. On 2026-10-25, 8,623 `petclinic-web` spans arrived over OTLP and 8,617 through the drain, with the same span IDs (`05c904f4e070ab45`, `c6e5739e2020c894` and the rest of request `wg6xg-1793009254408-be09daa615d3`) (Observed). The drain copy carries three more attributes, `vercel.projectId`, `vercel.deploymentId` and `vercel.ownerId`; everything else is identical (Captured: `span-handle-request-drain-copy.json`).
 
 Send each span once. With `@vercel/otel` the trace drain is the path that keeps the app spans inside Vercel's request trace, so on Vercel the usual choice is the drain alone, with no `OTEL_EXPORTER_OTLP_*` in the Next.js app's environment. In the lab the variables are set once for the project, which holds both the eve service and the Next.js app, so they reach both. The two ways out are to drop the trace drain (and lose the infrastructure spans) or to keep the variables away from the Next.js app. Neither was tested (it needs a configuration change).
+
+**Two sets of sampling rules.** Since GA, Vercel Tracing (what the Traces page and `vercel traces` show) and the trace drain use separate rule sets that behave differently when empty: with no rules, tracing collects nothing, while a trace drain forwards all traces (Documented, Tracing › Sampling). Default tracing adds a tracing rule only, so turning tracing off in Settings › Tracing doesn't change what a drain forwards. `vercel traces config` manages the tracing rules (rates 1 to 100%; 0% rules only in the dashboard).
+
+**Default tracing and the duplicate case.** The docs don't say whether the injected `@vercel/otel` also adds the automatic OTLP exporter when `OTEL_EXPORTER_OTLP_ENDPOINT` is set. If it behaves like a hand-written `registerOTel()`, a qualifying project with a trace drain and that variable would send app spans twice as described above (Not observed). A project that brings its own `instrumentation.ts` gets no injection and behaves as described in this section.
 
 What can't leave: nothing. Every span Next.js creates is exportable; the infrastructure spans come only through the drain (see the Functions entry).
 
@@ -155,12 +182,13 @@ Queries against the lab's last 7 days, run 2026-10-26:
 
 ## Gotchas
 
-1. **Two exporters from one call.** `registerOTel()` always exports to Vercel. Its automatic OTLP exporter is added as well: to `OTEL_EXPORTER_OTLP_ENDPOINT` if set, otherwise to `http://localhost:4318/v1/traces`. The 2.1.3 source wraps that exporter in a check meant to skip it when the request has trace drains (`skipping automatic exporter due to configured trace drains`), but in the lab the check didn't take effect: every app span arrived twice (Observed: 8,623 exported versus 8,617 drained on 2026-10-25, same span IDs). Reported to Vercel on 2026-10-26. Until that's resolved, a project with a trace drain shouldn't also set `OTEL_EXPORTER_OTLP_ENDPOINT` for traces.
+1. **Two exporters from one call.** `registerOTel()` always exports to Vercel. Its automatic OTLP exporter is added as well: to `OTEL_EXPORTER_OTLP_ENDPOINT` if set, otherwise to `http://localhost:4318/v1/traces`. The 2.1.3 source wraps that exporter in a check meant to skip it when the request has trace drains (`skipping automatic exporter due to configured trace drains`), but in the lab the check didn't take effect: every app span arrived twice (Observed: 8,623 exported versus 8,617 drained on 2026-10-25, same span IDs). Reported to Vercel on 2026-10-26; still unanswered on 2026-11-12, and the check is unchanged in 2.3.0 (docs, release notes and `dist/node/index.js` checked). Until that's resolved, a project with a trace drain shouldn't also set `OTEL_EXPORTER_OTLP_ENDPOINT` for traces.
 2. **Default propagation stops at your own production domain.** Only the deployment's generated URLs get `traceparent` by default. Calls to the production alias or a custom domain of the same app start new traces unless the URL is in `propagateContextUrls` (Observed).
 3. **`proxy.ts` is traced as `middleware GET`.** Next.js 16 renamed the file, not the span (Captured: `span-middleware.json`).
-4. **4xx is not an error.** Root and `fetch` spans keep `UNSET` for 4xx; only thrown errors and 5xx from `fetch` set `ERROR`. Count 4xx from `"$http.status_code"` (Observed).
+4. **4xx is not an error.** Root and `fetch` spans keep `UNSET` for 4xx; only thrown errors and 5xx from `fetch` set `ERROR`. Count 4xx from `http.status_code` (Observed).
 5. **`cloud.region` follows the code.** Middleware spans say `iad1` while the function spans of the same request say `dub1`, because middleware runs where the request entered.
 6. **Old and new HTTP attribute names in one trace.** Next.js spans have `http.status_code`; Vercel's edge spans have `http.response.status_code`. Queries across both need both names.
+7. **Turning off Vercel Tracing doesn't stop the drain.** Tracing and trace drains have separate sampling rules; with no rules, tracing collects nothing and a drain forwards everything (Documented, 2026-11-12).
 
 ## Samples
 
@@ -179,4 +207,5 @@ Queries against the lab's last 7 days, run 2026-10-26:
 ## Sources
 
 - Docs, read 2026-10-26: Next.js [OpenTelemetry guide](https://nextjs.org/docs/app/guides/open-telemetry) (last updated 2026-10-22), [`instrumentation.ts` and `onRequestError`](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation); Vercel [Instrumentation](https://vercel.com/docs/tracing/instrumentation) (last updated 2026-09-15), [Trace Drains reference](https://vercel.com/docs/drains/reference/traces); `@vercel/otel` 2.1.3 README and `dist/node/index.js` (export setup).
+- Docs and releases, read 2026-11-12: [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06), [Tracing](https://vercel.com/docs/tracing) (last updated 2026-11-03), [Configuring Tracing](https://vercel.com/docs/tracing/configure-tracing) (last updated 2026-11-03; default tracing, span units, retention), [Instrumentation](https://vercel.com/docs/tracing/instrumentation) (last updated 2026-11-03), [`vercel traces`](https://vercel.com/docs/cli/traces) (last updated 2026-11-03), [Trace Drains reference](https://vercel.com/docs/drains/reference/traces) (last updated 2026-08-21); `@vercel/otel` [releases](https://github.com/vercel/otel/releases) 2.1.4, 2.2.0, 2.2.1, 2.3.0 and the 2.3.0 `dist/node/index.js` (exporter setup, trace-drain check); npm dist-tags for `next` (read 2026-11-12).
 - Lab: Bronto EU datasets `.traces/petclinic-web`, `.traces/vercel-traces`, `.traces/petclinic`, `.traces/caddy`, 2026-10-19 to 2026-10-26; `vercel env ls` (variable names only); lab code `apps/web/instrumentation.ts`, `apps/web/proxy.ts`.

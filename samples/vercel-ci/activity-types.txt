@@ -1,0 +1,5 @@
+# vercel activity types (Vercel CLI 65.14.0, 2026-11-12), filtered to Vercel CI types
+  repository-ci-env-variable-create                        A repository-scoped Vercel CI environment variable was created.
+  repository-ci-env-variable-delete                        A repository-scoped Vercel CI environment variable was deleted.
+  repository-ci-env-variable-update                        A repository-scoped Vercel CI environment variable was updated.
+  vercel-ci-repository-settings-updated                    Vercel CI was enabled or disabled for a repository.

@@ -9,13 +9,14 @@
 | Signals | Logs |
 | Exit paths | Log drain (`source: build`) · REST API (deployment state, build logs) |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 (local) · build images reported Vercel CLI 64.3.1 to 65.1.0 · Next.js 16.3.6 · lab project `petclinic-agent` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures, no change found for build logs · Vercel CLI 65.14.0 |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Logs | Every line of the build: clone, install, framework build, output upload, build cache | Deployment › Build Logs, `vercel inspect --logs`, log drain | Kept with the deployment; truncated above 4 MB (Documented) |
-| Other | Build Diagnostics (time and resources per step) | Observability › Build Diagnostics | Not exportable (Documented, research A1) |
+| Other | Build Diagnostics (time and resources per step) | Observability › Build Diagnostics | No export path in the drain or API docs (Documented; Observability Insights lists Build Diagnostics as a dashboard view) |
 | Other | Deployment state, `errorCode`, `errorMessage`, `buildingAt`, `ready` | REST API `GET /v13/deployments/{id}` | With the deployment |
 
 Deployment lifecycle events (`deployment.created`, `.error`, …) are not build logs; they come by webhook (see the Deployments entry).
@@ -84,13 +85,13 @@ Builds ran in `cle1` (Cleveland) while the functions run in `dub1`; the build re
 | --- | --- |
 | Git integration | Branch and commit in the `Cloning` line; commit metadata on the deployment (REST, webhooks) |
 | Your build script's output | Anything your build prints becomes a `source: build` line, e.g. the lab's `patched …/.vc-config.json: regions=dub1` |
-| Turborepo `experimentalObservability` | OTLP metrics for task runs (Documented, research A1; Not observed) |
+| Turborepo `experimentalObservability` | OTLP metrics for task runs, sent by Turborepo itself to an OTLP endpoint (see the [Turborepo](turborepo.md) entry; on Vercel builds Not observed) |
 
 ## 4. Getting it out
 
 | Signal | Exit path | Tested configuration |
 | --- | --- | --- |
-| Build lines | Log drain, schema `log` v1 | Drain `petclinic-agent-logs`, no source filter (see the Functions entry). A drain filtered to source `build` and environment `production` delivered only production build lines (research D4) |
+| Build lines | Log drain, schema `log` v1 | Drain `petclinic-agent-logs`, no source filter (see the Functions entry). A drain filtered to source `build` and environment `production` delivered only production build lines (lab test, 2026-10) |
 | Failure reason, timings | REST `GET /v13/deployments/{id}`: `readyState`, `errorCode`, `errorMessage`, `buildingAt`, `ready` | Read-only call with `vercel api` |
 | Build Diagnostics | None | |
 
@@ -112,7 +113,7 @@ Queries, each run against the lab's last 7 days on 2026-10-26:
 | Build step duration | `source = 'build' AND message LIKE 'Build Completed in%'` | `message` | one line per successful build, `[12s]` to `[43s]` |
 | Error-level build lines | `source = 'build' AND level = 'error'` | | 0, although two builds failed |
 
-Template: the "Vercel Overview" dashboard has a "Build Failures Over Time" widget on the log drain dataset; for this lab's data, the first query above is the one that finds the failures.
+Template: the "Vercel Overview" dashboard has a "Build Failures Over Time" widget on the log drain dataset.
 
 ## Gotchas
 
@@ -137,6 +138,6 @@ Template: the "Vercel Overview" dashboard has a "Build Failures Over Time" widge
 
 ## Sources
 
-- Vercel docs, read 2026-10-26: [Log Drains reference](https://vercel.com/docs/drains/reference/logs) (last updated 2026-09-11); [Build logs](https://vercel.com/docs/deployments/logs) (via research A1).
+- Vercel docs, read 2026-10-26: [Log Drains reference](https://vercel.com/docs/drains/reference/logs) (last updated 2026-09-11); [Build logs](https://vercel.com/docs/deployments/logs).
+- Read 2026-11-12: [Observability Insights](https://vercel.com/docs/observability/insights) (Build Diagnostics), [Accessing Build Logs](https://vercel.com/docs/deployments/logs) (last updated 2026-08-28).
 - Lab: Bronto EU dataset `petclinic-agent/vercel-logs`, last 30 days on 2026-10-26; `vercel api /v13/deployments/{id}` for `dpl_9N9ig6nAVomDrAZcNMMGV7nPT8jh` and `dpl_zA9h4XmaGkY15VUuTXZcv1aMnzyP`.
-- Research: `research/I-lab-findings.md` D4, D8; `research/A1-vercel-platform.md` §6.

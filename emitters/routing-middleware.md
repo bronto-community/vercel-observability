@@ -5,17 +5,18 @@
 | | |
 | --- | --- |
 | Kind | Platform service (Routing Middleware on Fluid Compute; Next.js `proxy.ts`/`middleware.ts` or the framework-neutral `middleware.ts`) |
-| Plans | Logs and traces on all plans in the dashboard; drains need Pro or Enterprise; metrics queries need Observability Plus |
+| Plans | Logs on all plans in the dashboard; traces on all plans once the project has a tracing sampling rule (added by default for new Next.js 16.5+ projects since 2026-11-06; Hobby includes 1M span units a month); drains need Pro or Enterprise; metrics queries need Observability Plus |
 | Signals | Logs · Traces · Metrics (inside Vercel only) |
 | Exit paths | Log drain (`source: lambda`) · Trace drain |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · Next.js 16.3.6 (`proxy.ts`, Node.js runtime `nodejs24.x`) · `@vercel/otel` 2.1.3 · lab project `petclinic-agent` |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 docs · `@vercel/otel` 2.3.0 |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
 | Logs | One invocation report line per middleware run; `console.*` output from your middleware code (the lab's middleware logs nothing) | Runtime Logs ("Middleware" panel), `vercel logs` | As for functions: Hobby 1 h, Pro 1 day, Enterprise 3 days, Plus 30 days (Documented) |
-| Traces | `Invoke Middleware` (`vercel.serverless-runtime`) with `waitUntil` and, on a new instance, `Start VM`, `Spawn Node.js`, `Init User Code`; framework span `middleware GET` with `@vercel/otel` | Observability › Tracing, trace drain | As for logs (Documented) |
+| Traces | `Invoke Middleware` (`vercel.serverless-runtime`) with `waitUntil` and, on a new instance, `Start VM`, `Spawn Node.js`, `Init User Code`; framework span `middleware GET` with `@vercel/otel` | Traces page (Vercel Tracing), `vercel traces`, trace drain | In Vercel: Hobby 3 days, Pro 14 days, Enterprise 14 days since 2026-11-06; before that as for logs (Documented). Drained spans: your backend's retention |
 | Metrics | `vercel.middleware_invocation.*`: `count`, `request_duration_ms`, `function_cpu_time_ms`, `ttfb_ms`, `function_duration_gbhr`, Fast Origin Transfer in, out, total | Observability › Middleware, Query, `vercel metrics` | Hobby 12 h, Pro 1 day, Enterprise 3 days, Plus 30 days (Documented) |
 
 The middleware metrics have 20 dimensions, among them `route`, `requestPath`, `middlewareAction`, `middlewareActionTarget`, `functionStartType`, `functionRegion`, `edgeNetworkRegion`, `runtime`, `httpStatus` and `errorCode` ([`reference/vercel-metrics-schema.json`](../reference/vercel-metrics-schema.json)).
@@ -120,7 +121,7 @@ The log drain matches the count exactly: 5,095 records with `proxy.pathType = 'm
 
 | Extra | What it adds | Cost |
 | --- | --- | --- |
-| `@vercel/otel` in `instrumentation.ts` | The `middleware GET` span inside `Invoke Middleware`, with URL, user agent and region | None; spans are billed as trace drain volume when drained |
+| `@vercel/otel` in `instrumentation.ts` | The `middleware GET` span inside `Invoke Middleware`, with URL, user agent and region | None from the package; spans count as Drains Volume when drained and as span units when Vercel Tracing collects them (Documented) |
 | A `matcher` in `proxy.ts` / `middleware.ts` | Limits which paths run middleware. Next.js documents a negative-lookahead matcher that skips `_next/static`, `_next/image` and `favicon.ico` (Documented). Not tested in the lab | Fewer middleware invocations, each one an Observability Plus event and Fluid Compute usage |
 | `console.log` in middleware | Your own records, `source: lambda`, same `path` as the report line. Log the decision (rewrite target, redirect, auth result) as JSON: the action is otherwise only in the `middlewareAction` metric | None |
 | Observability Plus | Querying `vercel.middleware_invocation.*` (action, action target, start type, CPU, TTFB) | $1.20 per 1M events (Documented) |
@@ -186,4 +187,5 @@ Templates: the "Vercel Overview" dashboard counts middleware report lines among 
 ## Sources
 
 - Vercel docs, read 2026-10-26: [Log Drains reference](https://vercel.com/docs/drains/reference/logs) (last updated 2026-09-11), [Routing Middleware](https://vercel.com/docs/routing-middleware), [`vercel metrics`](https://vercel.com/docs/cli/metrics); Next.js `proxy.ts` matcher: [Next.js docs](https://nextjs.org/docs/app/api-reference/file-conventions/proxy).
+- Docs, read 2026-11-12: [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06), [Tracing](https://vercel.com/docs/tracing) and [Configuring Tracing](https://vercel.com/docs/tracing/configure-tracing) (both last updated 2026-11-03; retention, sampling rules, span units), [Trace Drains reference](https://vercel.com/docs/drains/reference/traces) (last updated 2026-08-21), [Runtime Logs](https://vercel.com/docs/logs/runtime) (last updated 2026-08-28; log retention unchanged).
 - Lab: `apps/web/proxy.ts` (no `matcher`), `apps/web/instrumentation.ts`; Bronto EU datasets `petclinic-agent/vercel-logs` and `.traces/vercel-traces`, 2026-10-18 to 2026-10-26; Vercel CLI 65.2.0 `vercel metrics` for 2026-10-23 and 2026-10-25.

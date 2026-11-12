@@ -9,12 +9,13 @@
 | Signals | Traces (`flag` span) · Events (flag values on Web Analytics records; `flag.*` webhooks) · Metrics (evaluation counts, inside Vercel) · Other: billing records |
 | Exit paths | Trace drain · Web Analytics drain (`analytics` v2) · Webhook · CLI/API (`vercel flags evaluations --json`, `GET /v1/billing/charges`) |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `flags` 4.4.0 · `@flags-sdk/vercel` 1.5.3 · `@vercel/flags-core` 1.10.2 · `@vercel/analytics` 2.0.1 · `@vercel/otel` 2.1.3 · lab project `vercel-observability-lab` |
+| Refreshed | 2026-11-12 · docs, changelog and releases to 2026-11-12, no new captures · `flags` 4.4.0, `@flags-sdk/vercel` 1.6.0, `@vercel/flags-core` 1.11.0 (current on npm; 1.6.0/1.11.0 add a `projectId` option, no telemetry change) |
 
 ## 1. What it emits
 
 | Signal | What | Where it lives | Retention |
 | --- | --- | --- | --- |
-| Traces | `flag` span per evaluation (`key`, `method`); `identify`, `decide`, `run`, `batch` spans in some paths (from source) | Trace drain, when the SDK has a tracer provider | As for Functions |
+| Traces | `flag` span per evaluation (`key`, `method`); `identify`, `decide`, `run`, `batch` spans in some paths (from source) | Vercel Tracing and the trace drain, when the SDK has a tracer provider | In Vercel Tracing since 2026-11-06: Hobby 3 days, Pro and Enterprise 14 days (before: 1 h, 1 day, 3 days, as runtime logs) (Documented) |
 | Events | Flag values on Web Analytics page views and custom events (`flags` field) | Web Analytics dashboard, Web Analytics drain | As for Web Analytics |
 | Metrics | Evaluation counts by variant, reason, environment, client, SDK key | Flag detail page, `vercel flags evaluations` | Up to 90 days, 1-minute granularity (Documented) |
 | Metrics | `vercel.analytics.page_view.count` and `event.count` have a `flags` dimension | `vercel metrics`, Web Analytics | As for Web Analytics |
@@ -55,7 +56,7 @@ GET /flags                                  vercel.edge-network         73.29 ms
    └─ waitUntil                             vercel.serverless-runtime    7.76 ms
 ```
 
-No `fetch` span to `flags.vercel.com` appeared in any of the 10 traces, and `vercel.external_api_request.count` listed no Flags host (Observed). From the `@vercel/flags-core` 1.10.2 source: on Vercel the client reads flag definitions from a datafile or the definitions bundled at build time (`@vercel/flags-definitions`), and hands evaluation counts to an in-process runtime hook (`globalThis[Symbol.for("@vercel/flags-context")].ingest`); it falls back to `GET https://flags.vercel.com/v1/datafile`, `/v1/stream` and `POST /v1/ingest` through the global `fetch`. The lab's traces fit the in-process paths.
+No `fetch` span to `flags.vercel.com` appeared in any of the 10 traces, and `vercel.external_api_request.count` listed no Flags host (Observed). From the `@vercel/flags-core` 1.10.2 source: on Vercel the client reads flag definitions from a datafile or the definitions bundled at build time (`@vercel/flags-definitions`), and hands evaluation counts to an in-process runtime hook (`globalThis[Symbol.for("@vercel/flags-context")].ingest`); it falls back to `GET https://flags.vercel.com/v1/datafile`, `/v1/stream` and `POST /v1/ingest` through the global `fetch`. The lab's traces fit the in-process paths. Vercel's changelog of 2026-10-29 confirms it for `@flags-sdk/vercel` 1.5.3 and later: usage events are passed to the Vercel runtime instead of being sent with `waitUntil`, so usage reporting no longer keeps the function running after the response. Earlier versions used `waitUntil`, which added to function duration (Documented). The same release reads the bundled datafile at client creation and gets the current datafile revision with each invocation, so a cold start needs no network request to check it (Documented).
 
 Without `setTracerProvider`, the SDK creates no spans at all: it looks up a tracer under `Symbol.for("flags:global-trace")` and otherwise calls the function directly. `VERCEL_FLAGS_TRACE_VERBOSE=true` adds spans for internal steps (from source).
 
@@ -122,6 +123,7 @@ Billing day 2026-10-26 (Captured: `charges-2026-10-26.jsonl`):
 | Extra | What it adds | Cost |
 | --- | --- | --- |
 | `setTracerProvider` from `flags` in `instrumentation.ts` | The `flag` span (section 2). Without it, no spans | Trace drain volume |
+| SvelteKit adapter with a tracer provider | `flags` 4.4.0 (2026-10-26) emits OpenTelemetry spans from the SvelteKit adapter when a tracer provider is set, as the Next.js integration does (Documented, release notes). Span names and attributes for SvelteKit: Not observed | Trace drain volume |
 | `VERCEL_FLAGS_TRACE_VERBOSE=true` | Spans for internal steps (from source; not tested) | Span volume |
 | `<FlagValues>` on the page | `flags` on every Web Analytics page view and client-side event of that page | None beyond the events |
 | `track(name, data, { flags: [...] })` | Names which flags an event should carry (`k` in the beacon) | Web Analytics events |
@@ -166,13 +168,14 @@ Queries run 2026-10-27 against the lab's last 6 hours (drained data starts 08:43
 ## Gotchas
 
 1. **The span has no value.** `flag` carries `key` and `method`; which variant the request got is not on the span, in the function logs or in `vercel logs` (Observed). Log it yourself if server-side errors need to be split by variant.
-2. **No spans without the hook.** The Flags SDK only traces after `setTracerProvider()`; registering `@vercel/otel` alone is not enough (from source; the lab calls it).
+2. **No spans without the hook.** The Flags SDK only traces after `setTracerProvider()`; registering `@vercel/otel` alone is not enough (from source; the lab calls it). This also applies to SvelteKit since `flags` 4.4.0 (Documented).
 3. **`flags` is a JSON string.** In the drain it is `"{\"lab-flag\":true}"`, like `eventData` and `queryParams` (Captured).
 4. **The `flags` metric dimension is keys only and drops the rest.** `--group-by flags` returns `lab-flag`, not `true`/`false`, and leaves out page views without flags (Observed).
 5. **Page views carry flags only where `<FlagValues>` renders.** The analytics script reads values from the DOM; pages without the component send no `flags` (Observed: `/` had none). The values are public in the page source unless encrypted, and encrypted values can make an event exceed size limits and arrive without flags (Documented).
 6. **Flag requests are per request, not per evaluation.** 33 requests evaluating one flag = 33 flag requests; 10 flags in one request = 1 (Observed and Documented). Separate Flags clients count separately (Documented).
 7. **The current evaluation bucket is `null`.** `vercel flags evaluations --json` returns `"evaluations": null` for the bucket still open; treat it as missing, not 0 (Observed).
 8. **Headless browsers need a normal user agent too.** With `navigator.webdriver` off but a `HeadlessChrome` user agent, the analytics script sent no beacons, so flag values from synthetic checks never arrive (Observed 2026-10-27).
+9. **Old `@flags-sdk/vercel` versions lengthen functions.** Before 1.5.3, usage reporting ran in `waitUntil` after the response and counted toward function duration; 1.5.3 and later hand it to the runtime (Documented, changelog 2026-10-29).
 
 ## Samples
 
@@ -195,5 +198,6 @@ Queries run 2026-10-27 against the lab's last 6 hours (drained data starts 08:43
 ## Sources
 
 - Vercel docs, read 2026-10-27: [Vercel Flags](https://vercel.com/docs/flags/vercel-flags) (last updated 2026-07-15), [Flag Evaluation Metrics](https://vercel.com/docs/flags/vercel-flags/evaluation-metrics) (2026-07-15), [Limits and Pricing for Vercel Flags](https://vercel.com/docs/flags/vercel-flags/limits-and-pricing) (2026-08-26), [Flags observability](https://vercel.com/docs/flags/observability) (2026-09-15), [Integrate flags with Web Analytics](https://vercel.com/docs/flags/observability/web-analytics) (2026-08-11), [Web Analytics Drains reference](https://vercel.com/docs/drains/reference/analytics) (2026-07-03), [Webhooks API reference](https://vercel.com/docs/webhooks/webhooks-api) (2026-09-17).
+- Read 2026-11-12: [Vercel Flags starts 7x faster and no longer extends function duration](https://vercel.com/changelog/vercel-flags-starts-7x-faster-and-no-longer-extends-function-duration) (2026-10-29), [`flags@4.4.0` release](https://github.com/vercel/flags/releases/tag/flags@4.4.0) (2026-10-26), [`@flags-sdk/vercel@1.6.0`](https://github.com/vercel/flags/releases/tag/%40flags-sdk%2Fvercel%401.6.0) and `@vercel/flags-core@1.11.0` releases (2026-10-30), [Vercel Tracing is now generally available](https://vercel.com/changelog/vercel-tracing-is-now-generally-available) (2026-11-06, trace retention).
 - Source: `flags` 4.4.0 (`dist/chunk-XASPEQRL.js` tracing and `reportValue`, `dist/next.js` `flag()` wrapper), `@vercel/flags-core` 1.10.2 (`dist/chunk-LGS6CVED.js`: datafile, stream, ingest, usage tracker).
 - Lab: Bronto EU datasets `.traces/vercel-observability-lab`, `vercel-observability-lab/vercel-logs` and `vercel-observability-lab/vercel-web-analytics`, 2026-10-27 08:43 to 08:50 UTC; 3 headless Chrome visits to `/` and `/flags` with the button click (Playwright, system Chrome, `--disable-blink-features=AutomationControlled`, desktop Chrome user agent), beacon bodies captured from the browser; `vercel flags evaluations`, `vercel metrics`, `vercel logs` (CLI 65.2.0); `GET /v1/billing/charges` for the billing day 2026-10-26; `lab/NOTES.md`.
