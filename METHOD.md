@@ -27,4 +27,14 @@ Every claim in an entry carries one of these:
 
 ## Versions
 
-Each entry states the date it was verified and the versions involved. `reference/vercel-metrics-schema.json` is the output of `vercel metrics schema <prefix> --json` for every metric prefix, Vercel CLI 65.2.0, 2026-10-26.
+Each entry states the date it was verified and the versions involved. `reference/vercel-metrics-schema.json` is the output of `vercel metrics schema <id> --json` for every metric the CLI lists, in the CLI's order.
+
+## Keeping it current
+
+A GitHub Action ([`weekly-check.yml`](.github/workflows/weekly-check.yml)) runs [`scripts/weekly-check.mjs`](scripts/weekly-check.mjs) every Monday:
+
+- It regenerates the metrics schema with the latest Vercel CLI and opens a pull request when it changed.
+- It compares [`reference/tracked-versions.json`](reference/tracked-versions.json), the package versions the catalog was last checked against, with npm.
+- It checks every link in the Markdown files.
+
+Findings go into one issue labelled `weekly-check`, which closes itself when a run finds nothing. The check never edits entries: a newer package version or a changed metric means an entry needs a review, and the evidence level of any claim it touches stays as it is until that review. Run it locally with `node scripts/weekly-check.mjs`; it needs a logged-in Vercel CLI for the schema step, or `SKIP=schema`.

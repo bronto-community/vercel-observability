@@ -1,0 +1,21 @@
+{
+ "checked": "2026-11-12",
+ "note": "The latest version of each package that the catalog was checked against. The weekly check reports when npm has a newer one. Update a version here only after reviewing the entries that cite the package.",
+ "packages": {
+  "vercel": "65.14.0",
+  "next": "16.4.6",
+  "@vercel/otel": "2.3.0",
+  "@ai-sdk/otel": "1.0.170",
+  "eve": "1.0.0-rc.10",
+  "workflow": "5.5.0",
+  "@vercel/agent-runs": "1.0.0-rc.5",
+  "@vercel/analytics": "2.0.1",
+  "@vercel/speed-insights": "2.1.0",
+  "@vercel/functions": "3.11.1",
+  "@vercel/blob": "2.9.0",
+  "@vercel/global-config": "1.5.1",
+  "@vercel/connect": "2.9.1",
+  "@vercel/flags-core": "1.11.0",
+  "@vercel/sandbox": "3.9.0"
+ }
+}

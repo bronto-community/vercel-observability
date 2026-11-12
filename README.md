@@ -81,7 +81,8 @@ Exit paths: **LD** log drain · **TD** trace drain · **AD** analytics (Web Anal
 ```
 emitters/<slug>.md      one entry per emitter, five sections + gotchas
 samples/<slug>/         captured records, redacted (see METHOD.md)
-reference/              machine-readable catalogs from Vercel
+reference/              machine-readable catalogs from Vercel, tracked package versions
+scripts/weekly-check.mjs  weekly drift check (metrics schema, package versions, links)
 ```
 
 ## License

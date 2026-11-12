@@ -1,0 +1,75 @@
+name: Weekly check
+
+# Mechanical drift checks for the catalog: the Vercel metrics schema, package
+# versions and links. A schema change opens a pull request; everything else
+# goes into one issue labelled weekly-check, which closes itself when clean.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: weekly-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install the Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Run the checks
+        id: check
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_SCOPE: ${{ vars.VERCEL_SCOPE }}
+          REPORT_PATH: ${{ runner.temp }}/report.md
+        run: node scripts/weekly-check.mjs
+
+      - name: Open or update the schema pull request
+        if: steps.check.outputs.schema_changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/metrics-schema
+          add-paths: reference/vercel-metrics-schema.json
+          commit-message: Update the Vercel metrics schema
+          title: Update the Vercel metrics schema
+          body-path: ${{ runner.temp }}/report.md
+          labels: weekly-check
+          delete-branch: true
+
+      - name: Open, update or close the report issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FINDINGS: ${{ steps.check.outputs.findings }}
+          REPORT: ${{ runner.temp }}/report.md
+        run: |
+          gh label create weekly-check --color BFD4F2 \
+            --description "Opened by the weekly check" 2>/dev/null || true
+          issue=$(gh issue list --label weekly-check --state open \
+            --search "in:title Weekly check" --json number --jq '.[0].number // empty')
+          if [ "${FINDINGS:-0}" -gt 0 ]; then
+            if [ -n "$issue" ]; then
+              gh issue edit "$issue" --body-file "$REPORT"
+              gh issue comment "$issue" --body "Updated by the run on $(date -u +%F)."
+            else
+              gh issue create --title "Weekly check: catalog drift" \
+                --label weekly-check --body-file "$REPORT"
+            fi
+          elif [ -n "$issue" ]; then
+            gh issue close "$issue" --comment "Nothing left to report on $(date -u +%F)."
+          fi
