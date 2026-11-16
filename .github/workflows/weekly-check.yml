@@ -4,9 +4,9 @@ name: Weekly check
 # versions and links. A schema change opens a pull request; everything else
 # goes into one issue labelled weekly-check, which closes itself when clean.
 #
-# Pull requests and issues are opened by a GitHub App when the repository has
-# the variable BOT_APP_ID and the secret BOT_PRIVATE_KEY (the app needs
-# Contents, Pull requests and Issues: read and write). Without them the run
+# Pull requests and issues are opened by a GitHub App when the secrets
+# BRONTO_COMMUNITY_BOT_APP_ID and BRONTO_COMMUNITY_BOT_PRIVATE_KEY are set (the
+# app needs Contents, Pull requests and Issues: read and write). Without them the run
 # falls back to GITHUB_TOKEN, which needs "Allow GitHub Actions to create and
 # approve pull requests" for the pull request step.
 
@@ -28,6 +28,8 @@ jobs:
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      HAS_APP: ${{ secrets.BRONTO_COMMUNITY_BOT_APP_ID != '' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -48,11 +50,11 @@ jobs:
 
       - name: Get a GitHub App token
         id: app
-        if: vars.BOT_APP_ID != ''
+        if: env.HAS_APP == 'true'
         uses: actions/create-github-app-token@v2
         with:
-          app-id: ${{ vars.BOT_APP_ID }}
-          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+          app-id: ${{ secrets.BRONTO_COMMUNITY_BOT_APP_ID }}
+          private-key: ${{ secrets.BRONTO_COMMUNITY_BOT_PRIVATE_KEY }}
 
       - name: Open or update the schema pull request
         if: steps.check.outputs.schema_changed == 'true'
