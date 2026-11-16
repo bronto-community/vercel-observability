@@ -3,6 +3,12 @@ name: Weekly check
 # Mechanical drift checks for the catalog: the Vercel metrics schema, package
 # versions and links. A schema change opens a pull request; everything else
 # goes into one issue labelled weekly-check, which closes itself when clean.
+#
+# Pull requests and issues are opened by a GitHub App when the repository has
+# the variable BOT_APP_ID and the secret BOT_PRIVATE_KEY (the app needs
+# Contents, Pull requests and Issues: read and write). Without them the run
+# falls back to GITHUB_TOKEN, which needs "Allow GitHub Actions to create and
+# approve pull requests" for the pull request step.
 
 on:
   schedule:
@@ -40,10 +46,20 @@ jobs:
           REPORT_PATH: ${{ runner.temp }}/report.md
         run: node scripts/weekly-check.mjs
 
+      - name: Get a GitHub App token
+        id: app
+        if: vars.BOT_APP_ID != ''
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+
       - name: Open or update the schema pull request
         if: steps.check.outputs.schema_changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
+          token: ${{ steps.app.outputs.token || github.token }}
+          sign-commits: true
           branch: automation/metrics-schema
           add-paths: reference/vercel-metrics-schema.json
           commit-message: Update the Vercel metrics schema
@@ -53,8 +69,9 @@ jobs:
           delete-branch: true
 
       - name: Open, update or close the report issue
+        if: always() && steps.check.outcome == 'success'
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.app.outputs.token || github.token }}
           FINDINGS: ${{ steps.check.outputs.findings }}
           REPORT: ${{ runner.temp }}/report.md
         run: |

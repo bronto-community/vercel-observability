@@ -76,7 +76,7 @@ function checkSchema() {
       if (JSON.stringify(o[k]) !== JSON.stringify(m[k])) parts.push(`${k} changed`);
     }
     if (!parts.length) parts.push("dimension order changed");
-    changed.push(`\`${m.id}\`: ${parts.join("; ")}`);
+    changed.push([m.id, parts.join("; ")]);
   }
 
   const text = JSON.stringify(fresh, null, 1) + "\n";
@@ -90,7 +90,21 @@ function checkSchema() {
   report.push(`Changed: now ${fresh.length} metrics (was ${old.length}), Vercel CLI ${cliVersion}. The file is updated in this run.\n`);
   if (added.length) report.push(`- New metrics: ${added.map((id) => `\`${id}\``).join(", ")}`);
   if (removed.length) report.push(`- Removed metrics: ${removed.map((id) => `\`${id}\``).join(", ")}`);
-  for (const c of changed) report.push(`- ${c}`);
+  // One line per distinct change; metrics with the same change are grouped.
+  const byChange = new Map();
+  for (const [id, what] of changed) byChange.set(what, [...(byChange.get(what) || []), id]);
+  for (const [what, ids] of byChange) {
+    if (ids.length <= 3) {
+      report.push(`- ${ids.map((id) => `\`${id}\``).join(", ")}: ${what}`);
+    } else {
+      let prefix = ids[0];
+      for (const id of ids) while (!id.startsWith(prefix)) prefix = prefix.slice(0, -1);
+      prefix = prefix.slice(0, prefix.lastIndexOf(".") + 1);
+      const scope = prefix ? `${ids.length} \`${prefix}*\` metrics` : `${ids.length} metrics`;
+      report.push(`- ${scope}: ${what}`);
+      report.push(`  <details><summary>Metrics</summary>${ids.map((id) => `\`${id}\``).join(", ")}</details>`);
+    }
+  }
   report.push(
     "\nBefore merging: update the metrics count, CLI version and date in `README.md` (reference section), and check the entries that cite changed metrics.\n",
   );
