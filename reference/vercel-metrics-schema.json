@@ -75,7 +75,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "seconds",
   "aggregations": [
@@ -168,7 +170,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -261,7 +265,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -354,7 +360,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
@@ -441,7 +449,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -534,7 +544,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -627,7 +639,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -720,7 +734,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
@@ -807,7 +823,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -891,7 +909,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
@@ -978,7 +998,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
@@ -1065,7 +1087,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -1158,7 +1182,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -1251,7 +1277,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -1344,7 +1372,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -1437,7 +1467,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -1530,7 +1562,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
@@ -1617,7 +1651,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -1710,7 +1746,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
@@ -1797,7 +1835,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
@@ -1884,7 +1924,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -1977,7 +2019,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "seconds",
   "aggregations": [
@@ -2070,7 +2114,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
@@ -2157,7 +2203,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
@@ -2244,7 +2292,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "milliseconds",
   "aggregations": [
@@ -2337,7 +2387,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -2430,7 +2482,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -2523,7 +2577,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
@@ -2610,7 +2666,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "milliseconds",
   "aggregations": [
@@ -2703,7 +2761,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -2796,7 +2856,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "seconds",
   "aggregations": [
@@ -2889,7 +2951,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -2982,7 +3046,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -3075,7 +3141,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "count",
   "aggregations": [
@@ -3168,7 +3236,9 @@
    "gatewayCredentialAppId",
    "gatewayCredentialAppName",
    "appliedRuleId",
-   "requestAppliedRuleId"
+   "requestAppliedRuleId",
+   "accessPolicyId",
+   "requestAccessPolicyId"
   ],
   "unit": "usd",
   "aggregations": [
