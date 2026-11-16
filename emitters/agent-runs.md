@@ -9,7 +9,7 @@
 | Signals | Traces · Agent Runs records (sessions, turns, tool calls, usage) |
 | Exit paths | Trace drain · OTLP from code · `vercel agent-runs` CLI (read) |
 | Verified | 2026-10-26 · eve 0.81.0 · durable-harness 0.0.1-beta.6 · Vercel CLI 65.2.0 · data 2026-10-19 to 2026-10-25 (agent turns stopped 2026-10-23 22:00 UTC) |
-| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · eve 1.0.0-rc.10 · `@vercel/agent-runs` 1.0.0-rc.5 · `ai` 7.0.170 |
+| Refreshed | 2026-11-16 · package releases to 2026-11-16 (weekly check), no new captures · eve 1.0.0 · `@vercel/agent-runs` 1.0.0 · `ai` 7.0.172 or later (required by eve 1.0.0) |
 
 ## 1. What it emits
 
@@ -67,11 +67,13 @@ From the eve and `@vercel/agent-runs` release notes (Documented, not yet seen in
 | `agent.approval` agent attributes | eve 1.0.0-rc.7 (2026-11-09) | `gen_ai.agent.name` and `agent.name`, so a query scoped to one agent includes its sign-in prompts. A failed sign-in records `agent.connection.authorization.reason` (a reason code such as `access_denied`; free text is never recorded) |
 | `execute_tool` on a refused connection | eve 1.0.0-rc.7 (2026-11-09) | `eve.connection.name` and `agent.connection.authorization.reason` (for example `principal_required`, `sign_in_unavailable`) when a call fails with `ConnectionAuthorizationFailedError` |
 | `decision <model>` | eve 1.0.0-rc.7, agent-runs 1.0.0-rc.4 (2026-11-09) | One span per `decide()` call, automatic model selection and tool-approval decision, with model, usage, cost and failure metadata that tells refusals from request failures. It sits under the operation it runs in, or under the turn when routing runs before the first step |
+| `chat <model>` for a compaction summary | eve 1.0.0-rc.11, agent-runs 1.0.0-rc.6 (2026-11-12) | A context compaction's summary request during a turn is its own `chat <model>` span under the turn's `invoke_agent` span, with token usage, cost and `ai.settings.context.eve.compaction.request = summary`. Before, compacting turns undercounted tokens and cost. All model spans now also carry `agent.turn.id` |
+| `decision <model>` turn and purpose | eve 1.0.0-rc.17, agent-runs 1.0.0-rc.7 (2026-11-13) | `agent.turn.id` and `agent.decision.purpose` (`model-selection`, `tool-approval`, `agent-routing` or `custom`). When the trace records outputs, per-question results as `gen_ai.decision.results`, following the proposed OpenTelemetry GenAI decision conventions |
 | `gen_ai.memory.store.id`, `agent.memory.slot` on `execute_tool` | eve 1.0.0-rc.8, agent-runs 1.0.0-rc.5 (2026-11-10) | Memory provider tool calls (such as `profile__save`) carry the store ID and slot, matching the `search_memory` and `upsert_memory` spans of the same slot. The store ID is an opaque scope key and is recorded whatever the trace policy |
 | `agent.github.lease.wait` | eve 1.0.0-rc.9 (2026-11-10) | Each wait for a `gh` command's sandbox credential lock, with `agent.github.lease.outcome` and `agent.github.lease.attempts`. A command waits up to a minute, then fails with a retryable error (rc.8) |
 | `$eve.tool_count` | eve 1.0.0-rc.3 (2026-11-03) | Now counts the tools offered to the model rather than the tools the agent declares |
 
-The rc line also moves the bundled Workflow runtime: eve 1.0.0-rc.3 bundles Workflow 5.3.0 and creates new runs with spec version 9 (`WORKFLOW_SPEC_VERSION=8` keeps spec 8); 1.0.0-rc.10 bundles Workflow 5.5.0. See the Workflow entry for what that changes in the Workflow spans.
+The rc line also moves the bundled Workflow runtime: eve 1.0.0-rc.3 bundles Workflow 5.3.0 and creates new runs with spec version 9 (`WORKFLOW_SPEC_VERSION=8` keeps spec 8); 1.0.0-rc.10 bundles Workflow 5.5.0. eve 1.0.0 and `@vercel/agent-runs` 1.0.0 (2026-11-15) ship all of the above; from 1.0 on, `@vercel/agent-runs` changes its API incompatibly only in a major release. eve 1.0.0-rc.11 also stops tagging a workflow run as content-visible when the session's `otel({ tracePolicy })` withholds inputs or outputs. See the Workflow entry for what that changes in the Workflow spans.
 
 ### durable-harness
 

@@ -9,7 +9,7 @@
 | Signals | Metrics (inside Vercel only) · billing lines · API objects (drives) · the calling function's spans and logs |
 | Exit paths | `vercel metrics` pull · `vercel usage` / `GET /v1/billing/charges` pull · `GET /v2/sandboxes/drives` pull · trace and log drain for the calling function only |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `@vercel/sandbox` 3.9.0 · `@opentelemetry/instrumentation-undici` 0.34.0 · lab project `vercel-observability-lab`, drive `lab-drive` in `iad1` |
-| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, `vercel metrics schema vercel.drive` re-run, no new captures (the lab drive was deleted on 2026-10-27) · Vercel CLI 65.14.0 |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, `vercel metrics schema vercel.drive` re-run, no new captures (the lab drive was deleted on 2026-10-27) · Vercel CLI 65.14.0. 2026-11-16: `@vercel/sandbox` 4.0.0 moves the Drive API calls to `api.vercel.com` and its own `undici` (see the Sandbox entry, gotcha 9) |
 
 ## 1. What it emits
 

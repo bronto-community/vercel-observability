@@ -9,7 +9,7 @@
 | Signals | Metrics (inside Vercel only) · API objects (sandboxes, sessions) · Billing lines · the calling function's logs and spans |
 | Exit paths | `vercel metrics` pull · `GET /v2/sandboxes`, `GET /v2/sandboxes/sessions` pull · `GET /v1/billing/charges` pull · log and trace drain for the calling function only |
 | Verified | 2026-10-27 (runs of 2026-10-26 and 2026-10-27) · Vercel CLI 65.2.0 · `@vercel/sandbox` 3.9.0 · `@vercel/otel` 2.1.3 · `@opentelemetry/instrumentation-undici` 0.34.0 · lab project `vercel-observability-lab` |
-| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, `vercel metrics schema vercel.sandbox` re-run, no new captures · Vercel CLI 65.14.0 |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, `vercel metrics schema vercel.sandbox` re-run, no new captures · Vercel CLI 65.14.0. 2026-11-16 · package releases to 2026-11-16 (weekly check), no new captures: `@vercel/sandbox` 4.0.0 (release notes and `base-client.js` read; see gotcha 9) |
 
 ## 1. What it emits
 
@@ -147,7 +147,7 @@ The API objects now include the mount: `"mounts": {"/data": {"drive": "lab-drive
 | Extra | What it adds |
 | --- | --- |
 | Logging command results from your code | `exitCode`, `stdout()`, `stderr()`, the sandbox name and session ID per command as one JSON line: the only way command results reach a log drain |
-| `@vercel/otel`'s fetch instrumentation or `@opentelemetry/instrumentation-undici` | The SDK sends its API calls with `globalThis.fetch` (with an `undici` dispatcher, `@vercel/sandbox` 3.9.0 `base-client.js`), so each call becomes a client span: `POST` with `url.path` from the undici instrumentation (Captured, 2026-10-27), `fetch POST https://vercel.com/api/…` from the fetch instrumentation (not run with a Sandbox call). Use one of the two, not both, or each call is recorded twice (see the Blob entry) |
+| `@vercel/otel`'s fetch instrumentation or `@opentelemetry/instrumentation-undici` | The SDK sends its API calls with `globalThis.fetch` (with an `undici` dispatcher, `@vercel/sandbox` 3.9.0 `base-client.js`), so each call becomes a client span: `POST` with `url.path` from the undici instrumentation (Captured, 2026-10-27), `fetch POST https://vercel.com/api/…` from the fetch instrumentation (not run with a Sandbox call). Use one of the two, not both, or each call is recorded twice (see the Blob entry). From `@vercel/sandbox` 4.0.0 (2026-11-12) the SDK calls the `fetch` of its own `undici` 8 dependency instead of `globalThis.fetch`, so only the undici instrumentation should still see the calls (gotcha 9) |
 | Observability Plus | Querying `vercel.sandbox.*` ($1.20 per 1M events, Documented) |
 
 ## 4. Getting it out
@@ -189,6 +189,7 @@ With `@vercel/otel`'s default fetch instrumentation, the span field is `"$http.u
 6. **`runtime: node22` ran Node.js 24.** The API reports `runtime: "node22"` for both sandboxes, while `node -v` inside them printed `v24.22.1` (image `vercel/sandbox/universal`). Don't take the runtime field as the version (Observed).
 7. **SDK spans are the only trace of a Sandbox.** With an undici or fetch instrumentation, each create, command and stop is a client span of the calling function; nothing comes from the VM (Observed, three runs).
 8. **Mounting a drive slowed create.** `POST /api/v3/sandboxes` took 584–673 ms with a drive mount against 292 ms median without (Observed 2026-10-27, 3 and 2 runs). On 2026-11-02 Vercel reported median creation of sandboxes with Drives down from 1.7 s to 0.7 s (p95 2.2 s to 1.6 s), with no SDK change (Documented); the lab hasn't measured it since.
+9. **`@vercel/sandbox` 4.0.0 changes the SDK spans.** It sends API requests through the `fetch` of its own `undici` 8 dependency, not `globalThis.fetch`, over HTTP/2, and to `https://api.vercel.com` instead of `https://vercel.com/api` (Documented: release notes and `base-client.js`; Node.js 22.19.0 or later). Expected, not yet observed: `@vercel/otel`'s fetch instrumentation, which wraps `globalThis.fetch`, no longer sees SDK calls; `@opentelemetry/instrumentation-undici` still does, because undici 8 publishes the same `undici:request:*` diagnostics channels; and `server.address`, `url.full` and `user_agent.original` change, so a filter or alert on `vercel.com/api/…` paths stops matching.
 
 ## Samples
 

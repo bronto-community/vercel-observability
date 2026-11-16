@@ -9,7 +9,7 @@
 | Signals | Traces · Metrics (inside Vercel only) · Generation lookup API |
 | Exit paths | AI Gateway trace drain · REST API (generation lookup, Custom Reporting) |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · lab project `petclinic-agent` · data 2026-10-19 to 2026-10-23 (the lab's model traffic stopped 2026-10-23 22:00 UTC) |
-| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 (`vercel metrics schema vercel.ai_gateway`) |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · Vercel CLI 65.14.0 (`vercel metrics schema vercel.ai_gateway`). 2026-11-16: Vercel CLI 65.16.0 schema adds the dimensions `accessPolicyId` and `requestAccessPolicyId` to all 35 `vercel.ai_gateway.request.*` metrics (Documented, schema only; Vercel's docs don't describe access policies yet) |
 
 ## 1. What it emits
 

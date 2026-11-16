@@ -9,7 +9,7 @@
 | Signals | Events (Connect runtime events) · Events (Activity Log config changes) · Metrics (outgoing `fetch` to the Connect API, Observability Plus) |
 | Exit paths | Drain (`connect` v1, custom HTTP endpoint only) · Activity Log via CLI/API pull for config changes · OTLP from code for the `fetch` span |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `@vercel/connect` 2.5.2 and eve 0.81.0 (source read, not running in the lab) · team `brontoio` (Pro) |
-| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures; one read-only backend count for the `connect` drain dataset · `@vercel/connect` 2.9.1 current on npm (not read) · Vercel CLI 65.14.0 |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures; one read-only backend count for the `connect` drain dataset · `@vercel/connect` 2.9.1 current on npm (not read) · Vercel CLI 65.14.0. 2026-11-16: `@vercel/connect` 2.9.3 (package diff against 2.9.1, no published release notes): API calls can carry an optional `teamId` or `orgId` query parameter; no telemetry change |
 
 ## 1. What it emits
 

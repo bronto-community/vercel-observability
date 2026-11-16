@@ -9,7 +9,7 @@
 | Signals | Traces · Metrics (one histogram, since `@ai-sdk/otel` 1.0.160) |
 | Exit paths | OTLP from code · Trace drain (spans created inside a Vercel function; spans only) |
 | Verified | 2026-10-26 · `ai` 7.0.148 · `@ai-sdk/otel` 1.0.148 · `@vercel/otel` 2.1.3 · Next.js 16.3.6 · lab route `apps/web/app/api/visit-note` |
-| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · `ai` 7.0.170 · `@ai-sdk/otel` 1.0.170 · `@vercel/otel` 2.3.0 |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · `ai` 7.0.170 · `@ai-sdk/otel` 1.0.170 · `@vercel/otel` 2.3.0. 2026-11-16: `@ai-sdk/otel` 1.0.173 (dependency updates only) |
 
 ## 1. What it emits
 

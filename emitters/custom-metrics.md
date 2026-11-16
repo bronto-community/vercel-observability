@@ -9,7 +9,7 @@
 | Signals | Metrics (inside Vercel only) |
 | Exit paths | None pushed. `vercel metrics --json` pull |
 | Verified | 2026-10-27 · Vercel CLI 65.2.0 · `@vercel/functions` 3.10.3 · Next.js 16.4.3 · lab project `vercel-observability-lab` |
-| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · `@vercel/functions` 3.11.1 (changelog: no change to `metric()`) · Vercel CLI 65.14.0 |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, no new captures · `@vercel/functions` 3.11.1 (changelog: no change to `metric()`) · Vercel CLI 65.14.0. 2026-11-16: `@vercel/functions` 3.11.3 (PostgreSQL pool cleanup fix, no change to `metric()`) |
 
 ## 1. What it emits
 

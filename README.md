@@ -8,7 +8,7 @@ Every Vercel service, product and library that emits telemetry, with the same fi
 4. **Getting it out**: drains, webhooks, APIs or OTLP from code, with tested configuration, and what can't leave Vercel.
 5. **In a backend**: how the data looks after ingestion, with tested queries. Bronto is the example backend; sections 1–4 apply to any OTLP or HTTP backend.
 
-Entries were verified in the lab on 2026-10-26 and 2026-10-27 and refreshed against Vercel's docs, changelog and package releases on 2026-11-12 (no new captures; each entry has a `Refreshed` row). Every claim is marked Captured, Observed, Documented or Not observed. See [METHOD.md](METHOD.md) for how records are captured and redacted, and [TEMPLATE.md](TEMPLATE.md) for the layout of an entry.
+Entries were verified in the lab on 2026-10-26 and 2026-10-27 and refreshed against Vercel's docs, changelog and package releases on 2026-11-12, with package releases to 2026-11-16 (no new captures; each entry has a `Refreshed` row). A weekly check flags new package versions and metrics schema changes (see [METHOD.md](METHOD.md#keeping-it-current)). Every claim is marked Captured, Observed, Documented or Not observed. See [METHOD.md](METHOD.md) for how records are captured and redacted, and [TEMPLATE.md](TEMPLATE.md) for the layout of an entry.
 
 ## Catalog
 

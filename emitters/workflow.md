@@ -9,7 +9,7 @@
 | Signals | Logs · Traces (edge from Vercel, SDK spans from code) · Metrics (inside Vercel only) |
 | Exit paths | Log drain (`source: lambda`) · Trace drain · OTLP from code |
 | Verified | 2026-10-26 · Vercel CLI 65.2.0 · eve 0.81.0 (bundles Workflow core 5.2.0, `@workflow/world-vercel/5.2.0`) · durable-harness 0.0.1-beta.6 · lab project `petclinic-agent`, data up to 2026-10-26 10:00 UTC |
-| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, one read-only query on the lab's spans of 2026-10-29 to 2026-11-12, no new captures · workflow 5.5.0 (`@workflow/core`, `@workflow/world-vercel` 5.5.0 source) · eve 1.0.0-rc.10 |
+| Refreshed | 2026-11-12 · docs and changelog to 2026-11-12, one read-only query on the lab's spans of 2026-10-29 to 2026-11-12, no new captures · workflow 5.5.0 (`@workflow/core`, `@workflow/world-vercel` 5.5.0 source) · eve 1.0.0-rc.10; 2026-11-16: eve 1.0.0 release notes read, no change to Workflow spans |
 
 ## 1. What it emits
 
