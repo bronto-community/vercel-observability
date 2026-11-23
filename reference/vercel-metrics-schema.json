@@ -286,7 +286,7 @@
  },
  {
   "id": "vercel.ai_gateway.request.billed_cost",
-  "description": "AI Gateway Requests Billed Cost (cost plus ZDR, reporting write, allowlist and quota write surcharges)",
+  "description": "AI Gateway Requests Billed Cost (cost plus every debited surcharge)",
   "dimensions": [
    "projectId",
    "appName",
@@ -3623,7 +3623,8 @@
    "contentType",
    "statusCode",
    "eventType",
-   "connectionId"
+   "connectionId",
+   "wafSource"
   ],
   "unit": "count",
   "aggregations": [
@@ -3654,7 +3655,9 @@
    "serverActionName",
    "clientIp",
    "clientUserAgent",
-   "deploymentId"
+   "deploymentId",
+   "requestId",
+   "invocationId"
   ],
   "unit": "count",
   "aggregations": [
@@ -3685,7 +3688,9 @@
    "serverActionName",
    "clientIp",
    "clientUserAgent",
-   "deploymentId"
+   "deploymentId",
+   "requestId",
+   "invocationId"
   ],
   "unit": "percent",
   "aggregations": [
@@ -3725,7 +3730,9 @@
    "serverActionName",
    "clientIp",
    "clientUserAgent",
-   "deploymentId"
+   "deploymentId",
+   "requestId",
+   "invocationId"
   ],
   "unit": "bytes",
   "aggregations": [
@@ -3765,7 +3772,9 @@
    "serverActionName",
    "clientIp",
    "clientUserAgent",
-   "deploymentId"
+   "deploymentId",
+   "requestId",
+   "invocationId"
   ],
   "unit": "bytes",
   "aggregations": [
@@ -3805,7 +3814,9 @@
    "serverActionName",
    "clientIp",
    "clientUserAgent",
-   "deploymentId"
+   "deploymentId",
+   "requestId",
+   "invocationId"
   ],
   "unit": "bytes",
   "aggregations": [
@@ -3845,7 +3856,9 @@
    "serverActionName",
    "clientIp",
    "clientUserAgent",
-   "deploymentId"
+   "deploymentId",
+   "requestId",
+   "invocationId"
   ],
   "unit": "milliseconds",
   "aggregations": [
@@ -3885,7 +3898,9 @@
    "serverActionName",
    "clientIp",
    "clientUserAgent",
-   "deploymentId"
+   "deploymentId",
+   "requestId",
+   "invocationId"
   ],
   "unit": "milliseconds",
   "aggregations": [
@@ -3925,7 +3940,9 @@
    "serverActionName",
    "clientIp",
    "clientUserAgent",
-   "deploymentId"
+   "deploymentId",
+   "requestId",
+   "invocationId"
   ],
   "unit": "megabytes",
   "aggregations": [
@@ -3965,7 +3982,9 @@
    "serverActionName",
    "clientIp",
    "clientUserAgent",
-   "deploymentId"
+   "deploymentId",
+   "requestId",
+   "invocationId"
   ],
   "unit": "megabytes",
   "aggregations": [
@@ -4005,7 +4024,9 @@
    "serverActionName",
    "clientIp",
    "clientUserAgent",
-   "deploymentId"
+   "deploymentId",
+   "requestId",
+   "invocationId"
   ],
   "unit": "milliseconds",
   "aggregations": [
@@ -5607,7 +5628,11 @@
    "httpRoute",
    "httpUrl",
    "scopeName",
-   "scopeVersion"
+   "scopeVersion",
+   "protocol",
+   "method",
+   "target",
+   "outcome"
   ],
   "unit": "milliseconds",
   "aggregations": [
